@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WiCity.iws" />
@@ -87,15 +88,15 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="73" selection-start="438" selection-end="438" vertical-scroll-proportion="0.48920864" vertical-offset="0" max-vertical-offset="816">
+            <state line="40" column="8" selection-start="1342" selection-end="1342" vertical-scroll-proportion="0.6738609" vertical-offset="399" max-vertical-offset="816">
               <folding>
-                <marker date="1387816692853" expanded="true" signature="226:1335" placeholder="..." />
-                <marker date="1387816692853" expanded="true" signature="279:809" placeholder="..." />
-                <marker date="1387816692853" expanded="true" signature="308:469" placeholder="..." />
-                <marker date="1387816692853" expanded="true" signature="363:457" placeholder="..." />
-                <marker date="1387816692853" expanded="true" signature="419:446" placeholder="..." />
-                <marker date="1387816692853" expanded="true" signature="862:1327" placeholder="..." />
-                <marker date="1387816692853" expanded="true" signature="891:1013" placeholder="..." />
+                <marker date="1387817002378" expanded="true" signature="226:1349" placeholder="..." />
+                <marker date="1387817002378" expanded="true" signature="279:809" placeholder="..." />
+                <marker date="1387817002378" expanded="true" signature="308:469" placeholder="..." />
+                <marker date="1387817002378" expanded="true" signature="363:457" placeholder="..." />
+                <marker date="1387817002378" expanded="true" signature="419:446" placeholder="..." />
+                <marker date="1387817002378" expanded="true" signature="862:1341" placeholder="..." />
+                <marker date="1387817002378" expanded="true" signature="891:1013" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -597,7 +598,11 @@
       <created>1387816722356</created>
       <updated>1387816722356</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Change button Interest Locations&#10;">
+      <created>1387816737441</created>
+      <updated>1387816737441</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -622,10 +627,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32038835" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32038835" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -664,7 +669,8 @@
     <MESSAGE value="Prova Commit" />
     <MESSAGE value="Prova Commit&#10;" />
     <MESSAGE value="Change button Interest Locations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change button Interest Locations" />
+    <MESSAGE value="Change button Interest Locations&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change button Interest Locations&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -674,13 +680,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="6" selection-start="1355" selection-end="1355" vertical-scroll-proportion="0.0" vertical-offset="389" max-vertical-offset="850">
           <folding>
-            <marker date="1387816692853" expanded="true" signature="226:1335" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="279:809" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="308:469" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="363:457" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="419:446" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="862:1327" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="891:1013" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="226:1349" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="279:809" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="308:469" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="363:457" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="419:446" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="862:1341" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="891:1013" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -745,13 +751,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="6" selection-start="1355" selection-end="1355" vertical-scroll-proportion="0.0" vertical-offset="389" max-vertical-offset="850">
           <folding>
-            <marker date="1387816692853" expanded="true" signature="226:1335" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="279:809" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="308:469" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="363:457" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="419:446" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="862:1327" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="891:1013" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="226:1349" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="279:809" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="308:469" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="363:457" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="419:446" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="862:1341" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="891:1013" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -809,13 +815,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="0" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="850">
           <folding>
-            <marker date="1387816692853" expanded="true" signature="226:1335" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="279:809" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="308:469" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="363:457" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="419:446" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="862:1327" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="891:1013" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="226:1349" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="279:809" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="308:469" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="363:457" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="419:446" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="862:1341" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="891:1013" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -866,13 +872,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="14" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0" vertical-offset="124" max-vertical-offset="816">
           <folding>
-            <marker date="1387816692853" expanded="true" signature="226:1335" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="279:809" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="308:469" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="363:457" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="419:446" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="862:1327" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="891:1013" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="226:1349" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="279:809" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="308:469" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="363:457" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="419:446" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="862:1341" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="891:1013" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -909,13 +915,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="14" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="816">
           <folding>
-            <marker date="1387816692853" expanded="true" signature="226:1335" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="279:809" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="308:469" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="363:457" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="419:446" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="862:1327" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="891:1013" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="226:1349" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="279:809" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="308:469" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="363:457" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="419:446" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="862:1341" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="891:1013" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1050,15 +1056,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="73" selection-start="438" selection-end="438" vertical-scroll-proportion="0.48920864" vertical-offset="0" max-vertical-offset="816">
+        <state line="40" column="8" selection-start="1342" selection-end="1342" vertical-scroll-proportion="0.6738609" vertical-offset="399" max-vertical-offset="816">
           <folding>
-            <marker date="1387816692853" expanded="true" signature="226:1335" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="279:809" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="308:469" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="363:457" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="419:446" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="862:1327" placeholder="..." />
-            <marker date="1387816692853" expanded="true" signature="891:1013" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="226:1349" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="279:809" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="308:469" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="363:457" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="419:446" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="862:1341" placeholder="..." />
+            <marker date="1387817002378" expanded="true" signature="891:1013" placeholder="..." />
           </folding>
         </state>
       </provider>
