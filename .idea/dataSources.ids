@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails WiCity: development" uuid="2c2476c2-5e4c-4963-941d-243a1d538bce">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails WiCity: test" uuid="b5b9b38e-7c16-4a86-85b5-fbe9820483ef">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails WiCity: production" uuid="6c345d04-8429-4f18-a3e9-0faf2a6d2cc8">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

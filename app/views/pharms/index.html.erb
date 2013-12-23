@@ -1,0 +1,21 @@
+<div data-role="header" data-theme="b">
+  <h1>Listing pharms</h1>
+  <%= link_to 'Add', new_pharm_path, 'data-icon' => 'plus', 'class' => 'ui-btn-right', :target => '_parent' %>
+  <%= link_to 'Back', 'intloc', 'data-icon' => 'back', 'class' => 'ui-btn-left' %>
+</div>
+
+
+<div data-role="content">
+  <ul data-role="listview" data-inset="true" data-filter="true">
+    <% @pharms.each do |pharm| %>
+        <li>
+          <a href="<%= "#{pharms_url}/#{pharm.id}" %>" target="_parent">
+            <img src="/assets/icon/pharm.png">
+            <h2><%= pharm.name %></h2>
+            <p><%= pharm.address %></p>
+            <%= link_to 'Edit', edit_pharm_path(pharm), 'data-icon' => 'edit', :target => '_parent' %>
+          </a>
+        </li>
+    <% end %>
+  </ul>
+</div>

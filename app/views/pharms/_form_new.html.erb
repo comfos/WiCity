@@ -1,0 +1,81 @@
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+
+<script>
+
+    function initialize() {
+
+        var input = (document.getElementById('pharm_address'));
+        var autocomplete = new google.maps.places.Autocomplete(input);
+
+        google.maps.event.addListener(autocomplete, 'place_changed', function() {
+
+            var place = autocomplete.getPlace();
+            if (!place.geometry) {
+                return;
+            }
+
+            if (place.geometry.viewport) {
+                map.fitBounds(place.geometry.viewport);
+            } else {
+                document.getElementById('pharm_lat').value = (place.geometry.location).lat();
+                document.getElementById('pharm_lng').value = (place.geometry.location).lng();
+                document.getElementById("pharm_add").style.display = "block";
+            }
+        });
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+
+
+
+<div data-role="content">
+
+    <%= form_for(@pharm, :html => {:target => '_parent'} ) do |f| %>
+      <% if @pharm.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@pharm.errors.count, "error") %> prohibited this pharm from being saved:</h2>
+
+          <ul>
+          <% @pharm.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <strong><b><%= f.label :Name %></b></strong>
+        <%= f.text_field :name %>
+      </div>
+
+      <br>
+
+      <div class="field">
+        <strong><b><%= f.label :Address %></b></strong>
+        <%= f.text_field :address %>
+      </div>
+
+      <br>
+
+      <div class="ui-grid-a">
+        <div class="ui-block-a" style="padding-right: 5px">
+          <strong><b><%= f.label :Latitude %></b></strong>
+          <%= f.text_field :lat, :readonly => true %>
+        </div>
+        <div class="ui-block-b" style="padding-left: 5px">
+          <strong><b><%= f.label :Longitude %></b></strong>
+          <%= f.text_field :lng, :readonly => true %>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="actions" id="pharm_add" style="display:none;">
+        <%= f.submit 'Add Pharm' %>
+      </div>
+
+    <% end %>
+
+</div>

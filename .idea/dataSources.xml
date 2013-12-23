@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="456518427">
+    <data-source source="LOCAL" name="Rails WiCity: development" uuid="2c2476c2-5e4c-4963-941d-243a1d538bce">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/WiCity_development</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfe2dfd8df9edfc9dfcedfc6df9ddffb</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails WiCity: test" uuid="b5b9b38e-7c16-4a86-85b5-fbe9820483ef">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/WiCity_test</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfe2dfd8df9edfc9dfcedfc6df9ddffb</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails WiCity: production" uuid="6c345d04-8429-4f18-a3e9-0faf2a6d2cc8">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/WiCity_production</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfe2dfd8df9edfc9dfcedfc6df9ddffb</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
