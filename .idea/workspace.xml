@@ -142,6 +142,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubProjectSettings">
+    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="master" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="comfos" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="WiCity" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
@@ -386,7 +391,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -611,7 +616,11 @@
       <created>1387792338958</created>
       <updated>1387792338958</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Test&#10;">
+      <created>1387792536431</created>
+      <updated>1387792536431</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -654,7 +663,8 @@
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Change:&#10;- index&#10;- intloc" />
     <MESSAGE value="Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test" />
+    <MESSAGE value="Test&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
