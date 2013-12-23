@@ -52,7 +52,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="166" column="70" selection-start="5372" selection-end="5372" vertical-scroll-proportion="0.6056701" vertical-offset="2587" max-vertical-offset="3179">
+            <state line="167" column="100" selection-start="5522" selection-end="5522" vertical-scroll-proportion="0.6494845" vertical-offset="2587" max-vertical-offset="3196">
               <folding />
             </state>
           </provider>
@@ -654,7 +654,11 @@
       <created>1387821376184</created>
       <updated>1387821376184</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="On click of the GETDIRECTION the dialog is closed&#10;">
+      <created>1387822436632</created>
+      <updated>1387822436632</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -723,7 +727,8 @@
     <MESSAGE value="Change button Interest Locations" />
     <MESSAGE value="Change button Interest Locations&#10;" />
     <MESSAGE value="Change button RT Traffic Information&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change button RT Traffic Information&#10;" />
+    <MESSAGE value="On click of the GETDIRECTION the dialog is closed&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="On click of the GETDIRECTION the dialog is closed&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1109,7 +1114,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="70" selection-start="5372" selection-end="5372" vertical-scroll-proportion="0.6056701" vertical-offset="2587" max-vertical-offset="3179">
+        <state line="167" column="100" selection-start="5522" selection-end="5522" vertical-scroll-proportion="0.6494845" vertical-offset="2587" max-vertical-offset="3196">
           <folding />
         </state>
       </provider>
