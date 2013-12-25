@@ -106,7 +106,7 @@
       <file leaf-file-name="nearserv.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="13" selection-start="157" selection-end="162" vertical-scroll-proportion="0.28176796" vertical-offset="0" max-vertical-offset="1479">
+            <state line="41" column="0" selection-start="1121" selection-end="1121" vertical-scroll-proportion="0.23480663" vertical-offset="612" max-vertical-offset="1479">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
               </folding>
@@ -645,7 +645,11 @@
       <created>1388010533178</created>
       <updated>1388010533178</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="UPDATE Nearest Services&#10;">
+      <created>1388011015818</created>
+      <updated>1388011015818</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -720,7 +724,8 @@
     <MESSAGE value="ADD auto resize for mobile" />
     <MESSAGE value="ADD Credits (da aggiornare)&#10;" />
     <MESSAGE value="ADD Nearest Services&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD Nearest Services&#10;" />
+    <MESSAGE value="UPDATE Nearest Services&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE Nearest Services&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1111,7 +1116,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="157" selection-end="162" vertical-scroll-proportion="0.28176796" vertical-offset="0" max-vertical-offset="1479">
+        <state line="41" column="0" selection-start="1121" selection-end="1121" vertical-scroll-proportion="0.23480663" vertical-offset="612" max-vertical-offset="1479">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
           </folding>
