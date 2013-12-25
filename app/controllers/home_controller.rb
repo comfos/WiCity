@@ -8,4 +8,8 @@ class HomeController < ApplicationController
 
   end
 
+  def nearserv
+    @pharms = Pharm.all
+  end
+
 end
