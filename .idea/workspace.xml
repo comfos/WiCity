@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/home/nearserv.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Alfio.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Alfio.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/nearserv.html.erb" afterPath="$PROJECT_DIR$/app/views/home/nearserv.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WiCity.iws" />
@@ -110,7 +106,7 @@
       <file leaf-file-name="nearserv.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="5" selection-start="1827" selection-end="1827" vertical-scroll-proportion="1.9723756" vertical-offset="306" max-vertical-offset="1666">
+            <state line="6" column="13" selection-start="157" selection-end="162" vertical-scroll-proportion="0.28176796" vertical-offset="0" max-vertical-offset="1479">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
               </folding>
@@ -645,7 +641,11 @@
       <created>1388009614264</created>
       <updated>1388009614264</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="ADD Nearest Services&#10;">
+      <created>1388010533178</created>
+      <updated>1388010533178</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -719,7 +719,8 @@
     <MESSAGE value="REMOVE Transit&#10;" />
     <MESSAGE value="ADD auto resize for mobile" />
     <MESSAGE value="ADD Credits (da aggiornare)&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD Credits (da aggiornare)&#10;" />
+    <MESSAGE value="ADD Nearest Services&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD Nearest Services&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1110,7 +1111,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="5" selection-start="1827" selection-end="1827" vertical-scroll-proportion="1.9723756" vertical-offset="306" max-vertical-offset="1666">
+        <state line="6" column="13" selection-start="157" selection-end="162" vertical-scroll-proportion="0.28176796" vertical-offset="0" max-vertical-offset="1479">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
           </folding>
