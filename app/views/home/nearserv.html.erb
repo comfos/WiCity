@@ -53,11 +53,15 @@
 
     function addMarker() {
         <% @pharms.each do |pharm| %>
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(<%= pharm.lat %>, <%= pharm.lng %>),
-                map: map,
-                title: 'Hello World!'
-            });
+            if (google.maps.geometry.poly.containsLocation(new google.maps.LatLng(<%= pharm.lat %>, <%= pharm.lng %>), bermudaTriangle)) {
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(<%= pharm.lat %>, <%= pharm.lng %>),
+                    map: map,
+                    title: '<%= pharm.name %>'
+                });
+            } else {
+                result = 'green';
+            }
         <% end %>
     }
 
