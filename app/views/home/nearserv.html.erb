@@ -67,9 +67,7 @@
     function addMarker() {
         <% @pharms.each do |pharm| %>
             var coord = new google.maps.LatLng(<%= pharm.lat %>, <%= pharm.lng %>);
-            alert (coord);
             if( google.maps.geometry.spherical.computeDistanceBetween(mypos, coord) ) {
-                alert ("coord");
                 var marker = new google.maps.Marker({
                     position: coord,
                     map: map,
