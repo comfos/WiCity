@@ -6,7 +6,7 @@
     var geocoder;
     var mypos = 0;
 
-    var markerArray = [];
+    var cityCircle;
 
     var intervall = window.setInterval(checkpos, 2000);
 
@@ -48,12 +48,25 @@
         };
         map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
+        var circle = {
+            strokeColor: '#FF0000',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#FF0000',
+            fillOpacity: 0.35,
+            map: map,
+            center: mypos,
+            radius: 1000
+        };
+        // Add the circle for this city to the map.
+        cityCircle = new google.maps.Circle(circle);
+
         addMarker();
     }
 
     function addMarker() {
         <% @pharms.each do |pharm| %>
-            if (google.maps.geometry.poly.containsLocation(new google.maps.LatLng(<%= pharm.lat %>, <%= pharm.lng %>), bermudaTriangle)) {
+            if (google.maps.geometry.poly.containsLocation(new google.maps.LatLng(<%= pharm.lat %>, <%= pharm.lng %>), cityCircle)) {
                 var marker = new google.maps.Marker({
                     position: new google.maps.LatLng(<%= pharm.lat %>, <%= pharm.lng %>),
                     map: map,
