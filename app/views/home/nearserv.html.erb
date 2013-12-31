@@ -58,7 +58,7 @@
             center: mypos,
             radius: 5000
         };
-        // Add the circle for this city to the map.
+
         cityCircle = new google.maps.Circle(circle);
 
         addMarker();
@@ -66,14 +66,15 @@
 
     function addMarker() {
         <% @pharms.each do |pharm| %>
-            if (google.maps.geometry.poly.containsLocation(new google.maps.LatLng(<%= pharm.lat %>, <%= pharm.lng %>), cityCircle)) {
+            var coord = new google.maps.LatLng(<%= pharm.lat %>, <%= pharm.lng %>);
+            alert (coord);
+            if( google.maps.geometry.spherical.computeDistanceBetween(mypos, coord) ) {
+                alert ("coord");
                 var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(<%= pharm.lat %>, <%= pharm.lng %>),
+                    position: coord,
                     map: map,
                     title: '<%= pharm.name %>'
                 });
-            } else {
-                result = 'green';
             }
         <% end %>
     }
