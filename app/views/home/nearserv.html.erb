@@ -8,6 +8,7 @@
 
     var circle;
 
+    var infowindow = null;
     var markers = [];
 
     var intervall = window.setInterval(checkpos, 2000);
@@ -94,16 +95,25 @@
     function addMarker() {
         var bounds = circle.getBounds();
         var i = 0;
+        var marker;
         <% @pharms.each do |pharm| %>
             var coord = new google.maps.LatLng(<%= pharm.lat %>, <%= pharm.lng %>);
             if( bounds.contains(coord) ) {
                 var icon = '/assets/marker/pharm.png';
-                var marker = new google.maps.Marker({
+                marker = new google.maps.Marker({
                     position: coord,
                     map: map,
                     icon: icon,
                     title: '<%= pharm.name %>'
                 });
+                infowindow = new google.maps.InfoWindow({
+                    content: '<span class="infowin"><%= pharm.name %></span>'
+                });
+
+                google.maps.event.addListener(marker, 'click', function () {
+                    infowindow.setContent('<span class="infowin"><%= pharm.name %></span>');
+                    infowindow.open(map, this);
+                 });
                 markers[i] = marker;
                 i++;
             }
@@ -124,7 +134,7 @@
 <div data-role="content">
 
   <div class="ui-bar ui-bar-c ui-corner-all ui-shadow">
-    <div id="map-canvas" style="width: 100%; height: 100%; min-height: 500px;" class="ui-corner-all ui-shadow"></div>
+    <div id="map-canvas" style="width: 100%; height: 100%; min-height: 450px;" class="ui-corner-all ui-shadow"></div>
   </div>
 
 </div>
