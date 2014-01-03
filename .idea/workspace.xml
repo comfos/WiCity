@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pharms/show.html.erb" afterPath="$PROJECT_DIR$/app/views/pharms/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WiCity.iws" />
@@ -43,7 +42,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="21" selection-start="533" selection-end="533" vertical-scroll-proportion="0.502439" vertical-offset="185" max-vertical-offset="3349">
+            <state line="24" column="24" selection-start="558" selection-end="558" vertical-scroll-proportion="0.46614584" vertical-offset="229" max-vertical-offset="3349">
               <folding />
             </state>
           </provider>
@@ -709,7 +708,11 @@
       <created>1388760368273</created>
       <updated>1388760368273</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="UPDATE NearestServices: passaggio centro cerchio&#10;">
+      <created>1388762816156</created>
+      <updated>1388762816156</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1143,7 +1146,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="21" selection-start="533" selection-end="533" vertical-scroll-proportion="0.502439" vertical-offset="185" max-vertical-offset="3349">
+        <state line="24" column="24" selection-start="558" selection-end="558" vertical-scroll-proportion="0.46614584" vertical-offset="229" max-vertical-offset="3349">
           <folding />
         </state>
       </provider>
