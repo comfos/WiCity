@@ -21,7 +21,6 @@
 
     function preinit() {
         mypos = "<%= params[:coord] %>";
-        alert(mypos);
         if(mypos == 0) {
             if(navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(position) {
