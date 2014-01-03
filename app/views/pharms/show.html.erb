@@ -20,16 +20,19 @@
     }
 
     function preinit() {
-        if(navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(function(position) {
-                mypos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-                window.clearInterval(intervall);
-                //initialize();
-            }, function() {
-                handleNoGeolocation(true);
-            });
-        } else {
-            handleNoGeolocation(false);
+        mypos = "<%= params[:coord] %>";
+        if(mypos == 0) {
+            if(navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    mypos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                    window.clearInterval(intervall);
+                    //initialize();
+                }, function() {
+                    handleNoGeolocation(true);
+                });
+            } else {
+                handleNoGeolocation(false);
+            }
         }
     }
 

@@ -136,12 +136,13 @@
                         map: map,
                         icon: icon,
                         title: '<%= pharm.name %>'
-                    });
+                        });
                     infowindow = new google.maps.InfoWindow({
-                        content: '<span class="infowin"><%= pharm.name %></span>'
+                            content: '<span class="infowin"><%= pharm.name %></span>'
                     });
                     google.maps.event.addListener(marker, 'click', function () {
-                        infowindow.setContent('<span class="infowin"><%= pharm.name %></span>');
+                        infowindow.setContent('<a href="<%= "#{pharms_url}/#{pharm.id}" %>?coord='+mypos+'" target="_parent"><%= pharm.name %></a>');
+                        //infowindow.setContent('<%= link_to pharm.name, "#{pharms_url}/#{pharm.id}", :target => '_parent', :coord => 'ciao' %>');
                         infowindow.open(map, this);
                     });
                     markers_pharms[i] = marker;
