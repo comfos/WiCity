@@ -44,7 +44,15 @@
             preinit();
     }
 
+    function updateRadius(circle, rad){
+        circle.setRadius(rad*1);
+        removeMarker();
+        clearClusters();
+        addMarker();
+    }
+
     function preinit() {
+
         if(navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function(position) {
                 mypos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
@@ -104,6 +112,10 @@
             radius: 1000
         });
         circle.bindTo('center', markerCenter, 'position');
+
+        $("#slider").on( 'slidestop', function( event, ui ) {
+            updateRadius(circle, $("#slider").val());
+        });
 
         google.maps.event.addListener(markerCenter, 'dragend', function() {
             mypos = new google.maps.LatLng(markerCenter.position.lat(), markerCenter.position.lng());
@@ -193,6 +205,8 @@
 <div data-role="content">
 
   <a href="#" id="pharm"><img src="assets/marker/pharm.png"/></a>
+
+  <input name="slider" id="slider" min="100" max="5000" value="1000" data-popup-enabled="true" type="range">
 
   <div class="ui-bar ui-bar-c ui-corner-all ui-shadow" style="padding: 2px">
     <div id="map-canvas" style="height: 100%; min-height: 450px;" class="ui-corner-all ui-shadow"></div>
