@@ -112,6 +112,10 @@
             });
             attachInstructionText(marker, myRoute.steps[i].instructions);
             markerArray[i] = marker;
+
+            google.maps.event.addListener(marker, "dblclick", function (e) {
+                location.href='../nearserv?lat='+e.latLng.lat()+'&lng='+e.latLng.lng();
+            });
         }
     }
 
