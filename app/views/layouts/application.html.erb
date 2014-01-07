@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
   <title>WiCity</title>
   <!-- <#%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %> -->
@@ -24,10 +24,15 @@
 
 <body>
 
-<!-- <p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p> -->
-
 <div data-role="page">
+
+  <!-- <#%- if !notice.nil? -%>
+      <p class="notice"><#%= notice %></p>
+  <#%- end -%>
+  <#%- if !alert.nil? -%>
+      <p class="alert"><#%= alert %></p>
+  <#%- end -%> -->
+
   <%= yield %>
 
   <% if request.original_url.start_with?(pharms_url) %>
@@ -37,6 +42,28 @@
   <% end %>
 
         <h2>KMetropolis Project</h2>
+        <% if user_signed_in? %>
+            <%= link_to "Hi #{current_user.name}, Logout", destroy_user_session_path, method: :delete, 'data-icon' => 'delete', 'class' => 'ui-btn-right', 'target' => '_parent' %>
+        <% end %>
+      </div>
+
+
+
+      <div data-role="popup" id="popupLogin" data-overlay-theme="b" data-dismissible="true" style="width:100%; height: 100%">
+        <div data-role="header" data-theme="a">
+          <h1>Login</h1>
+        </div>
+        <div role="main" class="ui-content">
+          <p><%= form_for('user', :url => user_session_path, :html => { :target => '_parent' }) do |f| %>
+                <%= f.text_field :email, 'placeholder' => 'Email' %>
+                <%= f.password_field :password, 'placeholder' => 'Password' %>
+                <%= f.submit 'Sign in' %>
+                <%= f.check_box :remember_me %>
+                <%= f.label :remember_me %>
+                <%= link_to 'Forgot your password?', new_password_path('user') %></br>
+                <%= link_to 'Sign up', new_registration_path('user'), :target => '_parent' %>
+            <% end %></p>
+        </div>
       </div>
 
 </div>

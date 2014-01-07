@@ -1,11 +1,15 @@
 WiCity::Application.routes.draw do
 
+  devise_for :users
+
   resources :pharms
 
   root 'home#index'
 
   get '/intloc', to: 'home#intloc'
   get '/nearserv', to: 'home#nearserv'
+
+  get '/users/sign_in', to: 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

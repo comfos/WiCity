@@ -1,6 +1,8 @@
 class PharmsController < ApplicationController
   before_action :set_pharm, only: [:show, :edit, :update, :destroy]
 
+  before_filter :authenticate_user!, :except => [:show, :index]
+
   # GET /pharms
   # GET /pharms.json
   def index

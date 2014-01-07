@@ -1,20 +1,28 @@
 <div data-role="header">
   <h1>WiCity</h1>
   <%= link_to 'Credits', '#popupDialog', 'data-icon' => 'gear', 'class' => 'ui-btn-right ui-corner-all ui-shadow ui-btn-inline ui-icon-delete ui-btn-icon-left', 'data-rel' => 'popup', 'data-position-to' => 'window', 'data-transition' => 'pop' %>
-</div>
 
+  <!--<#%= link_to 'Login', new_user_session_path, 'data-icon' => 'back', 'class' => 'ui-btn-left' %>-->
+  <% if !user_signed_in? %>
+      <%= link_to 'Login', '#popupLogin', 'data-icon' => 'user', 'class' => 'ui-btn-left ui-corner-all ui-shadow ui-btn-inline ui-icon-delete ui-btn-icon-left', 'data-rel' => 'popup', 'data-position-to' => 'window', 'data-transition' => 'pop' %>
+  <% else %>
+      <!-- <#%= link_to "Welcome #{current_user.name}, Logout", destroy_user_session_path, method: :delete, 'data-icon' => 'delete', 'class' => 'ui-btn-left', 'target' => '_parent' %> -->
+      <%= link_to "Edit #{current_user.name}", edit_user_registration_path, 'data-icon' => 'user', 'class' => 'ui-btn-left', 'target' => '_parent' %>
+  <% end %>
+
+</div>
 
 <div data-role="content" style="position: absolute; top: 50%; width: 100%; margin-top: -5em;">
 
   <div class="ui-grid-b" style="margin-right: 2em">
     <div class="ui-block-a">
-      <a href="intloc" style="text-decoration: none">
+      <a href="<%= root_url %>intloc" style="text-decoration: none">
         <button class="ui-shadow ui-btn ui-corner-all">Interest Locations</button>
       </a>
     </div>
 
     <div class="ui-block-b">
-      <a href="nearserv" style="text-decoration: none" target="_parent">
+      <a href="<%= root_url %>nearserv" style="text-decoration: none" target="_parent">
         <button class="ui-shadow ui-btn ui-corner-all">Nearest Services</button>
       </a>
     </div>

@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+<script>
+    $(function() {
+        $( '#datepicker' ).datepicker( { dateFormat: "dd/mm/yy" } );
+    });
+</script>
+
+<div data-role="header">
+  <h1>SignUp</h1>
+  <%= link_to 'Home', root_url, 'data-icon' => 'home', 'data-role' => 'button', 'target' => '_parent' %>
+</div>
+
+<div data-role="content">
+
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :target => '_parent' } ) do |f| %>
+      <%= devise_error_messages! %>
+
+      <div><%= f.email_field :email, :autofocus => true, 'placeholder' => 'Email' %></div>
+
+      <br />
+
+      <div class="ui-grid-a ui-responsive">
+        <div class="ui-block-a">
+          <%= f.text_field :name, 'placeholder' => 'Name' %>
+        </div>
+        <div class="ui-block-b">
+          <%= f.text_field :surname, 'placeholder' => 'Surname' %>
+        </div>
+      </div>
+
+      <br />
+
+      <div><%= f.text_field :born, 'id'=> 'datepicker', 'placeholder' => 'Born on' %></div>
+
+      <br />
+
+      <div class="ui-grid-a ui-responsive">
+        <div class="ui-block-a">
+          <%= f.password_field :password, 'placeholder' => 'Password' %>
+        </div>
+        <div class="ui-block-b">
+          <%= f.password_field :password_confirmation, 'placeholder' => 'Confirm Password' %>
+        </div>
+      </div>
+
+      <br />
+
+      <div><%= f.submit "Sign up" %></div>
+
+    <% end %>
+
+</div>

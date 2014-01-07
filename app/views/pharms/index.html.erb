@@ -2,7 +2,7 @@
   <h1>Listing pharms</h1>
   <div class="ui-btn-left" data-role="controlgroup" data-type="horizontal">
     <%= link_to 'Back', 'intloc', 'data-icon' => 'back', 'data-role' => 'button' %>
-    <%= link_to 'Home', root_url, 'data-icon' => 'home', 'data-role' => 'button', 'data-iconpos' => 'right' %>
+    <%= link_to 'Home', root_url, 'data-icon' => 'home', 'data-role' => 'button', 'data-iconpos' => 'right', :target => '_parent' %>
   </div>
   <%= link_to 'Add', new_pharm_path, 'data-icon' => 'plus', 'class' => 'ui-btn-right', :target => '_parent' %>
 </div>
