@@ -30,6 +30,8 @@
     var geocoder;
     var mypos = 0;
 
+    var check = 0;
+
     var circle;
 
     var infowindow = null;
@@ -40,6 +42,7 @@
     var intervall = window.setInterval(checkpos, 2000);
 
     function checkpos() {
+        check++;
         if(mypos == 0)
             preinit();
     }
@@ -58,16 +61,21 @@
             mypos = new google.maps.LatLng(lat, lng);
         }
         else {
-            if(navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function(position) {
-                    mypos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-                    window.clearInterval(intervall);
-                    //initialize();
-                }, function() {
-                    handleNoGeolocation(true);
-                });
-            } else {
-                handleNoGeolocation(false);
+            if(check > 5) {
+                initialize();
+            }
+            else {
+                if(navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        mypos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                        window.clearInterval(intervall);
+                        //initialize();
+                    }, function() {
+                        handleNoGeolocation(true);
+                    });
+                } else {
+                    handleNoGeolocation(false);
+                }
             }
         }
     }
@@ -178,8 +186,8 @@
         markerClusterer_pharm.clearMarkers();
     }
 
-    google.maps.event.addDomListener(window, 'load', preinit);
-    google.maps.event.addDomListener(window, 'load', initialize);
+    //google.maps.event.addDomListener(window, 'load', preinit);
+    //google.maps.event.addDomListener(window, 'load', initialize);
 
     function choice() {
         var pharm = document.getElementById("pharm");
