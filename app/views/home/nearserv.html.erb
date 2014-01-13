@@ -54,9 +54,10 @@
     function preinit() {
         var lat = "<%= params[:lat] %>";
         var lng = "<%= params[:lng] %>";
-        mypos = new google.maps.LatLng(lat, lng);
-        if(!lat) {
-            mypos = 0;
+        if(lat) {
+            mypos = new google.maps.LatLng(lat, lng);
+        }
+        else {
             if(navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(position) {
                     mypos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
