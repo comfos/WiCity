@@ -39,7 +39,7 @@
 
     var markerClusterer_pharm = null;
 
-    var intervall = window.setInterval(checkpos, 3000);
+    var intervall = window.setInterval(checkpos, 1000);
 
     function checkpos() {
         if(mypos == 0) {
@@ -59,10 +59,12 @@
         var lat = "<%= params[:lat] %>";
         var lng = "<%= params[:lng] %>";
         if(lat) {
+            alert("lat");
             mypos = new google.maps.LatLng(lat, lng);
         }
         else {
             if(check > 5) {
+                alert("check");
                 initialize();
             }
             else {
@@ -70,6 +72,7 @@
                     navigator.geolocation.getCurrentPosition(function(position) {
                         mypos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
                         window.clearInterval(intervall);
+                        alert("init");
                         initialize();
                     }, function() {
                         handleNoGeolocation(true);
@@ -95,6 +98,7 @@
         geocoder = new google.maps.Geocoder();
 
         if(mypos == 0) {
+            alert("mypos null");
             mypos = new google.maps.LatLng(37.508059, 375.082752);
         }
 
