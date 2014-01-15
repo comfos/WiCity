@@ -60,6 +60,8 @@
         var lng = "<%= params[:lng] %>";
         if(lat) {
             mypos = new google.maps.LatLng(lat, lng);
+            window.clearInterval(intervall);
+            initialize();
         }
         else {
             if(check > 5) {

@@ -53,7 +53,7 @@
       <file leaf-file-name="nearserv.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="17" selection-start="1445" selection-end="1445" vertical-scroll-proportion="1.1112804" vertical-offset="291" max-vertical-offset="3995">
+            <state line="63" column="25" selection-start="1570" selection-end="1570" vertical-scroll-proportion="0.64481705" vertical-offset="648" max-vertical-offset="4029">
               <folding />
             </state>
           </provider>
@@ -62,7 +62,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="58" selection-start="3175" selection-end="3175" vertical-scroll-proportion="-12.5" vertical-offset="1341" max-vertical-offset="3451">
+            <state line="98" column="58" selection-start="3175" selection-end="3175" vertical-scroll-proportion="-63.5" vertical-offset="15" max-vertical-offset="3451">
               <folding />
             </state>
           </provider>
@@ -781,7 +781,11 @@
       <created>1389788263204</created>
       <updated>1389788263204</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="BUGFIX NearestService&#10;">
+      <created>1389808027813</created>
+      <updated>1389808027813</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -864,9 +868,9 @@
     <MESSAGE value="ADD Sistema di Registrazione" />
     <MESSAGE value="ADD Sistema di Registrazione&#10;" />
     <MESSAGE value="BUGFIX NearestService" />
-    <MESSAGE value="BUGFIX NearestService&#10;" />
     <MESSAGE value="DEBUG BUGFIX NearestService&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="DEBUG BUGFIX NearestService&#10;" />
+    <MESSAGE value="BUGFIX NearestService&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="BUGFIX NearestService&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1147,14 +1151,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="58" selection-start="3175" selection-end="3175" vertical-scroll-proportion="-12.5" vertical-offset="1341" max-vertical-offset="3451">
+        <state line="98" column="58" selection-start="3175" selection-end="3175" vertical-scroll-proportion="-63.5" vertical-offset="15" max-vertical-offset="3451">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="17" selection-start="1445" selection-end="1445" vertical-scroll-proportion="1.1112804" vertical-offset="291" max-vertical-offset="3995">
+        <state line="63" column="25" selection-start="1570" selection-end="1570" vertical-scroll-proportion="0.64481705" vertical-offset="648" max-vertical-offset="4029">
           <folding />
         </state>
       </provider>
