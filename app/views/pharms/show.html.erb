@@ -46,7 +46,7 @@
 
     function initialize() {
         geocoder = new google.maps.Geocoder();
-        directionsDisplay = new google.maps.DirectionsRenderer();
+        directionsDisplay = new google.maps.DirectionsRenderer({suppressMarkers: true});
 
         var mapOptions = {
             center: new google.maps.LatLng(-34.397, 150.644),
@@ -75,6 +75,9 @@
                     map: map,
                     position: results[0].geometry.location,
                     icon: icon
+                });
+                google.maps.event.addListener(marker, "dblclick", function (e) {
+                    location.href='../nearserv?lat='+e.latLng.lat()+'&lng='+e.latLng.lng();
                 });
             } else {
                 alert("Geocode was not successful for the following reason: " + status);
