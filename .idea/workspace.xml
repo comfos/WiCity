@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pharms/_form_edit.html.erb" afterPath="$PROJECT_DIR$/app/views/pharms/_form_edit.html.erb" />
+    <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="UPDATE Edit Pharm&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/intloc.html.erb" afterPath="$PROJECT_DIR$/app/views/home/intloc.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WiCity.iws" />
@@ -62,7 +62,16 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="0" selection-start="3461" selection-end="3461" vertical-scroll-proportion="-10.115385" vertical-offset="1539" max-vertical-offset="3502">
+            <state line="78" column="63" selection-start="2576" selection-end="2584" vertical-scroll-proportion="-25.5" vertical-offset="0" max-vertical-offset="3502">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="intloc.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="72" selection-start="714" selection-end="714" vertical-scroll-proportion="0.29166666" vertical-offset="168" max-vertical-offset="1088">
               <folding />
             </state>
           </provider>
@@ -71,16 +80,16 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="10" selection-start="1601" selection-end="1601" vertical-scroll-proportion="-9.153846" vertical-offset="204" max-vertical-offset="1088">
+            <state line="26" column="10" selection-start="1601" selection-end="1601" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1088">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form_edit.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_form_edit.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/pharms/_form_edit.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="66" selection-start="997" selection-end="997" vertical-scroll-proportion="0.6636569" vertical-offset="165" max-vertical-offset="1496">
+            <state line="27" column="68" selection-start="999" selection-end="1005" vertical-scroll-proportion="-11.307693" vertical-offset="165" max-vertical-offset="1496">
               <folding />
             </state>
           </provider>
@@ -89,10 +98,8 @@
       <file leaf-file-name="_form_new.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/pharms/_form_new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="75" selection-start="862" selection-end="867" vertical-scroll-proportion="-4.9615383" vertical-offset="228" max-vertical-offset="1462">
-              <folding>
-                <element signature="n#style#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="21" column="75" selection-start="862" selection-end="867" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1462">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -134,7 +141,6 @@
         <option value="$PROJECT_DIR$/app/views/pharms/edit.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/pharms/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/home/intloc.html.erb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
@@ -151,6 +157,7 @@
         <option value="$PROJECT_DIR$/app/views/pharms/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/pharms/_form_edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/intloc.html.erb" />
       </list>
     </option>
   </component>
@@ -193,7 +200,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -309,10 +315,29 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WiCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WiCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -818,7 +843,11 @@
       <created>1390064581904</created>
       <updated>1390064581904</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="UPDATE Edit Pharm&#10;">
+      <created>1390066502150</created>
+      <updated>1390066502151</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -845,25 +874,25 @@
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32038835" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29589218" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29525033" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3592233" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28432733" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28432733" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3259362" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32780084" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -878,7 +907,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Test&#10;" />
     <MESSAGE value="Prova Commit" />
     <MESSAGE value="Prova Commit&#10;" />
     <MESSAGE value="Change button Interest Locations" />
@@ -903,7 +931,8 @@
     <MESSAGE value="BUGFIX NearestService&#10;" />
     <MESSAGE value="ADD ShowPharm: NearService pharm icon&#10;" />
     <MESSAGE value="EDIT index&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="EDIT index&#10;" />
+    <MESSAGE value="UPDATE Edit Pharm&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE Edit Pharm&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1081,11 +1110,6 @@
         <state line="6" column="0" selection-start="263" selection-end="288" vertical-scroll-proportion="0.24757281" vertical-offset="0" max-vertical-offset="412" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="101" selection-start="156" selection-end="156" vertical-scroll-proportion="-0.041262135" vertical-offset="51" max-vertical-offset="1088" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/devise/shared/_links.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="70" selection-start="197" selection-end="265" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="527" />
@@ -1172,32 +1196,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="0" selection-start="3461" selection-end="3461" vertical-scroll-proportion="-10.115385" vertical-offset="1539" max-vertical-offset="3502">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="10" selection-start="1601" selection-end="1601" vertical-scroll-proportion="-9.153846" vertical-offset="204" max-vertical-offset="1088">
+        <state line="26" column="10" selection-start="1601" selection-end="1601" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1088">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pharms/_form_new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="75" selection-start="862" selection-end="867" vertical-scroll-proportion="-4.9615383" vertical-offset="228" max-vertical-offset="1462">
-          <folding>
-            <element signature="n#style#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="21" column="75" selection-start="862" selection-end="867" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1462">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pharms/_form_edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="66" selection-start="997" selection-end="997" vertical-scroll-proportion="0.6636569" vertical-offset="165" max-vertical-offset="1496">
+        <state line="27" column="68" selection-start="999" selection-end="1005" vertical-scroll-proportion="-11.307693" vertical-offset="165" max-vertical-offset="1496">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="63" selection-start="2576" selection-end="2584" vertical-scroll-proportion="-25.5" vertical-offset="0" max-vertical-offset="3502">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="72" selection-start="714" selection-end="714" vertical-scroll-proportion="0.29166666" vertical-offset="168" max-vertical-offset="1088">
           <folding />
         </state>
       </provider>
