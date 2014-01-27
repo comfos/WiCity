@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="UPDATE Edit Pharm&#10;">
+    <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/intloc.html.erb" afterPath="$PROJECT_DIR$/app/views/home/intloc.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -44,7 +44,7 @@
       <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="92" selection-start="2249" selection-end="2269" vertical-scroll-proportion="0.0" vertical-offset="634" max-vertical-offset="1326">
+            <state line="19" column="50" selection-start="1008" selection-end="1008" vertical-scroll-proportion="-11.615385" vertical-offset="21" max-vertical-offset="1326">
               <folding />
             </state>
           </provider>
@@ -62,7 +62,16 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="63" selection-start="2576" selection-end="2584" vertical-scroll-proportion="-25.5" vertical-offset="0" max-vertical-offset="3502">
+            <state line="170" column="8" selection-start="5434" selection-end="5434" vertical-scroll-proportion="-5.9615383" vertical-offset="2580" max-vertical-offset="3502">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="129" selection-start="355" selection-end="355" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="493">
               <folding />
             </state>
           </provider>
@@ -71,7 +80,7 @@
       <file leaf-file-name="intloc.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="72" selection-start="714" selection-end="714" vertical-scroll-proportion="0.29166666" vertical-offset="168" max-vertical-offset="1088">
+            <state line="50" column="99" selection-start="1747" selection-end="1747" vertical-scroll-proportion="0.7808642" vertical-offset="344" max-vertical-offset="1088">
               <folding />
             </state>
           </provider>
@@ -255,6 +264,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -847,7 +860,11 @@
       <created>1390066502150</created>
       <updated>1390066502151</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="UPDATE InterestLocation">
+      <created>1390817191944</created>
+      <updated>1390817191944</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -874,6 +891,7 @@
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32038835" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -889,7 +907,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32780084" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -907,7 +924,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Prova Commit" />
     <MESSAGE value="Prova Commit&#10;" />
     <MESSAGE value="Change button Interest Locations" />
     <MESSAGE value="Change button Interest Locations&#10;" />
@@ -932,7 +948,8 @@
     <MESSAGE value="ADD ShowPharm: NearService pharm icon&#10;" />
     <MESSAGE value="EDIT index&#10;" />
     <MESSAGE value="UPDATE Edit Pharm&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE Edit Pharm&#10;" />
+    <MESSAGE value="UPDATE InterestLocation" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE InterestLocation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1100,11 +1117,6 @@
         <state line="0" column="38" selection-start="38" selection-end="38" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="204" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="129" selection-start="355" selection-end="355" vertical-scroll-proportion="0.16504854" vertical-offset="0" max-vertical-offset="493" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pharms/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="0" selection-start="263" selection-end="288" vertical-scroll-proportion="0.24757281" vertical-offset="0" max-vertical-offset="412" />
@@ -1182,13 +1194,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="92" selection-start="2249" selection-end="2269" vertical-scroll-proportion="0.0" vertical-offset="634" max-vertical-offset="1326">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="63" column="25" selection-start="1570" selection-end="1570" vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="4029">
@@ -1219,14 +1224,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="63" selection-start="2576" selection-end="2584" vertical-scroll-proportion="-25.5" vertical-offset="0" max-vertical-offset="3502">
+        <state line="170" column="8" selection-start="5434" selection-end="5434" vertical-scroll-proportion="-5.9615383" vertical-offset="2580" max-vertical-offset="3502">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="129" selection-start="355" selection-end="355" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="493">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="50" selection-start="1008" selection-end="1008" vertical-scroll-proportion="-11.615385" vertical-offset="21" max-vertical-offset="1326">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="72" selection-start="714" selection-end="714" vertical-scroll-proportion="0.29166666" vertical-offset="168" max-vertical-offset="1088">
+        <state line="50" column="99" selection-start="1747" selection-end="1747" vertical-scroll-proportion="0.7808642" vertical-offset="344" max-vertical-offset="1088">
           <folding />
         </state>
       </provider>
