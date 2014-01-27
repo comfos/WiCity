@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/intloc.html.erb" afterPath="$PROJECT_DIR$/app/views/home/intloc.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pharms/index.html.erb" afterPath="$PROJECT_DIR$/app/views/pharms/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WiCity.iws" />
@@ -68,19 +68,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="129" selection-start="355" selection-end="355" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="493">
+            <state line="6" column="15" selection-start="375" selection-end="375" vertical-scroll-proportion="0.1574074" vertical-offset="0" max-vertical-offset="648">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="intloc.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="intloc.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="99" selection-start="1747" selection-end="1747" vertical-scroll-proportion="0.7808642" vertical-offset="344" max-vertical-offset="1088">
+            <state line="50" column="99" selection-start="1747" selection-end="1747" vertical-scroll-proportion="-19.461538" vertical-offset="344" max-vertical-offset="1088">
               <folding />
             </state>
           </provider>
@@ -149,7 +149,6 @@
         <option value="$PROJECT_DIR$/app/views/pharms/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/pharms/edit.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/views/pharms/index.html.erb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
@@ -167,6 +166,7 @@
         <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/pharms/_form_edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/intloc.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/pharms/index.html.erb" />
       </list>
     </option>
   </component>
@@ -864,7 +864,11 @@
       <created>1390817191944</created>
       <updated>1390817191944</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="UPDATE InterestLocation&#10;">
+      <created>1390818992736</created>
+      <updated>1390818992736</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -924,7 +928,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Prova Commit&#10;" />
     <MESSAGE value="Change button Interest Locations" />
     <MESSAGE value="Change button Interest Locations&#10;" />
     <MESSAGE value="Change button RT Traffic Information&#10;" />
@@ -949,7 +952,8 @@
     <MESSAGE value="EDIT index&#10;" />
     <MESSAGE value="UPDATE Edit Pharm&#10;" />
     <MESSAGE value="UPDATE InterestLocation" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE InterestLocation" />
+    <MESSAGE value="UPDATE InterestLocation&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE InterestLocation&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1229,13 +1233,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="129" selection-start="355" selection-end="355" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="493">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="50" selection-start="1008" selection-end="1008" vertical-scroll-proportion="-11.615385" vertical-offset="21" max-vertical-offset="1326">
@@ -1245,7 +1242,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="99" selection-start="1747" selection-end="1747" vertical-scroll-proportion="0.7808642" vertical-offset="344" max-vertical-offset="1088">
+        <state line="50" column="99" selection-start="1747" selection-end="1747" vertical-scroll-proportion="-19.461538" vertical-offset="344" max-vertical-offset="1088">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="15" selection-start="375" selection-end="375" vertical-scroll-proportion="0.1574074" vertical-offset="0" max-vertical-offset="648">
           <folding />
         </state>
       </provider>
