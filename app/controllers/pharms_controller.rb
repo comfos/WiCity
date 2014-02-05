@@ -71,6 +71,6 @@ class PharmsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pharm_params
-      params.require(:pharm).permit(:name, :address, :lat, :lng, :coord)
+      params.require(:pharm).permit(:name, :address, :lat, :lng, :coord, :LM, :LP, :MM, :MP, :MEM, :MEP, :GM, :GP, :VM, :VP, :SM, :SP, :DM, :DP, :call)
     end
 end

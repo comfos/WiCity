@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140106172016) do
+ActiveRecord::Schema.define(version: 20140202115054) do
 
   create_table "pharms", force: true do |t|
     t.string   "name"
@@ -20,6 +20,21 @@ ActiveRecord::Schema.define(version: 20140106172016) do
     t.string   "lng"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "LM"
+    t.string   "LP"
+    t.string   "MM"
+    t.string   "MP"
+    t.string   "MEM"
+    t.string   "MEP"
+    t.string   "GM"
+    t.string   "GP"
+    t.string   "VM"
+    t.string   "VP"
+    t.string   "SM"
+    t.string   "SP"
+    t.string   "DM"
+    t.string   "DP"
+    t.boolean  "call"
   end
 
   create_table "users", force: true do |t|
@@ -37,7 +52,7 @@ ActiveRecord::Schema.define(version: 20140106172016) do
     t.datetime "updated_at"
     t.string   "name"
     t.string   "surname"
-    t.date "born"
+    t.date     "born"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
