@@ -13,7 +13,11 @@
     <% @pharms.each do |pharm| %>
         <li>
           <a href="<%= "#{pharms_url}/#{pharm.id}" %>" target="_parent">
-            <img src="/assets/icon/pharm.png">
+            <% if pharm.call %>
+              <img src="/assets/icon/cpharm.png">
+            <% else %>
+              <img src="/assets/icon/pharm.png">
+            <% end %>
             <h2><%= pharm.name %></h2>
             <p><%= pharm.address %></p>
             <%= link_to 'Edit', edit_pharm_path(pharm), 'data-icon' => 'edit', :target => '_parent' %>
