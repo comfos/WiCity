@@ -13,11 +13,102 @@
     <% @pharms.each do |pharm| %>
         <li>
           <a href="<%= "#{pharms_url}/#{pharm.id}" %>" target="_parent">
-            <% if pharm.call %>
-              <img src="/assets/icon/cpharm.png">
-            <% else %>
-              <img src="/assets/icon/pharm.png">
-            <% end %>
+
+            <% puts @today
+
+               if (@today == '1') # LUNEDì
+                 puts "LUNEDì"
+                 if (Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (pharm.LM.split(' - ')[0]).split(':')[0], (pharm.LM.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (pharm.LM.split(' - ')[1]).split(':')[0], (pharm.LM.split(' - ')[1]).split(':')[1]).to_i,
+                    ) === @t.to_i || Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (pharm.LP.split(' - ')[0]).split(':')[0], (pharm.LP.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (pharm.LP.split(' - ')[1]).split(':')[0], (pharm.LP.split(' - ')[1]).split(':')[1]).to_i,
+                    ) === @t.to_i) %>
+                   <img src="/assets/icon/openpharm.png">
+            <%   else %>
+                    <img src="/assets/icon/closepharm.png">
+            <%   end
+               end
+               if (@today == '2') # MARTEDì
+                 puts "MARTEDì"
+                 if(Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (pharm.MM.split(' - ')[0]).split(':')[0], (pharm.MM.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (pharm.MM.split(' - ')[1]).split(':')[0], (pharm.MM.split(' - ')[1]).split(':')[1]).to_i,
+                    ) === @t.to_i || Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (pharm.MP.split(' - ')[0]).split(':')[0], (pharm.MP.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (pharm.MP.split(' - ')[1]).split(':')[0], (pharm.MP.split(' - ')[1]).split(':')[1]).to_i,
+                    ) === @t.to_i) %>
+                   <img src="/assets/icon/openpharm.png">
+            <%   else %>
+                    <img src="/assets/icon/closepharm.png">
+            <%   end
+               end
+               if (@today == '3') # MERCOLEDì
+                 puts "MERCOLEDì"
+                 if(Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (pharm.MEM.split(' - ')[0]).split(':')[0], (pharm.MEM.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (pharm.MEM.split(' - ')[1]).split(':')[0], (pharm.MEM.split(' - ')[1]).split(':')[1]).to_i,
+                       ) === @t.to_i || Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (pharm.MEP.split(' - ')[0]).split(':')[0], (pharm.MEP.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (pharm.MEP.split(' - ')[1]).split(':')[0], (pharm.MEP.split(' - ')[1]).split(':')[1]).to_i,
+                       ) === @t.to_i) %>
+                    <img src="/assets/icon/openpharm.png">
+            <%   else %>
+                    <img src="/assets/icon/closepharm.png">
+            <%   end
+               end
+               if (@today == '4') # GIOVEDì
+                 puts "GIOVEDì"
+                 if(Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (pharm.GM.split(' - ')[0]).split(':')[0], (pharm.GM.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (pharm.GM.split(' - ')[1]).split(':')[0], (pharm.GM.split(' - ')[1]).split(':')[1]).to_i,
+                       ) === @t.to_i || Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (pharm.GP.split(' - ')[0]).split(':')[0], (pharm.GP.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (pharm.GP.split(' - ')[1]).split(':')[0], (pharm.GP.split(' - ')[1]).split(':')[1]).to_i,
+                       ) === @t.to_i) %>
+                    <img src="/assets/icon/openpharm.png">
+            <%   else %>
+                    <img src="/assets/icon/closepharm.png">
+            <%   end
+               end
+               if (@today == '5') # VENERDì
+                 puts "VENERDì"
+                 if(Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (pharm.VM.split(' - ')[0]).split(':')[0], (pharm.VM.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (pharm.VM.split(' - ')[1]).split(':')[0], (pharm.VM.split(' - ')[1]).split(':')[1]).to_i,
+                       ) === @t.to_i || Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (pharm.VP.split(' - ')[0]).split(':')[0], (pharm.VP.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (pharm.VP.split(' - ')[1]).split(':')[0], (pharm.VP.split(' - ')[1]).split(':')[1]).to_i,
+                       ) === @t.to_i) %>
+                    <img src="/assets/icon/openpharm.png">
+            <%   end
+               end
+               if (@today == '6') # SABATO
+                 puts "SABATO"
+                 if(Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (pharm.SM.split(' - ')[0]).split(':')[0], (pharm.SM.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (pharm.SM.split(' - ')[1]).split(':')[0], (pharm.SM.split(' - ')[1]).split(':')[1]).to_i,
+                       ) === @t.to_i || Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (pharm.SP.split(' - ')[0]).split(':')[0], (pharm.SP.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (pharm.SP.split(' - ')[1]).split(':')[0], (pharm.SP.split(' - ')[1]).split(':')[1]).to_i,
+                       ) === @t.to_i) %>
+                    <img src="/assets/icon/openpharm.png">
+            <%   end
+               end
+               if (@today == '7') # DOMENICA
+                 puts "DOMENICA"
+                 if(Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (pharm.DM.split(' - ')[0]).split(':')[0], (pharm.DM.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (pharm.DM.split(' - ')[1]).split(':')[0], (pharm.DM.split(' - ')[1]).split(':')[1]).to_i,
+                       ) === @t.to_i || Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (pharm.DP.split(' - ')[0]).split(':')[0], (pharm.DP.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (pharm.DP.split(' - ')[1]).split(':')[0], (pharm.DP.split(' - ')[1]).split(':')[1]).to_i,
+                       ) === @t.to_i) %>
+                    <img src="/assets/icon/openpharm.png">
+            <%   end
+               end %>
+
             <h2><%= pharm.name %></h2>
             <p><%= pharm.address %></p>
             <%= link_to 'Edit', edit_pharm_path(pharm), 'data-icon' => 'edit', :target => '_parent' %>

@@ -6,6 +6,9 @@ class PharmsController < ApplicationController
   # GET /pharms
   # GET /pharms.json
   def index
+    @today = Time.now.strftime("%u").downcase  # => lun = 1, mar = 2, mer = 3
+    @t = Time.now
+
     @pharms = Pharm.all
   end
 
