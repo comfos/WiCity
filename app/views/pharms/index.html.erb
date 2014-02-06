@@ -14,9 +14,7 @@
         <li>
           <a href="<%= "#{pharms_url}/#{pharm.id}" %>" target="_parent">
 
-            <% puts @today
-
-               if (@today == '1') # LUNEDì
+            <% if (@today == '1') # LUNEDì
                  puts "LUNEDì"
                  if (Range.new(
                          Time.local(@t.year, @t.month, @t.day, (pharm.LM.split(' - ')[0]).split(':')[0], (pharm.LM.split(' - ')[0]).split(':')[1]).to_i,
@@ -24,10 +22,15 @@
                     ) === @t.to_i || Range.new(
                          Time.local(@t.year, @t.month, @t.day, (pharm.LP.split(' - ')[0]).split(':')[0], (pharm.LP.split(' - ')[0]).split(':')[1]).to_i,
                          Time.local(@t.year, @t.month, @t.day, (pharm.LP.split(' - ')[1]).split(':')[0], (pharm.LP.split(' - ')[1]).split(':')[1]).to_i,
-                    ) === @t.to_i) %>
-                   <img src="/assets/icon/openpharm.png">
-            <%   else %>
-                    <img src="/assets/icon/closepharm.png">
+                    ) === @t.to_i)
+
+                    if pharm.call %>
+                        <img src="/assets/icon/opencpharm.png">
+            <%      else %>
+                        <img src="/assets/icon/openpharm.png">
+            <%      end
+                 else %>
+                        <img src="/assets/icon/closepharm.png">
             <%   end
                end
                if (@today == '2') # MARTEDì
@@ -38,10 +41,15 @@
                     ) === @t.to_i || Range.new(
                          Time.local(@t.year, @t.month, @t.day, (pharm.MP.split(' - ')[0]).split(':')[0], (pharm.MP.split(' - ')[0]).split(':')[1]).to_i,
                          Time.local(@t.year, @t.month, @t.day, (pharm.MP.split(' - ')[1]).split(':')[0], (pharm.MP.split(' - ')[1]).split(':')[1]).to_i,
-                    ) === @t.to_i) %>
-                   <img src="/assets/icon/openpharm.png">
-            <%   else %>
-                    <img src="/assets/icon/closepharm.png">
+                    ) === @t.to_i)
+
+                    if pharm.call %>
+                        <img src="/assets/icon/opencpharm.png">
+            <%      else %>
+                        <img src="/assets/icon/openpharm.png">
+            <%      end
+                 else %>
+                        <img src="/assets/icon/closepharm.png">
             <%   end
                end
                if (@today == '3') # MERCOLEDì
@@ -52,10 +60,15 @@
                        ) === @t.to_i || Range.new(
                          Time.local(@t.year, @t.month, @t.day, (pharm.MEP.split(' - ')[0]).split(':')[0], (pharm.MEP.split(' - ')[0]).split(':')[1]).to_i,
                          Time.local(@t.year, @t.month, @t.day, (pharm.MEP.split(' - ')[1]).split(':')[0], (pharm.MEP.split(' - ')[1]).split(':')[1]).to_i,
-                       ) === @t.to_i) %>
-                    <img src="/assets/icon/openpharm.png">
-            <%   else %>
-                    <img src="/assets/icon/closepharm.png">
+                       ) === @t.to_i)
+
+                    if pharm.call %>
+                        <img src="/assets/icon/opencpharm.png">
+            <%      else %>
+                        <img src="/assets/icon/openpharm.png">
+            <%      end
+                 else %>
+                        <img src="/assets/icon/closepharm.png">
             <%   end
                end
                if (@today == '4') # GIOVEDì
@@ -66,10 +79,15 @@
                        ) === @t.to_i || Range.new(
                          Time.local(@t.year, @t.month, @t.day, (pharm.GP.split(' - ')[0]).split(':')[0], (pharm.GP.split(' - ')[0]).split(':')[1]).to_i,
                          Time.local(@t.year, @t.month, @t.day, (pharm.GP.split(' - ')[1]).split(':')[0], (pharm.GP.split(' - ')[1]).split(':')[1]).to_i,
-                       ) === @t.to_i) %>
-                    <img src="/assets/icon/openpharm.png">
-            <%   else %>
-                    <img src="/assets/icon/closepharm.png">
+                       ) === @t.to_i)
+
+                   if pharm.call %>
+                        <img src="/assets/icon/opencpharm.png">
+            <%      else %>
+                        <img src="/assets/icon/openpharm.png">
+            <%      end
+                 else %>
+                        <img src="/assets/icon/closepharm.png">
             <%   end
                end
                if (@today == '5') # VENERDì
@@ -80,8 +98,15 @@
                        ) === @t.to_i || Range.new(
                          Time.local(@t.year, @t.month, @t.day, (pharm.VP.split(' - ')[0]).split(':')[0], (pharm.VP.split(' - ')[0]).split(':')[1]).to_i,
                          Time.local(@t.year, @t.month, @t.day, (pharm.VP.split(' - ')[1]).split(':')[0], (pharm.VP.split(' - ')[1]).split(':')[1]).to_i,
-                       ) === @t.to_i) %>
-                    <img src="/assets/icon/openpharm.png">
+                       ) === @t.to_i)
+
+                   if pharm.call %>
+                        <img src="/assets/icon/opencpharm.png">
+            <%      else %>
+                        <img src="/assets/icon/openpharm.png">
+            <%      end
+                 else %>
+                    <img src="/assets/icon/closepharm.png">
             <%   end
                end
                if (@today == '6') # SABATO
@@ -92,8 +117,15 @@
                        ) === @t.to_i || Range.new(
                          Time.local(@t.year, @t.month, @t.day, (pharm.SP.split(' - ')[0]).split(':')[0], (pharm.SP.split(' - ')[0]).split(':')[1]).to_i,
                          Time.local(@t.year, @t.month, @t.day, (pharm.SP.split(' - ')[1]).split(':')[0], (pharm.SP.split(' - ')[1]).split(':')[1]).to_i,
-                       ) === @t.to_i) %>
-                    <img src="/assets/icon/openpharm.png">
+                       ) === @t.to_i)
+
+                   if pharm.call %>
+                        <img src="/assets/icon/opencpharm.png">
+            <%     else %>
+                        <img src="/assets/icon/openpharm.png">
+            <%     end
+                 else %>
+                        <img src="/assets/icon/closepharm.png">
             <%   end
                end
                if (@today == '7') # DOMENICA
@@ -104,8 +136,15 @@
                        ) === @t.to_i || Range.new(
                          Time.local(@t.year, @t.month, @t.day, (pharm.DP.split(' - ')[0]).split(':')[0], (pharm.DP.split(' - ')[0]).split(':')[1]).to_i,
                          Time.local(@t.year, @t.month, @t.day, (pharm.DP.split(' - ')[1]).split(':')[0], (pharm.DP.split(' - ')[1]).split(':')[1]).to_i,
-                       ) === @t.to_i) %>
-                    <img src="/assets/icon/openpharm.png">
+                       ) === @t.to_i)
+
+                   if pharm.call %>
+                        <img src="/assets/icon/opencpharm.png">
+            <%     else %>
+                        <img src="/assets/icon/openpharm.png">
+            <%     end
+                 else %>
+                        <img src="/assets/icon/closepharm.png">
             <%   end
                end %>
 

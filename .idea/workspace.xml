@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/icon/opencpharm.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pharms/index.html.erb" afterPath="$PROJECT_DIR$/app/views/pharms/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/pharms_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/pharms_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WiCity.iws" />
@@ -36,7 +36,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="18" selection-start="7534" selection-end="7534" vertical-scroll-proportion="0.8718593" vertical-offset="1506" max-vertical-offset="2108">
+            <state line="146" column="17" selection-start="8778" selection-end="8778" vertical-scroll-proportion="0.8712121" vertical-offset="2137" max-vertical-offset="2771">
               <folding />
             </state>
           </provider>
@@ -407,11 +407,11 @@
       <recent name="C:\Users\Alfio\RubymineProjects\WiCity\app\views\layouts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Alfio\RubymineProjects\WiCity\app\assets\images\icon" />
       <recent name="C:\Users\Alfio\RubymineProjects\WiCity\app\assets\stylesheets" />
       <recent name="C:\Users\Alfio\RubymineProjects\WiCity\app\assets\themes\images\icons-png" />
       <recent name="C:\Users\Alfio\RubymineProjects\WiCity\app\assets\themes\images" />
       <recent name="C:\Users\Alfio\RubymineProjects\WiCity\app\assets\themes" />
-      <recent name="C:\Users\Alfio\RubymineProjects\WiCity\app\views\home" />
     </key>
   </component>
   <component name="RunManager" selected="Rails.Development: WiCity">
@@ -921,7 +921,11 @@
       <created>1391625422846</created>
       <updated>1391625422846</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="ADD Distinguere, tramite icona colorata, apertura/chiusura della farmacie in SHOWPharms">
+      <created>1391700929869</created>
+      <updated>1391700929870</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -948,6 +952,7 @@
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32038835" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -957,13 +962,12 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3592233" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28354082" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28432733" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3259362" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32732317" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -981,7 +985,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="ADDED Driving-Transit and Walking-Transit&#10;" />
     <MESSAGE value="REMOVE Transit&#10;" />
     <MESSAGE value="ADD auto resize for mobile" />
     <MESSAGE value="ADD Credits (da aggiornare)&#10;" />
@@ -1006,17 +1009,13 @@
     <MESSAGE value="UPDATE BUTTON Pharms&#10;" />
     <MESSAGE value="ADD tabelle orari  Pharms &#10;" />
     <MESSAGE value="ADD chiamata Pharms&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD chiamata Pharms&#10;" />
+    <MESSAGE value="ADD Distinguere, tramite icona colorata, apertura/chiusura della farmacie in SHOWPharms" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD Distinguere, tramite icona colorata, apertura/chiusura della farmacie in SHOWPharms" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="18" selection-start="70" selection-end="75" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="1139">
@@ -1284,9 +1283,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/icon/cpharm.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="18" selection-start="7534" selection-end="7534" vertical-scroll-proportion="0.8718593" vertical-offset="1506" max-vertical-offset="2108">
+        <state line="146" column="17" selection-start="8778" selection-end="8778" vertical-scroll-proportion="0.8712121" vertical-offset="2137" max-vertical-offset="2771">
           <folding />
         </state>
       </provider>
