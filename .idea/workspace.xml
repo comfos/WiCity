@@ -71,7 +71,7 @@
       <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="22" selection-start="83" selection-end="83" vertical-scroll-proportion="0.24285714" vertical-offset="0" max-vertical-offset="490">
+            <state line="8" column="20" selection-start="104" selection-end="104" vertical-scroll-proportion="0.27755103" vertical-offset="0" max-vertical-offset="490">
               <folding />
             </state>
           </provider>
@@ -975,7 +975,11 @@
       <created>1391762314311</created>
       <updated>1391762314311</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="UPDATE .gitignore&#10;">
+      <created>1391762460878</created>
+      <updated>1391762460878</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1346,7 +1350,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="22" selection-start="83" selection-end="83" vertical-scroll-proportion="0.24285714" vertical-offset="0" max-vertical-offset="490">
+        <state line="8" column="20" selection-start="104" selection-end="104" vertical-scroll-proportion="0.27755103" vertical-offset="0" max-vertical-offset="490">
           <folding />
         </state>
       </provider>

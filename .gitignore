@@ -6,3 +6,4 @@
 /public/system
 
 /config/environment.rb
+/config/database.yml
