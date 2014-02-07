@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environment.rb" afterPath="$PROJECT_DIR$/config/environment.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WiCity.iws" />
@@ -59,19 +60,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="environment.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="environment.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/environment.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="1" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+            <state line="12" column="18" selection-start="370" selection-end="370" vertical-scroll-proportion="0.41632652" vertical-offset="0" max-vertical-offset="490">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.yml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="780" selection-end="826" vertical-scroll-proportion="0.6183674" vertical-offset="258" max-vertical-offset="748">
+            <state line="8" column="22" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
               <folding />
             </state>
           </provider>
@@ -140,10 +141,10 @@
         <option value="$PROJECT_DIR$/app/views/pharms/_form_edit.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/pharms_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/pharms/_form_new.html.erb" />
-        <option value="$PROJECT_DIR$/config/environment.rb" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/views/pharms/index.html.erb" />
         <option value="$PROJECT_DIR$/config/database.yml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/config/environment.rb" />
       </list>
     </option>
   </component>
@@ -951,7 +952,15 @@
       <created>1391761357694</created>
       <updated>1391761357694</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="UPDATE .gitignore&#10;">
+      <created>1391761798966</created>
+      <updated>1391761798966</updated>
+    </task>
+    <task id="LOCAL-00075" summary="UPDATE .gitignore&#10;">
+      <created>1391761831784</created>
+      <updated>1391761831784</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1011,7 +1020,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="UPDATE Nearest Services&#10;" />
     <MESSAGE value="UPDATE ShowPharm: bottoni getdir e panel sulla stessa linea&#10;" />
     <MESSAGE value="UPDATE NearestServices: passaggio centro cerchio&#10;" />
     <MESSAGE value="UPDATE NearestServices: modifica raggio&#10;" />
@@ -1036,7 +1044,8 @@
     <MESSAGE value="UPDATE gitignore" />
     <MESSAGE value="UPDATE gitignore&#10;" />
     <MESSAGE value="UPDATE .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE .gitignore" />
+    <MESSAGE value="UPDATE .gitignore&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE .gitignore&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1299,13 +1308,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="14" selection-start="80" selection-end="80" vertical-scroll-proportion="0.20816326" vertical-offset="0" max-vertical-offset="490">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="157" column="6" selection-start="9108" selection-end="9108" vertical-scroll-proportion="-14.730769" vertical-offset="2286" max-vertical-offset="2771">
@@ -1313,16 +1315,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="1" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+        <state line="33" column="0" selection-start="780" selection-end="826" vertical-scroll-proportion="0.6183674" vertical-offset="258" max-vertical-offset="748">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="780" selection-end="826" vertical-scroll-proportion="0.6183674" vertical-offset="258" max-vertical-offset="748">
+        <state line="8" column="22" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="18" selection-start="370" selection-end="370" vertical-scroll-proportion="0.41632652" vertical-offset="0" max-vertical-offset="490">
           <folding />
         </state>
       </provider>

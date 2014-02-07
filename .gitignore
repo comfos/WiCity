@@ -4,3 +4,6 @@
 /tmp/**/*
 /log/*.log
 /public/system
+
+/config/database.yml
+/config/environment.rb
