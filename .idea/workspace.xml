@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pharms/_form_new.html.erb" afterPath="$PROJECT_DIR$/app/views/pharms/_form_new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environment.rb" afterPath="$PROJECT_DIR$/config/environment.rb" />
+    <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;config/environment.rb&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/environment.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WiCity.iws" />
@@ -36,7 +36,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="146" column="17" selection-start="8778" selection-end="8778" vertical-scroll-proportion="-0.0" vertical-offset="2482" max-vertical-offset="2771">
+            <state line="157" column="6" selection-start="9108" selection-end="9108" vertical-scroll-proportion="-14.730769" vertical-offset="2286" max-vertical-offset="2771">
               <folding />
             </state>
           </provider>
@@ -45,7 +45,7 @@
       <file leaf-file-name="_form_edit.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/pharms/_form_edit.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="5" selection-start="2789" selection-end="3660" vertical-scroll-proportion="0.0" vertical-offset="1173" max-vertical-offset="8568">
+            <state line="89" column="5" selection-start="2789" selection-end="3660" vertical-scroll-proportion="-13.076923" vertical-offset="1173" max-vertical-offset="8568">
               <folding />
             </state>
           </provider>
@@ -63,7 +63,7 @@
       <file leaf-file-name="environment.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/environment.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="459" selection-end="459" vertical-scroll-proportion="0.55510205" vertical-offset="0" max-vertical-offset="490">
+            <state line="15" column="1" selection-start="450" selection-end="450" vertical-scroll-proportion="0.52040815" vertical-offset="0" max-vertical-offset="490">
               <folding />
             </state>
           </provider>
@@ -132,10 +132,10 @@
         <option value="$PROJECT_DIR$/app/views/pharms/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/pharms/_form_edit.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/pharms_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/pharms/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/pharms/_form_new.html.erb" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/config/environment.rb" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/views/pharms/index.html.erb" />
       </list>
     </option>
   </component>
@@ -402,6 +402,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Alfio\RubymineProjects\WiCity\config" />
       <recent name="C:\Users\Alfio\RubymineProjects\WiCity\db\migrate" />
       <recent name="C:\Users\Alfio\RubymineProjects\WiCity\app\views\home" />
       <recent name="C:\Users\Alfio\RubymineProjects\WiCity\app\controllers" />
@@ -934,7 +935,11 @@
       <created>1391760197688</created>
       <updated>1391760197688</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="UPDATE gitignore&#10;">
+      <created>1391760325126</created>
+      <updated>1391760325126</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -994,7 +999,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="ADD Credits (da aggiornare)&#10;" />
     <MESSAGE value="ADD Nearest Services&#10;" />
     <MESSAGE value="UPDATE Nearest Services&#10;" />
     <MESSAGE value="UPDATE ShowPharm: bottoni getdir e panel sulla stessa linea&#10;" />
@@ -1019,7 +1023,8 @@
     <MESSAGE value="ADD Distinguere, tramite icona colorata, apertura/chiusura della farmacie in SHOWPharms" />
     <MESSAGE value="ADD Distinguere, tramite icona colorata, apertura/chiusura della farmacie in SHOWPharms con distinzione A CHIAMATA&#10;" />
     <MESSAGE value="UPDATE gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE gitignore" />
+    <MESSAGE value="UPDATE gitignore&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE gitignore&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1249,30 +1254,9 @@
         <state line="204" column="47" selection-start="6818" selection-end="6818" vertical-scroll-proportion="0.42572063" vertical-offset="3276" max-vertical-offset="4879" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/pharms_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="5" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1445">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/images/icon/cpharm.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="17" selection-start="8778" selection-end="8778" vertical-scroll-proportion="0.0" vertical-offset="2482" max-vertical-offset="2771">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pharms/_form_edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="5" selection-start="2789" selection-end="3660" vertical-scroll-proportion="0.0" vertical-offset="1173" max-vertical-offset="8568">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pharms/_form_new.html.erb">
@@ -1289,16 +1273,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/pharms_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="5" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1445">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pharms/_form_edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="5" selection-start="2789" selection-end="3660" vertical-scroll-proportion="-13.076923" vertical-offset="1173" max-vertical-offset="8568">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="22" selection-start="103" selection-end="103" vertical-scroll-proportion="0.24285714" vertical-offset="0" max-vertical-offset="490">
+        <state line="6" column="14" selection-start="80" selection-end="80" vertical-scroll-proportion="0.20816326" vertical-offset="0" max-vertical-offset="490">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="157" column="6" selection-start="9108" selection-end="9108" vertical-scroll-proportion="-14.730769" vertical-offset="2286" max-vertical-offset="2771">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environment.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="459" selection-end="459" vertical-scroll-proportion="0.55510205" vertical-offset="0" max-vertical-offset="490">
+        <state line="15" column="1" selection-start="450" selection-end="450" vertical-scroll-proportion="0.52040815" vertical-offset="0" max-vertical-offset="490">
           <folding />
         </state>
       </provider>
