@@ -1,8 +1,0 @@
-/.idea
-/.idea/**/*
-/tmp
-/tmp/**/*
-/log/*.log
-/public/system
-
-/config/environment.rb
