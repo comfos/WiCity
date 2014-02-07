@@ -1,7 +1,8 @@
-.idea
-.idea/**/*
-config/database.yml
-tmp
-tmp/**/*
-log/*.log
-public/system
+/.idea
+/.idea/**/*
+/config/database.yml
+/tmp
+/tmp/**/*
+/log/*.log
+/public/system
+/config/environment.rb
