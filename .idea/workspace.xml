@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
+    <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="UPDATE .gitignore&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -71,7 +71,7 @@
       <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="8" selection-start="69" selection-end="69" vertical-scroll-proportion="0.24285714" vertical-offset="0" max-vertical-offset="490">
+            <state line="7" column="22" selection-start="83" selection-end="83" vertical-scroll-proportion="0.24285714" vertical-offset="0" max-vertical-offset="490">
               <folding />
             </state>
           </provider>
@@ -971,7 +971,11 @@
       <created>1391762222249</created>
       <updated>1391762222249</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="UPDATE .gitignore&#10;">
+      <created>1391762314311</created>
+      <updated>1391762314311</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1342,7 +1346,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="8" selection-start="69" selection-end="69" vertical-scroll-proportion="0.24285714" vertical-offset="0" max-vertical-offset="490">
+        <state line="7" column="22" selection-start="83" selection-end="83" vertical-scroll-proportion="0.24285714" vertical-offset="0" max-vertical-offset="490">
           <folding />
         </state>
       </provider>
