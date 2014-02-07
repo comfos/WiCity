@@ -5,5 +5,5 @@
 /log/*.log
 /public/system
 
-/config/environment.r
-/config/database.ym
+/config/environment.rb
+/config/database.yml
