@@ -6,7 +6,6 @@
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://127.0.0.1/WiCity_development</jdbc-url>
       <user-name>root</user-name>
-      <user-password>dfcbdfcf</user-password>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails WiCity: test" uuid="b5b9b38e-7c16-4a86-85b5-fbe9820483ef">
