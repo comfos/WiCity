@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;config/environment.rb&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/environment.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WiCity.iws" />
@@ -60,10 +59,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="environment.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="environment.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/environment.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="1" selection-start="450" selection-end="450" vertical-scroll-proportion="0.52040815" vertical-offset="0" max-vertical-offset="490">
+            <state line="15" column="1" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.yml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/database.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="0" selection-start="780" selection-end="826" vertical-scroll-proportion="0.6183674" vertical-offset="258" max-vertical-offset="748">
               <folding />
             </state>
           </provider>
@@ -105,7 +113,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/app/views/layouts/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
@@ -136,6 +143,7 @@
         <option value="$PROJECT_DIR$/config/environment.rb" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/views/pharms/index.html.erb" />
+        <option value="$PROJECT_DIR$/config/database.yml" />
       </list>
     </option>
   </component>
@@ -939,7 +947,11 @@
       <created>1391760325126</created>
       <updated>1391760325126</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="UPDATE .gitignore">
+      <created>1391761357694</created>
+      <updated>1391761357694</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -999,7 +1011,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="ADD Nearest Services&#10;" />
     <MESSAGE value="UPDATE Nearest Services&#10;" />
     <MESSAGE value="UPDATE ShowPharm: bottoni getdir e panel sulla stessa linea&#10;" />
     <MESSAGE value="UPDATE NearestServices: passaggio centro cerchio&#10;" />
@@ -1024,7 +1035,8 @@
     <MESSAGE value="ADD Distinguere, tramite icona colorata, apertura/chiusura della farmacie in SHOWPharms con distinzione A CHIAMATA&#10;" />
     <MESSAGE value="UPDATE gitignore" />
     <MESSAGE value="UPDATE gitignore&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE gitignore&#10;" />
+    <MESSAGE value="UPDATE .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE .gitignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1303,7 +1315,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environment.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="1" selection-start="450" selection-end="450" vertical-scroll-proportion="0.52040815" vertical-offset="0" max-vertical-offset="490">
+        <state line="15" column="1" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="780" selection-end="826" vertical-scroll-proportion="0.6183674" vertical-offset="258" max-vertical-offset="748">
           <folding />
         </state>
       </provider>
