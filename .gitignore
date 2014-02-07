@@ -1,6 +1,5 @@
 /.idea
 /.idea/**/*
-/config/database.yml
 /tmp
 /tmp/**/*
 /log/*.log
