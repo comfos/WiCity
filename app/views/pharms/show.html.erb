@@ -157,7 +157,7 @@
 <div data-role="header" data-theme="b">
   <h1><%= @pharm.name %></h1>
   <div class="ui-btn-left" data-role="controlgroup" data-type="horizontal" data-mini="true">
-    <%= link_to 'Back', pharms_path, 'data-icon' => 'back', 'data-role' => 'button', 'data-iconpos' => 'notext' %>
+    <%= link_to 'Back', pharms_path, 'data-icon' => 'back', 'data-role' => 'button', 'data-iconpos' => 'notext', :target => '_parent' %>
     <%= link_to 'Home', root_url, 'data-icon' => 'home', 'data-role' => 'button', 'data-iconpos' => 'notext', :target => '_parent' %>
   </div>
   <%= link_to 'Edit', edit_pharm_path(@pharm), 'data-icon' => 'edit', 'class' => 'ui-btn-right', 'data-iconpos' => 'notext', :target => '_parent' %>
