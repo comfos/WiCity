@@ -2,6 +2,14 @@
 
 <script type="text/javascript">
 
+    function resetRange(day, type) {
+        $("#range-"+type+"a").val(0).slider('refresh');
+        $("#range-"+type+"b").val(1500).slider('refresh');
+
+        $('#text-'+day+'-'+type).html( '0:0 - 0:0' );
+        $('#pharm_'+type).val( '0:0 - 0:0' );
+    }
+
     function getRange(val, type) {
         var b = Math.floor(val.split(":")[0]);
         var c = Math.floor(val.split(":")[1]);
@@ -84,8 +92,6 @@
             minutes2 = '00';
 
         $('#text-'+to+'-'+from).html( hours1+':'+minutes1+' - '+hours2+':'+minutes2 );
-
-
         $('#pharm_'+from).val(hours1+':'+minutes1+' - '+hours2+':'+minutes2);
     }
 
@@ -284,7 +290,7 @@
 
       <div class="ui-grid-b">
         <div class="ui-block-a">
-          <div class="ui-bar ui-bar-a" style="height:46px" id="text-lun">
+          <div class="ui-bar ui-bar-a" style="height:50px" id="text-lun">
             Lunedì
             <div style="float:right">
               <div id="text-lun-LM" style="float:left"><%= @pharm.LM %></div>&nbsp;&nbsp;&nbsp;
@@ -293,27 +299,41 @@
           </div>
         </div>
         <div class="ui-block-b">
-          <div class="ui-bar ui-bar-a">
-            <div data-role="rangeslider">
-                <input id="range-LMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
-                <input id="range-LMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
-            </div>
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-LMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
+                  <input id="range-LMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('lun', 'LM')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
             <%= f.hidden_field :LM %>
           </div>
         </div>
         <div class="ui-block-c">
-          <div class="ui-bar ui-bar-a">
-            <div data-role="rangeslider">
-              <input id="range-LPa" step="15" min="780" max="1439" value="0" type="range" class="ui-hidden-accessible">
-              <input id="range-LPb" step="15" min="780" max="1440" value="1440" type="range" class="ui-hidden-accessible">
-            </div>
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-LPa" step="15" min="780" max="1439" type="range" class="ui-hidden-accessible">
+                  <input id="range-LPb" step="15" min="780" max="1440" type="range" value="1440" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('lun', 'LP')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
             <%= f.hidden_field :LP %>
           </div>
         </div>
 
 
         <div class="ui-block-a">
-          <div class="ui-bar ui-bar-a" style="height:46px" id="text-mar">
+          <div class="ui-bar ui-bar-a" style="height:50px" id="text-mar">
             Martedì
             <div style="float:right">
               <div id="text-mar-MM" style="float:left"><%= @pharm.MM %></div>&nbsp;&nbsp;&nbsp;
@@ -322,27 +342,41 @@
           </div>
         </div>
         <div class="ui-block-b">
-          <div class="ui-bar ui-bar-a">
-            <div data-role="rangeslider">
-              <input id="range-MMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
-              <input id="range-MMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
-            </div>
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-MMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
+                  <input id="range-MMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('mar', 'MM')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
             <%= f.hidden_field :MM %>
           </div>
         </div>
         <div class="ui-block-c">
-          <div class="ui-bar ui-bar-a">
-            <div data-role="rangeslider">
-              <input id="range-MPa" step="15" min="780" max="1439" value="0" type="range" class="ui-hidden-accessible">
-              <input id="range-MPb" step="15" min="780" max="1440" value="1440" type="range" class="ui-hidden-accessible">
-            </div>
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-MPa" step="15" min="780" max="1439" type="range" class="ui-hidden-accessible">
+                  <input id="range-MPb" step="15" min="780" max="1440" type="range" value="1440" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('mar', 'MP')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
             <%= f.hidden_field :MP %>
           </div>
         </div>
 
 
         <div class="ui-block-a">
-          <div class="ui-bar ui-bar-a" style="height:46px" id="text-mar">
+          <div class="ui-bar ui-bar-a" style="height:50px" id="text-mar">
             Mercoledì
             <div style="float:right">
               <div id="text-mer-MEM" style="float:left"><%= @pharm.MEM %></div>&nbsp;&nbsp;&nbsp;
@@ -351,27 +385,41 @@
           </div>
         </div>
         <div class="ui-block-b">
-          <div class="ui-bar ui-bar-a">
-            <div data-role="rangeslider">
-              <input id="range-MEMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
-              <input id="range-MEMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
-            </div>
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-MEMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
+                  <input id="range-MEMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('mer', 'MEM')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
             <%= f.hidden_field :MEM %>
           </div>
         </div>
         <div class="ui-block-c">
-          <div class="ui-bar ui-bar-a">
-            <div data-role="rangeslider">
-              <input id="range-MEPa" step="15" min="780" max="1439" value="0" type="range" class="ui-hidden-accessible">
-              <input id="range-MEPb" step="15" min="780" max="1440" value="1440" type="range" class="ui-hidden-accessible">
-            </div>
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-MEPa" step="15" min="780" max="1439" type="range" class="ui-hidden-accessible">
+                  <input id="range-MEPb" step="15" min="780" max="1440" type="range" value="1440" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('mer', 'MEP')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
             <%= f.hidden_field :MEP %>
           </div>
         </div>
 
 
         <div class="ui-block-a">
-          <div class="ui-bar ui-bar-a" style="height:46px" id="text-mar">
+          <div class="ui-bar ui-bar-a" style="height:50px" id="text-mar">
             Giovedì
             <div style="float:right">
               <div id="text-gio-GM" style="float:left"><%= @pharm.GM %></div>&nbsp;&nbsp;&nbsp;
@@ -380,27 +428,41 @@
           </div>
         </div>
         <div class="ui-block-b">
-          <div class="ui-bar ui-bar-a">
-            <div data-role="rangeslider">
-              <input id="range-GMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
-              <input id="range-GMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
-            </div>
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-GMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
+                  <input id="range-GMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('gio', 'GM')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
             <%= f.hidden_field :GM %>
           </div>
         </div>
         <div class="ui-block-c">
-          <div class="ui-bar ui-bar-a">
-            <div data-role="rangeslider">
-              <input id="range-GPa" step="15" min="780" max="1439" value="0" type="range" class="ui-hidden-accessible">
-              <input id="range-GPb" step="15" min="780" max="1440" value="1440" type="range" class="ui-hidden-accessible">
-            </div>
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-GPa" step="15" min="780" max="1439" type="range" class="ui-hidden-accessible">
+                  <input id="range-GPb" step="15" min="780" max="1440" type="range" value="1440" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('gio', 'GP')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
             <%= f.hidden_field :GP %>
           </div>
         </div>
 
 
         <div class="ui-block-a">
-          <div class="ui-bar ui-bar-a" style="height:46px" id="text-mar">
+          <div class="ui-bar ui-bar-a" style="height:50px" id="text-mar">
             Venerdì
             <div style="float:right">
               <div id="text-ven-VM" style="float:left"><%= @pharm.VM %></div>&nbsp;&nbsp;&nbsp;
@@ -409,27 +471,41 @@
           </div>
         </div>
         <div class="ui-block-b">
-          <div class="ui-bar ui-bar-a">
-            <div data-role="rangeslider">
-              <input id="range-VMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
-              <input id="range-VMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
-            </div>
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-VMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
+                  <input id="range-VMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('ven', 'VM')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
             <%= f.hidden_field :VM %>
           </div>
         </div>
         <div class="ui-block-c">
-          <div class="ui-bar ui-bar-a">
-            <div data-role="rangeslider">
-              <input id="range-VPa" step="15" min="780" max="1439" value="0" type="range" class="ui-hidden-accessible">
-              <input id="range-VPb" step="15" min="780" max="1440" value="1440" type="range" class="ui-hidden-accessible">
-            </div>
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-VPa" step="15" min="780" max="1439" type="range" class="ui-hidden-accessible">
+                  <input id="range-VPb" step="15" min="780" max="1440" type="range" value="1440" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('ven', 'VP')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
             <%= f.hidden_field :VP %>
           </div>
         </div>
 
 
         <div class="ui-block-a">
-          <div class="ui-bar ui-bar-a" style="height:46px" id="text-mar">
+          <div class="ui-bar ui-bar-a" style="height:50px" id="text-mar">
             Sabato
             <div style="float:right">
               <div id="text-sab-SM" style="float:left"><%= @pharm.SM %></div>&nbsp;&nbsp;&nbsp;
@@ -438,27 +514,41 @@
           </div>
         </div>
         <div class="ui-block-b">
-          <div class="ui-bar ui-bar-a">
-            <div data-role="rangeslider">
-              <input id="range-SMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
-              <input id="range-SMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
-            </div>
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-SMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
+                  <input id="range-SMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('sab', 'SM')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
             <%= f.hidden_field :SM %>
           </div>
         </div>
         <div class="ui-block-c">
-          <div class="ui-bar ui-bar-a">
-            <div data-role="rangeslider">
-              <input id="range-SPa" step="15" min="780" max="1439" value="0" type="range" class="ui-hidden-accessible">
-              <input id="range-SPb" step="15" min="780" max="1440" value="1440" type="range" class="ui-hidden-accessible">
-            </div>
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-SPa" step="15" min="780" max="1439" type="range" class="ui-hidden-accessible">
+                  <input id="range-SPb" step="15" min="780" max="1440" type="range" value="1440" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('sab', 'SP')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
             <%= f.hidden_field :SP %>
           </div>
         </div>
 
 
         <div class="ui-block-a">
-          <div class="ui-bar ui-bar-a" style="height:46px" id="text-mar">
+          <div class="ui-bar ui-bar-a" style="height:50px" id="text-mar">
             Domenica
             <div style="float:right">
               <div id="text-dom-DM" style="float:left"><%= @pharm.DM %></div>&nbsp;&nbsp;&nbsp;
@@ -467,20 +557,34 @@
           </div>
         </div>
         <div class="ui-block-b">
-          <div class="ui-bar ui-bar-a">
-            <div data-role="rangeslider">
-              <input id="range-DMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
-              <input id="range-DMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
-            </div>
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-DMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
+                  <input id="range-DMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('dom', 'DM')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
             <%= f.hidden_field :DM %>
           </div>
         </div>
         <div class="ui-block-c">
-          <div class="ui-bar ui-bar-a">
-            <div data-role="rangeslider">
-              <input id="range-DPa" step="15" min="780" max="1439" value="0" type="range" class="ui-hidden-accessible">
-              <input id="range-DPb" step="15" min="780" max="1440" value="1440" type="range" class="ui-hidden-accessible">
-            </div>
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-DPa" step="15" min="780" max="1439" type="range" class="ui-hidden-accessible">
+                  <input id="range-DPb" step="15" min="780" max="1440" type="range" value="1440" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('dom', 'DP')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
             <%= f.hidden_field :DP %>
           </div>
         </div>
