@@ -25,7 +25,12 @@
 
     function preinit() {
         mypos = "<%= params[:coord] %>";
-        if(mypos == 0) {
+        if(mypos) {
+            mypos = new google.maps.LatLng(mypos);
+            window.clearInterval(intervall);
+            initialize();
+        }
+        else {
             if(check > 2) {
                 initialize();
             }
@@ -42,10 +47,6 @@
                     handleNoGeolocation(false);
                 }
             }
-        }
-        else {
-            window.clearInterval(intervall);
-            initialize();
         }
     }
 
