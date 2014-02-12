@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/nearserv.html.erb" afterPath="$PROJECT_DIR$/app/views/home/nearserv.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pharms/show.html.erb" afterPath="$PROJECT_DIR$/app/views/pharms/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -44,7 +45,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="12" selection-start="729" selection-end="729" vertical-scroll-proportion="-0.8581395" vertical-offset="913" max-vertical-offset="5185">
+            <state line="34" column="48" selection-start="808" selection-end="808" vertical-scroll-proportion="0.40697673" vertical-offset="403" max-vertical-offset="5202">
               <folding />
             </state>
           </provider>
@@ -53,7 +54,7 @@
       <file leaf-file-name="nearserv.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="53" selection-start="1458" selection-end="1499" vertical-scroll-proportion="17.0" vertical-offset="1479" max-vertical-offset="4029">
+            <state line="67" column="48" selection-start="1672" selection-end="1672" vertical-scroll-proportion="-10.461538" vertical-offset="867" max-vertical-offset="4046">
               <folding />
             </state>
           </provider>
@@ -1118,7 +1119,11 @@
       <created>1392221233952</created>
       <updated>1392221233952</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="ADD in SHOWPharms bastano due messaggi e non 5 per essere informati che l'utente non è stato localizzato.&#10;">
+      <created>1392247026939</created>
+      <updated>1392247026940</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1178,7 +1183,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="ADD possibilità di passare da un qualsiasi marker del percorso che collega una posizione di origine ad un servizio (ad esempio una farmacia) alla schermata di NEAREST SERVICES centrata sulle coordinate del marker selezionato.Il passaggio dovrebbe essere attivato con un doppio click sul nome associato al marker." />
     <MESSAGE value="ADD pulsante HOME a sinistra di ogni BACK" />
     <MESSAGE value="ADD Sistema di Registrazione" />
     <MESSAGE value="ADD Sistema di Registrazione&#10;" />
@@ -1203,7 +1207,8 @@
     <MESSAGE value="ADD In SHOWPharm campo giorno e ora per effettuare la query sulle farmacie" />
     <MESSAGE value="ADD In EDITPharm possibilità di resettare l'orario della settimana per eventuale chiusura&#10;" />
     <MESSAGE value="ADD in SHOWPharms bastano due messaggi e non 5 per essere informati che l'utente non è stato localizzato." />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD in SHOWPharms bastano due messaggi e non 5 per essere informati che l'utente non è stato localizzato." />
+    <MESSAGE value="ADD in SHOWPharms bastano due messaggi e non 5 per essere informati che l'utente non è stato localizzato.&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD in SHOWPharms bastano due messaggi e non 5 per essere informati che l'utente non è stato localizzato.&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1482,14 +1487,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="53" selection-start="1458" selection-end="1499" vertical-scroll-proportion="17.0" vertical-offset="1479" max-vertical-offset="4029">
+        <state line="67" column="48" selection-start="1672" selection-end="1672" vertical-scroll-proportion="-10.461538" vertical-offset="867" max-vertical-offset="4046">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="12" selection-start="729" selection-end="729" vertical-scroll-proportion="-0.8581395" vertical-offset="913" max-vertical-offset="5185">
+        <state line="34" column="48" selection-start="808" selection-end="808" vertical-scroll-proportion="0.40697673" vertical-offset="403" max-vertical-offset="5202">
           <folding />
         </state>
       </provider>
