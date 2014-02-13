@@ -24,9 +24,10 @@
     }
 
     function preinit() {
-        mypos = "<%= params[:coord] %>";
-        if(mypos) {
-            mypos = new google.maps.LatLng(mypos);
+        var lat = "<%= params[:lat] %>";
+        var lng = "<%= params[:lng] %>";
+        if(lat) {
+            mypos = new google.maps.LatLng(lat, lng);
             window.clearInterval(intervall);
             initialize();
         }
@@ -60,6 +61,7 @@
     }
 
     function initialize() {
+
         if(mypos == 0) {
             mypos = new google.maps.LatLng(37.508059, 375.082752);
         }

@@ -16,7 +16,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/WiCity@Development__WiCity.coverage" NAME="Development: WiCity Coverage Results" MODIFIED="1392219970122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
+    <SUITE FILE_PATH="coverage/WiCity@Development__WiCity.coverage" NAME="Development: WiCity Coverage Results" MODIFIED="1392301697563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
     <SUITE FILE_PATH="coverage/WiCity@db_create_all__WiCity.coverage" NAME="db:create:all: WiCity Coverage Results" MODIFIED="1386777057762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
     <SUITE FILE_PATH="coverage/WiCity@Rails_console__WiCity.coverage" NAME="Rails console: WiCity Coverage Results" MODIFIED="1388859434959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
     <SUITE FILE_PATH="coverage/WiCity@db_migrate__WiCity.coverage" NAME="db:migrate: WiCity Coverage Results" MODIFIED="1391342064070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
@@ -42,19 +42,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="48" selection-start="808" selection-end="808" vertical-scroll-proportion="0.40697673" vertical-offset="403" max-vertical-offset="5202">
+            <state line="63" column="0" selection-start="1743" selection-end="1743" vertical-scroll-proportion="-37.26923" vertical-offset="102" max-vertical-offset="5236">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nearserv.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="nearserv.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="48" selection-start="1672" selection-end="1672" vertical-scroll-proportion="-10.461538" vertical-offset="867" max-vertical-offset="4046">
+            <state line="173" column="123" selection-start="5173" selection-end="5173" vertical-scroll-proportion="0.5866337" vertical-offset="2704" max-vertical-offset="4029">
               <folding />
             </state>
           </provider>
@@ -72,7 +72,7 @@
       <file leaf-file-name="_form_edit.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/pharms/_form_edit.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="586" column="23" selection-start="24519" selection-end="24519" vertical-scroll-proportion="-10.538462" vertical-offset="9688" max-vertical-offset="10336">
+            <state line="586" column="23" selection-start="24519" selection-end="24519" vertical-scroll-proportion="0.0" vertical-offset="9688" max-vertical-offset="10336">
               <folding />
             </state>
           </provider>
@@ -162,8 +162,8 @@
         <option value="$PROJECT_DIR$/app/views/pharms/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/pharms/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/pharms/_form_edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/home/nearserv.html.erb" />
         <option value="$PROJECT_DIR$/app/views/pharms/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/nearserv.html.erb" />
       </list>
     </option>
   </component>
@@ -1123,7 +1123,11 @@
       <created>1392247026939</created>
       <updated>1392247026940</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="ADD in SHOWPharms bastano due messaggi e non 5 per essere informati che l'utente non è stato localizzato.&#10;">
+      <created>1392247842640</created>
+      <updated>1392247842640</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1150,13 +1154,12 @@
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32038835" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32991013" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33376125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3592233" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -1164,11 +1167,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3259362" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32732317" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1473,7 +1477,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pharms/_form_edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="586" column="23" selection-start="24519" selection-end="24519" vertical-scroll-proportion="-10.538462" vertical-offset="9688" max-vertical-offset="10336">
+        <state line="586" column="23" selection-start="24519" selection-end="24519" vertical-scroll-proportion="0.0" vertical-offset="9688" max-vertical-offset="10336">
           <folding />
         </state>
       </provider>
@@ -1485,16 +1489,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="48" selection-start="1672" selection-end="1672" vertical-scroll-proportion="-10.461538" vertical-offset="867" max-vertical-offset="4046">
+        <state line="63" column="0" selection-start="1743" selection-end="1743" vertical-scroll-proportion="-37.26923" vertical-offset="102" max-vertical-offset="5236">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="48" selection-start="808" selection-end="808" vertical-scroll-proportion="0.40697673" vertical-offset="403" max-vertical-offset="5202">
+        <state line="173" column="123" selection-start="5173" selection-end="5173" vertical-scroll-proportion="0.5866337" vertical-offset="2704" max-vertical-offset="4029">
           <folding />
         </state>
       </provider>
