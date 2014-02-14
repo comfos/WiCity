@@ -88,10 +88,16 @@
 
     function codeAddress() {
         var address = "<%= @pharm.address %>";
+        var s = "<%= params[:s] %>";
         geocoder.geocode( { 'address': address}, function(results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
                 map.setCenter(results[0].geometry.location);
-                var icon = '/assets/marker/pharm.png';
+                if(s=="close") {
+                    var icon = '/assets/marker/cpharm.png';
+                }
+                else {
+                    var icon = '/assets/marker/pharm.png';
+                }
                 var marker = new google.maps.Marker({
                     map: map,
                     position: results[0].geometry.location,

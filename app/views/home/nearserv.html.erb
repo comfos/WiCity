@@ -152,6 +152,98 @@
         markers_pharms = [];
     }
 
+    <%
+        @today = Time.now.strftime("%u")  # => lun = 1, mar = 2, mer = 3
+        @t = Time.now
+
+        def isOpen(type)
+            if (@today == '1') # LUNEDì
+                puts "LUNEDì"
+                if (Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.LM.split(' - ')[0]).split(':')[0], (type.LM.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.LM.split(' - ')[1]).split(':')[0], (type.LM.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i || Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.LP.split(' - ')[0]).split(':')[0], (type.LP.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.LP.split(' - ')[1]).split(':')[0], (type.LP.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i)
+                   return true
+               end
+            end
+            if (@today == '2') # MARTEDì
+                puts "MARTEDì"
+                if (Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.MM.split(' - ')[0]).split(':')[0], (type.MM.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.MM.split(' - ')[1]).split(':')[0], (type.MM.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i || Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.MP.split(' - ')[0]).split(':')[0], (type.MP.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.MP.split(' - ')[1]).split(':')[0], (type.MP.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i)
+                   return true
+               end
+            end
+            if (@today == '3') # MERCOLEDì
+                puts "MERCOLEDì"
+                if (Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.MEM.split(' - ')[0]).split(':')[0], (type.MEM.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.MEM.split(' - ')[1]).split(':')[0], (type.MEM.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i || Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.MEP.split(' - ')[0]).split(':')[0], (type.MEP.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.MEP.split(' - ')[1]).split(':')[0], (type.MEP.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i)
+                   return true
+               end
+            end
+            if (@today == '4') # GIOVEDì
+                puts "GIOVEDì"
+                if (Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.GM.split(' - ')[0]).split(':')[0], (type.GM.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.GM.split(' - ')[1]).split(':')[0], (type.GM.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i || Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.GP.split(' - ')[0]).split(':')[0], (type.GP.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.GP.split(' - ')[1]).split(':')[0], (type.GP.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i)
+                   return true
+               end
+            end
+            if (@today == '5') # VENERDì
+                puts "VENERDì"
+                if (Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.VM.split(' - ')[0]).split(':')[0], (type.VM.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.VM.split(' - ')[1]).split(':')[0], (type.VM.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i || Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.VP.split(' - ')[0]).split(':')[0], (type.VP.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.VP.split(' - ')[1]).split(':')[0], (type.VP.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i)
+                   return true
+               end
+            end
+            if (@today == '6') # SABATO
+                puts "SABATO"
+                if (Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.SM.split(' - ')[0]).split(':')[0], (type.SM.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.SM.split(' - ')[1]).split(':')[0], (type.SM.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i || Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.SP.split(' - ')[0]).split(':')[0], (type.SP.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.SP.split(' - ')[1]).split(':')[0], (type.SP.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i)
+                   return true
+               end
+            end
+            if (@today == '7') # MERCOLEDì
+                puts "DOMENICA"
+                if (Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.DM.split(' - ')[0]).split(':')[0], (type.DM.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.DM.split(' - ')[1]).split(':')[0], (type.DM.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i || Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.DP.split(' - ')[0]).split(':')[0], (type.DP.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.DP.split(' - ')[1]).split(':')[0], (type.DP.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i)
+                   return true
+               end
+            end
+        end
+    %>
+
     function addMarker() {
         var bounds = circle.getBounds();
         var marker;
@@ -160,7 +252,12 @@
             <% @pharms.each do |pharm| %>
                 var coord = new google.maps.LatLng(<%= pharm.lat %>, <%= pharm.lng %>);
                 if( bounds.contains(coord) ) {
-                    var icon = '/assets/marker/pharm.png';
+                    if('<%= isOpen(pharm) %>') {
+                        var icon = '/assets/marker/pharm.png';
+                    }
+                    else {
+                        var icon = '/assets/marker/cpharm.png';
+                    }
                     marker = new google.maps.Marker({
                         position: coord,
                         map: map,
