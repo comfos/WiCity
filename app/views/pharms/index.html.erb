@@ -7,6 +7,14 @@
 
 <script>
 
+    function getDomenicali() {
+        var currentDate = $( "#datepicker" ).datepicker( "getDate" );
+        var addday = 7 - currentDate.getDay();
+
+        $( "#datepicker" ).datepicker( "setDate", new Date((currentDate.getMonth()+1)+"/"+(currentDate.getDate()+addday)+"/"+currentDate.getFullYear()) );
+        changeDateTime(this, this);
+    }
+
     function changeDateTime(event, ui) {
 
         var currentDate = $( "#datepicker" ).datepicker( "getDate" );
@@ -74,13 +82,20 @@
 
 <div data-role="content">
 
-  <div class="ui-grid-a">
-    <div class="ui-block-a" style="padding-right: 5px">
-      <input id='datepicker' placeholder='Date'/>
+  <div class="ui-grid-c">
+    <div class="ui-block-a">
+      <div class="ui-bar ui-bar-a"><input id='datepicker' placeholder='Date' style="height: 43px"/></div>
     </div>
-    <div class="ui-block-b" style="padding-left: 5px">
-      <input id="timeh" type="text">
+    <div class="ui-block-b">
+      <div class="ui-bar ui-bar-a"><input value="Domenicali" type="button" onclick="getDomenicali();"></div>
     </div>
+    <div class="ui-block-c">
+      <div class="ui-bar ui-bar-b"><input id="timeh" type="text" style="height: 43px"></div>
+    </div>
+    <div class="ui-block-d">
+      <div class="ui-bar ui-bar-b"><input value="Notturne" type="button" onclick="$('#timeh').val('23:30'); changeDateTime(this, this)"></div>
+    </div>
+
   </div>
 
   <ul data-role="listview" data-inset="true" data-filter="true">
