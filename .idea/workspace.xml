@@ -33,10 +33,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="5" selection-start="657" selection-end="657" vertical-scroll-proportion="0.7116279" vertical-offset="0" max-vertical-offset="4590">
+            <state line="18" column="5" selection-start="657" selection-end="657" vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="4590">
               <folding>
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -45,10 +45,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="24" selection-start="798" selection-end="798" vertical-scroll-proportion="-8.5" vertical-offset="357" max-vertical-offset="5576">
+            <state line="45" column="25" selection-start="1336" selection-end="1336" vertical-scroll-proportion="0.59302324" vertical-offset="510" max-vertical-offset="5610">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#ul#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
@@ -81,7 +81,7 @@
       <file leaf-file-name="nearserv.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="24" selection-start="1620" selection-end="1620" vertical-scroll-proportion="-10.0" vertical-offset="862" max-vertical-offset="5865">
+            <state line="77" column="25" selection-start="1886" selection-end="2158" vertical-scroll-proportion="-15.961538" vertical-offset="894" max-vertical-offset="5899">
               <folding />
             </state>
           </provider>
@@ -1120,7 +1120,11 @@
       <created>1392494996987</created>
       <updated>1392494996987</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="ADD porre anche su nearest service la data e l'ora solo a scopo informativo e non modificabili dall'utente&#10;">
+      <created>1392495156417</created>
+      <updated>1392495156417</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1475,16 +1479,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="5" selection-start="657" selection-end="657" vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="4590">
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="24" selection-start="1620" selection-end="1620" vertical-scroll-proportion="-10.0" vertical-offset="862" max-vertical-offset="5865">
+        <state line="77" column="25" selection-start="1886" selection-end="2158" vertical-scroll-proportion="-15.961538" vertical-offset="894" max-vertical-offset="5899">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="24" selection-start="798" selection-end="798" vertical-scroll-proportion="-8.5" vertical-offset="357" max-vertical-offset="5576">
+        <state line="45" column="25" selection-start="1336" selection-end="1336" vertical-scroll-proportion="0.59302324" vertical-offset="510" max-vertical-offset="5610">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
@@ -1509,16 +1523,6 @@
             <element signature="n#style#0;n#div#0;n#div#18;n#div#4;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#19;n#div#4;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#20;n#div#4;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="5" selection-start="657" selection-end="657" vertical-scroll-proportion="0.7116279" vertical-offset="0" max-vertical-offset="4590">
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
