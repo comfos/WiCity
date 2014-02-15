@@ -11,8 +11,10 @@
         var currentDate = $( "#datepicker" ).datepicker( "getDate" );
         var addday = 7 - currentDate.getDay();
 
-        $( "#datepicker" ).datepicker( "setDate", new Date((currentDate.getMonth()+1)+"/"+(currentDate.getDate()+addday)+"/"+currentDate.getFullYear()) );
-        changeDateTime(this, this);
+        if(addday!=7) {
+            $( "#datepicker" ).datepicker( "setDate", new Date((currentDate.getMonth()+1)+"/"+(currentDate.getDate()+addday)+"/"+currentDate.getFullYear()) );
+            changeDateTime(this, this);
+        }
     }
 
     function changeDateTime(event, ui) {
