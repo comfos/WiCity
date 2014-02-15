@@ -35,8 +35,11 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="9" selection-start="781" selection-end="781" vertical-scroll-proportion="0.63255817" vertical-offset="0" max-vertical-offset="4403">
-              <folding />
+            <state line="14" column="17" selection-start="559" selection-end="559" vertical-scroll-proportion="0.4744186" vertical-offset="34" max-vertical-offset="4590">
+              <folding>
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -77,7 +80,7 @@
       <file leaf-file-name="nearserv.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="156" column="8" selection-start="4279" selection-end="4292" vertical-scroll-proportion="-8.769231" vertical-offset="2424" max-vertical-offset="5763">
+            <state line="162" column="150" selection-start="4445" selection-end="4570" vertical-scroll-proportion="-12.692307" vertical-offset="2424" max-vertical-offset="5763">
               <folding />
             </state>
           </provider>
@@ -1104,7 +1107,11 @@
       <created>1392473727699</created>
       <updated>1392473727699</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="BUGFIX quando clicco su Domenicali non dovrei spostarmi alla domenica successiva s sono già in una data domenicale. Resto alla domenca in cui mi trovo.&#10;">
+      <created>1392475439025</created>
+      <updated>1392475439025</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1164,7 +1171,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="DEBUG BUGFIX NearestService&#10;" />
     <MESSAGE value="BUGFIX NearestService&#10;" />
     <MESSAGE value="ADD ShowPharm: NearService pharm icon&#10;" />
     <MESSAGE value="EDIT index&#10;" />
@@ -1189,7 +1195,8 @@
     <MESSAGE value="ADD in NEARESTSERVICES quando si vedono le farmacie sia in interest location che in nearest services esse dovrebbero essere colorate a seconda della fascia oraria di interesse che è quella fissata dopo avere cliccato interest location. Se invece si entra subito in nearest service la fascia oraria dovrebbe essere quella corrente.&#10;" />
     <MESSAGE value="ADD in LISTINGPHARMS nelle farmacie accanto alla fascia oraria metterei un tasto &quot;notturne&quot; che altro non fa che pressare automaticamnete la fascia oraria 23.30 - 00, mentre accanto al caledario metterei &quot;apertura domenicale&quot; che posiziona il calendario automaticamente alla domenica successiva." />
     <MESSAGE value="ADD show DATETIME" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD show DATETIME" />
+    <MESSAGE value="BUGFIX quando clicco su Domenicali non dovrei spostarmi alla domenica successiva s sono già in una data domenicale. Resto alla domenca in cui mi trovo.&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="BUGFIX quando clicco su Domenicali non dovrei spostarmi alla domenica successiva s sono già in una data domenicale. Resto alla domenca in cui mi trovo.&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1459,13 +1466,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="8" selection-start="4279" selection-end="4292" vertical-scroll-proportion="-8.769231" vertical-offset="2424" max-vertical-offset="5763">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="201" column="47" selection-start="6494" selection-end="6494" vertical-scroll-proportion="-8.115385" vertical-offset="3206" max-vertical-offset="5576">
@@ -1497,10 +1497,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="162" column="150" selection-start="4445" selection-end="4570" vertical-scroll-proportion="-12.692307" vertical-offset="2424" max-vertical-offset="5763">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="9" selection-start="781" selection-end="781" vertical-scroll-proportion="0.63255817" vertical-offset="0" max-vertical-offset="4403">
-          <folding />
+        <state line="14" column="17" selection-start="559" selection-end="559" vertical-scroll-proportion="0.4744186" vertical-offset="34" max-vertical-offset="4590">
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -7,6 +7,17 @@
 
 <script>
 
+    function getNotturne() {
+        var time = $('#timeh').val();
+        var h = time.split(":")[0];
+        var min = time.split(":")[1];
+
+        if (h >= 7) {
+            $('#timeh').val('23:30');
+            changeDateTime(this, this);
+        }
+    }
+
     function getDomenicali() {
         var currentDate = $( "#datepicker" ).datepicker( "getDate" );
         var addday = 7 - currentDate.getDay();
@@ -95,7 +106,7 @@
       <div class="ui-bar ui-bar-b"><input id="timeh" type="text" style="height: 43px"></div>
     </div>
     <div class="ui-block-d">
-      <div class="ui-bar ui-bar-b"><a class="ui-corner-all ui-btn ui-btn-active" type="button" onclick="$('#timeh').val('23:30'); changeDateTime(this, this)">Notturne</a></div>
+      <div class="ui-bar ui-bar-b"><a class="ui-corner-all ui-btn ui-btn-active" type="button" onclick="getNotturne();">Notturne</a></div>
     </div>
 
   </div>
