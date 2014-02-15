@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/nearserv.html.erb" afterPath="$PROJECT_DIR$/app/views/home/nearserv.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pharms/show.html.erb" afterPath="$PROJECT_DIR$/app/views/pharms/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WiCity.iws" />
@@ -32,10 +33,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="5" selection-start="657" selection-end="657" vertical-scroll-proportion="-10.461538" vertical-offset="34" max-vertical-offset="4590">
+            <state line="18" column="5" selection-start="657" selection-end="657" vertical-scroll-proportion="0.7116279" vertical-offset="0" max-vertical-offset="4590">
               <folding>
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -47,7 +48,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="207" column="73" selection-start="6101" selection-end="6688" vertical-scroll-proportion="-11.769231" vertical-offset="3213" max-vertical-offset="5576">
+            <state line="34" column="24" selection-start="798" selection-end="798" vertical-scroll-proportion="-8.5" vertical-offset="357" max-vertical-offset="5576">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#ul#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
@@ -77,10 +78,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nearserv.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="nearserv.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="327" column="5" selection-start="13226" selection-end="13226" vertical-scroll-proportion="0.36744186" vertical-offset="5401" max-vertical-offset="5865">
+            <state line="66" column="24" selection-start="1620" selection-end="1620" vertical-scroll-proportion="-10.0" vertical-offset="862" max-vertical-offset="5865">
               <folding />
             </state>
           </provider>
@@ -188,8 +189,8 @@
         <option value="$PROJECT_DIR$/app/views/pharms/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/pharms/_form_edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/pharms/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/pharms/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/nearserv.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/pharms/show.html.erb" />
       </list>
     </option>
   </component>
@@ -1115,7 +1116,11 @@
       <created>1392478034808</created>
       <updated>1392478034808</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="ADD porre anche su nearest service la data e l'ora solo a scopo informativo e non modificabili dall'utente&#10;">
+      <created>1392494996987</created>
+      <updated>1392494996987</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1175,7 +1180,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="ADD ShowPharm: NearService pharm icon&#10;" />
     <MESSAGE value="EDIT index&#10;" />
     <MESSAGE value="UPDATE Edit Pharm&#10;" />
     <MESSAGE value="UPDATE InterestLocation" />
@@ -1200,7 +1204,8 @@
     <MESSAGE value="ADD show DATETIME" />
     <MESSAGE value="BUGFIX quando clicco su Domenicali non dovrei spostarmi alla domenica successiva s sono già in una data domenicale. Resto alla domenca in cui mi trovo.&#10;" />
     <MESSAGE value="BUGFIX quando clicco su notturne non dovrei spostarmi alle 23:30 se sono già di notte. Resto all'ora corrente" />
-    <option name="LAST_COMMIT_MESSAGE" value="BUGFIX quando clicco su notturne non dovrei spostarmi alle 23:30 se sono già di notte. Resto all'ora corrente" />
+    <MESSAGE value="ADD porre anche su nearest service la data e l'ora solo a scopo informativo e non modificabili dall'utente&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD porre anche su nearest service la data e l'ora solo a scopo informativo e non modificabili dall'utente&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1470,19 +1475,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="5" selection-start="657" selection-end="657" vertical-scroll-proportion="-10.461538" vertical-offset="34" max-vertical-offset="4590">
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
+        <state line="66" column="24" selection-start="1620" selection-end="1620" vertical-scroll-proportion="-10.0" vertical-offset="862" max-vertical-offset="5865">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="207" column="73" selection-start="6101" selection-end="6688" vertical-scroll-proportion="-11.769231" vertical-offset="3213" max-vertical-offset="5576">
+        <state line="34" column="24" selection-start="798" selection-end="798" vertical-scroll-proportion="-8.5" vertical-offset="357" max-vertical-offset="5576">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
@@ -1511,10 +1513,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="327" column="5" selection-start="13226" selection-end="13226" vertical-scroll-proportion="0.36744186" vertical-offset="5401" max-vertical-offset="5865">
-          <folding />
+        <state line="18" column="5" selection-start="657" selection-end="657" vertical-scroll-proportion="0.7116279" vertical-offset="0" max-vertical-offset="4590">
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
