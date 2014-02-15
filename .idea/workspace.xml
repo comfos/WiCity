@@ -48,7 +48,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="25" selection-start="1336" selection-end="1336" vertical-scroll-proportion="0.59302324" vertical-offset="510" max-vertical-offset="5610">
+            <state line="34" column="24" selection-start="798" selection-end="798" vertical-scroll-proportion="0.39534885" vertical-offset="408" max-vertical-offset="5542">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#ul#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
@@ -81,7 +81,7 @@
       <file leaf-file-name="nearserv.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="25" selection-start="1886" selection-end="2158" vertical-scroll-proportion="-15.961538" vertical-offset="894" max-vertical-offset="5899">
+            <state line="66" column="24" selection-start="1620" selection-end="1620" vertical-scroll-proportion="-2.8846154" vertical-offset="1047" max-vertical-offset="5848">
               <folding />
             </state>
           </provider>
@@ -1124,7 +1124,11 @@
       <created>1392495156417</created>
       <updated>1392495156417</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="ADD porre anche su nearest service la data e l'ora solo a scopo informativo e non modificabili dall'utente&#10;">
+      <created>1392496542277</created>
+      <updated>1392496542277</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1491,14 +1495,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="25" selection-start="1886" selection-end="2158" vertical-scroll-proportion="-15.961538" vertical-offset="894" max-vertical-offset="5899">
+        <state line="66" column="24" selection-start="1620" selection-end="1620" vertical-scroll-proportion="-2.8846154" vertical-offset="1047" max-vertical-offset="5848">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="25" selection-start="1336" selection-end="1336" vertical-scroll-proportion="0.59302324" vertical-offset="510" max-vertical-offset="5610">
+        <state line="34" column="24" selection-start="798" selection-end="798" vertical-scroll-proportion="0.39534885" vertical-offset="408" max-vertical-offset="5542">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />

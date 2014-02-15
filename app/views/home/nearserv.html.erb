@@ -64,7 +64,8 @@
             initialize();
         }
         else {
-            if(check > 3) {
+            if(check > 4) {
+                mypos = new google.maps.LatLng(37.508059, 375.082752);
                 window.clearInterval(intervall);
                 initialize();
             }
@@ -98,10 +99,6 @@
         choice();
 
         geocoder = new google.maps.Geocoder();
-
-        if(mypos == 0) {
-            mypos = new google.maps.LatLng(37.508059, 375.082752);
-        }
 
         var mapOptions = {
             center: mypos,
