@@ -323,6 +323,12 @@
 
 <div data-role="content">
 
+  <%
+     t = Time.now
+     data = t.strftime("%d/%m/%Y  -  %H:%M")
+  %>
+  <input disabled="" value="<%= data %>" type="button" data-icon="clock">
+
   <a href="#" id="pharm"><img src="assets/marker/pharm.png"/></a>
 
   <input name="slider" id="slider" min="100" max="5000" value="1000" data-popup-enabled="true" type="range">
