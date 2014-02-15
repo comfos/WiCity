@@ -43,7 +43,7 @@
 
         <% if params[:day]
                 @today = params[:day]
-                @t = Time.local(@t.year, @t.month, @t.day, params[:h], params[:min])
+                @t = Time.local(params[:y], params[:m], params[:d], params[:h], params[:min])
            end
         %>
     }
@@ -87,13 +87,13 @@
       <div class="ui-bar ui-bar-a"><input id='datepicker' placeholder='Date' style="height: 43px"/></div>
     </div>
     <div class="ui-block-b">
-      <div class="ui-bar ui-bar-a"><input value="Domenicali" type="button" onclick="getDomenicali();"></div>
+      <div class="ui-bar ui-bar-a"><a class="ui-corner-all ui-btn" type="button" onclick="getDomenicali();">Domenicali</a></div>
     </div>
     <div class="ui-block-c">
       <div class="ui-bar ui-bar-b"><input id="timeh" type="text" style="height: 43px"></div>
     </div>
     <div class="ui-block-d">
-      <div class="ui-bar ui-bar-b"><input value="Notturne" type="button" onclick="$('#timeh').val('23:30'); changeDateTime(this, this)"></div>
+      <div class="ui-bar ui-bar-b"><a class="ui-corner-all ui-btn ui-btn-active" type="button" onclick="$('#timeh').val('23:30'); changeDateTime(this, this)">Notturne</a></div>
     </div>
 
   </div>
@@ -110,14 +110,14 @@
                          Time.local(@t.year, @t.month, @t.day, (pharm.LP.split(' - ')[0]).split(':')[0], (pharm.LP.split(' - ')[0]).split(':')[1]).to_i,
                          Time.local(@t.year, @t.month, @t.day, (pharm.LP.split(' - ')[1]).split(':')[0], (pharm.LP.split(' - ')[1]).split(':')[1]).to_i,
                     ) === @t.to_i)
-            %> <a href="<%= "#{pharms_url}/#{pharm.id}" %>" target="_parent"> <%
+            %> <a href="<%= "#{pharms_url}/#{pharm.id}?time="+@t.to_s %>" target="_parent"> <%
                     if pharm.call %>
                         <img src="/assets/icon/opencpharm.png">
             <%      else %>
                         <img src="/assets/icon/openpharm.png">
             <%      end
                  else %>
-                        <a href="<%= "#{pharms_url}/#{pharm.id}?s=close" %>" target="_parent">
+                        <a href="<%= "#{pharms_url}/#{pharm.id}?s=close&time="+@t.to_s %>" target="_parent">
                         <img src="/assets/icon/closepharm.png">
             <%   end
                end
@@ -130,14 +130,14 @@
                          Time.local(@t.year, @t.month, @t.day, (pharm.MP.split(' - ')[0]).split(':')[0], (pharm.MP.split(' - ')[0]).split(':')[1]).to_i,
                          Time.local(@t.year, @t.month, @t.day, (pharm.MP.split(' - ')[1]).split(':')[0], (pharm.MP.split(' - ')[1]).split(':')[1]).to_i,
                     ) === @t.to_i)
-            %> <a href="<%= "#{pharms_url}/#{pharm.id}" %>" target="_parent"> <%
+            %> <a href="<%= "#{pharms_url}/#{pharm.id}?time="+@t.to_s %>" target="_parent"> <%
                     if pharm.call %>
                         <img src="/assets/icon/opencpharm.png">
             <%      else %>
                         <img src="/assets/icon/openpharm.png">
             <%      end
                  else %>
-                        <a href="<%= "#{pharms_url}/#{pharm.id}?s=close" %>" target="_parent">
+                        <a href="<%= "#{pharms_url}/#{pharm.id}?s=close&time="+@t.to_s %>" target="_parent">
                         <img src="/assets/icon/closepharm.png">
             <%   end
                end
@@ -150,14 +150,14 @@
                          Time.local(@t.year, @t.month, @t.day, (pharm.MEP.split(' - ')[0]).split(':')[0], (pharm.MEP.split(' - ')[0]).split(':')[1]).to_i,
                          Time.local(@t.year, @t.month, @t.day, (pharm.MEP.split(' - ')[1]).split(':')[0], (pharm.MEP.split(' - ')[1]).split(':')[1]).to_i,
                        ) === @t.to_i)
-            %> <a href="<%= "#{pharms_url}/#{pharm.id}" %>" target="_parent"> <%
+            %> <a href="<%= "#{pharms_url}/#{pharm.id}?time="+@t.to_s %>" target="_parent"> <%
                     if pharm.call %>
                         <img src="/assets/icon/opencpharm.png">
             <%      else %>
                         <img src="/assets/icon/openpharm.png">
             <%      end
                  else %>
-                        <a href="<%= "#{pharms_url}/#{pharm.id}?s=close" %>" target="_parent">
+                        <a href="<%= "#{pharms_url}/#{pharm.id}?s=close&time="+@t.to_s %>" target="_parent">
                         <img src="/assets/icon/closepharm.png">
             <%   end
                end
@@ -170,14 +170,14 @@
                          Time.local(@t.year, @t.month, @t.day, (pharm.GP.split(' - ')[0]).split(':')[0], (pharm.GP.split(' - ')[0]).split(':')[1]).to_i,
                          Time.local(@t.year, @t.month, @t.day, (pharm.GP.split(' - ')[1]).split(':')[0], (pharm.GP.split(' - ')[1]).split(':')[1]).to_i,
                        ) === @t.to_i)
-            %> <a href="<%= "#{pharms_url}/#{pharm.id}" %>" target="_parent"> <%
+            %> <a href="<%= "#{pharms_url}/#{pharm.id}?time="+@t.to_s %>" target="_parent"> <%
                    if pharm.call %>
                         <img src="/assets/icon/opencpharm.png">
             <%      else %>
                         <img src="/assets/icon/openpharm.png">
             <%      end
                  else %>
-                        <a href="<%= "#{pharms_url}/#{pharm.id}?s=close" %>" target="_parent">
+                        <a href="<%= "#{pharms_url}/#{pharm.id}?s=close&time="+@t.to_s %>" target="_parent">
                         <img src="/assets/icon/closepharm.png">
             <%   end
                end
@@ -190,14 +190,14 @@
                          Time.local(@t.year, @t.month, @t.day, (pharm.VP.split(' - ')[0]).split(':')[0], (pharm.VP.split(' - ')[0]).split(':')[1]).to_i,
                          Time.local(@t.year, @t.month, @t.day, (pharm.VP.split(' - ')[1]).split(':')[0], (pharm.VP.split(' - ')[1]).split(':')[1]).to_i,
                        ) === @t.to_i)
-            %> <a href="<%= "#{pharms_url}/#{pharm.id}" %>" target="_parent"> <%
+            %> <a href="<%= "#{pharms_url}/#{pharm.id}?time="+@t.to_s %>" target="_parent"> <%
                    if pharm.call %>
                         <img src="/assets/icon/opencpharm.png">
             <%      else %>
                         <img src="/assets/icon/openpharm.png">
             <%      end
                  else %>
-                        <a href="<%= "#{pharms_url}/#{pharm.id}?s=close" %>" target="_parent">
+                        <a href="<%= "#{pharms_url}/#{pharm.id}?s=close&time="+@t.to_s %>" target="_parent">
                         <img src="/assets/icon/closepharm.png">
             <%   end
                end
@@ -210,14 +210,14 @@
                          Time.local(@t.year, @t.month, @t.day, (pharm.SP.split(' - ')[0]).split(':')[0], (pharm.SP.split(' - ')[0]).split(':')[1]).to_i,
                          Time.local(@t.year, @t.month, @t.day, (pharm.SP.split(' - ')[1]).split(':')[0], (pharm.SP.split(' - ')[1]).split(':')[1]).to_i,
                        ) === @t.to_i)
-            %> <a href="<%= "#{pharms_url}/#{pharm.id}" %>" target="_parent"> <%
+            %> <a href="<%= "#{pharms_url}/#{pharm.id}?time="+@t.to_s %>" target="_parent"> <%
                    if pharm.call %>
                         <img src="/assets/icon/opencpharm.png">
             <%     else %>
                         <img src="/assets/icon/openpharm.png">
             <%     end
                  else %>
-                        <a href="<%= "#{pharms_url}/#{pharm.id}?s=close" %>" target="_parent">
+                        <a href="<%= "#{pharms_url}/#{pharm.id}?s=close&time="+@t.to_s %>" target="_parent">
                         <img src="/assets/icon/closepharm.png">
             <%   end
                end
@@ -230,14 +230,14 @@
                          Time.local(@t.year, @t.month, @t.day, (pharm.DP.split(' - ')[0]).split(':')[0], (pharm.DP.split(' - ')[0]).split(':')[1]).to_i,
                          Time.local(@t.year, @t.month, @t.day, (pharm.DP.split(' - ')[1]).split(':')[0], (pharm.DP.split(' - ')[1]).split(':')[1]).to_i,
                        ) === @t.to_i)
-            %> <a href="<%= "#{pharms_url}/#{pharm.id}" %>" target="_parent"> <%
+            %> <a href="<%= "#{pharms_url}/#{pharm.id}?time="+@t.to_s %>" target="_parent"> <%
                    if pharm.call %>
                         <img src="/assets/icon/opencpharm.png">
             <%     else %>
                         <img src="/assets/icon/openpharm.png">
             <%     end
                  else %>
-                        <a href="<%= "#{pharms_url}/#{pharm.id}?s=close" %>" target="_parent">
+                        <a href="<%= "#{pharms_url}/#{pharm.id}?s=close&time="+@t.to_s %>" target="_parent">
                         <img src="/assets/icon/closepharm.png">
             <%   end
                end %>

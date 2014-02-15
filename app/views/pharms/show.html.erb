@@ -179,8 +179,6 @@
 
 </style>
 
-
-
 <div data-role="header" data-theme="b">
   <h1><%= @pharm.name %></h1>
   <div class="ui-btn-left" data-role="controlgroup" data-type="horizontal" data-mini="true">
@@ -192,6 +190,22 @@
 
 
 <div data-role="content">
+
+  <%    if params[:time]
+            datatempo = params[:time]
+            year = datatempo.split("-")[0].to_s
+            day = datatempo.split("-")[2].to_s.split(" ")[0].to_s
+            mese = datatempo.split("-")[1].to_s
+            ora = datatempo.split(" ")[1].split(":")[0].to_s
+            min = datatempo.split(" ")[1].split(":")[1].to_s
+
+            data = day+'/'+mese+'/'+year+'  -  '+ora+':'+min
+        else
+            t = Time.now
+            data = t.strftime("%d/%m/%Y  -  %H:%M")
+        end
+  %>
+  <input disabled="" value="<%= data %>" type="button" data-icon="clock">
 
   <div class="ui-bar ui-bar-c ui-corner-all ui-shadow">
     <div id="map-canvas" style="width: 100%; height: 400px" class="ui-corner-all ui-shadow"></div>
