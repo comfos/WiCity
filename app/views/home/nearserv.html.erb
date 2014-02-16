@@ -152,8 +152,19 @@
     }
 
     <%
-        @today = Time.now.strftime("%u")  # => lun = 1, mar = 2, mer = 3
-        @t = Time.now
+        if params[:time]
+            datatempo = params[:time]
+            year = datatempo.split("-")[0].to_s
+            day = datatempo.split("-")[2].to_s.split(" ")[0].to_s
+            mese = datatempo.split("-")[1].to_s
+            ora = datatempo.split(" ")[1].split(":")[0].to_s
+            min = datatempo.split(" ")[1].split(":")[1].to_s
+            @t = Time.local(year, mese, day, ora, min)
+            @today = @t.strftime("%u")  # => lun = 1, mar = 2, mer = 3
+        else
+            @today = Time.now.strftime("%u")  # => lun = 1, mar = 2, mer = 3
+            @t = Time.now
+        end
 
         def isOpen(type)
             if (@today == '1') # LUNEDì
@@ -268,10 +279,18 @@
                     });
                     google.maps.event.addListener(marker, 'click', function () {
                         if('<%= isOpen(pharm) %>') {
-                            infowindow.setContent('<a href="<%= "#{pharms_url}/#{pharm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'" target="_parent"><%= pharm.name %></a>');
+                            <% if params[:time] %>
+                                infowindow.setContent('<a href="<%= "#{pharms_url}/#{pharm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'&time=<%= params[:time] %>" target="_parent"><%= pharm.name %></a>');
+                            <% else %>
+                                infowindow.setContent('<a href="<%= "#{pharms_url}/#{pharm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'" target="_parent"><%= pharm.name %></a>');
+                            <% end %>
                         }
                         else {
-                            infowindow.setContent('<a href="<%= "#{pharms_url}/#{pharm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'&s=close" target="_parent"><%= pharm.name %></a>');
+                            <% if params[:time] %>
+                                infowindow.setContent('<a href="<%= "#{pharms_url}/#{pharm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'&time=<%= params[:time] %>&s=close" target="_parent"><%= pharm.name %></a>');
+                            <% else %>
+                                infowindow.setContent('<a href="<%= "#{pharms_url}/#{pharm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'&s=close"" target="_parent"><%= pharm.name %></a>');
+                            <% end %>
                         }
                         infowindow.open(map, this);
                     });
@@ -322,9 +341,19 @@
 
 <div data-role="content">
 
-  <%
-     t = Time.now
-     data = t.strftime("%d/%m/%Y  -  %H:%M")
+  <%    if params[:time]
+          datatempo = params[:time]
+          year = datatempo.split("-")[0].to_s
+          day = datatempo.split("-")[2].to_s.split(" ")[0].to_s
+          mese = datatempo.split("-")[1].to_s
+          ora = datatempo.split(" ")[1].split(":")[0].to_s
+          min = datatempo.split(" ")[1].split(":")[1].to_s
+
+          data = day+'/'+mese+'/'+year+'  -  '+ora+':'+min
+        else
+          t = Time.now
+          data = t.strftime("%d/%m/%Y  -  %H:%M")
+        end
   %>
   <input disabled="" value="<%= data %>" type="button" data-icon="clock">
 

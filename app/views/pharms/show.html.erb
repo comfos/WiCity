@@ -102,7 +102,11 @@
                     icon: icon
                 });
                 google.maps.event.addListener(marker, "dblclick", function (e) {
-                    location.href='../nearserv?lat='+e.latLng.lat()+'&lng='+e.latLng.lng();
+                    <%    if params[:time]   %>
+                        location.href='../nearserv?lat='+e.latLng.lat()+'&lng='+e.latLng.lng()+'&time=<%= params[:time] %>';
+                    <%    else   %>
+                        location.href='../nearserv?lat='+e.latLng.lat()+'&lng='+e.latLng.lng();
+                    <%    end   %>
                 });
             } else {
                 alert("Geocode was not successful for the following reason: " + status);
@@ -142,7 +146,11 @@
             markerArray[i] = marker;
 
             google.maps.event.addListener(marker, "dblclick", function (e) {
+       <%    if params[:time]   %>
+                location.href='../nearserv?lat='+e.latLng.lat()+'&lng='+e.latLng.lng()+'&time=<%= params[:time] %>';
+       <%    else   %>
                 location.href='../nearserv?lat='+e.latLng.lat()+'&lng='+e.latLng.lng();
+       <%    end   %>
             });
         }
     }

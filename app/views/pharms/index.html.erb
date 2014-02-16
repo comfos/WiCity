@@ -18,6 +18,12 @@
         }
     }
 
+    function setNow() {
+        $( "#datepicker" ).datepicker( "setDate", new Date("<%= Time.now %>") );
+        $('#timeh').datetimepicker({value:'<%= Time.now.to_s.split(" ")[1] %>'});
+        changeDateTime(this, this);
+    }
+
     function getDomenicali() {
         var currentDate = $( "#datepicker" ).datepicker( "getDate" );
         var addday = 7 - currentDate.getDay();
@@ -95,17 +101,20 @@
 
 <div data-role="content">
 
-  <div class="ui-grid-c">
+  <div class="ui-grid-d">
     <div class="ui-block-a">
       <div class="ui-bar ui-bar-a"><input id='datepicker' placeholder='Date' style="height: 43px"/></div>
     </div>
     <div class="ui-block-b">
-      <div class="ui-bar ui-bar-a"><a class="ui-corner-all ui-btn" type="button" onclick="getDomenicali();">Domenicali</a></div>
+      <div class="ui-bar ui-bar-a"><a class="ui-corner-all ui-btn" type="button" onclick="getDomenicali();">Sunday</a></div>
     </div>
     <div class="ui-block-c">
       <div class="ui-bar ui-bar-b"><input id="timeh" type="text" style="height: 43px"></div>
     </div>
     <div class="ui-block-d">
+      <div class="ui-bar ui-bar-b"><a class="ui-corner-all ui-btn ui-btn-active" type="button" onclick="setNow();">Now</a></div>
+    </div>
+    <div class="ui-block-e">
       <div class="ui-bar ui-bar-b"><a class="ui-corner-all ui-btn ui-btn-active" type="button" onclick="getNotturne();">Notturne</a></div>
     </div>
 
