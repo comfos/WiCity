@@ -35,7 +35,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="168" column="24" selection-start="7451" selection-end="7451" vertical-scroll-proportion="0.25822785" vertical-offset="2754" max-vertical-offset="5780">
+            <state line="202" column="145" selection-start="9202" selection-end="9202" vertical-scroll-proportion="0.81772155" vertical-offset="3111" max-vertical-offset="5780">
               <folding>
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -1115,7 +1115,11 @@
       <created>1392639420702</created>
       <updated>1392639420703</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="BUGFIX Listing Pharms  va sostituito con List of Pharmacies&#10;">
+      <created>1392674661089</created>
+      <updated>1392674661089</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1175,7 +1179,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="UPDATE Edit Pharm&#10;" />
     <MESSAGE value="UPDATE InterestLocation" />
     <MESSAGE value="UPDATE InterestLocation&#10;" />
     <MESSAGE value="UPDATE IndexPharms" />
@@ -1200,7 +1203,8 @@
     <MESSAGE value="BUGFIX quando clicco su notturne non dovrei spostarmi alle 23:30 se sono già di notte. Resto all'ora corrente" />
     <MESSAGE value="ADD porre anche su nearest service la data e l'ora solo a scopo informativo e non modificabili dall'utente&#10;" />
     <MESSAGE value="ADD Pulsante NOW e risolti BUGFIX&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD Pulsante NOW e risolti BUGFIX&#10;" />
+    <MESSAGE value="BUGFIX Listing Pharms  va sostituito con List of Pharmacies&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="BUGFIX Listing Pharms  va sostituito con List of Pharmacies&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1488,7 +1492,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="168" column="24" selection-start="7451" selection-end="7451" vertical-scroll-proportion="0.25822785" vertical-offset="2754" max-vertical-offset="5780">
+        <state line="202" column="145" selection-start="9202" selection-end="9202" vertical-scroll-proportion="0.81772155" vertical-offset="3111" max-vertical-offset="5780">
           <folding>
             <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
