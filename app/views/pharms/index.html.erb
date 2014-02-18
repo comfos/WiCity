@@ -71,16 +71,8 @@
 
         if(addday!=7) {
             $( "#datepicker" ).datepicker( "setDate", new Date((currentDate.getMonth()+1)+"/"+(currentDate.getDate()+addday)+"/"+currentDate.getFullYear()) );
-            var currentDate = $( "#datepicker" ).datepicker( "getDate" );
-            var currentTime = $( "#timeh" ).val();
-
-            if(currentDate.getDay() == 0) {
-                location.href='pharms?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day=7&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1]+'&filter3=domenicali';
-            }
-            else {
-                location.href='pharms?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day='+currentDate.getDay()+'&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1]+'&filter3=domenicali';
-            }
         }
+        changeDateTime(this, this);
     }
 
     function changeDateTime(event, ui) {
@@ -137,7 +129,7 @@
             $( "#filternotturne" ).css("border-width", "2px");
         <% end %>
 
-        <% if params[:filter3] == 'domenicali' %>
+        <% if params[:day] == '7' %>
             $( "#filtersunday" ).css("height", "18px");
             $( "#filtersunday" ).css("border-color", "red");
             $( "#filtersunday" ).css("border-width", "2px");
