@@ -10,6 +10,7 @@ WiCity::Application.routes.draw do
   get '/nearserv', to: 'home#nearserv'
 
   get '/users/sign_in', to: 'home#index'
+  get '/users/sign_out', to: 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
