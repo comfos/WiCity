@@ -1,16 +1,25 @@
-<h2>Change your password</h2>
+<div data-role="header">
+  <h1>Change your password</h1>
+  <%= link_to 'Home', root_url, 'data-icon' => 'home', 'data-role' => 'button', 'target' => '_parent' %>
+</div>
 
-<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
-  <%= devise_error_messages! %>
-  <%= f.hidden_field :reset_password_token %>
+<div data-role="content">
 
-  <div><%= f.label :password, "New password" %><br />
-  <%= f.password_field :password, :autofocus => true %></div>
+    <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
+        <%= devise_error_messages! %>
+        <%= f.hidden_field :reset_password_token %>
 
-  <div><%= f.label :password_confirmation, "Confirm new password" %><br />
-  <%= f.password_field :password_confirmation %></div>
+        <div><%= f.label :password, "New password" %>
+        <%= f.password_field :password, :autofocus => true %></div>
 
-  <div><%= f.submit "Change my password" %></div>
-<% end %>
+        <br />
 
-<%= render "devise/shared/links" %>
+        <div><%= f.label :password_confirmation, "Confirm new password" %>
+        <%= f.password_field :password_confirmation %></div>
+
+        <br />
+
+        <div><%= f.submit "Change my password" %></div>
+    <% end %>
+
+</div>
