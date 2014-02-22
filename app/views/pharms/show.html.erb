@@ -35,27 +35,8 @@
         }
         else {
             if(check > 4) {
-              <% if user_signed_in? %>
-                if("<%= current_user.prefadd %>" == "downtown") {
-                    codeAdd("<%= current_user.downtown %>");
-                }
-                else if("<%= current_user.prefadd %>" == "home") {
-                    codeAdd("<%= current_user.home %>");
-                }
-                else if("<%= current_user.prefadd %>" == "office") {
-                    codeAdd("<%= current_user.office %>");
-                }
-                else if("<%= current_user.prefadd %>" == "other") {
-                    codeAdd("<%= current_user.other %>");
-                }
-                else {
-                    window.clearInterval(intervall);
-                    initialize();
-                }
-              <% else %>
-                window.clearInterval(intervall);
-                initialize();
-              <% end %>
+              window.clearInterval(intervall);
+              initialize();
             }
             else {
                 if(navigator.geolocation) {
@@ -97,7 +78,25 @@
 
     function initialize() {
         if(mypos == 0) {
+          <% if user_signed_in? %>
+            if("<%= current_user.prefadd %>" == "downtown") {
+                codeAdd("<%= current_user.downtown %>");
+            }
+            else if("<%= current_user.prefadd %>" == "home") {
+                codeAdd("<%= current_user.home %>");
+            }
+            else if("<%= current_user.prefadd %>" == "office") {
+                codeAdd("<%= current_user.office %>");
+            }
+            else if("<%= current_user.prefadd %>" == "other") {
+                codeAdd("<%= current_user.other %>");
+            }
+            else {
+                mypos = new google.maps.LatLng(37.508059, 375.082752);
+            }
+          <% else %>
             mypos = new google.maps.LatLng(37.508059, 375.082752);
+          <% end %>
         }
 
         directionsDisplay = new google.maps.DirectionsRenderer({suppressMarkers: true});

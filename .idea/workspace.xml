@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/WiCity.iml" afterPath="$PROJECT_DIR$/.idea/WiCity.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/nearserv.html.erb" afterPath="$PROJECT_DIR$/app/views/home/nearserv.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pharms/show.html.erb" afterPath="$PROJECT_DIR$/app/views/pharms/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -155,7 +154,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="14" selection-start="1712" selection-end="1712" vertical-scroll-proportion="0.83247423" vertical-offset="646" max-vertical-offset="6273">
+            <state line="79" column="24" selection-start="2270" selection-end="2270" vertical-scroll-proportion="0.036082473" vertical-offset="1329" max-vertical-offset="6256">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#ul#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
@@ -188,7 +187,7 @@
       <file leaf-file-name="nearserv.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="23" selection-start="2307" selection-end="2420" vertical-scroll-proportion="-3.5384614" vertical-offset="1261" max-vertical-offset="6800">
+            <state line="129" column="9" selection-start="3774" selection-end="3774" vertical-scroll-proportion="-6.8076925" vertical-offset="1839" max-vertical-offset="6783">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -1485,7 +1484,11 @@
       <created>1393104296459</created>
       <updated>1393104296459</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="ADD Preferred Localization&#10;">
+      <created>1393111711780</created>
+      <updated>1393111711780</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1545,7 +1548,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="ADD chiamata Pharms&#10;" />
     <MESSAGE value="ADD Distinguere, tramite icona colorata, apertura/chiusura della farmacie in SHOWPharms" />
     <MESSAGE value="ADD Distinguere, tramite icona colorata, apertura/chiusura della farmacie in SHOWPharms con distinzione A CHIAMATA&#10;" />
     <MESSAGE value="UPDATE gitignore" />
@@ -1570,7 +1572,8 @@
     <MESSAGE value="BUGFIX logout&#10;" />
     <MESSAGE value="BUGFIX Lost Password&#10;" />
     <MESSAGE value="ADD Preferred Localization" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD Preferred Localization" />
+    <MESSAGE value="ADD Preferred Localization&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD Preferred Localization&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2199,7 +2202,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="23" selection-start="2307" selection-end="2420" vertical-scroll-proportion="-3.5384614" vertical-offset="1261" max-vertical-offset="6800">
+        <state line="129" column="9" selection-start="3774" selection-end="3774" vertical-scroll-proportion="-6.8076925" vertical-offset="1839" max-vertical-offset="6783">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -2209,7 +2212,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="14" selection-start="1712" selection-end="1712" vertical-scroll-proportion="0.83247423" vertical-offset="646" max-vertical-offset="6273">
+        <state line="79" column="24" selection-start="2270" selection-end="2270" vertical-scroll-proportion="0.036082473" vertical-offset="1329" max-vertical-offset="6256">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
