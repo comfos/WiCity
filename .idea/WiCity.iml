@@ -222,6 +222,7 @@
     <orderEntry type="library" scope="PROVIDED" name="warden (v1.2.3, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" name="jquery-1.9.1" level="application" />
     <orderEntry type="library" name="jquery-ui" level="application" />
+    <orderEntry type="library" name="markerclusterer_packed" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />

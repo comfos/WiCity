@@ -24,6 +24,8 @@
     }
 
     function preinit() {
+        geocoder = new google.maps.Geocoder();
+
         var lat = "<%= params[:lat] %>";
         var lng = "<%= params[:lng] %>";
         if(lat) {
@@ -33,9 +35,27 @@
         }
         else {
             if(check > 4) {
-                mypos = new google.maps.LatLng(37.508059, 375.082752);
+              <% if user_signed_in? %>
+                if("<%= current_user.prefadd %>" == "downtown") {
+                    codeAdd("<%= current_user.downtown %>");
+                }
+                else if("<%= current_user.prefadd %>" == "home") {
+                    codeAdd("<%= current_user.home %>");
+                }
+                else if("<%= current_user.prefadd %>" == "office") {
+                    codeAdd("<%= current_user.office %>");
+                }
+                else if("<%= current_user.prefadd %>" == "other") {
+                    codeAdd("<%= current_user.other %>");
+                }
+                else {
+                    window.clearInterval(intervall);
+                    initialize();
+                }
+              <% else %>
                 window.clearInterval(intervall);
                 initialize();
+              <% end %>
             }
             else {
                 if(navigator.geolocation) {
@@ -55,6 +75,18 @@
         }
     }
 
+    function codeAdd(add) {
+        geocoder.geocode( { 'address': add}, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                mypos = results[0].geometry.location;
+            } else {
+                mypos = 0;
+            }
+            window.clearInterval(intervall);
+            initialize();
+        });
+    }
+
     function handleNoGeolocation(errorFlag) {
         if (errorFlag) {
             alert("Error: The Geolocation service failed.");
@@ -64,7 +96,10 @@
     }
 
     function initialize() {
-        geocoder = new google.maps.Geocoder();
+        if(mypos == 0) {
+            mypos = new google.maps.LatLng(37.508059, 375.082752);
+        }
+
         directionsDisplay = new google.maps.DirectionsRenderer({suppressMarkers: true});
 
         var mapOptions = {
@@ -81,11 +116,11 @@
 
         stepDisplay = new google.maps.InfoWindow();
 
-        codeAddress();
+        codeAddress("<%= @pharm.address %>");
     }
 
-    function codeAddress() {
-        var address = "<%= @pharm.address %>";
+    function codeAddress(add) {
+        var address = add;
         var s = "<%= params[:s] %>";
         geocoder.geocode( { 'address': address}, function(results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
