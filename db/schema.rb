@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140202115054) do
+ActiveRecord::Schema.define(version: 20140222145124) do
 
   create_table "pharms", force: true do |t|
     t.string   "name"
@@ -20,21 +20,21 @@ ActiveRecord::Schema.define(version: 20140202115054) do
     t.string   "lng"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "LM"
-    t.string   "LP"
-    t.string   "MM"
-    t.string   "MP"
-    t.string   "MEM"
-    t.string   "MEP"
-    t.string   "GM"
-    t.string   "GP"
-    t.string   "VM"
-    t.string   "VP"
-    t.string   "SM"
-    t.string   "SP"
-    t.string   "DM"
-    t.string   "DP"
-    t.boolean  "call"
+    t.string   "LM",         default: "0:0 - 0:0"
+    t.string   "LP",         default: "0:0 - 0:0"
+    t.string   "MM",         default: "0:0 - 0:0"
+    t.string   "MP",         default: "0:0 - 0:0"
+    t.string   "MEM",        default: "0:0 - 0:0"
+    t.string   "MEP",        default: "0:0 - 0:0"
+    t.string   "GM",         default: "0:0 - 0:0"
+    t.string   "GP",         default: "0:0 - 0:0"
+    t.string   "VM",         default: "0:0 - 0:0"
+    t.string   "VP",         default: "0:0 - 0:0"
+    t.string   "SM",         default: "0:0 - 0:0"
+    t.string   "SP",         default: "0:0 - 0:0"
+    t.string   "DM",         default: "0:0 - 0:0"
+    t.string   "DP",         default: "0:0 - 0:0"
+    t.boolean  "call",       default: false
   end
 
   create_table "users", force: true do |t|
@@ -53,6 +53,11 @@ ActiveRecord::Schema.define(version: 20140202115054) do
     t.string   "name"
     t.string   "surname"
     t.date     "born"
+    t.string   "downtown"
+    t.string   "home"
+    t.string   "office"
+    t.string   "other"
+    t.string  "prefadd"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

@@ -2,10 +2,26 @@
 <script src="//code.jquery.com/jquery-1.9.1.js"></script>
 <script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+
 <script>
+
     $(function() {
+
         $( '#datepicker' ).datepicker( { dateFormat: "dd/mm/yy" } );
         $( '#datepicker').val( $.datepicker.formatDate( "dd/mm/yy", new Date( $.datepicker.parseDate( "yy-mm-dd", "<%= current_user.born %>" ) ) ) );
+
+        var input = (document.getElementById('user_downtown'));
+        var autocomplete = new google.maps.places.Autocomplete(input);
+
+        var input1 = (document.getElementById('user_home'));
+        var autocomplete1 = new google.maps.places.Autocomplete(input1);
+
+        var input2 = (document.getElementById('user_office'));
+        var autocomplete2 = new google.maps.places.Autocomplete(input2);
+
+        var input3 = (document.getElementById('user_other'));
+        var autocomplete3 = new google.maps.places.Autocomplete(input3);
     });
 </script>
 
@@ -31,12 +47,61 @@
       </div>
 
       <br>
-
-      <div><%= f.email_field :email, 'placeholder' => 'Email' %></div>
-
+      <%= f.email_field :email, 'placeholder' => 'Email' %>
+      <br>
+      <%= f.text_field :born, 'id' => 'datepicker', 'placeholder' => 'Born on' %>
       <br>
 
-      <div><%= f.text_field :born, 'id' => 'datepicker', 'placeholder' => 'Born on' %></div>
+      <div data-role="collapsible" data-enhanced="true" class="ui-collapsible ui-collapsible-inset ui-corner-all ui-collapsible-collapsed" data-collapsed-icon="plus">
+        <h2 class="ui-collapsible-heading ui-collapsible-heading-collapsed">
+          <a href="#" class="ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-icon-plus">
+            Preferred Localization <sub><i>(if the Google or GPS Localization is not working)</i></sub>
+            <span class="ui-collapsible-heading-status"> click to expand contents</span>
+          </a>
+        </h2>
+        <div class="ui-collapsible-content ui-collapsible-content-collapsed" aria-hidden="true">
+          <p>
+          <div class="ui-grid-b ui-corner-all">
+            <div class="ui-block-a" style="width: 20%">
+              <div class="ui-bar ui-bar-a" style="height:53px;">Downtown</div>
+            </div>
+            <div class="ui-block-b" style="width: 70%">
+              <div class="ui-bar ui-bar-a" style="height:53px;"><%= f.text_field :downtown %></div>
+            </div>
+            <div class="ui-block-c" style="width: 10%">
+              <div class="ui-bar ui-bar-a" style="height:53px;"><label style="height: 16px"><%= f.radio_button(:prefadd, "downtown") %></label></div>
+            </div>
+            <div class="ui-block-a" style="width: 20%">
+              <div class="ui-bar ui-bar-a" style="height:53px">Home</div>
+            </div>
+            <div class="ui-block-b" style="width: 70%">
+              <div class="ui-bar ui-bar-a" style="height:53px"><%= f.text_field :home %></div>
+            </div>
+            <div class="ui-block-c" style="width: 10%">
+              <div class="ui-bar ui-bar-a" style="height:53px"><label style="height: 16px"><%= f.radio_button(:prefadd, "home") %></label></div>
+            </div>
+            <div class="ui-block-a" style="width: 20%">
+              <div class="ui-bar ui-bar-a" style="height:53px">Office</div>
+            </div>
+            <div class="ui-block-b" style="width: 70%">
+              <div class="ui-bar ui-bar-a" style="height:53px"><%= f.text_field :office %></div>
+            </div>
+            <div class="ui-block-c" style="width: 10%">
+              <div class="ui-bar ui-bar-a" style="height:53px"><label style="height: 16px"><%= f.radio_button(:prefadd, "office") %></label></div>
+            </div>
+            <div class="ui-block-a" style="width: 20%">
+              <div class="ui-bar ui-bar-a" style="height:53px">Other</div>
+            </div>
+            <div class="ui-block-b" style="width: 70%">
+              <div class="ui-bar ui-bar-a" style="height:53px"><%= f.text_field :other %></div>
+            </div>
+            <div class="ui-block-c" style="width: 10%">
+              <div class="ui-bar ui-bar-a" style="height:53px"><label style="height: 16px"><%= f.radio_button(:prefadd, "other") %></label></div>
+            </div>
+          </div>
+          </p>
+        </div>
+      </div>
 
       <br>
 
