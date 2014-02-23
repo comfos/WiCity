@@ -3,6 +3,7 @@ WiCity::Application.routes.draw do
   devise_for :users
 
   resources :pharms
+  resources :parks
 
   root 'home#index'
 

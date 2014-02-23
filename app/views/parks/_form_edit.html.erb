@@ -7,7 +7,7 @@
         $("#range-"+type+"b").val(1500).slider('refresh');
 
         $('#text-'+day+'-'+type).html( '0:0 - 0:0' );
-        $('#pharm_'+type).val( '0:0 - 0:0' );
+        $('#park_'+type).val( '0:0 - 0:0' );
     }
 
     function getRange(val, type) {
@@ -18,53 +18,53 @@
     }
 
     function setRange() {
-        <% if(!(@pharm.LM).nil? && !(@pharm.LP).nil?) then %>
-            getRange("<%= @pharm.LM.split(" - ")[0] %>", "LMa");
-            getRange("<%= @pharm.LM.split(" - ")[1] %>", "LMb");
-            getRange("<%= @pharm.LP.split(" - ")[0] %>", "LPa");
-            getRange("<%= @pharm.LP.split(" - ")[1] %>", "LPb");
+        <% if(!(@park.LM).nil? && !(@park.LP).nil?) then %>
+            getRange("<%= @park.LM.split(" - ")[0] %>", "LMa");
+            getRange("<%= @park.LM.split(" - ")[1] %>", "LMb");
+            getRange("<%= @park.LP.split(" - ")[0] %>", "LPa");
+            getRange("<%= @park.LP.split(" - ")[1] %>", "LPb");
         <% end %>
 
-        <% if(!(@pharm.MM).nil? && !(@pharm.MP).nil?) then %>
-            getRange("<%= @pharm.MM.split(" - ")[0] %>", "MMa");
-            getRange("<%= @pharm.MM.split(" - ")[1] %>", "MMb");
-            getRange("<%= @pharm.MP.split(" - ")[0] %>", "MPa");
-            getRange("<%= @pharm.MP.split(" - ")[1] %>", "MPb");
+        <% if(!(@park.MM).nil? && !(@park.MP).nil?) then %>
+            getRange("<%= @park.MM.split(" - ")[0] %>", "MMa");
+            getRange("<%= @park.MM.split(" - ")[1] %>", "MMb");
+            getRange("<%= @park.MP.split(" - ")[0] %>", "MPa");
+            getRange("<%= @park.MP.split(" - ")[1] %>", "MPb");
         <% end %>
 
-        <% if(!(@pharm.MEM).nil? && !(@pharm.MEP).nil?) then %>
-            getRange("<%= @pharm.MEM.split(" - ")[0] %>", "MEMa");
-            getRange("<%= @pharm.MEM.split(" - ")[1] %>", "MEMb");
-            getRange("<%= @pharm.MEP.split(" - ")[0] %>", "MEPa");
-            getRange("<%= @pharm.MEP.split(" - ")[1] %>", "MEPb");
+        <% if(!(@park.MEM).nil? && !(@park.MEP).nil?) then %>
+            getRange("<%= @park.MEM.split(" - ")[0] %>", "MEMa");
+            getRange("<%= @park.MEM.split(" - ")[1] %>", "MEMb");
+            getRange("<%= @park.MEP.split(" - ")[0] %>", "MEPa");
+            getRange("<%= @park.MEP.split(" - ")[1] %>", "MEPb");
         <% end %>
 
-        <% if(!(@pharm.GM).nil? && !(@pharm.GP).nil?) then %>
-            getRange("<%= @pharm.GM.split(" - ")[0] %>", "GMa");
-            getRange("<%= @pharm.GM.split(" - ")[1] %>", "GMb");
-            getRange("<%= @pharm.GP.split(" - ")[0] %>", "GPa");
-            getRange("<%= @pharm.GP.split(" - ")[1] %>", "GPb");
+        <% if(!(@park.GM).nil? && !(@park.GP).nil?) then %>
+            getRange("<%= @park.GM.split(" - ")[0] %>", "GMa");
+            getRange("<%= @park.GM.split(" - ")[1] %>", "GMb");
+            getRange("<%= @park.GP.split(" - ")[0] %>", "GPa");
+            getRange("<%= @park.GP.split(" - ")[1] %>", "GPb");
         <% end %>
 
-        <% if(!(@pharm.VM).nil? && !(@pharm.VP).nil?) then %>
-            getRange("<%= @pharm.VM.split(" - ")[0] %>", "VMa");
-            getRange("<%= @pharm.VM.split(" - ")[1] %>", "VMb");
-            getRange("<%= @pharm.VP.split(" - ")[0] %>", "VPa");
-            getRange("<%= @pharm.VP.split(" - ")[1] %>", "VPb");
+        <% if(!(@park.VM).nil? && !(@park.VP).nil?) then %>
+            getRange("<%= @park.VM.split(" - ")[0] %>", "VMa");
+            getRange("<%= @park.VM.split(" - ")[1] %>", "VMb");
+            getRange("<%= @park.VP.split(" - ")[0] %>", "VPa");
+            getRange("<%= @park.VP.split(" - ")[1] %>", "VPb");
         <% end %>
 
-        <% if(!(@pharm.SM).nil? && !(@pharm.SP).nil?) then %>
-            getRange("<%= @pharm.SM.split(" - ")[0] %>", "SMa");
-            getRange("<%= @pharm.SM.split(" - ")[1] %>", "SMb");
-            getRange("<%= @pharm.SP.split(" - ")[0] %>", "SPa");
-            getRange("<%= @pharm.SP.split(" - ")[1] %>", "SPb");
+        <% if(!(@park.SM).nil? && !(@park.SP).nil?) then %>
+            getRange("<%= @park.SM.split(" - ")[0] %>", "SMa");
+            getRange("<%= @park.SM.split(" - ")[1] %>", "SMb");
+            getRange("<%= @park.SP.split(" - ")[0] %>", "SPa");
+            getRange("<%= @park.SP.split(" - ")[1] %>", "SPb");
         <% end %>
 
-        <% if(!(@pharm.DM).nil? && !(@pharm.DP).nil?) then %>
-            getRange("<%= @pharm.DM.split(" - ")[0] %>", "DMa");
-            getRange("<%= @pharm.DM.split(" - ")[1] %>", "DMb");
-            getRange("<%= @pharm.DP.split(" - ")[0] %>", "DPa");
-            getRange("<%= @pharm.DP.split(" - ")[1] %>", "DPb");
+        <% if(!(@park.DM).nil? && !(@park.DP).nil?) then %>
+            getRange("<%= @park.DM.split(" - ")[0] %>", "DMa");
+            getRange("<%= @park.DM.split(" - ")[1] %>", "DMb");
+            getRange("<%= @park.DP.split(" - ")[0] %>", "DPa");
+            getRange("<%= @park.DP.split(" - ")[1] %>", "DPb");
         <% end %>
     }
 
@@ -92,13 +92,10 @@
             minutes2 = '00';
 
         $('#text-'+to+'-'+from).html( hours1+':'+minutes1+' - '+hours2+':'+minutes2 );
-        $('#pharm_'+from).val(hours1+':'+minutes1+' - '+hours2+':'+minutes2);
+        $('#park_'+from).val(hours1+':'+minutes1+' - '+hours2+':'+minutes2);
     }
 
     function initialize() {
-
-        if(<%= @pharm.call %>)
-            $('#pharm_call').val('1').slider("refresh");
 
         setRange();
 
@@ -200,7 +197,7 @@
             slideTime(event, ui, "dom", "DP");
         });
 
-        var input = (document.getElementById('pharm_address'));
+        var input = (document.getElementById('park_address'));
         var autocomplete = new google.maps.places.Autocomplete(input);
 
         google.maps.event.addListener(autocomplete, 'place_changed', function() {
@@ -213,15 +210,15 @@
             if (place.geometry.viewport) {
                 map.fitBounds(place.geometry.viewport);
             } else {
-                document.getElementById('pharm_lat').value = (place.geometry.location).lat();
-                document.getElementById('pharm_lng').value = (place.geometry.location).lng();
-                document.getElementById("pharm_add").style.display = "block";
+                document.getElementById('park_lat').value = (place.geometry.location).lat();
+                document.getElementById('park_lng').value = (place.geometry.location).lng();
+                document.getElementById("park_add").style.display = "block";
             }
         });
     }
 
     function hideUpdate() {
-        document.getElementById("pharm_add").style.display = "none";
+        document.getElementById("park_add").style.display = "none";
     }
 
     google.maps.event.addDomListener(window, 'load', initialize);
@@ -230,13 +227,13 @@
 
 <div data-role="content">
 
-    <%= form_for(@pharm, :html => {:target => '_parent'} ) do |f| %>
-      <% if @pharm.errors.any? %>
+    <%= form_for(@park, :html => {:target => '_parent'} ) do |f| %>
+      <% if @park.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(@pharm.errors.count, "error") %> prohibited this pharm from being saved:</h2>
+          <h2><%= pluralize(@park.errors.count, "error") %> prohibited this park from being saved:</h2>
 
           <ul>
-          <% @pharm.errors.full_messages.each do |msg| %>
+          <% @park.errors.full_messages.each do |msg| %>
             <li><%= msg %></li>
           <% end %>
           </ul>
@@ -270,31 +267,13 @@
 
       <br>
 
-      <div class="ui-grid-a ui-corner-all ui-shadow">
-        <div class="ui-block-a">
-          <div class="ui-bar ui-bar-a" style="height:55px">
-            A chiamata:
-          </div>
-        </div>
-        <div class="ui-block-b">
-          <div class="ui-bar ui-bar-a" style="height:55px">
-            <select id="pharm_call" name="pharm[call]" data-role="slider">
-              <option value="0">Off</option>
-              <option value="1">On</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <br>
-
       <div class="ui-grid-b ui-corner-all ui-shadow">
         <div class="ui-block-a">
           <div class="ui-bar ui-bar-a" style="height:50px" id="text-lun">
             Lunedì
             <div style="float:right">
-              <div id="text-lun-LM" style="float:left"><%= @pharm.LM %></div>&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;<div id="text-lun-LP" style="float:right"><%= @pharm.LP %></div>
+              <div id="text-lun-LM" style="float:left"><%= @park.LM %></div>&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;<div id="text-lun-LP" style="float:right"><%= @park.LP %></div>
             </div>
           </div>
         </div>
@@ -336,8 +315,8 @@
           <div class="ui-bar ui-bar-a" style="height:50px" id="text-mar">
             Martedì
             <div style="float:right">
-              <div id="text-mar-MM" style="float:left"><%= @pharm.MM %></div>&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;<div id="text-mar-MP" style="float:right"><%= @pharm.MP %></div>
+              <div id="text-mar-MM" style="float:left"><%= @park.MM %></div>&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;<div id="text-mar-MP" style="float:right"><%= @park.MP %></div>
             </div>
           </div>
         </div>
@@ -379,8 +358,8 @@
           <div class="ui-bar ui-bar-a" style="height:50px" id="text-mar">
             Mercoledì
             <div style="float:right">
-              <div id="text-mer-MEM" style="float:left"><%= @pharm.MEM %></div>&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;<div id="text-mer-MEP" style="float:right"><%= @pharm.MEP %></div>
+              <div id="text-mer-MEM" style="float:left"><%= @park.MEM %></div>&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;<div id="text-mer-MEP" style="float:right"><%= @park.MEP %></div>
             </div>
           </div>
         </div>
@@ -422,8 +401,8 @@
           <div class="ui-bar ui-bar-a" style="height:50px" id="text-mar">
             Giovedì
             <div style="float:right">
-              <div id="text-gio-GM" style="float:left"><%= @pharm.GM %></div>&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;<div id="text-gio-GP" style="float:right"><%= @pharm.GP %></div>
+              <div id="text-gio-GM" style="float:left"><%= @park.GM %></div>&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;<div id="text-gio-GP" style="float:right"><%= @park.GP %></div>
             </div>
           </div>
         </div>
@@ -465,8 +444,8 @@
           <div class="ui-bar ui-bar-a" style="height:50px" id="text-mar">
             Venerdì
             <div style="float:right">
-              <div id="text-ven-VM" style="float:left"><%= @pharm.VM %></div>&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;<div id="text-ven-VP" style="float:right"><%= @pharm.VP %></div>
+              <div id="text-ven-VM" style="float:left"><%= @park.VM %></div>&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;<div id="text-ven-VP" style="float:right"><%= @park.VP %></div>
             </div>
           </div>
         </div>
@@ -508,8 +487,8 @@
           <div class="ui-bar ui-bar-a" style="height:50px" id="text-mar">
             Sabato
             <div style="float:right">
-              <div id="text-sab-SM" style="float:left"><%= @pharm.SM %></div>&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;<div id="text-sab-SP" style="float:right"><%= @pharm.SP %></div>
+              <div id="text-sab-SM" style="float:left"><%= @park.SM %></div>&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;<div id="text-sab-SP" style="float:right"><%= @park.SP %></div>
             </div>
           </div>
         </div>
@@ -551,8 +530,8 @@
           <div class="ui-bar ui-bar-a" style="height:50px" id="text-mar">
             Domenica
             <div style="float:right">
-              <div id="text-dom-DM" style="float:left"><%= @pharm.DM %></div>&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;<div id="text-dom-DP" style="float:right"><%= @pharm.DP %></div>
+              <div id="text-dom-DM" style="float:left"><%= @park.DM %></div>&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;<div id="text-dom-DP" style="float:right"><%= @park.DP %></div>
             </div>
           </div>
         </div>
@@ -594,7 +573,7 @@
 
       <br>
 
-      <div id="pharm_add" class="actions">
+      <div id="park_add" class="actions">
         <%= f.submit %>
       </div>
 

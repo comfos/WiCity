@@ -3,7 +3,7 @@ class AddDayToPharms < ActiveRecord::Migration
     add_column :pharms, :LM, :string
     add_column :pharms, :LP, :string
     add_column :pharms, :MM, :string
-    add_column :pharms, :Mp, :string
+    add_column :pharms, :MP, :string
     add_column :pharms, :MEM, :string
     add_column :pharms, :MEP, :string
     add_column :pharms, :GM, :string

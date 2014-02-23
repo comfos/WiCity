@@ -115,7 +115,7 @@
 
         stepDisplay = new google.maps.InfoWindow();
 
-        codeAddress("<%= @pharm.address %>");
+        codeAddress("<%= @park.address %>");
     }
 
     function codeAddress(add) {
@@ -125,10 +125,10 @@
             if (status == google.maps.GeocoderStatus.OK) {
                 map.setCenter(results[0].geometry.location);
                 if(s=="close") {
-                    var icon = '/assets/marker/cpharm.png';
+                    var icon = '/assets/marker/cpark.png';
                 }
                 else {
-                    var icon = '/assets/marker/pharm.png';
+                    var icon = '/assets/marker/park.png';
                 }
                 var marker = new google.maps.Marker({
                     map: map,
@@ -157,7 +157,7 @@
         var selectedMode = mode;
         var request = {
             origin: mypos,
-            destination: "<%= @pharm.address %>",
+            destination: "<%= @park.address %>",
             travelMode: google.maps.TravelMode[selectedMode]
         };
         directionsService.route(request, function(response, status) {
@@ -220,12 +220,12 @@
 </style>
 
 <div data-role="header" data-theme="b">
-  <h1><%= @pharm.name %></h1>
+  <h1><%= @park.name %></h1>
   <div class="ui-btn-left" data-role="controlgroup" data-type="horizontal" data-mini="true">
-    <%= link_to 'Back', pharms_path+'?filter1=now', 'data-icon' => 'back', 'data-role' => 'button', 'data-iconpos' => 'notext', :target => '_parent' %>
+    <%= link_to 'Back', parks_path+'?filter1=now', 'data-icon' => 'back', 'data-role' => 'button', 'data-iconpos' => 'notext', :target => '_parent' %>
     <%= link_to 'Home', root_url, 'data-icon' => 'home', 'data-role' => 'button', 'data-iconpos' => 'notext', :target => '_parent' %>
   </div>
-  <%= link_to 'Edit', edit_pharm_path(@pharm), 'data-icon' => 'edit', 'class' => 'ui-btn-right', 'data-iconpos' => 'notext', :target => '_parent' %>
+  <%= link_to 'Edit', edit_park_path(@park), 'data-icon' => 'edit', 'class' => 'ui-btn-right', 'data-iconpos' => 'notext', :target => '_parent' %>
 </div>
 
 
@@ -277,7 +277,7 @@
 
   <p>
     <strong>Address:</strong>
-    <%= @pharm.address %>
+    <%= @park.address %>
   </p>
 
   <div class="ui-grid-b ui-corner-all ui-shadow">
@@ -286,10 +286,10 @@
       <div class="ui-bar ui-bar-a ui-corner-top" style="height:25px" id="text-lun">Lunedì</div>
     </div>
     <div class="ui-block-b">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @pharm.LM %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.LM %></div>
     </div>
     <div class="ui-block-c">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @pharm.LP %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.LP %></div>
     </div>
 
 
@@ -297,10 +297,10 @@
       <div class="ui-bar ui-bar-a" style="height:25px">Martedì</div>
     </div>
     <div class="ui-block-b">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @pharm.MM %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.MM %></div>
     </div>
     <div class="ui-block-c">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @pharm.MP %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.MP %></div>
     </div>
 
 
@@ -308,10 +308,10 @@
       <div class="ui-bar ui-bar-a" style="height:25px">Mercoledì</div>
     </div>
     <div class="ui-block-b">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @pharm.MEM %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.MEM %></div>
     </div>
     <div class="ui-block-c">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @pharm.MEP %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.MEP %></div>
     </div>
 
 
@@ -319,10 +319,10 @@
       <div class="ui-bar ui-bar-a" style="height:25px">Giovedì</div>
     </div>
     <div class="ui-block-b">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @pharm.GM %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.GM %></div>
     </div>
     <div class="ui-block-c">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @pharm.GP %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.GP %></div>
     </div>
 
 
@@ -330,10 +330,10 @@
       <div class="ui-bar ui-bar-a" style="height:25px">Venerdì</div>
     </div>
     <div class="ui-block-b">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @pharm.VM %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.VM %></div>
     </div>
     <div class="ui-block-c">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @pharm.VP %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.VP %></div>
     </div>
 
 
@@ -341,10 +341,10 @@
       <div class="ui-bar ui-bar-a" style="height:25px">Sabato</div>
     </div>
     <div class="ui-block-b">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @pharm.SM %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.SM %></div>
     </div>
     <div class="ui-block-c">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @pharm.SP %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.SP %></div>
     </div>
 
 
@@ -352,10 +352,10 @@
       <div class="ui-bar ui-bar-a" style="height:25px">Domenica</div>
     </div>
     <div class="ui-block-b">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @pharm.DM %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.DM %></div>
     </div>
     <div class="ui-block-c">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @pharm.DP %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.DP %></div>
     </div>
 
   </div>
