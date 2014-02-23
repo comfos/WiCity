@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/nearserv.html.erb" afterPath="$PROJECT_DIR$/app/views/home/nearserv.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pharms/show.html.erb" afterPath="$PROJECT_DIR$/app/views/pharms/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WiCity.iws" />
@@ -149,10 +151,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="24" selection-start="2270" selection-end="2270" vertical-scroll-proportion="0.036082473" vertical-offset="1329" max-vertical-offset="6256">
+            <state line="36" column="24" selection-start="846" selection-end="846" vertical-scroll-proportion="-4.8461537" vertical-offset="360" max-vertical-offset="6256">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#ul#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
@@ -182,10 +184,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nearserv.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="nearserv.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="9" selection-start="3774" selection-end="3774" vertical-scroll-proportion="-6.8076925" vertical-offset="1839" max-vertical-offset="6783">
+            <state line="64" column="24" selection-start="1545" selection-end="1545" vertical-scroll-proportion="0.5618557" vertical-offset="870" max-vertical-offset="6783">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -515,8 +517,8 @@
         <option value="$PROJECT_DIR$/db/migrate/20140222145124_add_preferredaddress_to_users.rb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/home/nearserv.html.erb" />
         <option value="$PROJECT_DIR$/app/views/pharms/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/nearserv.html.erb" />
       </list>
     </option>
   </component>
@@ -759,7 +761,7 @@
       <recent name="C:\Users\Alfio\RubymineProjects\WiCity\app\assets\themes" />
     </key>
   </component>
-  <component name="RunManager" selected="Rake.db:migrate: WiCity">
+  <component name="RunManager" selected="Rails.Development: WiCity">
     <configuration default="false" name="db:create:all: WiCity" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="WiCity" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -1490,7 +1492,11 @@
       <created>1393112824867</created>
       <updated>1393112824867</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="ADD Preferred Localization&#10;">
+      <created>1393113433115</created>
+      <updated>1393113433115</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -2202,19 +2208,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="9" selection-start="3774" selection-end="3774" vertical-scroll-proportion="-6.8076925" vertical-offset="1839" max-vertical-offset="6783">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="24" selection-start="2270" selection-end="2270" vertical-scroll-proportion="0.036082473" vertical-offset="1329" max-vertical-offset="6256">
+        <state line="36" column="24" selection-start="846" selection-end="846" vertical-scroll-proportion="-4.8461537" vertical-offset="360" max-vertical-offset="6256">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
@@ -2239,6 +2235,16 @@
             <element signature="n#style#0;n#div#0;n#div#18;n#div#4;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#19;n#div#4;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#20;n#div#4;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="24" selection-start="1545" selection-end="1545" vertical-scroll-proportion="0.5618557" vertical-offset="870" max-vertical-offset="6783">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
