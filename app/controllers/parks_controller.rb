@@ -10,6 +10,7 @@ class ParksController < ApplicationController
     @t = Time.now
 
     @parks = Park.all
+    @taxistations = Taxistation.all
   end
 
   # GET /parks/1

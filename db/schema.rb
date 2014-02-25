@@ -11,29 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140223184054) do
+ActiveRecord::Schema.define(version: 20140224164742) do
 
-  create_table "parks", force: true do |t|
-    t.string   "name"
-    t.string   "address"
-    t.string   "lat"
-    t.string   "lng"
+  create_table 'parks', force: true do |t|
+    t.string 'name'
+    t.string 'address'
+    t.string 'lat'
+    t.string 'lng'
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "LM"
-    t.string   "LP"
-    t.string   "MM"
-    t.string   "MP"
-    t.string   "MEM"
-    t.string   "MEP"
-    t.string   "GM"
-    t.string   "GP"
-    t.string   "VM"
-    t.string   "VP"
-    t.string   "SM"
-    t.string   "SP"
-    t.string   "DM"
-    t.string   "DP"
+    t.string   "LM",         default: "0:0 - 0:0"
+    t.string   "LP",         default: "0:0 - 0:0"
+    t.string   "MM",         default: "0:0 - 0:0"
+    t.string   "MP",         default: "0:0 - 0:0"
+    t.string   "MEM",        default: "0:0 - 0:0"
+    t.string   "MEP",        default: "0:0 - 0:0"
+    t.string   "GM",         default: "0:0 - 0:0"
+    t.string   "GP",         default: "0:0 - 0:0"
+    t.string   "VM",         default: "0:0 - 0:0"
+    t.string   "VP",         default: "0:0 - 0:0"
+    t.string   "SM",         default: "0:0 - 0:0"
+    t.string   "SP",         default: "0:0 - 0:0"
+    t.string   "DM",         default: "0:0 - 0:0"
+    t.string   "DP",         default: "0:0 - 0:0"
   end
 
   create_table "pharms", force: true do |t|
@@ -58,6 +58,15 @@ ActiveRecord::Schema.define(version: 20140223184054) do
     t.string   "DM",         default: "0:0 - 0:0"
     t.string   "DP",         default: "0:0 - 0:0"
     t.boolean  "call",       default: false
+  end
+
+  create_table "taxis", force: true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "lat"
+    t.string   "lng"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|

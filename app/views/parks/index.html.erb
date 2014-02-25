@@ -158,7 +158,7 @@
 
 
 <div data-role="header" data-theme="b">
-  <h1>List of Parks</h1>
+  <h1>List of Parks & Taxi Stations</h1>
   <div id="custom-border-radius" class="ui-btn-left" data-role="controlgroup" data-type="horizontal" data-mini="true">
     <%= link_to 'Back', 'intloc', 'data-icon' => 'back', 'data-role' => 'button', 'data-iconpos' => 'notext' %>
     <%= link_to 'Home', root_url, 'data-icon' => 'home', 'data-role' => 'button', 'data-iconpos' => 'notext', :target => '_parent' %>
@@ -314,6 +314,16 @@
     <%      end
           end     %>
 
+    <% end %>
+    <% @taxistations.each do |taxistation| %>
+        <li>
+          <a href="<%= "#{taxistations_url}/#{taxistation.id}?time="+@t.to_s %>" target="_parent">
+              <img src="/assets/icon/taxistation.png">
+              <h2><%= taxistation.name %></h2>
+              <p><%= taxistation.address %></p>
+              <%= link_to 'Edit', edit_taxistation_path(taxistation), 'data-icon' => 'edit', :target => '_parent' %>
+          </a>
+        </li>
     <% end %>
   </ul>
 </div>
