@@ -28,7 +28,7 @@
         $('#text-'+to+'-'+from).html( hours1+':'+minutes1+' - '+hours2+':'+minutes2 );
 
 
-        $('#park_'+from).val(hours1+':'+minutes1+' - '+hours2+':'+minutes2);
+        $('#taxistation_'+from).val(hours1+':'+minutes1+' - '+hours2+':'+minutes2);
     }
 
     function initialize() {
@@ -131,7 +131,7 @@
             slideTime(event, ui, "dom", "DP");
         });
 
-        var input = (document.getElementById('park_address'));
+        var input = (document.getElementById('taxistation_address'));
         var autocomplete = new google.maps.places.Autocomplete(input);
 
         google.maps.event.addListener(autocomplete, 'place_changed', function() {
@@ -144,9 +144,9 @@
             if (place.geometry.viewport) {
                 map.fitBounds(place.geometry.viewport);
             } else {
-                document.getElementById('park_lat').value = (place.geometry.location).lat();
-                document.getElementById('park_lng').value = (place.geometry.location).lng();
-                document.getElementById("park_add").style.display = "block";
+                document.getElementById('taxistation_lat').value = (place.geometry.location).lat();
+                document.getElementById('taxistation_lng').value = (place.geometry.location).lng();
+                document.getElementById("taxistation_add").style.display = "block";
             }
         });
     }
@@ -159,13 +159,13 @@
 
 <div data-role="content">
 
-    <%= form_for(@park, :html => {:target => '_parent'} ) do |f| %>
-      <% if @park.errors.any? %>
+    <%= form_for(@taxistation, :html => {:target => '_parent'} ) do |f| %>
+      <% if @taxistation.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(@park.errors.count, "error") %> prohibited this park from being saved:</h2>
+          <h2><%= pluralize(@taxistation.errors.count, "error") %> prohibited this taxistation from being saved:</h2>
 
           <ul>
-          <% @park.errors.full_messages.each do |msg| %>
+          <% @taxistation.errors.full_messages.each do |msg| %>
             <li><%= msg %></li>
           <% end %>
           </ul>
@@ -199,13 +199,13 @@
 
       <br>
 
-      <div class="ui-grid-b ui-corner-all ui-shadow">
+      <!-- <div class="ui-grid-b ui-corner-all ui-shadow">
       <div class="ui-block-a">
         <div class="ui-bar ui-bar-a" style="height:46px" id="text-lun">
           Lunedì
           <div style="float:right">
-            <div id="text-lun-LM" style="float:left"><%= @park.LM %></div>&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;<div id="text-lun-LP" style="float:right"><%= @park.LP %></div>
+            <div id="text-lun-LM" style="float:left"><#%= @taxistation.LM %></div>&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;<div id="text-lun-LP" style="float:right"><#%= @taxistation.LP %></div>
           </div>
         </div>
       </div>
@@ -215,7 +215,7 @@
             <input id="range-LMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
             <input id="range-LMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
           </div>
-          <%= f.hidden_field :LM %>
+          <#%= f.hidden_field :LM %>
         </div>
       </div>
       <div class="ui-block-c">
@@ -224,7 +224,7 @@
             <input id="range-LPa" step="15" min="780" max="1439" value="0" type="range" class="ui-hidden-accessible">
             <input id="range-LPb" step="15" min="780" max="1440" value="1440" type="range" class="ui-hidden-accessible">
           </div>
-          <%= f.hidden_field :LP %>
+          <#%= f.hidden_field :LP %>
         </div>
       </div>
 
@@ -233,8 +233,8 @@
         <div class="ui-bar ui-bar-a" style="height:46px" id="text-mar">
           Martedì
           <div style="float:right">
-            <div id="text-mar-MM" style="float:left"><%= @park.MM %></div>&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;<div id="text-mar-MP" style="float:right"><%= @park.MP %></div>
+            <div id="text-mar-MM" style="float:left"><#%= @taxistation.MM %></div>&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;<div id="text-mar-MP" style="float:right"><#%= @taxistation.MP %></div>
           </div>
         </div>
       </div>
@@ -244,7 +244,7 @@
             <input id="range-MMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
             <input id="range-MMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
           </div>
-          <%= f.hidden_field :MM %>
+          <#%= f.hidden_field :MM %>
         </div>
       </div>
       <div class="ui-block-c">
@@ -253,7 +253,7 @@
             <input id="range-MPa" step="15" min="780" max="1439" value="0" type="range" class="ui-hidden-accessible">
             <input id="range-MPb" step="15" min="780" max="1440" value="1440" type="range" class="ui-hidden-accessible">
           </div>
-          <%= f.hidden_field :MP %>
+          <#%= f.hidden_field :MP %>
         </div>
       </div>
 
@@ -262,8 +262,8 @@
         <div class="ui-bar ui-bar-a" style="height:46px" id="text-mar">
           Mercoledì
           <div style="float:right">
-            <div id="text-mer-MEM" style="float:left"><%= @park.MEM %></div>&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;<div id="text-mer-MEP" style="float:right"><%= @park.MEP %></div>
+            <div id="text-mer-MEM" style="float:left"><#%= @taxistation.MEM %></div>&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;<div id="text-mer-MEP" style="float:right"><#%= @taxistation.MEP %></div>
           </div>
         </div>
       </div>
@@ -273,7 +273,7 @@
             <input id="range-MEMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
             <input id="range-MEMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
           </div>
-          <%= f.hidden_field :MEM %>
+          <#%= f.hidden_field :MEM %>
         </div>
       </div>
       <div class="ui-block-c">
@@ -282,7 +282,7 @@
             <input id="range-MEPa" step="15" min="780" max="1439" value="0" type="range" class="ui-hidden-accessible">
             <input id="range-MEPb" step="15" min="780" max="1440" value="1440" type="range" class="ui-hidden-accessible">
           </div>
-          <%= f.hidden_field :MEP %>
+          <#%= f.hidden_field :MEP %>
         </div>
       </div>
 
@@ -291,8 +291,8 @@
         <div class="ui-bar ui-bar-a" style="height:46px" id="text-mar">
           Giovedì
           <div style="float:right">
-            <div id="text-gio-GM" style="float:left"><%= @park.GM %></div>&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;<div id="text-gio-GP" style="float:right"><%= @park.GP %></div>
+            <div id="text-gio-GM" style="float:left"><#%= @taxistation.GM %></div>&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;<div id="text-gio-GP" style="float:right"><#%= @taxistation.GP %></div>
           </div>
         </div>
       </div>
@@ -302,7 +302,7 @@
             <input id="range-GMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
             <input id="range-GMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
           </div>
-          <%= f.hidden_field :GM %>
+          <#%= f.hidden_field :GM %>
         </div>
       </div>
       <div class="ui-block-c">
@@ -311,7 +311,7 @@
             <input id="range-GPa" step="15" min="780" max="1439" value="0" type="range" class="ui-hidden-accessible">
             <input id="range-GPb" step="15" min="780" max="1440" value="1440" type="range" class="ui-hidden-accessible">
           </div>
-          <%= f.hidden_field :GP %>
+          <#%= f.hidden_field :GP %>
         </div>
       </div>
 
@@ -320,8 +320,8 @@
         <div class="ui-bar ui-bar-a" style="height:46px" id="text-mar">
           Venerdì
           <div style="float:right">
-            <div id="text-ven-VM" style="float:left"><%= @park.VM %></div>&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;<div id="text-ven-VP" style="float:right"><%= @park.VP %></div>
+            <div id="text-ven-VM" style="float:left"><#%= @taxistation.VM %></div>&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;<div id="text-ven-VP" style="float:right"><#%= @taxistation.VP %></div>
           </div>
         </div>
       </div>
@@ -331,7 +331,7 @@
             <input id="range-VMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
             <input id="range-VMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
           </div>
-          <%= f.hidden_field :VM %>
+          <#%= f.hidden_field :VM %>
         </div>
       </div>
       <div class="ui-block-c">
@@ -340,7 +340,7 @@
             <input id="range-VPa" step="15" min="780" max="1439" value="0" type="range" class="ui-hidden-accessible">
             <input id="range-VPb" step="15" min="780" max="1440" value="1440" type="range" class="ui-hidden-accessible">
           </div>
-          <%= f.hidden_field :VP %>
+          <#%= f.hidden_field :VP %>
         </div>
       </div>
 
@@ -349,8 +349,8 @@
         <div class="ui-bar ui-bar-a" style="height:46px" id="text-mar">
           Sabato
           <div style="float:right">
-            <div id="text-sab-SM" style="float:left"><%= @park.SM %></div>&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;<div id="text-sab-SP" style="float:right"><%= @park.SP %></div>
+            <div id="text-sab-SM" style="float:left"><#%= @taxistation.SM %></div>&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;<div id="text-sab-SP" style="float:right"><#%= @taxistation.SP %></div>
           </div>
         </div>
       </div>
@@ -360,7 +360,7 @@
             <input id="range-SMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
             <input id="range-SMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
           </div>
-          <%= f.hidden_field :SM %>
+          <#%= f.hidden_field :SM %>
         </div>
       </div>
       <div class="ui-block-c">
@@ -369,7 +369,7 @@
             <input id="range-SPa" step="15" min="780" max="1439" value="0" type="range" class="ui-hidden-accessible">
             <input id="range-SPb" step="15" min="780" max="1440" value="1440" type="range" class="ui-hidden-accessible">
           </div>
-          <%= f.hidden_field :SP %>
+          <#%= f.hidden_field :SP %>
         </div>
       </div>
 
@@ -378,8 +378,8 @@
         <div class="ui-bar ui-bar-a" style="height:46px" id="text-mar">
           Domenica
           <div style="float:right">
-            <div id="text-dom-DM" style="float:left"><%= @park.DM %></div>&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;<div id="text-dom-DP" style="float:right"><%= @park.DP %></div>
+            <div id="text-dom-DM" style="float:left"><#%= @taxistation.DM %></div>&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;<div id="text-dom-DP" style="float:right"><#%= @taxistation.DP %></div>
           </div>
         </div>
       </div>
@@ -389,7 +389,7 @@
             <input id="range-DMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
             <input id="range-DMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
           </div>
-          <%= f.hidden_field :DM %>
+          <#%= f.hidden_field :DM %>
         </div>
       </div>
       <div class="ui-block-c">
@@ -398,15 +398,15 @@
             <input id="range-DPa" step="15" min="780" max="1439" value="0" type="range" class="ui-hidden-accessible">
             <input id="range-DPb" step="15" min="780" max="1440" value="1440" type="range" class="ui-hidden-accessible">
           </div>
-          <%= f.hidden_field :DP %>
+          <#%= f.hidden_field :DP %>
         </div>
       </div>
       </div>
 
-      <br>
+      <br>-->
 
-      <div class="actions" id="park_add" style="display:none;">
-        <%= f.submit 'Add Park' %>
+      <div class="actions" id="taxistation_add" style="display:none;">
+        <%= f.submit 'Add Taxi Station' %>
       </div>
 
     <% end %>

@@ -7,7 +7,7 @@
         $("#range-"+type+"b").val(1500).slider('refresh');
 
         $('#text-'+day+'-'+type).html( '0:0 - 0:0' );
-        $('#park_'+type).val( '0:0 - 0:0' );
+        $('#taxistation_'+type).val( '0:0 - 0:0' );
     }
 
     function getRange(val, type) {
@@ -18,54 +18,54 @@
     }
 
     function setRange() {
-        <% if(!(@park.LM).nil? && !(@park.LP).nil?) then %>
-            getRange("<%= @park.LM.split(" - ")[0] %>", "LMa");
-            getRange("<%= @park.LM.split(" - ")[1] %>", "LMb");
-            getRange("<%= @park.LP.split(" - ")[0] %>", "LPa");
-            getRange("<%= @park.LP.split(" - ")[1] %>", "LPb");
-        <% end %>
+    /*    <#% if(!(@taxistation.LM).nil? && !(@taxistation.LP).nil?) then %>
+            getRange("<#%= @taxistation.LM.split(" - ")[0] %>", "LMa");
+            getRange("<#%= @taxistation.LM.split(" - ")[1] %>", "LMb");
+            getRange("<#%= @taxistation.LP.split(" - ")[0] %>", "LPa");
+            getRange("<#%= @taxistation.LP.split(" - ")[1] %>", "LPb");
+        <#% end %>
 
-        <% if(!(@park.MM).nil? && !(@park.MP).nil?) then %>
-            getRange("<%= @park.MM.split(" - ")[0] %>", "MMa");
-            getRange("<%= @park.MM.split(" - ")[1] %>", "MMb");
-            getRange("<%= @park.MP.split(" - ")[0] %>", "MPa");
-            getRange("<%= @park.MP.split(" - ")[1] %>", "MPb");
-        <% end %>
+        <#% if(!(@taxistation.MM).nil? && !(@taxistation.MP).nil?) then %>
+            getRange("<#%= @taxistation.MM.split(" - ")[0] %>", "MMa");
+            getRange("<#%= @taxistation.MM.split(" - ")[1] %>", "MMb");
+            getRange("<#%= @taxistation.MP.split(" - ")[0] %>", "MPa");
+            getRange("<à%= @taxistation.MP.split(" - ")[1] %>", "MPb");
+        <#% end %>
 
-        <% if(!(@park.MEM).nil? && !(@park.MEP).nil?) then %>
-            getRange("<%= @park.MEM.split(" - ")[0] %>", "MEMa");
-            getRange("<%= @park.MEM.split(" - ")[1] %>", "MEMb");
-            getRange("<%= @park.MEP.split(" - ")[0] %>", "MEPa");
-            getRange("<%= @park.MEP.split(" - ")[1] %>", "MEPb");
-        <% end %>
+        <#% if(!(@taxistation.MEM).nil? && !(@taxistation.MEP).nil?) then %>
+            getRange("<#%= @taxistation.MEM.split(" - ")[0] %>", "MEMa");
+            getRange("<#%= @taxistation.MEM.split(" - ")[1] %>", "MEMb");
+            getRange("<#%= @taxistation.MEP.split(" - ")[0] %>", "MEPa");
+            getRange("<#%= @taxistation.MEP.split(" - ")[1] %>", "MEPb");
+        <#% end %>
 
-        <% if(!(@park.GM).nil? && !(@park.GP).nil?) then %>
-            getRange("<%= @park.GM.split(" - ")[0] %>", "GMa");
-            getRange("<%= @park.GM.split(" - ")[1] %>", "GMb");
-            getRange("<%= @park.GP.split(" - ")[0] %>", "GPa");
-            getRange("<%= @park.GP.split(" - ")[1] %>", "GPb");
-        <% end %>
+        <#% if(!(@taxistation.GM).nil? && !(@taxistation.GP).nil?) then %>
+            getRange("<#%= @taxistation.GM.split(" - ")[0] %>", "GMa");
+            getRange("<#%= @taxistation.GM.split(" - ")[1] %>", "GMb");
+            getRange("<#%= @taxistation.GP.split(" - ")[0] %>", "GPa");
+            getRange("<#%= @taxistation.GP.split(" - ")[1] %>", "GPb");
+        <#% end %>
 
-        <% if(!(@park.VM).nil? && !(@park.VP).nil?) then %>
-            getRange("<%= @park.VM.split(" - ")[0] %>", "VMa");
-            getRange("<%= @park.VM.split(" - ")[1] %>", "VMb");
-            getRange("<%= @park.VP.split(" - ")[0] %>", "VPa");
-            getRange("<%= @park.VP.split(" - ")[1] %>", "VPb");
-        <% end %>
+        <#% if(!(@taxistation.VM).nil? && !(@taxistation.VP).nil?) then %>
+            getRange("<#%= @taxistation.VM.split(" - ")[0] %>", "VMa");
+            getRange("<#%= @taxistation.VM.split(" - ")[1] %>", "VMb");
+            getRange("<#%= @taxistation.VP.split(" - ")[0] %>", "VPa");
+            getRange("<#%= @taxistation.VP.split(" - ")[1] %>", "VPb");
+        <#% end %>
 
-        <% if(!(@park.SM).nil? && !(@park.SP).nil?) then %>
-            getRange("<%= @park.SM.split(" - ")[0] %>", "SMa");
-            getRange("<%= @park.SM.split(" - ")[1] %>", "SMb");
-            getRange("<%= @park.SP.split(" - ")[0] %>", "SPa");
-            getRange("<%= @park.SP.split(" - ")[1] %>", "SPb");
-        <% end %>
+        <#% if(!(@taxistation.SM).nil? && !(@taxistation.SP).nil?) then %>
+            getRange("<#%= @taxistation.SM.split(" - ")[0] %>", "SMa");
+            getRange("<#%= @taxistation.SM.split(" - ")[1] %>", "SMb");
+            getRange("<#%= @taxistation.SP.split(" - ")[0] %>", "SPa");
+            getRange("<#%= @taxistation.SP.split(" - ")[1] %>", "SPb");
+        <#% end %>
 
-        <% if(!(@park.DM).nil? && !(@park.DP).nil?) then %>
-            getRange("<%= @park.DM.split(" - ")[0] %>", "DMa");
-            getRange("<%= @park.DM.split(" - ")[1] %>", "DMb");
-            getRange("<%= @park.DP.split(" - ")[0] %>", "DPa");
-            getRange("<%= @park.DP.split(" - ")[1] %>", "DPb");
-        <% end %>
+        <#% if(!(@taxistation.DM).nil? && !(@taxistation.DP).nil?) then %>
+            getRange("<#%= @taxistation.DM.split(" - ")[0] %>", "DMa");
+            getRange("<#%= @taxistation.DM.split(" - ")[1] %>", "DMb");
+            getRange("<#%= @taxistation.DP.split(" - ")[0] %>", "DPa");
+            getRange("<#%= @taxistation.DP.split(" - ")[1] %>", "DPb");
+        <#% end %>   */
     }
 
     function slideTime(event, ui, to, from) {
@@ -92,7 +92,7 @@
             minutes2 = '00';
 
         $('#text-'+to+'-'+from).html( hours1+':'+minutes1+' - '+hours2+':'+minutes2 );
-        $('#park_'+from).val(hours1+':'+minutes1+' - '+hours2+':'+minutes2);
+        $('#taxistation_'+from).val(hours1+':'+minutes1+' - '+hours2+':'+minutes2);
     }
 
     function initialize() {
@@ -197,7 +197,7 @@
             slideTime(event, ui, "dom", "DP");
         });
 
-        var input = (document.getElementById('park_address'));
+        var input = (document.getElementById('taxistation_address'));
         var autocomplete = new google.maps.places.Autocomplete(input);
 
         google.maps.event.addListener(autocomplete, 'place_changed', function() {
@@ -210,15 +210,15 @@
             if (place.geometry.viewport) {
                 map.fitBounds(place.geometry.viewport);
             } else {
-                document.getElementById('park_lat').value = (place.geometry.location).lat();
-                document.getElementById('park_lng').value = (place.geometry.location).lng();
-                document.getElementById("park_add").style.display = "block";
+                document.getElementById('taxistation_lat').value = (place.geometry.location).lat();
+                document.getElementById('taxistation_lng').value = (place.geometry.location).lng();
+                document.getElementById("taxistation_add").style.display = "block";
             }
         });
     }
 
     function hideUpdate() {
-        document.getElementById("park_add").style.display = "none";
+        document.getElementById("taxistation_add").style.display = "none";
     }
 
     google.maps.event.addDomListener(window, 'load', initialize);
@@ -227,13 +227,13 @@
 
 <div data-role="content">
 
-    <%= form_for(@park, :html => {:target => '_parent'} ) do |f| %>
-      <% if @park.errors.any? %>
+    <%= form_for(@taxistation, :html => {:target => '_parent'} ) do |f| %>
+      <% if @taxistation.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(@park.errors.count, "error") %> prohibited this park from being saved:</h2>
+          <h2><%= pluralize(@taxistation.errors.count, "error") %> prohibited this taxistation from being saved:</h2>
 
           <ul>
-          <% @park.errors.full_messages.each do |msg| %>
+          <% @taxistation.errors.full_messages.each do |msg| %>
             <li><%= msg %></li>
           <% end %>
           </ul>
@@ -267,13 +267,15 @@
 
       <br>
 
+    <!--
+
       <div class="ui-grid-b ui-corner-all ui-shadow">
         <div class="ui-block-a">
           <div class="ui-bar ui-bar-a" style="height:50px" id="text-lun">
             Lunedì
             <div style="float:right">
-              <div id="text-lun-LM" style="float:left"><%= @park.LM %></div>&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;<div id="text-lun-LP" style="float:right"><%= @park.LP %></div>
+              <div id="text-lun-LM" style="float:left"><#%= @taxistation.LM %></div>&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;<div id="text-lun-LP" style="float:right"><#%= @taxistation.LP %></div>
             </div>
           </div>
         </div>
@@ -290,7 +292,7 @@
                 <button id="reset" type="button" onclick="resetRange('lun', 'LM')" class="ui-btn ui-mini">Chiuso</button>
               </div>
             </fieldset>
-            <%= f.hidden_field :LM %>
+            <#%= f.hidden_field :LM %>
           </div>
         </div>
         <div class="ui-block-c">
@@ -306,7 +308,7 @@
                 <button id="reset" type="button" onclick="resetRange('lun', 'LP')" class="ui-btn ui-mini">Chiuso</button>
               </div>
             </fieldset>
-            <%= f.hidden_field :LP %>
+            <#%= f.hidden_field :LP %>
           </div>
         </div>
 
@@ -315,8 +317,8 @@
           <div class="ui-bar ui-bar-a" style="height:50px" id="text-mar">
             Martedì
             <div style="float:right">
-              <div id="text-mar-MM" style="float:left"><%= @park.MM %></div>&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;<div id="text-mar-MP" style="float:right"><%= @park.MP %></div>
+              <div id="text-mar-MM" style="float:left"><#%= @taxistation.MM %></div>&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;<div id="text-mar-MP" style="float:right"><#%= @taxistation.MP %></div>
             </div>
           </div>
         </div>
@@ -333,7 +335,7 @@
                 <button id="reset" type="button" onclick="resetRange('mar', 'MM')" class="ui-btn ui-mini">Chiuso</button>
               </div>
             </fieldset>
-            <%= f.hidden_field :MM %>
+            <#%= f.hidden_field :MM %>
           </div>
         </div>
         <div class="ui-block-c">
@@ -349,7 +351,7 @@
                 <button id="reset" type="button" onclick="resetRange('mar', 'MP')" class="ui-btn ui-mini">Chiuso</button>
               </div>
             </fieldset>
-            <%= f.hidden_field :MP %>
+            <#%= f.hidden_field :MP %>
           </div>
         </div>
 
@@ -358,8 +360,8 @@
           <div class="ui-bar ui-bar-a" style="height:50px" id="text-mar">
             Mercoledì
             <div style="float:right">
-              <div id="text-mer-MEM" style="float:left"><%= @park.MEM %></div>&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;<div id="text-mer-MEP" style="float:right"><%= @park.MEP %></div>
+              <div id="text-mer-MEM" style="float:left"><#%= @taxistation.MEM %></div>&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;<div id="text-mer-MEP" style="float:right"><#%= @taxistation.MEP %></div>
             </div>
           </div>
         </div>
@@ -376,7 +378,7 @@
                 <button id="reset" type="button" onclick="resetRange('mer', 'MEM')" class="ui-btn ui-mini">Chiuso</button>
               </div>
             </fieldset>
-            <%= f.hidden_field :MEM %>
+            <#%= f.hidden_field :MEM %>
           </div>
         </div>
         <div class="ui-block-c">
@@ -392,7 +394,7 @@
                 <button id="reset" type="button" onclick="resetRange('mer', 'MEP')" class="ui-btn ui-mini">Chiuso</button>
               </div>
             </fieldset>
-            <%= f.hidden_field :MEP %>
+            <#%= f.hidden_field :MEP %>
           </div>
         </div>
 
@@ -401,8 +403,8 @@
           <div class="ui-bar ui-bar-a" style="height:50px" id="text-mar">
             Giovedì
             <div style="float:right">
-              <div id="text-gio-GM" style="float:left"><%= @park.GM %></div>&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;<div id="text-gio-GP" style="float:right"><%= @park.GP %></div>
+              <div id="text-gio-GM" style="float:left"><#%= @taxistation.GM %></div>&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;<div id="text-gio-GP" style="float:right"><#%= @taxistation.GP %></div>
             </div>
           </div>
         </div>
@@ -419,7 +421,7 @@
                 <button id="reset" type="button" onclick="resetRange('gio', 'GM')" class="ui-btn ui-mini">Chiuso</button>
               </div>
             </fieldset>
-            <%= f.hidden_field :GM %>
+            <#%= f.hidden_field :GM %>
           </div>
         </div>
         <div class="ui-block-c">
@@ -435,7 +437,7 @@
                 <button id="reset" type="button" onclick="resetRange('gio', 'GP')" class="ui-btn ui-mini">Chiuso</button>
               </div>
             </fieldset>
-            <%= f.hidden_field :GP %>
+            <#%= f.hidden_field :GP %>
           </div>
         </div>
 
@@ -444,8 +446,8 @@
           <div class="ui-bar ui-bar-a" style="height:50px" id="text-mar">
             Venerdì
             <div style="float:right">
-              <div id="text-ven-VM" style="float:left"><%= @park.VM %></div>&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;<div id="text-ven-VP" style="float:right"><%= @park.VP %></div>
+              <div id="text-ven-VM" style="float:left"><#%= @taxistation.VM %></div>&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;<div id="text-ven-VP" style="float:right"><#%= @taxistation.VP %></div>
             </div>
           </div>
         </div>
@@ -462,7 +464,7 @@
                 <button id="reset" type="button" onclick="resetRange('ven', 'VM')" class="ui-btn ui-mini">Chiuso</button>
               </div>
             </fieldset>
-            <%= f.hidden_field :VM %>
+            <#%= f.hidden_field :VM %>
           </div>
         </div>
         <div class="ui-block-c">
@@ -478,7 +480,7 @@
                 <button id="reset" type="button" onclick="resetRange('ven', 'VP')" class="ui-btn ui-mini">Chiuso</button>
               </div>
             </fieldset>
-            <%= f.hidden_field :VP %>
+            <#%= f.hidden_field :VP %>
           </div>
         </div>
 
@@ -487,8 +489,8 @@
           <div class="ui-bar ui-bar-a" style="height:50px" id="text-mar">
             Sabato
             <div style="float:right">
-              <div id="text-sab-SM" style="float:left"><%= @park.SM %></div>&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;<div id="text-sab-SP" style="float:right"><%= @park.SP %></div>
+              <div id="text-sab-SM" style="float:left"><#%= @taxistation.SM %></div>&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;<div id="text-sab-SP" style="float:right"><#%= @taxistation.SP %></div>
             </div>
           </div>
         </div>
@@ -505,7 +507,7 @@
                 <button id="reset" type="button" onclick="resetRange('sab', 'SM')" class="ui-btn ui-mini">Chiuso</button>
               </div>
             </fieldset>
-            <%= f.hidden_field :SM %>
+            <#%= f.hidden_field :SM %>
           </div>
         </div>
         <div class="ui-block-c">
@@ -521,7 +523,7 @@
                 <button id="reset" type="button" onclick="resetRange('sab', 'SP')" class="ui-btn ui-mini">Chiuso</button>
               </div>
             </fieldset>
-            <%= f.hidden_field :SP %>
+            <#%= f.hidden_field :SP %>
           </div>
         </div>
 
@@ -530,8 +532,8 @@
           <div class="ui-bar ui-bar-a" style="height:50px" id="text-mar">
             Domenica
             <div style="float:right">
-              <div id="text-dom-DM" style="float:left"><%= @park.DM %></div>&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;<div id="text-dom-DP" style="float:right"><%= @park.DP %></div>
+              <div id="text-dom-DM" style="float:left"><#%= @taxistation.DM %></div>&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;<div id="text-dom-DP" style="float:right"><#%= @taxistation.DP %></div>
             </div>
           </div>
         </div>
@@ -548,7 +550,7 @@
                 <button id="reset" type="button" onclick="resetRange('dom', 'DM')" class="ui-btn ui-mini">Chiuso</button>
               </div>
             </fieldset>
-            <%= f.hidden_field :DM %>
+            <#%= f.hidden_field :DM %>
           </div>
         </div>
         <div class="ui-block-c">
@@ -564,16 +566,17 @@
                 <button id="reset" type="button" onclick="resetRange('dom', 'DP')" class="ui-btn ui-mini">Chiuso</button>
               </div>
             </fieldset>
-            <%= f.hidden_field :DP %>
+            <#%= f.hidden_field :DP %>
           </div>
         </div>
 
       </div>
 
-
       <br>
 
-      <div id="park_add" class="actions">
+      -->
+
+      <div id="taxistation_add" class="actions">
         <%= f.submit %>
       </div>
 

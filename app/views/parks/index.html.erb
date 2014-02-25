@@ -163,7 +163,7 @@
     <%= link_to 'Back', 'intloc', 'data-icon' => 'back', 'data-role' => 'button', 'data-iconpos' => 'notext' %>
     <%= link_to 'Home', root_url, 'data-icon' => 'home', 'data-role' => 'button', 'data-iconpos' => 'notext', :target => '_parent' %>
   </div>
-  <%= link_to 'Add', new_park_path, 'data-iconpos' => 'notext', 'data-icon' => 'plus', 'class' => 'ui-btn-right', :target => '_parent' %>
+  <a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-right ui-icon-plus ui-btn-icon-notext">Add</a>
 </div>
 
 
@@ -326,4 +326,11 @@
         </li>
     <% end %>
   </ul>
+</div>
+
+<div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;">
+  <div role="main" class="ui-content">
+    <%= link_to 'Park', new_park_path, 'class' => 'ui-btn', :target => '_parent' %>
+    <%= link_to 'Taxi Station', new_taxistation_path, 'class' => 'ui-btn', :target => '_parent' %>
+  </div>
 </div>
