@@ -9,6 +9,8 @@ class ParksController < ApplicationController
     @today = Time.now.strftime("%u")  # => lun = 1, mar = 2, mer = 3
     @t = Time.now
 
+    @type = 'all'
+
     @parks = Park.all
     @taxistations = Taxistation.all
   end

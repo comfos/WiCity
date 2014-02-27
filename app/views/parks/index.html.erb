@@ -7,6 +7,30 @@
 
 <script>
 
+    function getPark() {
+        var type = "<%= params[:type] %>";
+        if(type != 'park') {
+            var http = location.href.replace('&type=taxistation', '');
+            location.href = http+'&type=park';
+        }
+        else {
+            var http = location.href.replace('&type=park', '');
+            location.href = http;
+        }
+    }
+
+    function getTaxiStation() {
+        var type = "<%= params[:type] %>";
+        if(type != 'taxistation') {
+            var http = location.href.replace('&type=park', '');
+            location.href = http+'&type=taxistation';
+        }
+        else {
+            var http = location.href.replace('&type=taxistation', '');
+            location.href = http;
+        }
+    }
+
     function getAll() {
         var currentDate = $( "#datepicker" ).datepicker( "getDate" );
         var currentTime = $( "#timeh" ).val();
@@ -135,6 +159,18 @@
             $( "#filtersunday" ).css("border-width", "2px");
         <% end %>
 
+        <% if params[:type] == 'park' %>
+            $( "#park" ).css("height", "18px");
+            $( "#park" ).css("border-color", "red");
+            $( "#park" ).css("border-width", "2px");
+        <% end %>
+
+        <% if params[:type] == 'taxistation' %>
+            $( "#taxistation" ).css("height", "18px");
+            $( "#taxistation" ).css("border-color", "red");
+            $( "#taxistation" ).css("border-width", "2px");
+        <% end %>
+
 
         $( '#datepicker' ).datepicker( { dateFormat: "dd/mm/yy" } );
         $( "#datepicker" ).datepicker( "setDate", new Date("<%= @t %>") );
@@ -168,6 +204,15 @@
 
 
 <div data-role="content">
+
+  <fieldset class="ui-grid-a ui-corner-all">
+    <div class="ui-block-a">
+      <a class="ui-corner-all ui-btn" id="park" type="button" onclick="getPark();">Parks</a>
+    </div>
+    <div class="ui-block-b">
+      <a class="ui-corner-all ui-btn" id="taxistation" type="button" onclick="getTaxiStation();">Taxi Stations</a>
+    </div>
+  </fieldset >
 
   <fieldset class="ui-grid-a ui-corner-all">
     <div class="ui-block-a">
@@ -286,7 +331,8 @@
   %>
 
   <ul data-role="listview" data-inset="true" data-filter="true">
-    <% @parks.each do |park|
+    <% if ( params[:type] != '' && params[:type] == 'park' ) || params[:type] == nil
+         @parks.each do |park|
           if params[:filter] == 'all' %>
             <li>
     <%          if isOpen(park) %>
@@ -313,18 +359,21 @@
                     </li>
     <%      end
           end     %>
+    <%   end
+       end %>
 
-    <% end %>
-    <% @taxistations.each do |taxistation| %>
-        <li>
-          <a href="<%= "#{taxistations_url}/#{taxistation.id}?time="+@t.to_s %>" target="_parent">
-              <img src="/assets/icon/taxistation.png">
-              <h2><%= taxistation.name %></h2>
-              <p><%= taxistation.address %></p>
-              <%= link_to 'Edit', edit_taxistation_path(taxistation), 'data-icon' => 'edit', :target => '_parent' %>
-          </a>
-        </li>
-    <% end %>
+    <% if ( params[:type] != '' && params[:type] == 'taxistation' ) || params[:type] == nil
+           @taxistations.each do |taxistation| %>
+            <li>
+              <a href="<%= "#{taxistations_url}/#{taxistation.id}?time="+@t.to_s %>" target="_parent">
+                  <img src="/assets/icon/taxistation.png">
+                  <h2><%= taxistation.name %></h2>
+                  <p><%= taxistation.address %></p>
+                  <%= link_to 'Edit', edit_taxistation_path(taxistation), 'data-icon' => 'edit', :target => '_parent' %>
+              </a>
+            </li>
+    <%     end
+       end %>
   </ul>
 </div>
 
