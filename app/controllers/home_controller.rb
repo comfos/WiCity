@@ -9,7 +9,9 @@ class HomeController < ApplicationController
   end
 
   def nearserv
-    @pharms = Pharm.all # + Pharm.all
+    @pharms = Pharm.all
+    @parks = Park.all
+    @taxistations = Taxistation.all
   end
 
 end

@@ -33,9 +33,13 @@
     var circle;
 
     var infowindow = null;
-    var markers_pharms = [];
 
+    var markers_pharms = [];
     var markerClusterer_pharm = null;
+    var markers_parks = [];
+    var markerClusterer_park = null;
+    var markers_ts = [];
+    var markerClusterer_ts = null;
 
     var intervall = window.setInterval(checkpos, 2000);
 
@@ -105,8 +109,6 @@
     }
 
     function initialize() {
-        choice();
-
         if(mypos == 0) {
           <% if user_signed_in? %>
             if("<%= current_user.prefadd %>" == "downtown") {
@@ -178,6 +180,16 @@
             markers_pharms[i].setMap(null);
         }
         markers_pharms = [];
+
+        for (var i = 0; i < markers_parks.length; i++) {
+            markers_parks[i].setMap(null);
+        }
+        markers_parks = [];
+
+        for (var i = 0; i < markers_ts.length; i++) {
+            markers_ts[i].setMap(null);
+        }
+        markers_ts = [];
     }
 
     <%
@@ -288,10 +300,10 @@
         var marker;
         var i=0;
         if(cpharm) {
-            <% @pharms.each do |pharm| %>
-                var coord = new google.maps.LatLng(<%= pharm.lat %>, <%= pharm.lng %>);
+            <% @pharms.each do |itm| %>
+                var coord = new google.maps.LatLng(<%= itm.lat %>, <%= itm.lng %>);
                 if( bounds.contains(coord) ) {
-                    if('<%= isOpen(pharm) %>') {
+                    if('<%= isOpen(itm) %>') {
                         var icon = '/assets/marker/pharm.png';
                     }
                     else {
@@ -301,24 +313,24 @@
                         position: coord,
                         map: map,
                         icon: icon,
-                        title: '<%= pharm.name %>'
+                        title: '<%= itm.name %>'
                         });
                     infowindow = new google.maps.InfoWindow({
-                            content: '<span class="infowin"><%= pharm.name %></span>'
+                            content: '<span class="infowin"><%= itm.name %></span>'
                     });
                     google.maps.event.addListener(marker, 'click', function () {
-                        if('<%= isOpen(pharm) %>') {
+                        if('<%= isOpen(itm) %>') {
                             <% if params[:time] %>
-                                infowindow.setContent('<a href="<%= "#{pharms_url}/#{pharm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'&time=<%= params[:time] %>" target="_parent"><%= pharm.name %></a>');
+                                infowindow.setContent('<a href="<%= "#{pharms_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'&time=<%= params[:time] %>" target="_parent"><%= itm.name %></a>');
                             <% else %>
-                                infowindow.setContent('<a href="<%= "#{pharms_url}/#{pharm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'" target="_parent"><%= pharm.name %></a>');
+                                infowindow.setContent('<a href="<%= "#{pharms_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'" target="_parent"><%= itm.name %></a>');
                             <% end %>
                         }
                         else {
                             <% if params[:time] %>
-                                infowindow.setContent('<a href="<%= "#{pharms_url}/#{pharm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'&time=<%= params[:time] %>&s=close" target="_parent"><%= pharm.name %></a>');
+                                infowindow.setContent('<a href="<%= "#{pharms_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'&time=<%= params[:time] %>&s=close" target="_parent"><%= itm.name %></a>');
                             <% else %>
-                                infowindow.setContent('<a href="<%= "#{pharms_url}/#{pharm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'&s=close"" target="_parent"><%= pharm.name %></a>');
+                                infowindow.setContent('<a href="<%= "#{pharms_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'&s=close"" target="_parent"><%= itm.name %></a>');
                             <% end %>
                         }
                         infowindow.open(map, this);
@@ -332,25 +344,122 @@
              });*/
             markerClusterer_pharm = new MarkerClusterer(map, markers_pharms);
         }
+        i=0;
+        if(cpark) {
+            <% @parks.each do |itm| %>
+            var coord = new google.maps.LatLng(<%= itm.lat %>, <%= itm.lng %>);
+            if( bounds.contains(coord) ) {
+                if('<%= isOpen(itm) %>') {
+                    var icon = '/assets/marker/park.png';
+                }
+                else {
+                    var icon = '/assets/marker/cpark.png';
+                }
+                marker = new google.maps.Marker({
+                    position: coord,
+                    map: map,
+                    icon: icon,
+                    title: '<%= itm.name %>'
+                });
+                infowindow = new google.maps.InfoWindow({
+                    content: '<span class="infowin"><%= itm.name %></span>'
+                });
+                google.maps.event.addListener(marker, 'click', function () {
+                    if('<%= isOpen(itm) %>') {
+                        <% if params[:time] %>
+                        infowindow.setContent('<a href="<%= "#{parks_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'&time=<%= params[:time] %>" target="_parent"><%= itm.name %></a>');
+                        <% else %>
+                        infowindow.setContent('<a href="<%= "#{parks_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'" target="_parent"><%= itm.name %></a>');
+                        <% end %>
+                    }
+                    else {
+                        <% if params[:time] %>
+                        infowindow.setContent('<a href="<%= "#{parks_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'&time=<%= params[:time] %>&s=close" target="_parent"><%= itm.name %></a>');
+                        <% else %>
+                        infowindow.setContent('<a href="<%= "#{parks_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'&s=close"" target="_parent"><%= itm.name %></a>');
+                        <% end %>
+                    }
+                    infowindow.open(map, this);
+                });
+                markers_parks[i] = marker;
+                i++;
+            }
+            <% end %>
+            /*markerClusterer_pharm = new MarkerClusterer(map, markers_pharms, {
+             styles: styles[0]
+             });*/
+            markerClusterer_park = new MarkerClusterer(map, markers_parks);
+        }
+        i=0;
+        if(cts) {
+            <% @taxistations.each do |itm| %>
+            var coord = new google.maps.LatLng(<%= itm.lat %>, <%= itm.lng %>);
+            if( bounds.contains(coord) ) {
+                var icon = '/assets/marker/taxistation.png';
+                marker = new google.maps.Marker({
+                    position: coord,
+                    map: map,
+                    icon: icon,
+                    title: '<%= itm.name %>'
+                });
+                infowindow = new google.maps.InfoWindow({
+                    content: '<span class="infowin"><%= itm.name %></span>'
+                });
+                google.maps.event.addListener(marker, 'click', function () {
+                    <% if params[:time] %>
+                        infowindow.setContent('<a href="<%= "#{taxistations_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'&time=<%= params[:time] %>" target="_parent"><%= itm.name %></a>');
+                    <% else %>
+                        infowindow.setContent('<a href="<%= "#{taxistations_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'" target="_parent"><%= itm.name %></a>');
+                    <% end %>
+                    infowindow.open(map, this);
+                });
+                markers_ts[i] = marker;
+                i++;
+            }
+            <% end %>
+            /*markerClusterer_pharm = new MarkerClusterer(map, markers_pharms, {
+             styles: styles[0]
+             });*/
+            markerClusterer_ts = new MarkerClusterer(map, markers_ts);
+        }
     }
 
     function clearClusters() {
         markerClusterer_pharm.clearMarkers();
-    }
-
-    function choice() {
-        var pharm = document.getElementById("pharm");
-        google.maps.event.addDomListener(pharm, 'click', choiceElement);
+        markerClusterer_park.clearMarkers();
+        markerClusterer_ts.clearMarkers();
     }
 
     var cpharm = true;
-    function choiceElement() {
-        if(cpharm) {
-            $("#pharm").fadeTo( "slow", 0.30 );
-            cpharm = false;
-        } else {
-            $("#pharm").fadeTo( "slow", 1 );
-            cpharm = true;
+    var cpark = true;
+    var cts = true;
+    function choiceElement(type) {
+        if(type=='pharm') {
+            if(cpharm) {
+                $("#pharm").fadeTo( "slow", 0.30 );
+                cpharm = false;
+            } else {
+                $("#pharm").fadeTo( "slow", 1 );
+                cpharm = true;
+            }
+        }
+        if(type=='park') {
+            if(cpark) {
+                $("#park").fadeTo( "slow", 0.30 );
+                cpark = false;
+            } else {
+                $("#park").fadeTo( "slow", 1 );
+                cpark = true;
+            }
+        }
+        if(type=='ts') {
+            if(cts) {
+                $("#ts").fadeTo( "slow", 0.30 );
+                cts = false;
+            } else {
+                $("#ts").fadeTo( "slow", 1 );
+                cts = true;
+            }
         }
         removeMarker();
         clearClusters();
@@ -383,7 +492,9 @@
   %>
   <input disabled="" value="<%= data %>" type="button" data-icon="clock">
 
-  <a href="#" id="pharm"><img src="assets/marker/pharm.png"/></a>
+  <a href="#" id="pharm" onclick="choiceElement(this.id)"><img src="assets/marker/pharm.png"/></a>
+  <a href="#" id="park" onclick="choiceElement(this.id)"><img src="assets/marker/park.png"/></a>
+  <a href="#" id="ts" onclick="choiceElement(this.id)"><img src="assets/marker/taxistation.png"/></a>
 
   <input name="slider" id="slider" min="100" max="5000" value="1000" data-popup-enabled="true" type="range">
 
