@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140224164742) do
+ActiveRecord::Schema.define(version: 20140228203654) do
 
-  create_table 'parks', force: true do |t|
-    t.string 'name'
-    t.string 'address'
-    t.string 'lat'
-    t.string 'lng'
+  create_table "parks", force: true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "lat"
+    t.string   "lng"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "LM",         default: "0:0 - 0:0"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20140224164742) do
     t.string   "SP",         default: "0:0 - 0:0"
     t.string   "DM",         default: "0:0 - 0:0"
     t.string   "DP",         default: "0:0 - 0:0"
+    t.string   "phone"
   end
 
   create_table "pharms", force: true do |t|
@@ -60,13 +61,14 @@ ActiveRecord::Schema.define(version: 20140224164742) do
     t.boolean  "call",       default: false
   end
 
-  create_table "taxis", force: true do |t|
+  create_table "taxistations", force: true do |t|
     t.string   "name"
     t.string   "address"
     t.string   "lat"
     t.string   "lng"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "phone"
   end
 
   create_table "users", force: true do |t|

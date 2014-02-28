@@ -74,6 +74,6 @@ class TaxistationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def taxistation_params
-      params.require(:taxistation).permit(:name, :address, :lat, :lng, :coord)
+      params.require(:taxistation).permit(:name, :address, :lat, :lng, :coord, :phone)
     end
 end
