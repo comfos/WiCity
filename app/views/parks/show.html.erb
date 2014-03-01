@@ -251,10 +251,25 @@
       <input disabled="" value="<%= data %>" type="button" data-icon="clock">
     </div>
     <div class="ui-block-b">
-      <a href="#directions-panel" data-transition="slideup" data-icon="gear" style="position: absolute; z-index: 1; right: 0">
-        <img src="/assets/auto.png"/>
+      <a href="#postipopup" data-rel="popup" data-position-to='window' data-transition="fade" style="position: absolute; z-index: 1; right: 0">
+        <% liberi = @park.capacity - @park.occupati
+           if ( liberi <= (@park.capacity * 30 / 100) ) %>
+                <img src="/assets/rauto.png"/>
+        <% elsif ( liberi < (@park.capacity * 65 / 100) && liberi > (@park.capacity * 30 / 100) ) %>
+                <img src="/assets/gauto.png"/>
+        <% else %>
+                <img src="/assets/vauto.png"/>
+        <% end %>
       </a>
     </div>
+  </div>
+
+  <div data-role="popup" id="postipopup" style="min-width: 300px" data-overlay-theme="b">
+    <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+    <p><strong>Capacity:</strong> <%= @park.capacity %></p>
+    <p><strong>Posti Occupati:</strong> <%= @park.occupati %></p>
+    <p><strong>Posti Liberi:</strong> <%= @park.capacity - @park.occupati %></p>
+    <p><strong>Flow:</strong> <%= @park.flusso %></p>
   </div>
 
   <div class="ui-bar ui-bar-c ui-corner-all ui-shadow">

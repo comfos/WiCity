@@ -186,12 +186,18 @@
 
       <br>
 
-      <div class="field">
-        <strong><b><%= f.label :Phone %></b></strong>
-        <%= f.phone_field :phone %>
+      <div class="ui-grid-a">
+        <div class="ui-block-a" style="padding-right: 5px">
+          <strong><b><%= f.label :Phone %></b></strong>
+          <%= f.text_field :phone %>
+        </div>
+        <div class="ui-block-b" style="padding-left: 5px">
+          <strong><b><%= f.label :Capacity %></b></strong>
+          <%= f.text_field :capacity %>
+        </div>
       </div>
 
-    <br>
+      <br>
 
       <div class="ui-grid-a">
         <div class="ui-block-a" style="padding-right: 5px">
