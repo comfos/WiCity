@@ -250,16 +250,56 @@
     <div class="ui-block-a">
       <input disabled="" value="<%= data %>" type="button" data-icon="clock">
     </div>
-    <div class="ui-block-b">
-      <a href="#postipopup" data-rel="popup" data-position-to='window' data-transition="fade" style="position: absolute; z-index: 1; right: 0">
+    <div class="ui-block-b" style="text-align: right">
+      <a href="#postipopup" data-rel="popup" data-position-to='window' data-transition="fade" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" style="height: 20px; text-align: left;">
+        <b>Parking Status</b>&nbsp;&nbsp;<b>&DoubleRightArrow;</b>&nbsp;&nbsp;
         <% liberi = @park.capacity - @park.occupati
-           if ( liberi <= (@park.capacity * 30 / 100) ) %>
-                <img src="/assets/rauto.png"/>
-        <% elsif ( liberi < (@park.capacity * 65 / 100) && liberi > (@park.capacity * 30 / 100) ) %>
-                <img src="/assets/gauto.png"/>
-        <% else %>
-                <img src="/assets/vauto.png"/>
-        <% end %>
+           if (@park.capacity <= 50)
+                if ( @park.occupati < (@park.capacity * 50 / 100) ) %>
+                    <img src="/assets/vdot.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<b>Vacancy</b>
+        <%      elsif ( @park.occupati > (@park.capacity * 80 / 100) ) %>
+                    <img src="/assets/rdot.png"/>
+        <%          if liberi == 0 %>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<b>Full – No place available</b>
+        <%          elsif liberi == 1 %>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<b>Almost Full - Last <%= liberi %> place available</b>
+        <%          else %>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<b>Almost Full - Last <%= liberi %> places available</b>
+        <%          end
+                else %>
+                    <img src="/assets/gdot.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<b>Last <%= liberi %> places available</b>
+        <%      end
+           elsif (@park.capacity > 100)
+                if ( @park.occupati < (@park.capacity * 70 / 100) ) %>
+                    <img src="/assets/vdot.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<b>Vacancy</b>
+        <%      elsif ( @park.occupati > (@park.capacity * 90 / 100) ) %>
+                    <img src="/assets/rdot.png"/>
+        <%          if liberi == 0 %>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<b>Full – No place available</b>
+        <%          elsif liberi == 1 %>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<b>Almost Full - Last <%= liberi %> place available</b>
+        <%          else %>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<b>Almost Full - Last <%= liberi %> places available</b>
+        <%          end
+                else %>
+                    <img src="/assets/gdot.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<b>Last <%= liberi %> places available</b>
+        <%      end
+           else
+                if ( @park.occupati < (@park.capacity * 60 / 100) ) %>
+                    <img src="/assets/vdot.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<b>Vacancy</b>
+        <%      elsif ( @park.occupati > (@park.capacity * 85 / 100) ) %>
+                    <img src="/assets/rdot.png"/>
+        <%          if liberi == 0 %>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<b>Full – No place available</b>
+        <%          elsif liberi == 1 %>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<b>Almost Full - Last <%= liberi %> place available</b>
+        <%          else %>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<b>Almost Full - Last <%= liberi %> places available</b>
+        <%          end
+                else %>
+                    <img src="/assets/gdot.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<b>Last <%= liberi %> places available</b>
+        <%      end
+           end %>
       </a>
     </div>
   </div>
