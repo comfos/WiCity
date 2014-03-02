@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/gdot.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/rdot.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/vdot.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Alfio.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Alfio.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/parks/show.html.erb" afterPath="$PROJECT_DIR$/app/views/parks/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/icon/taxistation.png" afterPath="$PROJECT_DIR$/app/assets/images/icon/taxistation.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WiCity.iws" />
@@ -39,7 +35,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/parks/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="298" column="9" selection-start="11304" selection-end="11304" vertical-scroll-proportion="0.7002288" vertical-offset="4760" max-vertical-offset="7446">
+            <state line="298" column="9" selection-start="11304" selection-end="11304" vertical-scroll-proportion="0.7034483" vertical-offset="4760" max-vertical-offset="7446">
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -1303,7 +1299,11 @@
       <created>1393685631455</created>
       <updated>1393685631455</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <task id="LOCAL-00136" summary="EDIT Posti in Park&#10;">
+      <created>1393777115309</created>
+      <updated>1393777115309</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1330,6 +1330,7 @@
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32038835" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1339,13 +1340,12 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3592233" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30567083" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30651873" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3259362" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3264177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1363,7 +1363,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="ADD In EDITPharm possibilità di resettare l'orario della settimana per eventuale chiusura&#10;" />
     <MESSAGE value="ADD in SHOWPharms bastano due messaggi e non 5 per essere informati che l'utente non è stato localizzato." />
     <MESSAGE value="ADD in SHOWPharms bastano due messaggi e non 5 per essere informati che l'utente non è stato localizzato.&#10;" />
     <MESSAGE value="ADD in NEARESTSERVICES quando si vedono le farmacie sia in interest location che in nearest services esse dovrebbero essere colorate a seconda della fascia oraria di interesse che è quella fissata dopo avere cliccato interest location. Se invece si entra subito in nearest service la fascia oraria dovrebbe essere quella corrente." />
@@ -1388,7 +1387,8 @@
     <MESSAGE value="ADD PHONE in Park &amp; TaxiStation&#10;" />
     <MESSAGE value="ADD Posti in Park" />
     <MESSAGE value="ADD Posti in Park&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD Posti in Park&#10;" />
+    <MESSAGE value="EDIT Posti in Park&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="EDIT Posti in Park&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1678,7 +1678,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/parks/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="298" column="9" selection-start="11304" selection-end="11304" vertical-scroll-proportion="0.7002288" vertical-offset="4760" max-vertical-offset="7446">
+        <state line="298" column="9" selection-start="11304" selection-end="11304" vertical-scroll-proportion="0.7034483" vertical-offset="4760" max-vertical-offset="7446">
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
