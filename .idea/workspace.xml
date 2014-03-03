@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20140303131242_create_radiotaxis.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/radiotaxis/_form_edit.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/radiotaxis/_form_new.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/radiotaxis/edit.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/radiotaxis/new.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/radiotaxi.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/radiotaxis_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/radiotaxis_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/radiotaxis/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Alfio.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Alfio.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/parks/index.html.erb" afterPath="$PROJECT_DIR$/app/views/parks/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/parks/show.html.erb" afterPath="$PROJECT_DIR$/app/views/parks/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WiCity.iws" />
@@ -56,7 +44,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/parks/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="401" column="114" selection-start="18695" selection-end="18695" vertical-scroll-proportion="0.5618557" vertical-offset="6599" max-vertical-offset="7259">
+            <state line="422" column="6" selection-start="19662" selection-end="19662" vertical-scroll-proportion="0.8357488" vertical-offset="6828" max-vertical-offset="7276">
               <folding />
             </state>
           </provider>
@@ -1324,7 +1312,11 @@
       <created>1393842161640</created>
       <updated>1393842161640</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="ADD RadioTaxi">
+      <created>1393858148873</created>
+      <updated>1393858148873</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1357,7 +1349,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24261874" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24261874" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3592233" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -1384,7 +1376,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="ADD in SHOWPharms bastano due messaggi e non 5 per essere informati che l'utente non è stato localizzato." />
     <MESSAGE value="ADD in SHOWPharms bastano due messaggi e non 5 per essere informati che l'utente non è stato localizzato.&#10;" />
     <MESSAGE value="ADD in NEARESTSERVICES quando si vedono le farmacie sia in interest location che in nearest services esse dovrebbero essere colorate a seconda della fascia oraria di interesse che è quella fissata dopo avere cliccato interest location. Se invece si entra subito in nearest service la fascia oraria dovrebbe essere quella corrente." />
     <MESSAGE value="ADD in NEARESTSERVICES quando si vedono le farmacie sia in interest location che in nearest services esse dovrebbero essere colorate a seconda della fascia oraria di interesse che è quella fissata dopo avere cliccato interest location. Se invece si entra subito in nearest service la fascia oraria dovrebbe essere quella corrente.&#10;" />
@@ -1409,7 +1400,8 @@
     <MESSAGE value="ADD Posti in Park" />
     <MESSAGE value="ADD Posti in Park&#10;" />
     <MESSAGE value="EDIT Posti in Park&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="EDIT Posti in Park&#10;" />
+    <MESSAGE value="ADD RadioTaxi" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD RadioTaxi" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1723,7 +1715,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/parks/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="401" column="114" selection-start="18695" selection-end="18695" vertical-scroll-proportion="0.5618557" vertical-offset="6599" max-vertical-offset="7259">
+        <state line="422" column="6" selection-start="19662" selection-end="19662" vertical-scroll-proportion="0.8357488" vertical-offset="6828" max-vertical-offset="7276">
           <folding />
         </state>
       </provider>
