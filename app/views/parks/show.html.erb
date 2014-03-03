@@ -253,9 +253,11 @@
     <div class="ui-block-b" style="text-align: right">
       <a href="#postipopup" data-rel="popup" data-position-to='window' data-transition="fade" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" style="height: 20px; text-align: left;">
         <b>Parking Status</b>&nbsp;&nbsp;<b>&DoubleRightArrow;</b>&nbsp;&nbsp;
-        <% if (!@park.capacity.nil? && !@park.occupati.nil?)
+        <% if !@park.capacity.nil? && !@park.occupati.nil?
            liberi = @park.capacity - @park.occupati
-           if (@park.capacity <= 50)
+           if (@park.capacity == 0) %>
+                <img src="/assets/bdot.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<b>Not Known</b>
+        <% elsif (@park.capacity <= 50)
                 if ( @park.occupati < (@park.capacity * 50 / 100) ) %>
                     <img src="/assets/vdot.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<b>Vacancy</b>
         <%      elsif ( @park.occupati > (@park.capacity * 80 / 100) ) %>
@@ -302,7 +304,7 @@
         <%      end
            end
            else %>
-                    <b>Not Known</b>
+                    <img src="/assets/bdot.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<b>Not Known</b>
         <% end %>
       </a>
     </div>
@@ -314,7 +316,7 @@
                                             @park.capacity
                                       else 'Not known'
                                       end %></p>
-    <p><strong>Vacancy:</strong> <%= if (!@park.capacity.nil? && !@park.occupati.nil?)
+    <p><strong>Vacancy:</strong> <%= if (!@park.capacity.nil? && !@park.occupati.nil? && @park.capacity != 0)
                                             @park.capacity - @park.occupati
                                      else 'Not known'
                                      end %></p>
