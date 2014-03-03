@@ -1,0 +1,7 @@
+<div data-role="header" data-theme="b">
+  <h1>Edit RadioTaxi</h1>
+  <%= link_to 'Back', parks_path+'?filter1=now', 'data-icon' => 'back', 'class' => 'ui-btn-left', :target => '_parent' %>
+  <%= link_to 'Show', @taxistation, :target => '_parent', 'data-icon' => 'search', 'class' => 'ui-btn-right'  %>
+</div>
+
+<%= render 'form_edit' %>

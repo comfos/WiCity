@@ -115,7 +115,7 @@
 
         stepDisplay = new google.maps.InfoWindow();
 
-        codeAddress("<%= @park.address %>");
+        codeAddress("<%= @radiotaxi.address %>");
     }
 
     function codeAddress(add) {
@@ -125,10 +125,10 @@
             if (status == google.maps.GeocoderStatus.OK) {
                 map.setCenter(results[0].geometry.location);
                 if(s=="close") {
-                    var icon = '/assets/marker/cpark.png';
+                    var icon = '/assets/marker/cradiotaxi.png';
                 }
                 else {
-                    var icon = '/assets/marker/park.png';
+                    var icon = '/assets/marker/radiotaxi.png';
                 }
                 var marker = new google.maps.Marker({
                     map: map,
@@ -157,7 +157,7 @@
         var selectedMode = mode;
         var request = {
             origin: mypos,
-            destination: "<%= @park.address %>",
+            destination: "<%= @radiotaxi.address %>",
             travelMode: google.maps.TravelMode[selectedMode]
         };
         directionsService.route(request, function(response, status) {
@@ -220,12 +220,12 @@
 </style>
 
 <div data-role="header" data-theme="b">
-  <h1><%= @park.name %></h1>
+  <h1><%= @radiotaxi.name %></h1>
   <div class="ui-btn-left" data-role="controlgroup" data-type="horizontal" data-mini="true">
     <%= link_to 'Back', parks_path+'?filter1=now', 'data-icon' => 'back', 'data-role' => 'button', 'data-iconpos' => 'notext', :target => '_parent' %>
     <%= link_to 'Home', root_url, 'data-icon' => 'home', 'data-role' => 'button', 'data-iconpos' => 'notext', :target => '_parent' %>
   </div>
-  <%= link_to 'Edit', edit_park_path(@park), 'data-icon' => 'edit', 'class' => 'ui-btn-right', 'data-iconpos' => 'notext', :target => '_parent' %>
+  <%= link_to 'Edit', edit_radiotaxi_path(@radiotaxi), 'data-icon' => 'edit', 'class' => 'ui-btn-right', 'data-iconpos' => 'notext', :target => '_parent' %>
 </div>
 
 
@@ -245,84 +245,7 @@
             data = t.strftime("%d/%m/%Y  -  %H:%M")
         end
   %>
-
-  <div class="ui-grid-a ui-responsive">
-    <div class="ui-block-a">
-      <input disabled="" value="<%= data %>" type="button" data-icon="clock">
-    </div>
-    <div class="ui-block-b" style="text-align: right">
-      <a href="#postipopup" data-rel="popup" data-position-to='window' data-transition="fade" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" style="height: 20px; text-align: left;">
-        <b>Parking Status</b>&nbsp;&nbsp;<b>&DoubleRightArrow;</b>&nbsp;&nbsp;
-        <% if (!@park.capacity.nil? && !@park.occupati.nil?)
-           liberi = @park.capacity - @park.occupati
-           if (@park.capacity <= 50)
-                if ( @park.occupati < (@park.capacity * 50 / 100) ) %>
-                    <img src="/assets/vdot.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<b>Vacancy</b>
-        <%      elsif ( @park.occupati > (@park.capacity * 80 / 100) ) %>
-                    <img src="/assets/rdot.png"/>
-        <%          if liberi == 0 %>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<b>Full – No place available</b>
-        <%          elsif liberi == 1 %>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<b>Almost Full - Last place available</b>
-        <%          else %>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<b>Almost Full - Last <%= liberi %> places available</b>
-        <%          end
-                else %>
-                    <img src="/assets/gdot.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<b>Last <%= liberi %> places available</b>
-        <%      end
-           elsif (@park.capacity > 100)
-                if ( @park.occupati < (@park.capacity * 70 / 100) ) %>
-                    <img src="/assets/vdot.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<b>Vacancy</b>
-        <%      elsif ( @park.occupati > (@park.capacity * 90 / 100) ) %>
-                    <img src="/assets/rdot.png"/>
-        <%          if liberi == 0 %>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<b>Full – No place available</b>
-        <%          elsif liberi == 1 %>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<b>Almost Full - Last place available</b>
-        <%          else %>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<b>Almost Full - Last <%= liberi %> places available</b>
-        <%          end
-                else %>
-                    <img src="/assets/gdot.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<b>Last <%= liberi %> places available</b>
-        <%      end
-           else
-                if ( @park.occupati < (@park.capacity * 60 / 100) ) %>
-                    <img src="/assets/vdot.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<b>Vacancy</b>
-        <%      elsif ( @park.occupati > (@park.capacity * 85 / 100) ) %>
-                    <img src="/assets/rdot.png"/>
-        <%          if liberi == 0 %>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<b>Full – No place available</b>
-        <%          elsif liberi == 1 %>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<b>Almost Full - Last place available</b>
-        <%          else %>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<b>Almost Full - Last <%= liberi %> places available</b>
-        <%          end
-                else %>
-                    <img src="/assets/gdot.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<b>Last <%= liberi %> places available</b>
-        <%      end
-           end
-           else %>
-                    <b>Not Known</b>
-        <% end %>
-      </a>
-    </div>
-  </div>
-
-  <div data-role="popup" id="postipopup" style="min-width: 300px" data-overlay-theme="b">
-    <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
-    <p><strong>Capacity:</strong> <%= if (!@park.capacity.nil?)
-                                            @park.capacity
-                                      else 'Not known'
-                                      end %></p>
-    <p><strong>Vacancy:</strong> <%= if (!@park.capacity.nil? && !@park.occupati.nil?)
-                                            @park.capacity - @park.occupati
-                                     else 'Not known'
-                                     end %></p>
-    <p><strong>Flow:</strong> <%= if (!@park.flusso.nil?)
-                                    @park.flusso
-                                  else 'Not known'
-                                  end %></p>
-  </div>
+  <input disabled="" value="<%= data %>" type="button" data-icon="clock">
 
   <div class="ui-bar ui-bar-c ui-corner-all ui-shadow">
     <div id="map-canvas" style="width: 100%; height: 400px" class="ui-corner-all ui-shadow"></div>
@@ -354,24 +277,24 @@
 
   <p>
     <strong>Address:</strong>
-    <%= @park.address %>
+    <%= @radiotaxi.address %>
   </p>
 
   <p>
     <strong>Phone:</strong>
-    <%= @park.phone %>
+    <%= @radiotaxi.phone %>
   </p>
 
-  <div class="ui-grid-b ui-corner-all ui-shadow">
+  <!-- <div class="ui-grid-b ui-corner-all ui-shadow">
 
     <div class="ui-block-a">
       <div class="ui-bar ui-bar-a ui-corner-top" style="height:25px" id="text-lun">Lunedì</div>
     </div>
     <div class="ui-block-b">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.LM %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><#%= @radiotaxi.LM %></div>
     </div>
     <div class="ui-block-c">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.LP %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><#%= @radiotaxi.LP %></div>
     </div>
 
 
@@ -379,10 +302,10 @@
       <div class="ui-bar ui-bar-a" style="height:25px">Martedì</div>
     </div>
     <div class="ui-block-b">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.MM %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><#%= @radiotaxi.MM %></div>
     </div>
     <div class="ui-block-c">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.MP %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><#%= @radiotaxi.MP %></div>
     </div>
 
 
@@ -390,10 +313,10 @@
       <div class="ui-bar ui-bar-a" style="height:25px">Mercoledì</div>
     </div>
     <div class="ui-block-b">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.MEM %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><#%= @radiotaxi.MEM %></div>
     </div>
     <div class="ui-block-c">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.MEP %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><#%= @radiotaxi.MEP %></div>
     </div>
 
 
@@ -401,10 +324,10 @@
       <div class="ui-bar ui-bar-a" style="height:25px">Giovedì</div>
     </div>
     <div class="ui-block-b">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.GM %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><#%= @radiotaxi.GM %></div>
     </div>
     <div class="ui-block-c">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.GP %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><#%= @radiotaxi.GP %></div>
     </div>
 
 
@@ -412,10 +335,10 @@
       <div class="ui-bar ui-bar-a" style="height:25px">Venerdì</div>
     </div>
     <div class="ui-block-b">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.VM %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><#%= @radiotaxi.VM %></div>
     </div>
     <div class="ui-block-c">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.VP %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><#%= @radiotaxi.VP %></div>
     </div>
 
 
@@ -423,10 +346,10 @@
       <div class="ui-bar ui-bar-a" style="height:25px">Sabato</div>
     </div>
     <div class="ui-block-b">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.SM %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><#%= @radiotaxi.SM %></div>
     </div>
     <div class="ui-block-c">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.SP %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><#%= @radiotaxi.SP %></div>
     </div>
 
 
@@ -434,12 +357,12 @@
       <div class="ui-bar ui-bar-a" style="height:25px">Domenica</div>
     </div>
     <div class="ui-block-b">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.DM %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><#%= @radiotaxi.DM %></div>
     </div>
     <div class="ui-block-c">
-      <div class="ui-bar ui-bar-a" style="height:25px"><%= @park.DP %></div>
+      <div class="ui-bar ui-bar-a" style="height:25px"><#%= @radiotaxi.DP %></div>
     </div>
 
-  </div>
+  </div>-->
 
 </div>

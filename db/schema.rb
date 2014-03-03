@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140301114354) do
+ActiveRecord::Schema.define(version: 20140303131242) do
 
   create_table "parks", force: true do |t|
     t.string   "name"
@@ -35,9 +35,9 @@ ActiveRecord::Schema.define(version: 20140301114354) do
     t.string   "DM",         default: "0:0 - 0:0"
     t.string   "DP",         default: "0:0 - 0:0"
     t.string   "phone"
-    t.integer  "capacity"
-    t.integer  "occupati"
-    t.integer  "flusso"
+    t.integer  "capacity",   default: 0
+    t.integer  "occupati",   default: 0
+    t.integer  "flusso",     default: 0
   end
 
   create_table "pharms", force: true do |t|
@@ -62,6 +62,16 @@ ActiveRecord::Schema.define(version: 20140301114354) do
     t.string   "DM",         default: "0:0 - 0:0"
     t.string   "DP",         default: "0:0 - 0:0"
     t.boolean  "call",       default: false
+  end
+
+  create_table "radiotaxis", force: true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "lat"
+    t.string   "lng"
+    t.string   "phone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "taxistations", force: true do |t|

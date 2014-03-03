@@ -11,6 +11,7 @@
         var type = "<%= params[:type] %>";
         if(type != 'park') {
             var http = location.href.replace('&type=taxistation', '');
+            http = http.replace('&type=radiotaxi', '');
             location.href = http+'&type=park';
         }
         else {
@@ -23,10 +24,24 @@
         var type = "<%= params[:type] %>";
         if(type != 'taxistation') {
             var http = location.href.replace('&type=park', '');
+            http = http.replace('&type=radiotaxi', '');
             location.href = http+'&type=taxistation';
         }
         else {
             var http = location.href.replace('&type=taxistation', '');
+            location.href = http;
+        }
+    }
+
+    function getRadioTaxi() {
+        var type = "<%= params[:type] %>";
+        if(type != 'radiotaxi') {
+            var http = location.href.replace('&type=park', '');
+            http = http.replace('&type=taxistation', '');
+            location.href = http+'&type=radiotaxi';
+        }
+        else {
+            var http = location.href.replace('&type=radiotaxi', '');
             location.href = http;
         }
     }
@@ -171,6 +186,12 @@
             $( "#taxistation" ).css("border-width", "2px");
         <% end %>
 
+        <% if params[:type] == 'radiotaxi' %>
+        $( "#radiotaxi" ).css("height", "18px");
+        $( "#radiotaxi" ).css("border-color", "red");
+        $( "#radiotaxi" ).css("border-width", "2px");
+        <% end %>
+
 
         $( '#datepicker' ).datepicker( { dateFormat: "dd/mm/yy" } );
         $( "#datepicker" ).datepicker( "setDate", new Date("<%= @t %>") );
@@ -205,12 +226,15 @@
 
 <div data-role="content">
 
-  <fieldset class="ui-grid-a ui-corner-all">
+  <fieldset class="ui-grid-b ui-corner-all">
     <div class="ui-block-a">
-      <a class="ui-corner-all ui-btn" id="park" type="button" onclick="getPark();">Parks</a>
+      <a class="ui-corner-all ui-btn" id="park" type="button" onclick="getPark();">Park</a>
     </div>
     <div class="ui-block-b">
-      <a class="ui-corner-all ui-btn" id="taxistation" type="button" onclick="getTaxiStation();">Taxi Stations</a>
+      <a class="ui-corner-all ui-btn" id="taxistation" type="button" onclick="getTaxiStation();">Taxi Station</a>
+    </div>
+    <div class="ui-block-c">
+      <a class="ui-corner-all ui-btn" id="radiotaxi" type="button" onclick="getRadioTaxi();">RadioTaxi</a>
     </div>
   </fieldset >
 
@@ -331,7 +355,7 @@
   %>
 
   <ul data-role="listview" data-inset="true" data-filter="true">
-    <% if ( params[:type] != '' && params[:type] == 'park' ) || params[:type] == nil
+    <% if !@parks.nil? && ( ( params[:type] != '' && params[:type] == 'park' ) || params[:type] == nil )
          @parks.each do |park|
           if params[:filter] == 'all' %>
             <li>
@@ -362,7 +386,7 @@
     <%   end
        end %>
 
-    <% if ( params[:type] != '' && params[:type] == 'taxistation' ) || params[:type] == nil
+    <% if !@taxistations.nil? && ( ( params[:type] != '' && params[:type] == 'taxistation' ) || params[:type] == nil )
            @taxistations.each do |taxistation| %>
             <li>
               <a href="<%= "#{taxistations_url}/#{taxistation.id}?time="+@t.to_s %>" target="_parent">
@@ -373,6 +397,19 @@
               </a>
             </li>
     <%     end
+       end %>
+
+    <% if !@radiotaxis.nil? && ( ( params[:type] != '' && params[:type] == 'radiotaxi' ) || params[:type] == nil )
+         @radiotaxis.each do |radiotaxi| %>
+            <li>
+              <a href="<%= "#{radiotaxis_url}/#{radiotaxi.id}?time="+@t.to_s %>" target="_parent">
+                <img src="/assets/icon/radiotaxi.png">
+                <h2><%= radiotaxi.name %></h2>
+                <p><%= radiotaxi.address %></p>
+                <%= link_to 'Edit', edit_radiotaxi_path(radiotaxi), 'data-icon' => 'edit', :target => '_parent' %>
+              </a>
+            </li>
+    <%   end
        end %>
   </ul>
 </div>
