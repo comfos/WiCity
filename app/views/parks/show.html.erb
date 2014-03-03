@@ -307,8 +307,7 @@
   <div data-role="popup" id="postipopup" style="min-width: 300px" data-overlay-theme="b">
     <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
     <p><strong>Capacity:</strong> <%= @park.capacity %></p>
-    <p><strong>Posti Occupati:</strong> <%= @park.occupati %></p>
-    <p><strong>Posti Liberi:</strong> <%= @park.capacity - @park.occupati %></p>
+    <p><strong>Vacancy:</strong> <%= @park.capacity - @park.occupati %></p>
     <p><strong>Flow:</strong> <%= @park.flusso %></p>
   </div>
 
