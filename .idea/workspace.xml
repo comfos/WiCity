@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/parks/index.html.erb" afterPath="$PROJECT_DIR$/app/views/parks/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/radiotaxis/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/radiotaxis/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/parks_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/parks_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WiCity.iws" />
@@ -41,28 +43,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/parks/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="422" column="6" selection-start="19662" selection-end="19662" vertical-scroll-proportion="0.8357488" vertical-offset="6828" max-vertical-offset="7276">
+            <state line="404" column="44" selection-start="18801" selection-end="18801" vertical-scroll-proportion="-8.576923" vertical-offset="6645" max-vertical-offset="7276">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="radiotaxis_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/radiotaxis_controller.rb">
+      <file leaf-file-name="routes.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="32" selection-start="1666" selection-end="1666" vertical-scroll-proportion="0.0" vertical-offset="920" max-vertical-offset="1445">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/radiotaxis/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="19" selection-start="59" selection-end="59" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="204">
+            <state line="7" column="23" selection-start="145" selection-end="145" vertical-scroll-proportion="0.25105485" vertical-offset="0" max-vertical-offset="1326">
               <folding />
             </state>
           </provider>
@@ -71,7 +64,7 @@
       <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/radiotaxis/edit.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="20" selection-start="60" selection-end="60" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="204">
+            <state line="3" column="32" selection-start="220" selection-end="220" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="204">
               <folding />
             </state>
           </provider>
@@ -89,16 +82,7 @@
       <file leaf-file-name="_form_edit.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/radiotaxis/_form_edit.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="585" column="24" selection-start="24563" selection-end="24572" vertical-scroll-proportion="-6.4814816" vertical-offset="9420" max-vertical-offset="10149">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="165" column="127" selection-start="7168" selection-end="7304" vertical-scroll-proportion="-5.3846154" vertical-offset="2665" max-vertical-offset="5644">
+            <state line="585" column="24" selection-start="24563" selection-end="24572" vertical-scroll-proportion="-7.111111" vertical-offset="9369" max-vertical-offset="10149">
               <folding />
             </state>
           </provider>
@@ -108,15 +92,6 @@
         <entry file="file://$PROJECT_DIR$/app/views/radiotaxis/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="362" column="70" selection-start="12342" selection-end="12351" vertical-scroll-proportion="-31.08642" vertical-offset="3636" max-vertical-offset="6341">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="radiotaxis_helper.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/helpers/radiotaxis_helper.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136">
               <folding />
             </state>
           </provider>
@@ -175,7 +150,6 @@
         <option value="$PROJECT_DIR$/app/views/taxistations/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/home/nearserv.html.erb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20140228203554_add_phone_to_parks.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20140228203654_add_phone_to_taxistations.rb" />
         <option value="$PROJECT_DIR$/app/controllers/taxistations_controller.rb" />
@@ -184,7 +158,6 @@
         <option value="$PROJECT_DIR$/app/views/taxistations/show.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20140301114354_add_posti_to_parks.rb" />
         <option value="$PROJECT_DIR$/app/views/parks/_form_new.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/parks_controller.rb" />
         <option value="$PROJECT_DIR$/db/schema.rb" />
         <option value="$PROJECT_DIR$/app/views/parks/_form_edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
@@ -196,9 +169,11 @@
         <option value="$PROJECT_DIR$/app/models/radiotaxi.rb" />
         <option value="$PROJECT_DIR$/app/views/radiotaxis/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/radiotaxis/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/radiotaxis/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/radiotaxis/_form_new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/radiotaxis/_form_edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/parks_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/radiotaxis/edit.html.erb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/parks/index.html.erb" />
       </list>
     </option>
@@ -1316,7 +1291,11 @@
       <created>1393858148873</created>
       <updated>1393858148873</updated>
     </task>
-    <option name="localTasksCounter" value="142" />
+    <task id="LOCAL-00142" summary="ADD RadioTaxi&#10;">
+      <created>1393859365030</created>
+      <updated>1393859365030</updated>
+    </task>
+    <option name="localTasksCounter" value="143" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1341,7 +1320,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32038835" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1376,7 +1355,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="ADD in SHOWPharms bastano due messaggi e non 5 per essere informati che l'utente non è stato localizzato.&#10;" />
     <MESSAGE value="ADD in NEARESTSERVICES quando si vedono le farmacie sia in interest location che in nearest services esse dovrebbero essere colorate a seconda della fascia oraria di interesse che è quella fissata dopo avere cliccato interest location. Se invece si entra subito in nearest service la fascia oraria dovrebbe essere quella corrente." />
     <MESSAGE value="ADD in NEARESTSERVICES quando si vedono le farmacie sia in interest location che in nearest services esse dovrebbero essere colorate a seconda della fascia oraria di interesse che è quella fissata dopo avere cliccato interest location. Se invece si entra subito in nearest service la fascia oraria dovrebbe essere quella corrente.&#10;" />
     <MESSAGE value="ADD in LISTINGPHARMS nelle farmacie accanto alla fascia oraria metterei un tasto &quot;notturne&quot; che altro non fa che pressare automaticamnete la fascia oraria 23.30 - 00, mentre accanto al caledario metterei &quot;apertura domenicale&quot; che posiziona il calendario automaticamente alla domenica successiva." />
@@ -1401,7 +1379,8 @@
     <MESSAGE value="ADD Posti in Park&#10;" />
     <MESSAGE value="EDIT Posti in Park&#10;" />
     <MESSAGE value="ADD RadioTaxi" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD RadioTaxi" />
+    <MESSAGE value="ADD RadioTaxi&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD RadioTaxi&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1525,13 +1504,6 @@
         <state line="17" column="0" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1309">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="412" column="20" selection-start="18381" selection-end="18381" vertical-scroll-proportion="0.0" vertical-offset="7004" max-vertical-offset="8670">
@@ -1583,13 +1555,6 @@
     <entry file="file://$PROJECT_DIR$/db/migrate/20140228203654_add_phone_to_taxistations.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="28" selection-start="96" selection-end="96" vertical-scroll-proportion="0.07172996" vertical-offset="0" max-vertical-offset="474">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/parks_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="181" selection-start="2064" selection-end="2064" vertical-scroll-proportion="0.0" vertical-offset="1035" max-vertical-offset="1496">
           <folding />
         </state>
       </provider>
@@ -1657,30 +1622,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/radiotaxis_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="32" selection-start="1666" selection-end="1666" vertical-scroll-proportion="0.0" vertical-offset="920" max-vertical-offset="1445">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/radiotaxis/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="362" column="70" selection-start="12342" selection-end="12351" vertical-scroll-proportion="-31.08642" vertical-offset="3636" max-vertical-offset="6341">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/radiotaxis/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="19" selection-start="59" selection-end="59" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="204">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/radiotaxis/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="20" selection-start="60" selection-end="60" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="204">
           <folding />
         </state>
       </provider>
@@ -1692,20 +1636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/radiotaxis/_form_edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="585" column="24" selection-start="24563" selection-end="24572" vertical-scroll-proportion="-6.4814816" vertical-offset="9420" max-vertical-offset="10149">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="165" column="127" selection-start="7168" selection-end="7304" vertical-scroll-proportion="-5.3846154" vertical-offset="2665" max-vertical-offset="5644">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/parks/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="304" column="20" selection-start="11528" selection-end="11528" vertical-scroll-proportion="-13.076923" vertical-offset="4828" max-vertical-offset="7650">
@@ -1713,9 +1643,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/radiotaxis/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="32" selection-start="220" selection-end="220" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="204">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/radiotaxis/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="19" selection-start="59" selection-end="59" vertical-scroll-proportion="0.039812647" vertical-offset="0" max-vertical-offset="427">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="165" column="127" selection-start="7168" selection-end="7304" vertical-scroll-proportion="0.33816424" vertical-offset="2665" max-vertical-offset="5644">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/radiotaxis_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="21" selection-start="394" selection-end="394" vertical-scroll-proportion="0.52538633" vertical-offset="0" max-vertical-offset="1445">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/parks_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="332" selection-end="332" vertical-scroll-proportion="0.46363637" vertical-offset="0" max-vertical-offset="1513">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/radiotaxis/_form_edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="585" column="24" selection-start="24563" selection-end="24572" vertical-scroll-proportion="-7.111111" vertical-offset="9369" max-vertical-offset="10149">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/parks/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="422" column="6" selection-start="19662" selection-end="19662" vertical-scroll-proportion="0.8357488" vertical-offset="6828" max-vertical-offset="7276">
+        <state line="404" column="44" selection-start="18801" selection-end="18801" vertical-scroll-proportion="-8.576923" vertical-offset="6645" max-vertical-offset="7276">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="23" selection-start="145" selection-end="145" vertical-scroll-proportion="0.25105485" vertical-offset="0" max-vertical-offset="1326">
           <folding />
         </state>
       </provider>

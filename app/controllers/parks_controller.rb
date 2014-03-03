@@ -13,6 +13,7 @@ class ParksController < ApplicationController
 
     @parks = Park.all
     @taxistations = Taxistation.all
+    @radiotaxis = Radiotaxi.all
   end
 
   # GET /parks/1
