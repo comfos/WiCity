@@ -15,7 +15,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/WiCity@Development__WiCity.coverage" NAME="Development: WiCity Coverage Results" MODIFIED="1393933678105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
+    <SUITE FILE_PATH="coverage/WiCity@Development__WiCity.coverage" NAME="Development: WiCity Coverage Results" MODIFIED="1394020062309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
     <SUITE FILE_PATH="coverage/WiCity@db_create_all__WiCity.coverage" NAME="db:create:all: WiCity Coverage Results" MODIFIED="1386777057762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
     <SUITE FILE_PATH="coverage/WiCity@Rails_console__WiCity.coverage" NAME="Rails console: WiCity Coverage Results" MODIFIED="1388859434959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
     <SUITE FILE_PATH="coverage/WiCity@db_migrate__WiCity.coverage" NAME="db:migrate: WiCity Coverage Results" MODIFIED="1393848867601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
@@ -35,7 +35,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/parks/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="306" column="39" selection-start="11673" selection-end="11673" vertical-scroll-proportion="-10.461538" vertical-offset="4930" max-vertical-offset="7684">
+            <state line="306" column="39" selection-start="11673" selection-end="11673" vertical-scroll-proportion="0.0" vertical-offset="4930" max-vertical-offset="7684">
               <folding />
             </state>
           </provider>
@@ -53,7 +53,7 @@
       <file leaf-file-name="park.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/park.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="54" selection-start="539" selection-end="539" vertical-scroll-proportion="0.6754967" vertical-offset="0" max-vertical-offset="510">
+            <state line="4" column="42" selection-start="159" selection-end="159" vertical-scroll-proportion="0.14945056" vertical-offset="0" max-vertical-offset="510">
               <folding />
             </state>
           </provider>
@@ -1354,7 +1354,11 @@
       <created>1393934316334</created>
       <updated>1393934316334</updated>
     </task>
-    <option name="localTasksCounter" value="147" />
+    <task id="LOCAL-00147" summary="EDIT Posti&#10;">
+      <created>1393934620141</created>
+      <updated>1393934620141</updated>
+    </task>
+    <option name="localTasksCounter" value="148" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1381,25 +1385,25 @@
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32038835" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24582799" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24903722" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3592233" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30651873" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30567083" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3259362" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3264177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1414,7 +1418,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="ADD in NEARESTSERVICES quando si vedono le farmacie sia in interest location che in nearest services esse dovrebbero essere colorate a seconda della fascia oraria di interesse che è quella fissata dopo avere cliccato interest location. Se invece si entra subito in nearest service la fascia oraria dovrebbe essere quella corrente.&#10;" />
     <MESSAGE value="ADD in LISTINGPHARMS nelle farmacie accanto alla fascia oraria metterei un tasto &quot;notturne&quot; che altro non fa che pressare automaticamnete la fascia oraria 23.30 - 00, mentre accanto al caledario metterei &quot;apertura domenicale&quot; che posiziona il calendario automaticamente alla domenica successiva." />
     <MESSAGE value="ADD show DATETIME" />
     <MESSAGE value="BUGFIX quando clicco su Domenicali non dovrei spostarmi alla domenica successiva s sono già in una data domenicale. Resto alla domenca in cui mi trovo.&#10;" />
@@ -1439,7 +1442,8 @@
     <MESSAGE value="ADD RadioTaxi" />
     <MESSAGE value="ADD RadioTaxi&#10;" />
     <MESSAGE value="EDIT Posti" />
-    <option name="LAST_COMMIT_MESSAGE" value="EDIT Posti" />
+    <MESSAGE value="EDIT Posti&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="EDIT Posti&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1464,16 +1468,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140202114854_add_day_to_pharms.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="27" selection-start="198" selection-end="198" vertical-scroll-proportion="0.18681319" vertical-offset="0" max-vertical-offset="455">
-          <folding />
-        </state>
+        <state line="5" column="27" selection-start="198" selection-end="198" vertical-scroll-proportion="0.18681319" vertical-offset="0" max-vertical-offset="455" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20130923090842_create_pharms.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140223184054_add_day_to_parks.rb">
@@ -1567,9 +1567,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140224164742_create_taxistations.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="225" selection-end="225" vertical-scroll-proportion="0.44835165" vertical-offset="0" max-vertical-offset="455">
-          <folding />
-        </state>
+        <state line="12" column="0" selection-start="225" selection-end="225" vertical-scroll-proportion="0.44835165" vertical-offset="0" max-vertical-offset="455" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/taxistations_controller.rb">
@@ -1599,9 +1597,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140228203654_add_phone_to_taxistations.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="28" selection-start="96" selection-end="96" vertical-scroll-proportion="0.07172996" vertical-offset="0" max-vertical-offset="474">
-          <folding />
-        </state>
+        <state line="2" column="28" selection-start="96" selection-end="96" vertical-scroll-proportion="0.07172996" vertical-offset="0" max-vertical-offset="474" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/parks/_form_new.html.erb">
@@ -1623,16 +1619,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="25" selection-start="1734" selection-end="1734" vertical-scroll-proportion="0.0" vertical-offset="397" max-vertical-offset="1853">
-          <folding />
-        </state>
+        <state line="37" column="25" selection-start="1734" selection-end="1734" vertical-scroll-proportion="0.0" vertical-offset="397" max-vertical-offset="1853" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140303131242_create_radiotaxis.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-          <folding />
-        </state>
+        <state line="13" column="0" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/radiotaxi.rb">
@@ -1647,16 +1639,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/radiotaxis/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="362" column="70" selection-start="12342" selection-end="12351" vertical-scroll-proportion="0.0" vertical-offset="3636" max-vertical-offset="6341">
-          <folding />
-        </state>
+        <state line="362" column="70" selection-start="12342" selection-end="12351" vertical-scroll-proportion="0.0" vertical-offset="3636" max-vertical-offset="6341" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/radiotaxis/_form_new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="414" column="40" selection-start="15613" selection-end="15622" vertical-scroll-proportion="0.0" vertical-offset="6870" max-vertical-offset="7242">
-          <folding />
-        </state>
+        <state line="414" column="40" selection-start="15613" selection-end="15622" vertical-scroll-proportion="0.0" vertical-offset="6870" max-vertical-offset="7242" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/radiotaxis/edit.html.erb">
@@ -1725,7 +1713,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/parks/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="306" column="39" selection-start="11673" selection-end="11673" vertical-scroll-proportion="-10.461538" vertical-offset="4930" max-vertical-offset="7684">
+        <state line="306" column="39" selection-start="11673" selection-end="11673" vertical-scroll-proportion="0.0" vertical-offset="4930" max-vertical-offset="7684">
           <folding />
         </state>
       </provider>
@@ -1739,7 +1727,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/park.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="54" selection-start="539" selection-end="539" vertical-scroll-proportion="0.6754967" vertical-offset="0" max-vertical-offset="510">
+        <state line="4" column="42" selection-start="159" selection-end="159" vertical-scroll-proportion="0.14945056" vertical-offset="0" max-vertical-offset="510">
           <folding />
         </state>
       </provider>

@@ -2,7 +2,7 @@ class Park < ActiveRecord::Base
 
   validate :occupati_cannot_be_greater_than_capacity, :occupati_cannot_be_min_zero
 
-  validates :occupati, numericality: true
+  #validates :occupati, numericality: true
   validates :capacity, numericality: true
 
   def occupati_cannot_be_greater_than_capacity
