@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20141002121006) do
     t.string   "SM",         default: "0:0 - 0:0"
     t.string   "SP",         default: "0:0 - 0:0"
     t.string   "DM",         default: "0:0 - 0:0"
-    t.string   "DP"
+    t.string   "DP",         default: "0:0 - 0:0"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
