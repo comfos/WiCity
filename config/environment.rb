@@ -10,7 +10,7 @@ ActionMailer::Base.smtp_settings = {
     :port => 587,
     :domain => 'mail.live.com',
     :user_name => 'wicity@live.it',
-    :password => '!ra73on19!',
+    :password => '!akayciao!',
     :authentication => 'plain',
     :enable_starttls_auto => true
 }
