@@ -1,0 +1,602 @@
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+
+<script type="text/javascript">
+
+    function resetRange(day, type) {
+        $("#range-"+type+"a").val(0).slider('refresh');
+        $("#range-"+type+"b").val(1500).slider('refresh');
+
+        $('#text-'+day+'-'+type).html( '0:0 - 0:0' );
+        $('#fuel_'+type).val( '0:0 - 0:0' );
+    }
+
+    function getRange(val, type) {
+        var b = Math.floor(val.split(":")[0]);
+        var c = Math.floor(val.split(":")[1]);
+        $("#range-"+type).val(b*60+c);
+        $("#range-"+type).slider('refresh');
+    }
+
+    function setRange() {
+        <% if(!(@fuel.LM).nil? && !(@fuel.LP).nil?) then %>
+            getRange("<%= @fuel.LM.split(" - ")[0] %>", "LMa");
+            getRange("<%= @fuel.LM.split(" - ")[1] %>", "LMb");
+            getRange("<%= @fuel.LP.split(" - ")[0] %>", "LPa");
+            getRange("<%= @fuel.LP.split(" - ")[1] %>", "LPb");
+        <% end %>
+
+        <% if(!(@fuel.MM).nil? && !(@fuel.MP).nil?) then %>
+            getRange("<%= @fuel.MM.split(" - ")[0] %>", "MMa");
+            getRange("<%= @fuel.MM.split(" - ")[1] %>", "MMb");
+            getRange("<%= @fuel.MP.split(" - ")[0] %>", "MPa");
+            getRange("<%= @fuel.MP.split(" - ")[1] %>", "MPb");
+        <% end %>
+
+        <% if(!(@fuel.MEM).nil? && !(@fuel.MEP).nil?) then %>
+            getRange("<%= @fuel.MEM.split(" - ")[0] %>", "MEMa");
+            getRange("<%= @fuel.MEM.split(" - ")[1] %>", "MEMb");
+            getRange("<%= @fuel.MEP.split(" - ")[0] %>", "MEPa");
+            getRange("<%= @fuel.MEP.split(" - ")[1] %>", "MEPb");
+        <% end %>
+
+        <% if(!(@fuel.GM).nil? && !(@fuel.GP).nil?) then %>
+            getRange("<%= @fuel.GM.split(" - ")[0] %>", "GMa");
+            getRange("<%= @fuel.GM.split(" - ")[1] %>", "GMb");
+            getRange("<%= @fuel.GP.split(" - ")[0] %>", "GPa");
+            getRange("<%= @fuel.GP.split(" - ")[1] %>", "GPb");
+        <% end %>
+
+        <% if(!(@fuel.VM).nil? && !(@fuel.VP).nil?) then %>
+            getRange("<%= @fuel.VM.split(" - ")[0] %>", "VMa");
+            getRange("<%= @fuel.VM.split(" - ")[1] %>", "VMb");
+            getRange("<%= @fuel.VP.split(" - ")[0] %>", "VPa");
+            getRange("<%= @fuel.VP.split(" - ")[1] %>", "VPb");
+        <% end %>
+
+        <% if(!(@fuel.SM).nil? && !(@fuel.SP).nil?) then %>
+            getRange("<%= @fuel.SM.split(" - ")[0] %>", "SMa");
+            getRange("<%= @fuel.SM.split(" - ")[1] %>", "SMb");
+            getRange("<%= @fuel.SP.split(" - ")[0] %>", "SPa");
+            getRange("<%= @fuel.SP.split(" - ")[1] %>", "SPb");
+        <% end %>
+
+        <% if(!(@fuel.DM).nil? && !(@fuel.DP).nil?) then %>
+            getRange("<%= @fuel.DM.split(" - ")[0] %>", "DMa");
+            getRange("<%= @fuel.DM.split(" - ")[1] %>", "DMb");
+            getRange("<%= @fuel.DP.split(" - ")[0] %>", "DPa");
+            getRange("<%= @fuel.DP.split(" - ")[1] %>", "DPb");
+        <% end %>
+    }
+
+    function slideTime(event, ui, to, from) {
+        var hours1 = Math.floor($("#range-"+from+'a').val() / 60);
+        var minutes1 = $("#range-"+from+'a').val() - (hours1 * 60);
+
+        if(hours1.length < 10)
+            hours1 = '0' + hours;
+        if(minutes1.length < 10)
+            minutes1 = '0' + minutes;
+
+        if(minutes1 == 0)
+            minutes1 = '00';
+
+        var hours2 = Math.floor($("#range-"+from+'b').val() / 60);
+        var minutes2 = $("#range-"+from+'b').val() - (hours2 * 60);
+
+        if(hours2.length < 10)
+            hours2= '0' + hours;
+        if(minutes2.length < 10)
+            minutes2 = '0' + minutes;
+
+        if(minutes2 == 0)
+            minutes2 = '00';
+
+        $('#text-'+to+'-'+from).html( hours1+':'+minutes1+' - '+hours2+':'+minutes2 );
+        $('#fuel_'+from).val(hours1+':'+minutes1+' - '+hours2+':'+minutes2);
+    }
+
+    function initialize() {
+
+        setRange();
+
+        /* LUNEDì */
+        $("#range-LMa").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "lun", "LM");
+        });
+        $("#range-LMb").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "lun", "LM");
+        });
+        $("#range-LPa").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "lun", "LP");
+        });
+        $("#range-LPb").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "lun", "LP");
+        });
+
+        /* MARTEDì */
+        $("#range-MMa").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "mar", "MM");
+        });
+        $("#range-MMb").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "mar", "MM");
+        });
+        $("#range-MPa").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "mar", "MP");
+        });
+        $("#range-MPb").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "mar", "MP");
+        });
+
+        /* MERCOLEDì */
+        $("#range-MEMa").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "mer", "MEM");
+        });
+        $("#range-MEMb").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "mer", "MEM");
+        });
+        $("#range-MEPa").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "mer", "MEP");
+        });
+        $("#range-MEPb").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "mer", "MEP");
+        });
+
+        /* GIOVEEDì */
+        $("#range-GMa").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "gio", "GM");
+        });
+        $("#range-GMb").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "gio", "GM");
+        });
+        $("#range-GPa").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "gio", "GP");
+        });
+        $("#range-GPb").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "gio", "GP");
+        });
+
+        /* VENERDì */
+        $("#range-VMa").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "ven", "VM");
+        });
+        $("#range-VMb").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "ven", "VM");
+        });
+        $("#range-VPa").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "ven", "VP");
+        });
+        $("#range-VPb").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "ven", "VP");
+        });
+
+        /* SABATO */
+        $("#range-SMa").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "sab", "SM");
+        });
+        $("#range-SMb").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "sab", "SM");
+        });
+        $("#range-SPa").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "sab", "SP");
+        });
+        $("#range-SPb").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "sab", "SP");
+        });
+
+        /* DOMENICA */
+        $("#range-DMa").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "dom", "DM");
+        });
+        $("#range-DMb").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "dom", "DM");
+        });
+        $("#range-DPa").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "dom", "DP");
+        });
+        $("#range-DPb").on( 'change', function( event, ui ) {
+            slideTime(event, ui, "dom", "DP");
+        });
+
+        var input = (document.getElementById('fuel_address'));
+        var autocomplete = new google.maps.places.Autocomplete(input);
+
+        google.maps.event.addListener(autocomplete, 'place_changed', function() {
+
+            var place = autocomplete.getPlace();
+            if (!place.geometry) {
+                return;
+            }
+
+            if (place.geometry.viewport) {
+                map.fitBounds(place.geometry.viewport);
+            } else {
+                document.getElementById('fuel_lat').value = (place.geometry.location).lat();
+                document.getElementById('fuel_lng').value = (place.geometry.location).lng();
+                document.getElementById("fuel_add").style.display = "block";
+            }
+        });
+    }
+
+    function hideUpdate() {
+        document.getElementById("fuel_add").style.display = "none";
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+
+<div data-role="content">
+
+    <%= form_for(@fuel, :html => {:target => '_parent'} ) do |f| %>
+      <% if @fuel.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@fuel.errors.count, "error") %> prohibited this fuel from being saved:</h2>
+
+          <ul>
+          <% @fuel.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <strong><b><%= f.label :Name %></b></strong>
+        <%= f.text_field :name %>
+      </div>
+
+      <br>
+
+      <div class="field">
+        <strong><b><%= f.label :Address %></b></strong>
+        <%= f.text_field :address, :onclick => 'hideUpdate();' %>
+      </div>
+
+      <br>
+
+      <div class="field">
+        <strong><b><%= f.label :Phone %></b></strong>
+        <%= f.phone_field :phone %>
+      </div>
+
+      <br>
+
+      <div class="ui-grid-a">
+        <div class="ui-block-a" style="padding-right: 5px">
+          <strong><b><%= f.label :Capacity %></b></strong>
+          <%= f.number_field :capacity %>
+        </div>
+        <div class="ui-block-b" style="padding-left: 5px">
+          <strong><b><%= f.label :Occupati %></b></strong>
+          <%= f.number_field :occupati %>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="ui-grid-a">
+        <div class="ui-block-a" style="padding-right: 5px">
+          <strong><b><%= f.label :Latitude %></b></strong>
+          <%= f.text_field :lat, :readonly => true %>
+        </div>
+        <div class="ui-block-b" style="padding-left: 5px">
+          <strong><b><%= f.label :Longitude %></b></strong>
+          <%= f.text_field :lng, :readonly => true %>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="ui-grid-b ui-corner-all ui-shadow">
+        <div class="ui-block-a">
+          <div class="ui-bar ui-bar-a" style="height:50px" id="text-lun">
+            Lunedì
+            <div style="float:right">
+              <div id="text-lun-LM" style="float:left"><%= @fuel.LM %></div>&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;<div id="text-lun-LP" style="float:right"><%= @fuel.LP %></div>
+            </div>
+          </div>
+        </div>
+        <div class="ui-block-b">
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-LMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
+                  <input id="range-LMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('lun', 'LM')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
+            <%= f.hidden_field :LM %>
+          </div>
+        </div>
+        <div class="ui-block-c">
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-LPa" step="15" min="780" max="1439" type="range" class="ui-hidden-accessible">
+                  <input id="range-LPb" step="15" min="780" max="1440" type="range" value="1440" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('lun', 'LP')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
+            <%= f.hidden_field :LP %>
+          </div>
+        </div>
+
+
+        <div class="ui-block-a">
+          <div class="ui-bar ui-bar-a" style="height:50px" id="text-mar">
+            Martedì
+            <div style="float:right">
+              <div id="text-mar-MM" style="float:left"><%= @fuel.MM %></div>&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;<div id="text-mar-MP" style="float:right"><%= @fuel.MP %></div>
+            </div>
+          </div>
+        </div>
+        <div class="ui-block-b">
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-MMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
+                  <input id="range-MMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('mar', 'MM')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
+            <%= f.hidden_field :MM %>
+          </div>
+        </div>
+        <div class="ui-block-c">
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-MPa" step="15" min="780" max="1439" type="range" class="ui-hidden-accessible">
+                  <input id="range-MPb" step="15" min="780" max="1440" type="range" value="1440" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('mar', 'MP')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
+            <%= f.hidden_field :MP %>
+          </div>
+        </div>
+
+
+        <div class="ui-block-a">
+          <div class="ui-bar ui-bar-a" style="height:50px" id="text-mar">
+            Mercoledì
+            <div style="float:right">
+              <div id="text-mer-MEM" style="float:left"><%= @fuel.MEM %></div>&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;<div id="text-mer-MEP" style="float:right"><%= @fuel.MEP %></div>
+            </div>
+          </div>
+        </div>
+        <div class="ui-block-b">
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-MEMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
+                  <input id="range-MEMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('mer', 'MEM')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
+            <%= f.hidden_field :MEM %>
+          </div>
+        </div>
+        <div class="ui-block-c">
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-MEPa" step="15" min="780" max="1439" type="range" class="ui-hidden-accessible">
+                  <input id="range-MEPb" step="15" min="780" max="1440" type="range" value="1440" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('mer', 'MEP')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
+            <%= f.hidden_field :MEP %>
+          </div>
+        </div>
+
+
+        <div class="ui-block-a">
+          <div class="ui-bar ui-bar-a" style="height:50px" id="text-mar">
+            Giovedì
+            <div style="float:right">
+              <div id="text-gio-GM" style="float:left"><%= @fuel.GM %></div>&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;<div id="text-gio-GP" style="float:right"><%= @fuel.GP %></div>
+            </div>
+          </div>
+        </div>
+        <div class="ui-block-b">
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-GMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
+                  <input id="range-GMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('gio', 'GM')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
+            <%= f.hidden_field :GM %>
+          </div>
+        </div>
+        <div class="ui-block-c">
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-GPa" step="15" min="780" max="1439" type="range" class="ui-hidden-accessible">
+                  <input id="range-GPb" step="15" min="780" max="1440" type="range" value="1440" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('gio', 'GP')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
+            <%= f.hidden_field :GP %>
+          </div>
+        </div>
+
+
+        <div class="ui-block-a">
+          <div class="ui-bar ui-bar-a" style="height:50px" id="text-mar">
+            Venerdì
+            <div style="float:right">
+              <div id="text-ven-VM" style="float:left"><%= @fuel.VM %></div>&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;<div id="text-ven-VP" style="float:right"><%= @fuel.VP %></div>
+            </div>
+          </div>
+        </div>
+        <div class="ui-block-b">
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-VMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
+                  <input id="range-VMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('ven', 'VM')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
+            <%= f.hidden_field :VM %>
+          </div>
+        </div>
+        <div class="ui-block-c">
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-VPa" step="15" min="780" max="1439" type="range" class="ui-hidden-accessible">
+                  <input id="range-VPb" step="15" min="780" max="1440" type="range" value="1440" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('ven', 'VP')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
+            <%= f.hidden_field :VP %>
+          </div>
+        </div>
+
+
+        <div class="ui-block-a">
+          <div class="ui-bar ui-bar-a" style="height:50px" id="text-mar">
+            Sabato
+            <div style="float:right">
+              <div id="text-sab-SM" style="float:left"><%= @fuel.SM %></div>&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;<div id="text-sab-SP" style="float:right"><%= @fuel.SP %></div>
+            </div>
+          </div>
+        </div>
+        <div class="ui-block-b">
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-SMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
+                  <input id="range-SMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('sab', 'SM')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
+            <%= f.hidden_field :SM %>
+          </div>
+        </div>
+        <div class="ui-block-c">
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-SPa" step="15" min="780" max="1439" type="range" class="ui-hidden-accessible">
+                  <input id="range-SPb" step="15" min="780" max="1440" type="range" value="1440" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('sab', 'SP')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
+            <%= f.hidden_field :SP %>
+          </div>
+        </div>
+
+
+        <div class="ui-block-a">
+          <div class="ui-bar ui-bar-a" style="height:50px" id="text-mar">
+            Domenica
+            <div style="float:right">
+              <div id="text-dom-DM" style="float:left"><%= @fuel.DM %></div>&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;<div id="text-dom-DP" style="float:right"><%= @fuel.DP %></div>
+            </div>
+          </div>
+        </div>
+        <div class="ui-block-b">
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-DMa" step="15" min="0" max="780" type="range" class="ui-hidden-accessible">
+                  <input id="range-DMb" step="15" min="0" max="780" type="range" value="780" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('dom', 'DM')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
+            <%= f.hidden_field :DM %>
+          </div>
+        </div>
+        <div class="ui-block-c">
+          <div class="ui-bar ui-bar-a" style="height:50px">
+            <fieldset class="ui-grid-a">
+              <div class="ui-block-a" style="width: 85%">
+                <div data-role="rangeslider">
+                  <input id="range-DPa" step="15" min="780" max="1439" type="range" class="ui-hidden-accessible">
+                  <input id="range-DPb" step="15" min="780" max="1440" type="range" value="1440" class="ui-hidden-accessible">
+                </div>
+              </div>
+              <div class="ui-block-b" style="width: 15%">
+                <button id="reset" type="button" onclick="resetRange('dom', 'DP')" class="ui-btn ui-mini">Chiuso</button>
+              </div>
+            </fieldset>
+            <%= f.hidden_field :DP %>
+          </div>
+        </div>
+
+      </div>
+
+
+      <br>
+
+      <div id="fuel_add" class="actions">
+        <%= f.submit %>
+      </div>
+
+    <% end %>
+
+</div>

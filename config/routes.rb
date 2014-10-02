@@ -6,6 +6,7 @@ WiCity::Application.routes.draw do
   resources :parks
   resources :taxistations
   resources :radiotaxis
+  resources :fuels
 
   root 'home#index'
 
