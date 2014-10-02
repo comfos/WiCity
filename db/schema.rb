@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140312104542) do
+ActiveRecord::Schema.define(version: 20141002121006) do
 
   create_table "fuels", force: true do |t|
     t.string   "name"
@@ -85,6 +85,7 @@ ActiveRecord::Schema.define(version: 20140312104542) do
     t.string   "DM",         default: "0:0 - 0:0"
     t.string   "DP",         default: "0:0 - 0:0"
     t.boolean  "call",       default: false
+    t.string   "phone"
   end
 
   create_table "radiotaxis", force: true do |t|
