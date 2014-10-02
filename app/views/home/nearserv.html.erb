@@ -1,3 +1,4 @@
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 <script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerclusterer/1.0/src/markerclusterer_packed.js"></script>
 
 <script type="text/javascript">
@@ -25,7 +26,7 @@
     }] ];*/
 
     var map;
-    var geocoder = new google.maps.Geocoder();
+    var geocoder;
     var mypos = 0;
 
     var check = 0;
@@ -58,6 +59,8 @@
     }
 
     function preinit() {
+        geocoder = new google.maps.Geocoder();
+
         var lat = "<%= params[:lat] %>";
         var lng = "<%= params[:lng] %>";
         if(lat) {
