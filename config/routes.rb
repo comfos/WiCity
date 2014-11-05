@@ -1,5 +1,7 @@
 WiCity::Application.routes.draw do
 
+  resources :restaurants
+
   devise_for :users
 
   resources :pharms

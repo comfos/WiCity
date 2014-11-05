@@ -1,0 +1,63 @@
+<h1>Listing restaurants</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Lat</th>
+      <th>Lng</th>
+      <th>Lm</th>
+      <th>Lp</th>
+      <th>Mm</th>
+      <th>Mp</th>
+      <th>Mem</th>
+      <th>Mep</th>
+      <th>Gm</th>
+      <th>Gp</th>
+      <th>Vm</th>
+      <th>Vp</th>
+      <th>Sm</th>
+      <th>Sp</th>
+      <th>Dm</th>
+      <th>Dp</th>
+      <th>Phone</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @restaurants.each do |restaurant| %>
+      <tr>
+        <td><%= restaurant.name %></td>
+        <td><%= restaurant.address %></td>
+        <td><%= restaurant.lat %></td>
+        <td><%= restaurant.lng %></td>
+        <td><%= restaurant.LM %></td>
+        <td><%= restaurant.LP %></td>
+        <td><%= restaurant.MM %></td>
+        <td><%= restaurant.MP %></td>
+        <td><%= restaurant.MEM %></td>
+        <td><%= restaurant.MEP %></td>
+        <td><%= restaurant.GM %></td>
+        <td><%= restaurant.GP %></td>
+        <td><%= restaurant.VM %></td>
+        <td><%= restaurant.VP %></td>
+        <td><%= restaurant.SM %></td>
+        <td><%= restaurant.SP %></td>
+        <td><%= restaurant.DM %></td>
+        <td><%= restaurant.DP %></td>
+        <td><%= restaurant.phone %></td>
+        <td><%= link_to 'Show', restaurant %></td>
+        <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
+        <td><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Restaurant', new_restaurant_path %>
