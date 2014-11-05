@@ -1,63 +1,327 @@
-<h1>Listing restaurants</h1>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Address</th>
-      <th>Lat</th>
-      <th>Lng</th>
-      <th>Lm</th>
-      <th>Lp</th>
-      <th>Mm</th>
-      <th>Mp</th>
-      <th>Mem</th>
-      <th>Mep</th>
-      <th>Gm</th>
-      <th>Gp</th>
-      <th>Vm</th>
-      <th>Vp</th>
-      <th>Sm</th>
-      <th>Sp</th>
-      <th>Dm</th>
-      <th>Dp</th>
-      <th>Phone</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<link rel="stylesheet" type="text/css" href="http://xdsoft.net/scripts/jquery.datetimepicker.css">
+<script src="http://xdsoft.net/scripts/jquery.datetimepicker.js"></script>
 
-  <tbody>
-    <% @restaurants.each do |restaurant| %>
-      <tr>
-        <td><%= restaurant.name %></td>
-        <td><%= restaurant.address %></td>
-        <td><%= restaurant.lat %></td>
-        <td><%= restaurant.lng %></td>
-        <td><%= restaurant.LM %></td>
-        <td><%= restaurant.LP %></td>
-        <td><%= restaurant.MM %></td>
-        <td><%= restaurant.MP %></td>
-        <td><%= restaurant.MEM %></td>
-        <td><%= restaurant.MEP %></td>
-        <td><%= restaurant.GM %></td>
-        <td><%= restaurant.GP %></td>
-        <td><%= restaurant.VM %></td>
-        <td><%= restaurant.VP %></td>
-        <td><%= restaurant.SM %></td>
-        <td><%= restaurant.SP %></td>
-        <td><%= restaurant.DM %></td>
-        <td><%= restaurant.DP %></td>
-        <td><%= restaurant.phone %></td>
-        <td><%= link_to 'Show', restaurant %></td>
-        <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
-        <td><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<script>
+
+    function getAll() {
+        var currentDate = $( "#datepicker" ).datepicker( "getDate" );
+        var currentTime = $( "#timeh" ).val();
+
+        if(currentDate.getDay() == 0) {
+            location.href='restaurants?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day=7&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1]+'&filter=all';
+        }
+        else {
+            location.href='restaurants?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day='+currentDate.getDay()+'&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1]+'&filter=all';
+        }
+    }
+
+    function getOpened() {
+        var currentDate = $( "#datepicker" ).datepicker( "getDate" );
+        var currentTime = $( "#timeh" ).val();
+
+        if(currentDate.getDay() == 0) {
+            location.href='restaurants?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day=7&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1]+'&filter=open';
+        }
+        else {
+            location.href='restaurants?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day='+currentDate.getDay()+'&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1]+'&filter=open';
+        }
+    }
+
+    function getNotturne() {
+        var time = $('#timeh').val();
+        var h = time.split(":")[0];
+        var min = time.split(":")[1];
+
+        if (h >= 7) {
+            $('#timeh').val('23:30');
+            var currentDate = $( "#datepicker" ).datepicker( "getDate" );
+            var currentTime = $( "#timeh" ).val();
+
+            if(currentDate.getDay() == 0) {
+                location.href='restaurants?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day=7&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1]+'&filter2=notturne';
+            }
+            else {
+                location.href='restaurants?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day='+currentDate.getDay()+'&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1]+'&filter2=notturne';
+            }
+        }
+    }
+
+    function setNow() {
+        $( "#datepicker" ).datepicker( "setDate", new Date("<%= Time.now %>") );
+        $('#timeh').datetimepicker({value:'<%= Time.now.to_s.split(" ")[1] %>'});
+
+        var currentDate = $( "#datepicker" ).datepicker( "getDate" );
+        var currentTime = $( "#timeh" ).val();
+
+        if(currentDate.getDay() == 0) {
+            location.href='restaurants?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day=7&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1]+'&filter1=now';
+        }
+        else {
+            location.href='restaurants?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day='+currentDate.getDay()+'&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1]+'&filter1=now';
+        }
+    }
+
+    function getDomenicali() {
+        var currentDate = $( "#datepicker" ).datepicker( "getDate" );
+        var addday = 7 - currentDate.getDay();
+
+        if(addday!=7) {
+            $( "#datepicker" ).datepicker( "setDate", new Date((currentDate.getMonth()+1)+"/"+(currentDate.getDate()+addday)+"/"+currentDate.getFullYear()) );
+        }
+        changeDateTime(this, this);
+    }
+
+    function changeDateTime(event, ui) {
+
+        var currentDate = $( "#datepicker" ).datepicker( "getDate" );
+        var currentTime = $( "#timeh" ).val();
+
+        if(currentDate.getDay() == 0) {
+            location.href='restaurants?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day=7&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1];
+        }
+        else {
+            location.href='restaurants?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day='+currentDate.getDay()+'&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1];
+        }
+    }
+
+    function getDateTime() {
+        var d = "<%= params[:d] %>";
+        var m = "<%= params[:m] %>";
+        var y = "<%= params[:y] %>";
+
+        var h = "<%= params[:h] %>";
+        var min = "<%= params[:min] %>";
+
+        $( "#datepicker" ).datepicker( "setDate", new Date(m+"/"+d+"/"+y) );
+
+        if(h)
+            $( "#timeh" ).val( h+":"+min );
+
+        <% if params[:day]
+                @today = params[:day]
+                @t = Time.local(params[:y], params[:m], params[:d], params[:h], params[:min])
+           end
+        %>
+    }
+
+    $(function() {
+        <% if params[:filter] == 'all' %>
+        $( "#filterall" ).css("border-color", "red");
+        $( "#filterall" ).css("border-width", "2px");
+        <% else %>
+        $( "#filteropen" ).css("border-color", "red");
+        $( "#filteropen" ).css("border-width", "2px");
+        <% end %>
+
+        <% if params[:filter1] == 'now' %>
+        $( "#filternow" ).css("height", "18px");
+        $( "#filternow" ).css("border-color", "red");
+        $( "#filternow" ).css("border-width", "2px");
+        <% end %>
+
+        <% if params[:filter2] == 'notturne' %>
+        $( "#filternotturne" ).css("height", "18px");
+        $( "#filternotturne" ).css("border-color", "red");
+        $( "#filternotturne" ).css("border-width", "2px");
+        <% end %>
+
+        <% if params[:day] == '7' %>
+        $( "#filtersunday" ).css("height", "18px");
+        $( "#filtersunday" ).css("border-color", "red");
+        $( "#filtersunday" ).css("border-width", "2px");
+        <% end %>
+
+
+        $( '#datepicker' ).datepicker( { dateFormat: "dd/mm/yy" } );
+        $( "#datepicker" ).datepicker( "setDate", new Date("<%= @t %>") );
+        $( "#datepicker" ).on("change", function( event, ui ) {
+            changeDateTime(event, ui);
+        });
+
+        $('#timeh').datetimepicker({
+            datepicker:false,
+            format:'H:i',
+            step: 15,
+            value:'<%= @t.to_s.split(" ")[1] %>',
+            onChangeDateTime: function(dp,$input) {
+                changeDateTime(dp, $input)
+            }
+        });
+
+        getDateTime();
+    });
+</script>
+
+
+<div data-role="header" data-theme="b">
+  <h1>List of Restaurants</h1>
+  <div id="custom-border-radius" class="ui-btn-left" data-role="controlgroup" data-type="horizontal" data-mini="true">
+    <%= link_to 'Back', 'intloc', 'data-icon' => 'back', 'data-role' => 'button', 'data-iconpos' => 'notext' %>
+    <%= link_to 'Home', root_url, 'data-icon' => 'home', 'data-role' => 'button', 'data-iconpos' => 'notext', :target => '_parent' %>
+  </div>
+  <%= link_to 'Add', new_restaurant_path, 'data-iconpos' => 'notext', 'data-icon' => 'plus', 'class' => 'ui-btn-right', :target => '_parent' %>
+</div>
+
+
+<div data-role="content">
+
+  <fieldset class="ui-grid-a ui-corner-all">
+    <div class="ui-block-a">
+      <a class="ui-corner-all ui-btn" id="filterall" type="button" onclick="getAll();">All</a>
+    </div>
+    <div class="ui-block-b">
+      <a class="ui-corner-all ui-btn" id="filteropen" type="button" onclick="getOpened();">Open</a>
+    </div>
+  </fieldset >
+
+  <div class="ui-grid-d ui-corner-all">
+    <div class="ui-block-a">
+      <div class="ui-bar ui-bar-a"><input id='datepicker' placeholder='Date' style="height: 43px"/></div>
+    </div>
+    <div class="ui-block-b">
+      <div class="ui-bar ui-bar-a"><a id="filtersunday" class="ui-corner-all ui-btn" type="button" onclick="getDomenicali();">Sunday</a></div>
+    </div>
+    <div class="ui-block-c">
+      <div class="ui-bar ui-bar-b"><input id="timeh" type="text" style="height: 43px"></div>
+    </div>
+    <div class="ui-block-d">
+      <div class="ui-bar ui-bar-b"><a id="filternow" class="ui-corner-all ui-btn ui-btn-active" type="button" onclick="setNow();">Now</a></div>
+    </div>
+    <div class="ui-block-e">
+      <div class="ui-bar ui-bar-b"><a id="filternotturne" class="ui-corner-all ui-btn ui-btn-active" type="button" onclick="getNotturne();">Night</a></div>
+    </div>
+  </div>
+
+  <%
+     def isOpen(type)
+       if (@today == '1') # LUNEDì
+         puts "LUNEDì"
+         if (Range.new(
+                 Time.local(@t.year, @t.month, @t.day, (type.LM.split(' - ')[0]).split(':')[0], (type.LM.split(' - ')[0]).split(':')[1]).to_i,
+                 Time.local(@t.year, @t.month, @t.day, (type.LM.split(' - ')[1]).split(':')[0], (type.LM.split(' - ')[1]).split(':')[1]).to_i,
+         ) === @t.to_i || Range.new(
+                 Time.local(@t.year, @t.month, @t.day, (type.LP.split(' - ')[0]).split(':')[0], (type.LP.split(' - ')[0]).split(':')[1]).to_i,
+                 Time.local(@t.year, @t.month, @t.day, (type.LP.split(' - ')[1]).split(':')[0], (type.LP.split(' - ')[1]).split(':')[1]).to_i,
+         ) === @t.to_i)
+           return true
+         end
+       end
+       if (@today == '2') # MARTEDì
+         puts "MARTEDì"
+         if (Range.new(
+                 Time.local(@t.year, @t.month, @t.day, (type.MM.split(' - ')[0]).split(':')[0], (type.MM.split(' - ')[0]).split(':')[1]).to_i,
+                 Time.local(@t.year, @t.month, @t.day, (type.MM.split(' - ')[1]).split(':')[0], (type.MM.split(' - ')[1]).split(':')[1]).to_i,
+         ) === @t.to_i || Range.new(
+                 Time.local(@t.year, @t.month, @t.day, (type.MP.split(' - ')[0]).split(':')[0], (type.MP.split(' - ')[0]).split(':')[1]).to_i,
+                 Time.local(@t.year, @t.month, @t.day, (type.MP.split(' - ')[1]).split(':')[0], (type.MP.split(' - ')[1]).split(':')[1]).to_i,
+         ) === @t.to_i)
+           return true
+         end
+       end
+       if (@today == '3') # MERCOLEDì
+         puts "MERCOLEDì"
+         if (Range.new(
+                 Time.local(@t.year, @t.month, @t.day, (type.MEM.split(' - ')[0]).split(':')[0], (type.MEM.split(' - ')[0]).split(':')[1]).to_i,
+                 Time.local(@t.year, @t.month, @t.day, (type.MEM.split(' - ')[1]).split(':')[0], (type.MEM.split(' - ')[1]).split(':')[1]).to_i,
+         ) === @t.to_i || Range.new(
+                 Time.local(@t.year, @t.month, @t.day, (type.MEP.split(' - ')[0]).split(':')[0], (type.MEP.split(' - ')[0]).split(':')[1]).to_i,
+                 Time.local(@t.year, @t.month, @t.day, (type.MEP.split(' - ')[1]).split(':')[0], (type.MEP.split(' - ')[1]).split(':')[1]).to_i,
+         ) === @t.to_i)
+           return true
+         end
+       end
+       if (@today == '4') # GIOVEDì
+         puts "GIOVEDì"
+         if (Range.new(
+                 Time.local(@t.year, @t.month, @t.day, (type.GM.split(' - ')[0]).split(':')[0], (type.GM.split(' - ')[0]).split(':')[1]).to_i,
+                 Time.local(@t.year, @t.month, @t.day, (type.GM.split(' - ')[1]).split(':')[0], (type.GM.split(' - ')[1]).split(':')[1]).to_i,
+         ) === @t.to_i || Range.new(
+                 Time.local(@t.year, @t.month, @t.day, (type.GP.split(' - ')[0]).split(':')[0], (type.GP.split(' - ')[0]).split(':')[1]).to_i,
+                 Time.local(@t.year, @t.month, @t.day, (type.GP.split(' - ')[1]).split(':')[0], (type.GP.split(' - ')[1]).split(':')[1]).to_i,
+         ) === @t.to_i)
+           return true
+         end
+       end
+       if (@today == '5') # VENERDì
+         puts "VENERDì"
+         if (Range.new(
+                 Time.local(@t.year, @t.month, @t.day, (type.VM.split(' - ')[0]).split(':')[0], (type.VM.split(' - ')[0]).split(':')[1]).to_i,
+                 Time.local(@t.year, @t.month, @t.day, (type.VM.split(' - ')[1]).split(':')[0], (type.VM.split(' - ')[1]).split(':')[1]).to_i,
+         ) === @t.to_i || Range.new(
+                 Time.local(@t.year, @t.month, @t.day, (type.VP.split(' - ')[0]).split(':')[0], (type.VP.split(' - ')[0]).split(':')[1]).to_i,
+                 Time.local(@t.year, @t.month, @t.day, (type.VP.split(' - ')[1]).split(':')[0], (type.VP.split(' - ')[1]).split(':')[1]).to_i,
+         ) === @t.to_i)
+           return true
+         end
+       end
+       if (@today == '6') # SABATO
+         puts "SABATO"
+         if (Range.new(
+                 Time.local(@t.year, @t.month, @t.day, (type.SM.split(' - ')[0]).split(':')[0], (type.SM.split(' - ')[0]).split(':')[1]).to_i,
+                 Time.local(@t.year, @t.month, @t.day, (type.SM.split(' - ')[1]).split(':')[0], (type.SM.split(' - ')[1]).split(':')[1]).to_i,
+         ) === @t.to_i || Range.new(
+                 Time.local(@t.year, @t.month, @t.day, (type.SP.split(' - ')[0]).split(':')[0], (type.SP.split(' - ')[0]).split(':')[1]).to_i,
+                 Time.local(@t.year, @t.month, @t.day, (type.SP.split(' - ')[1]).split(':')[0], (type.SP.split(' - ')[1]).split(':')[1]).to_i,
+         ) === @t.to_i)
+           return true
+         end
+       end
+       if (@today == '7') # MERCOLEDì
+         puts "DOMENICA"
+         if (Range.new(
+                 Time.local(@t.year, @t.month, @t.day, (type.DM.split(' - ')[0]).split(':')[0], (type.DM.split(' - ')[0]).split(':')[1]).to_i,
+                 Time.local(@t.year, @t.month, @t.day, (type.DM.split(' - ')[1]).split(':')[0], (type.DM.split(' - ')[1]).split(':')[1]).to_i,
+         ) === @t.to_i || Range.new(
+                 Time.local(@t.year, @t.month, @t.day, (type.DP.split(' - ')[0]).split(':')[0], (type.DP.split(' - ')[0]).split(':')[1]).to_i,
+                 Time.local(@t.year, @t.month, @t.day, (type.DP.split(' - ')[1]).split(':')[0], (type.DP.split(' - ')[1]).split(':')[1]).to_i,
+         ) === @t.to_i)
+           return true
+         end
+       end
+     end
+  %>
+
+  <ul data-role="listview" data-inset="true" data-filter="true">
+    <% @restaurants.each do |restaurant|
+      if params[:filter] == 'all' %>
+            <li>
+              <%          if isOpen(restaurant) %>
+                  <a href="<%= "#{restaurants_url}/#{restaurant.id}?time="+@t.to_s %>" target="_parent">
+                    <%              if restaurant.call %>
+                        <img src="/assets/icon/opencpharm.png">
+                    <%              else %>
+                        <img src="/assets/icon/openpharm.png">
+                    <%              end %>
+              <%          else    %>
+                  <a href="<%= "#{restaurants_url}/#{restaurant.id}?s=close&time="+@t.to_s %>" target="_parent">
+                    <img src="/assets/icon/closepharm.png">
+              <%	        end     %>
+              <h2><%= restaurant.name %></h2>
+              <p><%= restaurant.address %></p>
+              <%= link_to 'Edit', edit_restaurant_path(restaurant), 'data-icon' => 'edit', :target => '_parent' %>
+              </a>
+            </li>
+        <%    else
+                if isOpen(restaurant) %>
+                <li>
+                  <a href="<%= "#{restaurants_url}/#{restaurant.id}?time="+@t.to_s %>" target="_parent">
+                    <%          if restaurant.call %>
+                        <img src="/assets/icon/opencpharm.png">
+                    <%          else %>
+                        <img src="/assets/icon/openpharm.png">
+                    <%          end %>
+                    <h2><%= restaurant.name %></h2>
+                    <p><%= restaurant.address %></p>
+                    <%= link_to 'Edit', edit_restaurant_path(restaurant), 'data-icon' => 'edit', :target => '_parent' %>
+                  </a>
+                </li>
+            <%      end
+                    end     %>
+
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Restaurant', new_restaurant_path %>
+  </ul>
+</div>

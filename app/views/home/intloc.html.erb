@@ -36,7 +36,13 @@
 
   <div class="ui-grid-b" style="margin-right: 2em">
     <div class="ui-block-a">
-      <div class="button-wrap"><button class="ui-shadow ui-btn ui-corner-all">Restaurants</button></div>
+      <div class="button-wrap">
+        <a href="<%= restaurants_path %>?filter1=now" style="text-decoration: none" target="_parent">
+          <button class="ui-shadow ui-btn ui-corner-all">
+            Restaurants
+          </button>
+        </a>
+      </div>
     </div>
 
     <div class="ui-block-b">

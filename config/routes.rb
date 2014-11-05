@@ -1,7 +1,5 @@
 WiCity::Application.routes.draw do
 
-  resources :restaurants
-
   devise_for :users
 
   resources :pharms
@@ -9,6 +7,7 @@ WiCity::Application.routes.draw do
   resources :taxistations
   resources :radiotaxis
   resources :fuels
+  resources :restaurants
 
   root 'home#index'
 
@@ -22,7 +21,7 @@ WiCity::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  # root 'welcome#OLDindex'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

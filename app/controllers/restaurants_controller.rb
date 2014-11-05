@@ -4,6 +4,9 @@ class RestaurantsController < ApplicationController
   # GET /restaurants
   # GET /restaurants.json
   def index
+    @today = Time.now.strftime("%u")  # => lun = 1, mar = 2, mer = 3
+    @t = Time.now
+
     @restaurants = Restaurant.all
   end
 
