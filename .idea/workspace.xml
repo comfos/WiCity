@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/restaurants/_form_edit.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/restaurants/_form_new.html.erb" />
-      <change type="DELETED" beforePath="C:\Users\Alfio\RubymineProjects\WiCity\app\views\restaurants\_form.html.erb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/restaurants/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/restaurants/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/restaurants/index.html.erb" afterPath="$PROJECT_DIR$/app/views/restaurants/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/intloc.html.erb" afterPath="$PROJECT_DIR$/app/views/home/intloc.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/restaurants/new.html.erb" afterPath="$PROJECT_DIR$/app/views/restaurants/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/restaurants_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/restaurants_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/restaurants/show.html.erb" afterPath="$PROJECT_DIR$/app/views/restaurants/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WiCity.iws" />
@@ -77,14 +68,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form_edit.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/restaurants/_form_edit.html.erb">
+      <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/restaurants/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="269" column="6" selection-start="9940" selection-end="9940" vertical-scroll-proportion="0.121306375" vertical-offset="4495" max-vertical-offset="9979">
+            <state line="348" column="0" selection-start="11967" selection-end="11967" vertical-scroll-proportion="9.843594" vertical-offset="0" max-vertical-offset="6256">
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#4;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#4;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#3;n#div#4;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#4;n#div#4;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#5;n#div#4;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#6;n#div#4;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#7;n#div#4;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#8;n#div#4;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#9;n#div#4;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#10;n#div#4;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#11;n#div#4;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#12;n#div#4;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#13;n#div#4;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#14;n#div#4;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#15;n#div#4;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#16;n#div#4;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#17;n#div#4;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#18;n#div#4;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#19;n#div#4;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#20;n#div#4;n#div#1;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="109" column="78" selection-start="0" selection-end="12216" vertical-scroll-proportion="-71.26923" vertical-offset="0" max-vertical-offset="6256">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -115,7 +136,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/taxistations/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/taxistations/edit.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20140228203554_add_phone_to_parks.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20140228203654_add_phone_to_taxistations.rb" />
@@ -166,6 +186,7 @@
         <option value="$PROJECT_DIR$/app/views/restaurants/_form_new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/restaurants/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/restaurants/_form_edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/restaurants/show.html.erb" />
       </list>
     </option>
   </component>
@@ -1293,7 +1314,11 @@
       <created>1415187885091</created>
       <updated>1415187885091</updated>
     </task>
-    <option name="localTasksCounter" value="167" />
+    <task id="LOCAL-00167" summary="UPDATE Restaurants&#10;">
+      <created>1415196592697</created>
+      <updated>1415196592697</updated>
+    </task>
+    <option name="localTasksCounter" value="168" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1353,7 +1378,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="BUGFIX Lost Password&#10;" />
     <MESSAGE value="ADD Preferred Localization" />
     <MESSAGE value="ADD Preferred Localization&#10;" />
     <MESSAGE value="ADD Parks&#10;" />
@@ -1378,17 +1402,13 @@
     <MESSAGE value="UPDATE NearestService" />
     <MESSAGE value="UPDATE NearestService&#10;" />
     <MESSAGE value="ADD Restaurants" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD Restaurants" />
+    <MESSAGE value="UPDATE Restaurants&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE Restaurants&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/radiotaxis/_form_new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="414" column="40" selection-start="15613" selection-end="15622" vertical-scroll-proportion="0.0" vertical-offset="6870" max-vertical-offset="7242" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/radiotaxis/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="32" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="204" />
@@ -1506,11 +1526,6 @@
         <state line="76" column="85" selection-start="2172" selection-end="2172" vertical-scroll-proportion="0.0" vertical-offset="667" max-vertical-offset="1445" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="201" column="9" selection-start="85" selection-end="6787" vertical-scroll-proportion="0.0" vertical-offset="3111" max-vertical-offset="6256" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/Street_Width.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="33" selection-start="418" selection-end="418" vertical-scroll-proportion="-7.8461537" vertical-offset="136" max-vertical-offset="1258" />
@@ -1547,7 +1562,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/parks/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="322" column="51" selection-start="12562" selection-end="12568" vertical-scroll-proportion="0.4565757" vertical-offset="5290" max-vertical-offset="7684" />
+        <state line="322" column="51" selection-start="12562" selection-end="12568" vertical-scroll-proportion="0.4565757" vertical-offset="5290" max-vertical-offset="7684">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/fuels/index.html.erb">
@@ -1684,10 +1701,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/restaurants/_form_edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="269" column="6" selection-start="9940" selection-end="9940" vertical-scroll-proportion="0.121306375" vertical-offset="4495" max-vertical-offset="9979">
+        <state line="269" column="6" selection-start="9940" selection-end="9940" vertical-scroll-proportion="-1.5" vertical-offset="4495" max-vertical-offset="9979">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="78" selection-start="0" selection-end="12216" vertical-scroll-proportion="-71.26923" vertical-offset="0" max-vertical-offset="6256">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/restaurants/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="348" column="0" selection-start="11967" selection-end="11967" vertical-scroll-proportion="9.843594" vertical-offset="0" max-vertical-offset="6256">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#4;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#4;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#4;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#4;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#4;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#6;n#div#4;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#7;n#div#4;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#8;n#div#4;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#9;n#div#4;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#10;n#div#4;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#11;n#div#4;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#12;n#div#4;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#13;n#div#4;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#14;n#div#4;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#15;n#div#4;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#16;n#div#4;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#17;n#div#4;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#18;n#div#4;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#19;n#div#4;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#20;n#div#4;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
