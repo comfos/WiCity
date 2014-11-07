@@ -8,6 +8,8 @@ WiCity::Application.routes.draw do
   resources :radiotaxis
   resources :fuels
   resources :restaurants
+  resources :first_aids
+  resources :hospitals
 
   root 'home#index'
 

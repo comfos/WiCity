@@ -1,0 +1,6 @@
+<div data-role="header" data-theme="b">
+  <h1>New Hospital</h1>
+  <%= link_to 'Back', hospitals_path+'?filter1=now', 'data-icon' => 'back', 'class' => 'ui-btn-left', :target => '_parent' %>
+</div>
+
+<%= render 'form_new' %>

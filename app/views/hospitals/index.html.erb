@@ -7,15 +7,39 @@
 
 <script>
 
+    function gethospital() {
+        var type = "<%= params[:type] %>";
+        if(type != 'hospital') {
+            var http = location.href.replace('&type=first_aid', '');
+            location.href = http+'&type=hospital';
+        }
+        else {
+            var http = location.href.replace('&type=hospital', '');
+            location.href = http;
+        }
+    }
+
+    function getfirst_aid() {
+        var type = "<%= params[:type] %>";
+        if(type != 'first_aid') {
+            var http = location.href.replace('&type=hospital', '');
+            location.href = http+'&type=first_aid';
+        }
+        else {
+            var http = location.href.replace('&type=first_aid', '');
+            location.href = http;
+        }
+    }
+
     function getAll() {
         var currentDate = $( "#datepicker" ).datepicker( "getDate" );
         var currentTime = $( "#timeh" ).val();
 
         if(currentDate.getDay() == 0) {
-            location.href='restaurants?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day=7&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1]+'&filter=all';
+            location.href='hospitals?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day=7&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1]+'&filter=all';
         }
         else {
-            location.href='restaurants?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day='+currentDate.getDay()+'&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1]+'&filter=all';
+            location.href='hospitals?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day='+currentDate.getDay()+'&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1]+'&filter=all';
         }
     }
 
@@ -24,10 +48,10 @@
         var currentTime = $( "#timeh" ).val();
 
         if(currentDate.getDay() == 0) {
-            location.href='restaurants?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day=7&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1]+'&filter=open';
+            location.href='hospitals?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day=7&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1]+'&filter=open';
         }
         else {
-            location.href='restaurants?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day='+currentDate.getDay()+'&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1]+'&filter=open';
+            location.href='hospitals?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day='+currentDate.getDay()+'&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1]+'&filter=open';
         }
     }
 
@@ -42,10 +66,10 @@
             var currentTime = $( "#timeh" ).val();
 
             if(currentDate.getDay() == 0) {
-                location.href='restaurants?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day=7&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1]+'&filter2=notturne';
+                location.href='hospitals?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day=7&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1]+'&filter2=notturne';
             }
             else {
-                location.href='restaurants?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day='+currentDate.getDay()+'&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1]+'&filter2=notturne';
+                location.href='hospitals?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day='+currentDate.getDay()+'&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1]+'&filter2=notturne';
             }
         }
     }
@@ -58,10 +82,10 @@
         var currentTime = $( "#timeh" ).val();
 
         if(currentDate.getDay() == 0) {
-            location.href='restaurants?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day=7&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1]+'&filter1=now';
+            location.href='hospitals?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day=7&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1]+'&filter1=now';
         }
         else {
-            location.href='restaurants?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day='+currentDate.getDay()+'&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1]+'&filter1=now';
+            location.href='hospitals?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day='+currentDate.getDay()+'&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1]+'&filter1=now';
         }
     }
 
@@ -81,10 +105,10 @@
         var currentTime = $( "#timeh" ).val();
 
         if(currentDate.getDay() == 0) {
-            location.href='restaurants?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day=7&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1];
+            location.href='hospitals?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day=7&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1];
         }
         else {
-            location.href='restaurants?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day='+currentDate.getDay()+'&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1];
+            location.href='hospitals?d='+currentDate.getDate()+'&m='+(currentDate.getMonth()+1)+'&y='+currentDate.getFullYear()+'&day='+currentDate.getDay()+'&h='+currentTime.split(":")[0]+'&min='+currentTime.split(":")[1];
         }
     }
 
@@ -135,6 +159,17 @@
         $( "#filtersunday" ).css("border-width", "2px");
         <% end %>
 
+        <% if params[:type] == 'hospital' %>
+        $( "#hospital" ).css("height", "18px");
+        $( "#hospital" ).css("border-color", "red");
+        $( "#hospital" ).css("border-width", "2px");
+        <% end %>
+
+        <% if params[:type] == 'first_aid' %>
+        $( "#first_aid" ).css("height", "18px");
+        $( "#first_aid" ).css("border-color", "red");
+        $( "#first_aid" ).css("border-width", "2px");
+        <% end %>
 
         $( '#datepicker' ).datepicker( { dateFormat: "dd/mm/yy" } );
         $( "#datepicker" ).datepicker( "setDate", new Date("<%= @t %>") );
@@ -158,16 +193,25 @@
 
 
 <div data-role="header" data-theme="b">
-  <h1>Restaurants</h1>
+  <h1>Hospitals & First Aid</h1>
   <div id="custom-border-radius" class="ui-btn-left" data-role="controlgroup" data-type="horizontal" data-mini="true">
     <%= link_to 'Back', 'intloc', 'data-icon' => 'back', 'data-role' => 'button', 'data-iconpos' => 'notext' %>
     <%= link_to 'Home', root_url, 'data-icon' => 'home', 'data-role' => 'button', 'data-iconpos' => 'notext', :target => '_parent' %>
   </div>
-  <%= link_to 'Add', new_restaurant_path, 'data-iconpos' => 'notext', 'data-icon' => 'plus', 'class' => 'ui-btn-right', :target => '_parent' %>
+  <a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-right ui-icon-plus ui-btn-icon-notext">Add</a>
 </div>
 
 
 <div data-role="content">
+
+  <fieldset class="ui-grid-a ui-corner-all">
+    <div class="ui-block-a">
+      <a class="ui-corner-all ui-btn" id="hospital" type="button" onclick="gethospital();">Hospital</a>
+    </div>
+    <div class="ui-block-b">
+      <a class="ui-corner-all ui-btn" id="first_aid" type="button" onclick="getfirst_aid();">First Aid</a>
+    </div>
+  </fieldset >
 
   <fieldset class="ui-grid-a ui-corner-all">
     <div class="ui-block-a">
@@ -286,42 +330,55 @@
   %>
 
   <ul data-role="listview" data-inset="true" data-filter="true">
-    <% @restaurants.each do |restaurant|
-      if params[:filter] == 'all' %>
-            <li>
-              <%          if isOpen(restaurant) %>
-                  <a href="<%= "#{restaurants_url}/#{restaurant.id}?time="+@t.to_s %>" target="_parent">
-                    <%              if restaurant.call %>
-                        <img src="/assets/icon/opencpharm.png">
-                    <%              else %>
-                        <img src="/assets/icon/openpharm.png">
-                    <%              end %>
-              <%          else    %>
-                  <a href="<%= "#{restaurants_url}/#{restaurant.id}?s=close&time="+@t.to_s %>" target="_parent">
-                    <img src="/assets/icon/closepharm.png">
-              <%	        end     %>
-              <h2><%= restaurant.name %></h2>
-              <p><%= restaurant.address %></p>
-              <%= link_to 'Edit', edit_restaurant_path(restaurant), 'data-icon' => 'edit', :target => '_parent' %>
-              </a>
-            </li>
-        <%    else
-                if isOpen(restaurant) %>
+    <% if !@hospitals.nil? && ( ( params[:type] != '' && params[:type] == 'hospital' ) || params[:type] == nil )
+         @hospitals.each do |hospital|
+           if params[:filter] == 'all' %>
                 <li>
-                  <a href="<%= "#{restaurants_url}/#{restaurant.id}?time="+@t.to_s %>" target="_parent">
-                    <%          if restaurant.call %>
-                        <img src="/assets/icon/opencpharm.png">
-                    <%          else %>
-                        <img src="/assets/icon/openpharm.png">
-                    <%          end %>
-                    <h2><%= restaurant.name %></h2>
-                    <p><%= restaurant.address %></p>
-                    <%= link_to 'Edit', edit_restaurant_path(restaurant), 'data-icon' => 'edit', :target => '_parent' %>
+                  <%          if isOpen(hospital) %>
+                      <a href="<%= "#{hospitals_url}/#{hospital.id}?time="+@t.to_s %>" target="_parent">
+                        <img src="/assets/icon/openhospital.png">
+                  <%          else    %>
+                      <a href="<%= "#{hospitals_url}/#{hospital.id}?s=close&time="+@t.to_s %>" target="_parent">
+                        <img src="/assets/icon/closehospital.png">
+                  <%	        end     %>
+                  <h2><%= hospital.name %></h2>
+                  <p><%= hospital.address %></p>
+                  <%= link_to 'Edit', edit_hospital_path(hospital), 'data-icon' => 'edit', :target => '_parent' %>
                   </a>
                 </li>
-            <%      end
-                    end     %>
+            <%    else
+                    if isOpen(hospital) %>
+                    <li>
+                      <a href="<%= "#{hospitals_url}/#{hospital.id}?time="+@t.to_s %>" target="_parent">
+                        <img src="/assets/icon/openhospital.png">
+                        <h2><%= hospital.name %></h2>
+                        <p><%= hospital.address %></p>
+                        <%= link_to 'Edit', edit_hospital_path(hospital), 'data-icon' => 'edit', :target => '_parent' %>
+                      </a>
+                    </li>
+                <%      end
+                        end     %>
+        <%   end
+             end %>
 
-    <% end %>
+    <% if !@first_aids.nil? && ( ( params[:type] != '' && params[:type] == 'first_aid' ) || params[:type] == nil )
+         @first_aids.each do |first_aid| %>
+            <li>
+              <a href="<%= "#{first_aids_url}/#{first_aid.id}?time="+@t.to_s %>" target="_parent">
+                <img src="/assets/icon/first_aid.png">
+                <h2><%= first_aid.name %></h2>
+                <p><%= first_aid.address %></p>
+                <%= link_to 'Edit', edit_first_aid_path(first_aid), 'data-icon' => 'edit', :target => '_parent' %>
+              </a>
+            </li>
+        <%     end
+               end %>
   </ul>
+</div>
+
+<div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;">
+  <div role="main" class="ui-content">
+    <%= link_to 'Hospital', new_hospital_path, 'class' => 'ui-btn', :target => '_parent' %>
+    <%= link_to 'First Aid', new_first_aid_path, 'class' => 'ui-btn', :target => '_parent' %>
+  </div>
 </div>
