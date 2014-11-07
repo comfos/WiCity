@@ -15,6 +15,25 @@
   <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
   <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
 
+  <style>
+      .bg {
+          background: url('/assets/bg/city-lights.jpg') center center no-repeat;
+          background-size: cover;
+      }
+
+      .bg:before
+      {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+          opacity: .6;
+      }
+  </style>
+
   <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
   <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
   <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script> -->
@@ -24,7 +43,7 @@
 
 <body>
 
-<div data-role="page">
+<div data-role="page" class="bg">
 
   <!-- <#%- if !notice.nil? -%>
       <p class="notice"><#%= notice %></p>
