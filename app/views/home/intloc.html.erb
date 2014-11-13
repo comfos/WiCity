@@ -1,17 +1,48 @@
+<style>
+    #mcs
+    {
+        background: -webkit-linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
+        #background-image: -o-linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
+        #background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
+        #background-image: -webkit-linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
+        #background-image: -webkit-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
+        height: 150px;
+        width: 80%;
+        box-shadow: 3px 3px 3px 3px;
+    }
+
+    #txt
+    {
+        font: small-caps bold 1.4em/2em Verdana, Arial, Helvetica, sans-serif;
+        color: #EFEFEF;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+
+    #container
+    {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        margin-top: -16.6em;
+        margin-left: 3em;
+    }
+
+</style>
+
 <div data-role="header">
   <h1>Main City Services</h1>
   <%= link_to 'Home', root_url, 'data-icon' => 'home', 'class' => 'ui-btn-left', 'data-iconpos' => 'notext', :target => '_parent' %>
 </div>
 
 
-<div data-role="content" style="position: absolute; top: 50%; width: 100%; margin-top: -5em;">
+<div data-role="content" id="container">
 
   <div class="ui-grid-b" style="margin-right: 2em">
     <div class="ui-block-a">
       <div class="button-wrap">
         <a href="<%= pharms_path %>?filter1=now" style="text-decoration: none" target="_parent">
-          <button class="ui-shadow ui-btn ui-corner-all">
-            Pharms
+          <button class="ui-shadow ui-btn ui-corner-all" id="mcs">
+            <span id="txt">Pharms</span>
           </button>
         </a>
       </div>
@@ -20,7 +51,9 @@
     <div class="ui-block-b">
       <div class="button-wrap">
         <a href="<%= hospitals_path %>?filter1=now" style="text-decoration: none" target="_parent">
-          <button class="ui-shadow ui-btn ui-corner-all">Hospitals & First Aid</button>
+          <button class="ui-shadow ui-btn ui-corner-all" id="mcs">
+            <span id="txt">Hospitals & First Aid</span>
+          </button>
         </a>
       </div>
     </div>
@@ -28,8 +61,8 @@
     <div class="ui-block-c">
       <div class="button-wrap"><div class="button-wrap">
         <a href="<%= fuels_path %>?filter1=now" style="text-decoration: none" target="_parent">
-          <button class="ui-shadow ui-btn ui-corner-all">
-            Fuel Stations
+          <button class="ui-shadow ui-btn ui-corner-all" id="mcs">
+            <span id="txt">Fuel Stations</span>
           </button>
         </a>
       </div></div>
@@ -40,35 +73,53 @@
     <div class="ui-block-a">
       <div class="button-wrap">
         <a href="<%= restaurants_path %>?filter1=now" style="text-decoration: none" target="_parent">
-          <button class="ui-shadow ui-btn ui-corner-all">
-            Restaurants
+          <button class="ui-shadow ui-btn ui-corner-all" id="mcs">
+            <span id="txt">Restaurants</span>
           </button>
         </a>
       </div>
     </div>
 
     <div class="ui-block-b">
-      <div class="button-wrap"><button class="ui-shadow ui-btn ui-corner-all">Hotels</button></div>
+      <div class="button-wrap">
+        <button class="ui-shadow ui-btn ui-corner-all" id="mcs">
+          <span id="txt">Hotels</span>
+        </button>
+      </div>
     </div>
 
     <div class="ui-block-c">
-      <div class="button-wrap"><button class="ui-shadow ui-btn ui-corner-all">Cinema & Theaters</button></div>
+      <div class="button-wrap">
+        <button class="ui-shadow ui-btn ui-corner-all" id="mcs">
+          <span id="txt">Cinema & Theaters</span>
+        </button>
+      </div>
     </div>
   </div>
 
   <div class="ui-grid-b" style="margin-right: 2em">
     <div class="ui-block-a">
-      <div class="button-wrap"><button class="ui-shadow ui-btn ui-corner-all">Schools & Universities</button></div>
+      <div class="button-wrap">
+        <button class="ui-shadow ui-btn ui-corner-all" id="mcs">
+          <span id="txt">Schools & Universities</span>
+        </button>
+      </div>
     </div>
 
     <div class="ui-block-b">
-      <div class="button-wrap"><button class="ui-shadow ui-btn ui-corner-all">Financial Services & Stores</button></div>
+      <div class="button-wrap">
+        <button class="ui-shadow ui-btn ui-corner-all" id="mcs">
+          <span id="txt">Financial Services & Stores</span>
+        </button>
+      </div>
     </div>
 
     <div class="ui-block-c">
       <div class="button-wrap">
         <a href="<%= parks_path %>?filter1=now" style="text-decoration: none" target="_parent">
-          <button class="ui-shadow ui-btn ui-corner-all">Parks and Taxi Services</button>
+          <button class="ui-shadow ui-btn ui-corner-all" id="mcs">
+            <span id="txt">Parks and Taxi Services</span>
+          </button>
         </a>
       </div>
     </div>
