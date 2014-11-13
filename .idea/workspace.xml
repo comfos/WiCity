@@ -62,7 +62,18 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="92" selection-start="1133" selection-end="1133" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="1462">
+            <state line="38" column="0" selection-start="1990" selection-end="1990" vertical-scroll-proportion="-24.846153" vertical-offset="0" max-vertical-offset="1462">
+              <folding>
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="intloc.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="108" selection-start="136" selection-end="163" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="1394">
               <folding />
             </state>
           </provider>
@@ -80,7 +91,7 @@
       <file leaf-file-name="nearserv.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="470" column="9" selection-start="19998" selection-end="19998" vertical-scroll-proportion="0.19778481" vertical-offset="7865" max-vertical-offset="8704">
+            <state line="475" column="108" selection-start="20167" selection-end="20167" vertical-scroll-proportion="0.33333334" vertical-offset="7865" max-vertical-offset="8704">
               <folding />
             </state>
           </provider>
@@ -1306,7 +1317,11 @@
       <created>1415374888779</created>
       <updated>1415374888779</updated>
     </task>
-    <option name="localTasksCounter" value="173" />
+    <task id="LOCAL-00173" summary="EDIT bottone Home su NearCityServices">
+      <created>1415867773393</created>
+      <updated>1415867773393</updated>
+    </task>
+    <option name="localTasksCounter" value="174" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1333,6 +1348,7 @@
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32038835" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1348,7 +1364,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3259362" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1366,7 +1381,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="EDIT Nearestservices" />
     <MESSAGE value="EDIT INDEX Park &amp; TaxiStation&#10;" />
     <MESSAGE value="ADD PHONE in Park &amp; TaxiStation&#10;" />
     <MESSAGE value="ADD Posti in Park" />
@@ -1391,7 +1405,8 @@
     <MESSAGE value="ADD Hospital &amp; First Aid" />
     <MESSAGE value="UPDATE BG e FIX&#10;" />
     <MESSAGE value="UPDATE grafica&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE grafica&#10;" />
+    <MESSAGE value="EDIT bottone Home su NearCityServices" />
+    <option name="LAST_COMMIT_MESSAGE" value="EDIT bottone Home su NearCityServices" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1470,11 +1485,6 @@
     <entry file="file://$PROJECT_DIR$/app/models/hospital.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="35" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="35" selection-start="734" selection-end="734" vertical-scroll-proportion="-9.807693" vertical-offset="102" max-vertical-offset="1394" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/hospitals/edit.html.erb">
@@ -1645,13 +1655,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="92" selection-start="1133" selection-end="1133" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="1462">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="85" selection-start="1243" selection-end="1243" vertical-scroll-proportion="-12.884615" vertical-offset="209" max-vertical-offset="1632">
@@ -1659,9 +1662,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="0" selection-start="1990" selection-end="1990" vertical-scroll-proportion="-24.846153" vertical-offset="0" max-vertical-offset="1462">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="108" selection-start="136" selection-end="163" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="1394">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="470" column="9" selection-start="19998" selection-end="19998" vertical-scroll-proportion="0.19778481" vertical-offset="7865" max-vertical-offset="8704">
+        <state line="475" column="108" selection-start="20167" selection-end="20167" vertical-scroll-proportion="0.33333334" vertical-offset="7865" max-vertical-offset="8704">
           <folding />
         </state>
       </provider>
