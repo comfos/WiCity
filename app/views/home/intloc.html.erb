@@ -1,9 +1,8 @@
 <script>
     $(function() {
         var $inner = $('#container');
-        $(window).on('resize', function() {
-            $inner.css({ marginTop:  ($(window).height() / 2) - $inner.outerHeight() / 2 });
-        });
+
+        $inner.css({ marginTop:  ($(window).height() / 2) - $inner.outerHeight() / 2 });
     });
 </script>
 

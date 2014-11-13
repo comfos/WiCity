@@ -69,7 +69,7 @@
       <file leaf-file-name="intloc.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="7" selection-start="1098" selection-end="1098" vertical-scroll-proportion="1.159844" vertical-offset="0" max-vertical-offset="2397">
+            <state line="5" column="7" selection-start="163" selection-end="163" vertical-scroll-proportion="0.165692" vertical-offset="0" max-vertical-offset="2380">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -1529,7 +1529,11 @@
       <created>1415892157279</created>
       <updated>1415892157279</updated>
     </task>
-    <option name="localTasksCounter" value="204" />
+    <task id="LOCAL-00204" summary="UPDATE CSS">
+      <created>1415894535772</created>
+      <updated>1415894535772</updated>
+    </task>
+    <option name="localTasksCounter" value="205" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1589,7 +1593,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="EDIT Posti in Park&#10;" />
     <MESSAGE value="ADD RadioTaxi" />
     <MESSAGE value="ADD RadioTaxi&#10;" />
     <MESSAGE value="EDIT Posti" />
@@ -1614,7 +1617,8 @@
     <MESSAGE value="EDIT background&#10;" />
     <MESSAGE value="EDIT Hospitals (first aid to medical guards)" />
     <MESSAGE value="EDIT Hospitals (first aid to medical guards)&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="EDIT Hospitals (first aid to medical guards)&#10;" />
+    <MESSAGE value="UPDATE CSS" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE CSS" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1897,7 +1901,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="7" selection-start="1098" selection-end="1098" vertical-scroll-proportion="1.159844" vertical-offset="0" max-vertical-offset="2397">
+        <state line="5" column="7" selection-start="163" selection-end="163" vertical-scroll-proportion="0.165692" vertical-offset="0" max-vertical-offset="2380">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
