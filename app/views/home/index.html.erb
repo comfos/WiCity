@@ -1,3 +1,90 @@
+<script>
+    $(function() {
+        var $inner = $('#container');
+        //$inner.css({ left:  ($(window).width() / 2) - $inner.outerWidth() / 2 });
+        //$inner.css({ marginTop:  ($(window).height() / 2) - $inner.outerHeight() / 2 });
+    });
+</script>
+
+<style>
+  #mcs
+  {
+      background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
+      background-image: -webkit-linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
+      background-image: -webkit-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
+      height: 150px;
+      width: 80%;
+      box-shadow: 3px 3px 3px 3px;
+  }
+
+  #ncs
+  {
+      background-image: linear-gradient(to bottom right, rgba(255, 51, 0, 0.6), rgba(255, 171, 72, 0.60));
+      background-image: -webkit-linear-gradient(to bottom right, rgba(255, 51, 0, 0.6), rgba(255, 171, 72, 0.60));
+      background-image: -webkit-gradient(to bottom right, rgba(255, 51, 0, 0.6), rgba(255, 171, 72, 0.60));
+      height: 150px;
+      width: 80%;
+      box-shadow: 3px 3px 3px 3px;
+  }
+
+  #dss
+  {
+      background-image: linear-gradient(to bottom right, rgba(40, 64, 255, 0.60), rgba(0, 255, 204, 0.6));
+      background-image: -webkit-linear-gradient(to bottom right, rgba(40, 64, 255, 0.60), rgba(0, 255, 204, 0.6));
+      background-image: -webkit-gradient(to bottom right, rgba(40, 64, 255, 0.60), rgba(0, 255, 204, 0.6));
+      height: 150px;
+      width: 80%;
+      box-shadow: 3px 3px 3px 3px;
+  }
+
+  #mg
+  {
+      background-image: linear-gradient(to bottom right, rgba(255, 133, 17, 0.60), rgba(255, 255, 0, 0.6));
+      background-image: -webkit-linear-gradient(to bottom right, rgba(255, 133, 17, 0.60), rgba(255, 255, 0, 0.6));
+      background-image: -webkit-gradient(to bottom right, rgba(255, 133, 17, 0.60), rgba(255, 255, 0, 0.6));
+      height: 150px;
+      width: 80%;
+      box-shadow: 3px 3px 3px 3px;
+  }
+
+  #evt
+  {
+      background-image: linear-gradient(to bottom right, rgba(24, 184, 50, 0.60), rgba(177, 255, 98, 0.60));
+      background-image: -webkit-linear-gradient(to bottom right, rgba(24, 184, 50, 0.60), rgba(177, 255, 98, 0.60));
+      background-image: -webkit-gradient(to bottom right, rgba(24, 184, 50, 0.60), rgba(177, 255, 98, 0.60));
+      height: 150px;
+      width: 80%;
+      box-shadow: 3px 3px 3px 3px;
+  }
+
+  #rtt
+  {
+      background-image: linear-gradient(to bottom right, rgba(116, 6, 12, 0.60), rgba(204, 0, 0, 0.6));
+      background-image: -webkit-linear-gradient(to bottom right, rgba(116, 6, 12, 0.60), rgba(204, 0, 0, 0.6));
+      background-image: -webkit-gradient(to bottom right, rgba(116, 6, 12, 0.60), rgba(204, 0, 0, 0.6));
+      height: 150px;
+      width: 80%;
+      box-shadow: 3px 3px 3px 3px;
+  }
+
+  #container
+  {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      margin-top: -13em;
+      margin-left: 3em;
+  }
+
+  #txt
+  {
+      font: small-caps bold 1.4em/2em Verdana, Arial, Helvetica, sans-serif;
+      color: #EFEFEF;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+
+</style>
+
 <div data-role="header">
   <h1>WiCity</h1>
   <%= link_to 'Credits', '#popupDialog', 'data-icon' => 'gear', 'class' => 'ui-btn-right ui-corner-all ui-shadow ui-btn-inline ui-icon-delete ui-btn-icon-left', 'data-rel' => 'popup', 'data-position-to' => 'window', 'data-transition' => 'pop' %>
@@ -12,32 +99,29 @@
 
 </div>
 
-<div data-role="content" style="position: absolute; top: 50%; width: 100%; margin-top: -13em; margin-left: 3em">
+<div id="container" data-role="content">
 
-  <div class="ui-grid-b" style="margin-right: 2em">
+  <div class="ui-grid-b">
     <div class="ui-block-a">
       <a href="<%= root_url %>intloc" style="text-decoration: none">
-        <button class="ui-shadow ui-btn ui-corner-all"
-                style="background: #FFFF99; height: 150px; width: 80%">
-          <span>Main City Services</span>
+        <button class="ui-shadow ui-btn ui-corner-all" id="mcs">
+          <span id="txt">Main City Services</span>
         </button>
       </a>
     </div>
 
     <div class="ui-block-b">
       <a href="<%= root_url %>nearserv" style="text-decoration: none" target="_parent">
-        <button class="ui-shadow ui-btn ui-corner-all"
-                style="background: #0066FF; height: 150px; width: 80%">
-          Nearest City Services
+        <button class="ui-shadow ui-btn ui-corner-all" id="ncs">
+          <span id="txt">Nearest City Services</span>
         </button>
       </a>
     </div>
 
     <div class="ui-block-c">
       <div class="button-wrap">
-        <button class="ui-shadow ui-btn ui-corner-all"
-            style="background: url('https://www.google.com/images/srpr/logo3w.png'); height: 150px; width: 80%">
-          Decision Support System
+        <button class="ui-shadow ui-btn ui-corner-all" id="dss">
+          <span id="txt">Decision Support System</span>
         </button>
       </div>
     </div>
@@ -45,30 +129,27 @@
 
   <br><br><br>
 
-  <div class="ui-grid-b" style="margin-right: 2em">
+  <div class="ui-grid-b">
     <div class="ui-block-a">
       <div class="button-wrap">
-        <button class="ui-shadow ui-btn ui-corner-all"
-            style="background: url('http://www.kinetic.co.nz/assets/images/layout/photos/business-services.jpg'); height: 150px; width: 80%">
-          Mobile Government
+        <button class="ui-shadow ui-btn ui-corner-all" id="mg">
+          <span id="txt">Mobile Government</span>
         </button>
       </div>
     </div>
 
     <div class="ui-block-b">
       <div class="button-wrap">
-        <button class="ui-shadow ui-btn ui-corner-all"
-            style="background: url('http://swgordoncpa.com/~swgordon/images/picture2.jpg'); height: 150px; width: 80%">
-          Events
+        <button class="ui-shadow ui-btn ui-corner-all" id="evt">
+          <span id="txt">Events</span>
         </button>
       </div>
     </div>
 
     <div class="ui-block-c">
       <div class="button-wrap">
-        <button class="ui-shadow ui-btn ui-corner-all"
-            style="background: url('http://swgordoncpa.com/~swgordon/images/picture2.jpg'); height: 150px; width: 80%">
-          Real Time Traffic & Environment Information
+        <button class="ui-shadow ui-btn ui-corner-all" id="rtt">
+          <span id="txt">Real Time Traffic &<br>Environment Information</span>
         </button>
       </div>
     </div>
