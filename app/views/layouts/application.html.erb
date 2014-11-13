@@ -17,21 +17,23 @@
 
   <style>
       .bg {
-          background: url('/assets/bg/city-lights.jpg') center center no-repeat;
+          background: url('/assets/bg/city-lights.png') center center no-repeat;
+          #background-image: linear-gradient(to bottom right, rgba(0, 47, 75, 0.6), rgba(220, 66, 37, 0.6));
+          #background-image: -webkit-linear-gradient(to bottom right, rgba(0, 47, 75, 0.6), rgba(220, 66, 37, 0.6));
           background-size: cover;
       }
 
       .bg:before
       {
           content: '';
-          position: relative;
+          position: absolute;
           top: 0;
           right: 0;
           bottom: 0;
           left: 0;
-          background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
-          background-image: -webkit-linear-gradient(to bottom right,#002f4b,#dc4225);
-          opacity: .6;
+          background-image: linear-gradient(to bottom right, rgba(0, 47, 75, 0.6), rgba(220, 66, 37, 0.6));
+          background-image: -webkit-linear-gradient(to bottom right, rgba(0, 47, 75, 0.6), rgba(220, 66, 37, 0.6));
+          #opacity: .6;
       }
   </style>
 
