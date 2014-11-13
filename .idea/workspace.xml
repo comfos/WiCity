@@ -86,7 +86,7 @@
       <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="2" selection-start="199" selection-end="199" vertical-scroll-proportion="0.034" vertical-offset="68" max-vertical-offset="1683">
+            <state line="25" column="22" selection-start="961" selection-end="961" vertical-scroll-proportion="0.516" vertical-offset="167" max-vertical-offset="1649">
               <folding />
             </state>
           </provider>
@@ -1456,7 +1456,11 @@
       <created>1415880311305</created>
       <updated>1415880311305</updated>
     </task>
-    <option name="localTasksCounter" value="188" />
+    <task id="LOCAL-00188" summary="EDIT background&#10;">
+      <created>1415881173140</created>
+      <updated>1415881173140</updated>
+    </task>
+    <option name="localTasksCounter" value="189" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1828,7 +1832,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="2" selection-start="199" selection-end="199" vertical-scroll-proportion="0.034" vertical-offset="68" max-vertical-offset="1683">
+        <state line="25" column="22" selection-start="961" selection-end="961" vertical-scroll-proportion="0.516" vertical-offset="167" max-vertical-offset="1649">
           <folding />
         </state>
       </provider>
