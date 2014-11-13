@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/intloc.html.erb" afterPath="$PROJECT_DIR$/app/views/home/intloc.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -70,7 +69,7 @@
       <file leaf-file-name="intloc.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="104" selection-start="127" selection-end="127" vertical-scroll-proportion="0.099415205" vertical-offset="0" max-vertical-offset="2261">
+            <state line="110" column="53" selection-start="3492" selection-end="3492" vertical-scroll-proportion="0.72904485" vertical-offset="1496" max-vertical-offset="2244">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -1495,7 +1494,11 @@
       <created>1415889081430</created>
       <updated>1415889081430</updated>
     </task>
-    <option name="localTasksCounter" value="197" />
+    <task id="LOCAL-00197" summary="EDIT background&#10;">
+      <created>1415890432663</created>
+      <updated>1415890432663</updated>
+    </task>
+    <option name="localTasksCounter" value="198" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1859,7 +1862,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="104" selection-start="127" selection-end="127" vertical-scroll-proportion="0.099415205" vertical-offset="0" max-vertical-offset="2261">
+        <state line="110" column="53" selection-start="3492" selection-end="3492" vertical-scroll-proportion="0.72904485" vertical-offset="1496" max-vertical-offset="2244">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />

@@ -1,11 +1,10 @@
 <style>
     #mcs
     {
+        background: -o-linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
+        background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
         background: -webkit-linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
-        #background-image: -o-linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
-        #background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
-        #background-image: -webkit-linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
-        #background-image: -webkit-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
+        background: -webkit-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
         height: 150px;
         width: 80%;
         box-shadow: 3px 3px 3px 3px;
@@ -52,7 +51,7 @@
       <div class="button-wrap">
         <a href="<%= hospitals_path %>?filter1=now" style="text-decoration: none" target="_parent">
           <button class="ui-shadow ui-btn ui-corner-all" id="mcs">
-            <span id="txt">Hospitals & First Aid</span>
+            <span id="txt">Hospitals &<br>Medical Guards</span>
           </button>
         </a>
       </div>
@@ -74,7 +73,7 @@
       <div class="button-wrap">
         <a href="<%= restaurants_path %>?filter1=now" style="text-decoration: none" target="_parent">
           <button class="ui-shadow ui-btn ui-corner-all" id="mcs">
-            <span id="txt">Restaurants</span>
+            <span id="txt">Restaurants &<br>Cafe</span>
           </button>
         </a>
       </div>
@@ -109,7 +108,7 @@
     <div class="ui-block-b">
       <div class="button-wrap">
         <button class="ui-shadow ui-btn ui-corner-all" id="mcs">
-          <span id="txt">Financial Services & Stores</span>
+          <span id="txt">Financial Services &<br>City Stores</span>
         </button>
       </div>
     </div>
