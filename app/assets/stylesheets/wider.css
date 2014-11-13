@@ -1,0 +1,28 @@
+
+/* ----- Wider CSS Rules ----- */
+
+body{
+font-size:1.5em;
+}
+p{
+font-size:.7em;
+}
+#container{
+width:900px;
+}
+#primaryContent{
+line-height:300px;
+width:50%;
+}
+#secondaryContent{
+line-height:300px;
+width:30%;
+}
+#extraContent{
+display:block;
+background-color: #E9B5FF;
+width:20%;
+line-height:300px;
+float:right;
+color:#333;
+}

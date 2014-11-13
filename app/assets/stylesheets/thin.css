@@ -1,0 +1,17 @@
+
+/* ----- Thin CSS Rules ----- */
+
+body{
+font-size:.8em;
+}
+#container{
+width:80%;
+}
+#primaryContent{
+width:100%;
+line-height: 125px;
+}
+#secondaryContent{
+width:100%;
+line-height: 125px;
+}
