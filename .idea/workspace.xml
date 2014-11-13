@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/intloc.html.erb" afterPath="$PROJECT_DIR$/app/views/home/intloc.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -50,10 +51,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="0" selection-start="3423" selection-end="3555" vertical-scroll-proportion="-7.8461537" vertical-offset="1071" max-vertical-offset="3417">
+            <state line="58" column="16" selection-start="2618" selection-end="2618" vertical-scroll-proportion="0.34" vertical-offset="816" max-vertical-offset="3417">
               <folding>
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -66,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="intloc.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="intloc.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="64" selection-start="3503" selection-end="3503" vertical-scroll-proportion="0.7680312" vertical-offset="1476" max-vertical-offset="2244">
+            <state line="3" column="18" selection-start="31" selection-end="41" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="2244">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -168,8 +169,8 @@
         <option value="$PROJECT_DIR$/app/views/pharms/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/nearserv.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/intloc.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
       </list>
     </option>
   </component>
@@ -1502,7 +1503,11 @@
       <created>1415890865613</created>
       <updated>1415890865614</updated>
     </task>
-    <option name="localTasksCounter" value="199" />
+    <task id="LOCAL-00199" summary="EDIT background&#10;">
+      <created>1415890993503</created>
+      <updated>1415890993503</updated>
+    </task>
+    <option name="localTasksCounter" value="200" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1850,23 +1855,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="0" selection-start="3423" selection-end="3555" vertical-scroll-proportion="-7.8461537" vertical-offset="1071" max-vertical-offset="3417">
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="64" selection-start="3503" selection-end="3503" vertical-scroll-proportion="0.7680312" vertical-offset="1476" max-vertical-offset="2244">
+        <state line="3" column="18" selection-start="31" selection-end="41" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="2244">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -1876,6 +1867,20 @@
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#div#2;n#div#2;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="16" selection-start="2618" selection-end="2618" vertical-scroll-proportion="0.34" vertical-offset="816" max-vertical-offset="3417">
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
