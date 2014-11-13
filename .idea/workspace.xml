@@ -87,8 +87,10 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/hospitals/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="381" column="31" selection-start="18143" selection-end="18143" vertical-scroll-proportion="0.82067513" vertical-offset="6088" max-vertical-offset="6613">
-              <folding />
+            <state line="378" column="78" selection-start="17930" selection-end="17930" vertical-scroll-proportion="0.71308017" vertical-offset="6088" max-vertical-offset="6613">
+              <folding>
+                <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1519,7 +1521,11 @@
       <created>1415891699309</created>
       <updated>1415891699309</updated>
     </task>
-    <option name="localTasksCounter" value="202" />
+    <task id="LOCAL-00202" summary="EDIT Hospitals (first aid to medical guards)">
+      <created>1415892097027</created>
+      <updated>1415892097027</updated>
+    </task>
+    <option name="localTasksCounter" value="203" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1579,7 +1585,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="ADD Posti in Park" />
     <MESSAGE value="ADD Posti in Park&#10;" />
     <MESSAGE value="EDIT Posti in Park&#10;" />
     <MESSAGE value="ADD RadioTaxi" />
@@ -1604,7 +1609,8 @@
     <MESSAGE value="EDIT bottone Home su NearCityServices" />
     <MESSAGE value="EDIT bottone Home su NearCityServices&#10;" />
     <MESSAGE value="EDIT background&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="EDIT background&#10;" />
+    <MESSAGE value="EDIT Hospitals (first aid to medical guards)" />
+    <option name="LAST_COMMIT_MESSAGE" value="EDIT Hospitals (first aid to medical guards)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1894,8 +1900,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/hospitals/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="381" column="31" selection-start="18143" selection-end="18143" vertical-scroll-proportion="0.82067513" vertical-offset="6088" max-vertical-offset="6613">
-          <folding />
+        <state line="378" column="78" selection-start="17930" selection-end="17930" vertical-scroll-proportion="0.71308017" vertical-offset="6088" max-vertical-offset="6613">
+          <folding>
+            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
