@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/bg/city-lights.png" afterPath="$PROJECT_DIR$/app/assets/images/bg/city-lights.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WiCity.iws" />
@@ -1376,7 +1376,11 @@
       <created>1415876912303</created>
       <updated>1415876912303</updated>
     </task>
-    <option name="localTasksCounter" value="184" />
+    <task id="LOCAL-00184" summary="EDIT background&#10;">
+      <created>1415878067758</created>
+      <updated>1415878067758</updated>
+    </task>
+    <option name="localTasksCounter" value="185" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
