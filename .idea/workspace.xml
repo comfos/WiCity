@@ -82,7 +82,7 @@
       <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="11" selection-start="811" selection-end="811" vertical-scroll-proportion="0.17378049" vertical-offset="209" max-vertical-offset="1632">
+            <state line="19" column="10" selection-start="810" selection-end="810" vertical-scroll-proportion="0.17378049" vertical-offset="209" max-vertical-offset="1649">
               <folding />
             </state>
           </provider>
@@ -1325,7 +1325,11 @@
       <created>1415868051573</created>
       <updated>1415868051573</updated>
     </task>
-    <option name="localTasksCounter" value="175" />
+    <task id="LOCAL-00175" summary="EDIT background&#10;">
+      <created>1415868100226</created>
+      <updated>1415868100226</updated>
+    </task>
+    <option name="localTasksCounter" value="176" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1385,7 +1389,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="ADD PHONE in Park &amp; TaxiStation&#10;" />
     <MESSAGE value="ADD Posti in Park" />
     <MESSAGE value="ADD Posti in Park&#10;" />
     <MESSAGE value="EDIT Posti in Park&#10;" />
@@ -1410,7 +1413,8 @@
     <MESSAGE value="UPDATE grafica&#10;" />
     <MESSAGE value="EDIT bottone Home su NearCityServices" />
     <MESSAGE value="EDIT bottone Home su NearCityServices&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="EDIT bottone Home su NearCityServices&#10;" />
+    <MESSAGE value="EDIT background&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="EDIT background&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1684,7 +1688,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="11" selection-start="811" selection-end="811" vertical-scroll-proportion="0.17378049" vertical-offset="209" max-vertical-offset="1632">
+        <state line="19" column="10" selection-start="810" selection-end="810" vertical-scroll-proportion="0.17378049" vertical-offset="209" max-vertical-offset="1649">
           <folding />
         </state>
       </provider>
