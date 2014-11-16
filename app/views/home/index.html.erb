@@ -1,94 +1,159 @@
-<script>
-    /*$(function() {
-     var $inner = $('#container');
-     $inner.css({ left:  ($(window).width() / 2) - $inner.outerWidth() / 2 });
-     $inner.css({ marginTop:  ($(window).height() / 2) - $inner.outerHeight() / 2 });
-     });*/
-</script>
-
 <style>
-    #mcs
+
+    .ui-listview > .ui-li-static, .ui-listview > .ui-li-divider, .ui-listview > li > a.ui-btn-mcs
     {
-        background: -o-linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
-        background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
-        background: -webkit-linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
-        background: -webkit-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
-        height: 150px;
-        width: 80%;
-        box-shadow: 3px 3px 3px 3px;
+        background: -o-linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.6));
+        background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.6));
+        background: -webkit-linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.6));
+        background: -webkit-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.6));
+        border: 1px #000;
     }
 
-    #ncs
-    {
-        background: -o-linear-gradient(to bottom right, rgba(255, 51, 0, 0.6), rgba(255, 171, 72, 0.60));
-        background: linear-gradient(to bottom right, rgba(255, 51, 0, 0.6), rgba(255, 171, 72, 0.60));
-        background: -webkit-linear-gradient(to bottom right, rgba(255, 51, 0, 0.6), rgba(255, 171, 72, 0.60));
-        background: -webkit-gradient(to bottom right, rgba(255, 51, 0, 0.6), rgba(255, 171, 72, 0.60));
-        height: 150px;
-        width: 80%;
-        box-shadow: 3px 3px 3px 3px;
-    }
+    .ui-listview > .ui-li-static, .ui-listview > .ui-li-divider, .ui-listview > li > a.ui-btn-ncs
+     {
+         background: -o-linear-gradient(to bottom right, rgba(255, 51, 0, 0.6), rgba(255, 171, 72, 0.6));
+         background: linear-gradient(to bottom right, rgba(255, 51, 0, 0.6), rgba(255, 171, 72, 0.6));
+         background: -webkit-linear-gradient(to bottom right, rgba(255, 51, 0, 0.6), rgba(255, 171, 72, 0.6));
+         background: -webkit-gradient(to bottom right, rgba(255, 51, 0, 0.6), rgba(255, 171, 72, 0.6));
+         border: 1px #000;
+     }
 
-    #dss
+    .ui-listview > .ui-li-static, .ui-listview > .ui-li-divider, .ui-listview > li > a.ui-btn-dss
     {
         background: -o-linear-gradient(to bottom right, rgba(40, 64, 255, 0.60), rgba(0, 255, 204, 0.6));
         background: linear-gradient(to bottom right, rgba(40, 64, 255, 0.60), rgba(0, 255, 204, 0.6));
         background: -webkit-linear-gradient(to bottom right, rgba(40, 64, 255, 0.60), rgba(0, 255, 204, 0.6));
         background: -webkit-gradient(to bottom right, rgba(40, 64, 255, 0.60), rgba(0, 255, 204, 0.6));
-        height: 150px;
-        width: 80%;
-        box-shadow: 3px 3px 3px 3px;
+        border: 1px #000;
     }
 
-    #mg
+    .ui-listview > .ui-li-static, .ui-listview > .ui-li-divider, .ui-listview > li > a.ui-btn-mg
     {
         background: -o-linear-gradient(to bottom right, rgba(255, 133, 17, 0.60), rgba(255, 255, 0, 0.6));
         background: linear-gradient(to bottom right, rgba(255, 133, 17, 0.60), rgba(255, 255, 0, 0.6));
         background: -webkit-linear-gradient(to bottom right, rgba(255, 133, 17, 0.60), rgba(255, 255, 0, 0.6));
         background: -webkit-gradient(to bottom right, rgba(255, 133, 17, 0.60), rgba(255, 255, 0, 0.6));
-        height: 150px;
-        width: 80%;
-        box-shadow: 3px 3px 3px 3px;
+        border: 1px #000;
     }
 
-    #evt
+    .ui-listview > .ui-li-static, .ui-listview > .ui-li-divider, .ui-listview > li > a.ui-btn-evt
     {
         background: -o-linear-gradient(to bottom right, rgba(24, 184, 50, 0.60), rgba(177, 255, 98, 0.60));
         background: linear-gradient(to bottom right, rgba(24, 184, 50, 0.60), rgba(177, 255, 98, 0.60));
         background: -webkit-linear-gradient(to bottom right, rgba(24, 184, 50, 0.60), rgba(177, 255, 98, 0.60));
         background: -webkit-gradient(to bottom right, rgba(24, 184, 50, 0.60), rgba(177, 255, 98, 0.60));
-        height: 150px;
-        width: 80%;
-        box-shadow: 3px 3px 3px 3px;
+        border: 1px #000;
     }
 
-    #rtt
+    .ui-listview > .ui-li-static, .ui-listview > .ui-li-divider, .ui-listview > li > a.ui-btn-rtt
     {
         background: -o-linear-gradient(to bottom right, rgba(116, 6, 12, 0.60), rgba(204, 0, 0, 0.6));
         background: linear-gradient(to bottom right, rgba(116, 6, 12, 0.60), rgba(204, 0, 0, 0.6));
         background: -webkit-linear-gradient(to bottom right, rgba(116, 6, 12, 0.60), rgba(204, 0, 0, 0.6));
         background: -webkit-gradient(to bottom right, rgba(116, 6, 12, 0.60), rgba(204, 0, 0, 0.6));
-        height: 150px;
-        width: 80%;
-        box-shadow: 3px 3px 3px 3px;
+        border: 1px #000;
     }
 
-    #container
+    .ui-listview h2
     {
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        margin-top: -13em;
-        margin-left: 2.2em;
-    }
-
-    #txt
-    {
-        font: small-caps bold 1.4em/2em Verdana, Arial, Helvetica, sans-serif;
         color: #EFEFEF;
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        text-align: center;
+        font: small-caps bold 2em Verdana, Arial, Helvetica, sans-serif;
     }
 
+    .ui-listview li .ui-btn p
+    {
+        color: #c0c0c0;
+    }
+
+    .ui-listview li .ui-btn
+    {
+        color: #eee;
+    }
+
+    /* 3 column layout */
+    @media ( min-width: 768px )
+    {
+        .ui-content
+        {
+            padding: 9px;
+            vertical-align: middle;
+
+            position: absolute;
+            top: 23%;
+            width: 98.5%;
+        }
+
+        .ui-listview li
+        {
+            float: left;
+            width: 30.9333%; /* 33.3333% incl. 2 x 1.2% margin */
+            height: 150px;
+            margin: .5625em 1.2%;
+        }
+
+        .ui-btn
+        {
+            border: 1px #000;
+        }
+
+        .ui-listview li > .ui-btn
+        {
+            -webkit-box-sizing: border-box; /* include padding and border in height so we can set it to 100% */
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            height: 100%;
+        }
+
+        /* Make all list items and anchors inherit the border-radius from the UL. */
+        .ui-listview li, .ui-listview li .ui-btn
+        {
+            -webkit-border-radius: inherit;
+            border-radius: inherit;
+        }
+
+        /* Make text wrap. */
+        .ui-listview h2 {
+            white-space: normal;
+            overflow: visible;
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+
+        /* Text position */
+        .ui-listview h2 {
+            font-size: 1.25em;
+            margin: 0;
+            padding: .125em 1em;
+            bottom: 50%;
+        }
+
+        /* If you want to add shadow, don't kill the focus style. */
+        .ui-listview li {
+            -moz-box-shadow: 0px 0px 9px #111;
+            -webkit-box-shadow: 0px 0px 9px #111;
+            box-shadow: 0px 0px 9px #111;
+        }
+
+        /* Images mask the hover bg color so we give desktop users feedback by applying the focus style on hover as well. */
+        .ui-listview li > .ui-btn:hover {
+            -moz-box-shadow: 0px 0px 12px #33ccff;
+            -webkit-box-shadow: 0px 0px 12px #33ccff;
+            box-shadow: 0px 0px 12px #33ccff;
+        }
+
+        /* Animate focus and hover style, and resizing. */
+        .ui-listview li, .ui-listview .ui-btn
+        {
+            -webkit-transition: all 500ms ease;
+            -moz-transition: all 500ms ease;
+            -o-transition: all 500ms ease;
+            -ms-transition: all 500ms ease;
+            transition: all 500ms ease;
+        }
+    }
 </style>
 
 <div data-role="header">
@@ -105,62 +170,34 @@
 
 </div>
 
-<div id="container" data-role="content">
+<div role="main" class="ui-content">
+  <ul data-role="listview" data-inset="true">
 
-  <div class="ui-grid-b">
-    <div class="ui-block-a">
-      <a href="<%= root_url %>intloc" style="text-decoration: none" target="_parent">
-        <button class="ui-shadow ui-btn ui-corner-all" id="mcs">
-          <span id="txt">Main City Services</span>
-        </button>
-      </a>
-    </div>
+    <li><a href="<%= root_url %>intloc" target="_parent" class="ui-btn ui-btn-mcs">
+      <h2>Main City Services</h2>
+    </a></li>
 
-    <div class="ui-block-b">
-      <a href="<%= root_url %>nearserv" style="text-decoration: none" target="_parent">
-        <button class="ui-shadow ui-btn ui-corner-all" id="ncs">
-          <span id="txt">Nearest City Services</span>
-        </button>
-      </a>
-    </div>
+    <li><a href="<%= root_url %>nearserv" target="_parent" class="ui-btn ui-btn-ncs">
+      <h2>Nearest City Services</h2>
+    </a></li>
 
-    <div class="ui-block-c">
-      <div class="button-wrap">
-        <button class="ui-shadow ui-btn ui-corner-all" id="dss">
-          <span id="txt">M-Recommender Systems &<br>City Social Network</span>
-        </button>
-      </div>
-    </div>
-  </div>
+    <li><a href="" target="_parent" class="ui-btn ui-btn-dss">
+      <h2>M-Recommender Systems &<br>City Social Network</h2>
+    </a></li>
 
-  <br><br><br>
+    <li><a href="" target="_parent" class="ui-btn ui-btn-mg">
+      <h2>Mobile Government</h2>
+    </a></li>
 
-  <div class="ui-grid-b">
-    <div class="ui-block-a">
-      <div class="button-wrap">
-        <button class="ui-shadow ui-btn ui-corner-all" id="mg">
-          <span id="txt">Mobile Government</span>
-        </button>
-      </div>
-    </div>
+    <li><a href="" target="_parent" class="ui-btn ui-btn-evt">
+      <h2>City & Regional Events</h2>
+    </a></li>
 
-    <div class="ui-block-b">
-      <div class="button-wrap">
-        <button class="ui-shadow ui-btn ui-corner-all" id="evt">
-          <span id="txt">City & Regional Events</span>
-        </button>
-      </div>
-    </div>
+    <li><a href="" target="_parent" class="ui-btn ui-btn-rtt">
+      <h2>Real Time Traffic &<br>Environment Information</h2>
+    </a></li>
 
-    <div class="ui-block-c">
-      <div class="button-wrap">
-        <button class="ui-shadow ui-btn ui-corner-all" id="rtt">
-          <span id="txt">Real Time Traffic &<br>Environment Information</span>
-        </button>
-      </div>
-    </div>
-  </div>
-
+  </ul>
 </div>
 
 <div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="b" data-dismissible="true" style="max-width:100%;">
