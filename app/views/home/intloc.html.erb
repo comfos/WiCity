@@ -1,39 +1,115 @@
-<script>
-    /*$(function() {
-        var $inner = $('#container');
-
-        $inner.css({ marginTop:  ($(window).height() / 2) - $inner.outerHeight() / 2 });
-    });*
-</script>
-
 <style>
-    #mcs
+
+    .ui-listview > .ui-li-static, .ui-listview > .ui-li-divider, .ui-listview > li > a.ui-btn
     {
-        background: -o-linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
-        background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
-        background: -webkit-linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
-        background: -webkit-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
-        height: 150px;
-        width: 80%;
-        box-shadow: 3px 3px 3px 3px;
+        background: -o-linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.6));
+        background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.6));
+        background: -webkit-linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.6));
+        background: -webkit-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.6));
+        border: 1px #000;
     }
 
-    #txt
+    .ui-listview h2
     {
-        font: small-caps bold 1.4em/2em Verdana, Arial, Helvetica, sans-serif;
         color: #EFEFEF;
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        text-align: center;
+        font: small-caps bold 2em Verdana, Arial, Helvetica, sans-serif;
     }
 
-    #container
+    .ui-listview li .ui-btn p
     {
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        margin-top: -16.6em;
-        margin-left: 2.8em;
+        color: #c0c0c0;
     }
 
+    .ui-listview li .ui-btn
+    {
+        color: #eee;
+    }
+
+    /* 3 column layout */
+    @media ( min-width: 768px )
+    {
+        .ui-content
+        {
+            padding: 9px;
+            vertical-align: middle;
+        }
+
+        .ui-listview li
+        {
+            float: left;
+            width: 30.9333%; /* 33.3333% incl. 2 x 1.2% margin */
+            height: 150px;
+            margin: .5625em 1.2%;
+        }
+
+        .ui-btn
+        {
+            border: 1px #000;
+        }
+
+        .ui-listview li > .ui-btn
+        {
+            -webkit-box-sizing: border-box; /* include padding and border in height so we can set it to 100% */
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            height: 100%;
+        }
+
+        /* Make all list items and anchors inherit the border-radius from the UL. */
+        .ui-listview li, .ui-listview li .ui-btn
+        {
+            -webkit-border-radius: inherit;
+            border-radius: inherit;
+        }
+
+        /* Hide the icon */
+        .ui-listview .ui-btn-icon-right:after {
+            display: none;
+        }
+
+        /* Make text wrap. */
+        .ui-listview h2 {
+            white-space: normal;
+            overflow: visible;
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+
+        /* Text position */
+        .ui-listview h2 {
+            font-size: 1.25em;
+            margin: 0;
+            padding: .125em 1em;
+            bottom: 50%;
+        }
+
+        /* If you want to add shadow, don't kill the focus style. */
+        .ui-listview li {
+            -moz-box-shadow: 0px 0px 9px #111;
+            -webkit-box-shadow: 0px 0px 9px #111;
+            box-shadow: 0px 0px 9px #111;
+        }
+
+        /* Images mask the hover bg color so we give desktop users feedback by applying the focus style on hover as well. */
+        .ui-listview li > .ui-btn:hover {
+            -moz-box-shadow: 0px 0px 12px #33ccff;
+            -webkit-box-shadow: 0px 0px 12px #33ccff;
+            box-shadow: 0px 0px 12px #33ccff;
+        }
+
+        /* Animate focus and hover style, and resizing. */
+        .ui-listview li, .ui-listview .ui-btn
+        {
+            -webkit-transition: all 500ms ease;
+            -moz-transition: all 500ms ease;
+            -o-transition: all 500ms ease;
+            -ms-transition: all 500ms ease;
+            transition: all 500ms ease;
+        }
+    }
 </style>
 
 <div data-role="header">
@@ -42,94 +118,44 @@
 </div>
 
 
-<div data-role="content" id="container">
+<div role="main" class="ui-content">
+    <ul data-role="listview" data-inset="true">
 
-  <div class="ui-grid-b" style="margin-right: 2em">
-    <div class="ui-block-a">
-      <div class="button-wrap">
-        <a href="<%= pharms_path %>?filter1=now" style="text-decoration: none" target="_parent">
-          <button class="ui-shadow ui-btn ui-corner-all" id="mcs">
-            <span id="txt">Pharms</span>
-          </button>
-        </a>
-      </div>
-    </div>
+      <li><a href="<%= pharms_path %>?filter1=now" target="_parent">
+        <h2>Pharms</h2>
+      </a></li>
 
-    <div class="ui-block-b">
-      <div class="button-wrap">
-        <a href="<%= hospitals_path %>?filter1=now" style="text-decoration: none" target="_parent">
-          <button class="ui-shadow ui-btn ui-corner-all" id="mcs">
-            <span id="txt">Hospitals &<br>Medical Guards</span>
-          </button>
-        </a>
-      </div>
-    </div>
+      <li><a href="<%= hospitals_path %>?filter1=now" target="_parent">
+        <h2>Hospitals &<br>Medical Guards</h2>
+      </a></li>
 
-    <div class="ui-block-c">
-      <div class="button-wrap"><div class="button-wrap">
-        <a href="<%= fuels_path %>?filter1=now" style="text-decoration: none" target="_parent">
-          <button class="ui-shadow ui-btn ui-corner-all" id="mcs">
-            <span id="txt">Fuel Stations</span>
-          </button>
-        </a>
-      </div></div>
-    </div>
-  </div>
+      <li><a href="<%= fuels_path %>?filter1=now" target="_parent">
+        <h2>Fuel Stations</h2>
+      </a></li>
 
-  <div class="ui-grid-b" style="margin-right: 2em">
-    <div class="ui-block-a">
-      <div class="button-wrap">
-        <a href="<%= restaurants_path %>?filter1=now" style="text-decoration: none" target="_parent">
-          <button class="ui-shadow ui-btn ui-corner-all" id="mcs">
-            <span id="txt">Restaurants &<br>Café</span>
-          </button>
-        </a>
-      </div>
-    </div>
+      <li><a href="<%= restaurants_path %>?filter1=now" target="_parent">
+        <h2>Restaurants &<br>Café</h2>
+      </a></li>
 
-    <div class="ui-block-b">
-      <div class="button-wrap">
-        <button class="ui-shadow ui-btn ui-corner-all" id="mcs">
-          <span id="txt">Bed and Breakfast &<br>Hotels</span>
-        </button>
-      </div>
-    </div>
+      <li><a href="" target="_parent">
+        <h2>Bed and Breakfast &<br>Hotels</h2>
+      </a></li>
 
-    <div class="ui-block-c">
-      <div class="button-wrap">
-        <button class="ui-shadow ui-btn ui-corner-all" id="mcs">
-          <span id="txt">Cinema & Theaters</span>
-        </button>
-      </div>
-    </div>
-  </div>
+      <li><a href="" target="_parent">
+        <h2>Cinema & Theaters</h2>
+      </a></li>
 
-  <div class="ui-grid-b" style="margin-right: 2em">
-    <div class="ui-block-a">
-      <div class="button-wrap">
-        <button class="ui-shadow ui-btn ui-corner-all" id="mcs">
-          <span id="txt">Schools & Universities</span>
-        </button>
-      </div>
-    </div>
+      <li><a href="" target="_parent">
+        <h2>Schools & Universities</h2>
+      </a></li>
 
-    <div class="ui-block-b">
-      <div class="button-wrap">
-        <button class="ui-shadow ui-btn ui-corner-all" id="mcs">
-          <span id="txt">Financial Services &<br>City - Regional Stores</span>
-        </button>
-      </div>
-    </div>
+      <li><a href="" target="_parent">
+        <h2>Financial Services &<br>City - Regional Stores</h2>
+      </a></li>
 
-    <div class="ui-block-c">
-      <div class="button-wrap">
-        <a href="<%= parks_path %>?filter1=now" style="text-decoration: none" target="_parent">
-          <button class="ui-shadow ui-btn ui-corner-all" id="mcs">
-            <span id="txt">Parks - Garages &<br>Taxi Services</span>
-          </button>
-        </a>
-      </div>
-    </div>
-  </div>
+      <li><a href="<%= parks_path %>?filter1=now" target="_parent">
+        <h2>Parks - Garages &<br>Taxi Services</h2>
+      </a></li>
 
+    </ul>
 </div>

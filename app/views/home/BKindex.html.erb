@@ -1,0 +1,196 @@
+<script>
+    /*$(function() {
+        var $inner = $('#container');
+        $inner.css({ left:  ($(window).width() / 2) - $inner.outerWidth() / 2 });
+        $inner.css({ marginTop:  ($(window).height() / 2) - $inner.outerHeight() / 2 });
+    });*/
+</script>
+
+<style>
+  #mcs
+  {
+      background: -o-linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
+      background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
+      background: -webkit-linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
+      background: -webkit-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.60));
+      height: 150px;
+      width: 80%;
+      box-shadow: 3px 3px 3px 3px;
+  }
+
+  #ncs
+  {
+      background: -o-linear-gradient(to bottom right, rgba(255, 51, 0, 0.6), rgba(255, 171, 72, 0.60));
+      background: linear-gradient(to bottom right, rgba(255, 51, 0, 0.6), rgba(255, 171, 72, 0.60));
+      background: -webkit-linear-gradient(to bottom right, rgba(255, 51, 0, 0.6), rgba(255, 171, 72, 0.60));
+      background: -webkit-gradient(to bottom right, rgba(255, 51, 0, 0.6), rgba(255, 171, 72, 0.60));
+      height: 150px;
+      width: 80%;
+      box-shadow: 3px 3px 3px 3px;
+  }
+
+  #dss
+  {
+      background: -o-linear-gradient(to bottom right, rgba(40, 64, 255, 0.60), rgba(0, 255, 204, 0.6));
+      background: linear-gradient(to bottom right, rgba(40, 64, 255, 0.60), rgba(0, 255, 204, 0.6));
+      background: -webkit-linear-gradient(to bottom right, rgba(40, 64, 255, 0.60), rgba(0, 255, 204, 0.6));
+      background: -webkit-gradient(to bottom right, rgba(40, 64, 255, 0.60), rgba(0, 255, 204, 0.6));
+      height: 150px;
+      width: 80%;
+      box-shadow: 3px 3px 3px 3px;
+  }
+
+  #mg
+  {
+      background: -o-linear-gradient(to bottom right, rgba(255, 133, 17, 0.60), rgba(255, 255, 0, 0.6));
+      background: linear-gradient(to bottom right, rgba(255, 133, 17, 0.60), rgba(255, 255, 0, 0.6));
+      background: -webkit-linear-gradient(to bottom right, rgba(255, 133, 17, 0.60), rgba(255, 255, 0, 0.6));
+      background: -webkit-gradient(to bottom right, rgba(255, 133, 17, 0.60), rgba(255, 255, 0, 0.6));
+      height: 150px;
+      width: 80%;
+      box-shadow: 3px 3px 3px 3px;
+  }
+
+  #evt
+  {
+      background: -o-linear-gradient(to bottom right, rgba(24, 184, 50, 0.60), rgba(177, 255, 98, 0.60));
+      background: linear-gradient(to bottom right, rgba(24, 184, 50, 0.60), rgba(177, 255, 98, 0.60));
+      background: -webkit-linear-gradient(to bottom right, rgba(24, 184, 50, 0.60), rgba(177, 255, 98, 0.60));
+      background: -webkit-gradient(to bottom right, rgba(24, 184, 50, 0.60), rgba(177, 255, 98, 0.60));
+      height: 150px;
+      width: 80%;
+      box-shadow: 3px 3px 3px 3px;
+  }
+
+  #rtt
+  {
+      background: -o-linear-gradient(to bottom right, rgba(116, 6, 12, 0.60), rgba(204, 0, 0, 0.6));
+      background: linear-gradient(to bottom right, rgba(116, 6, 12, 0.60), rgba(204, 0, 0, 0.6));
+      background: -webkit-linear-gradient(to bottom right, rgba(116, 6, 12, 0.60), rgba(204, 0, 0, 0.6));
+      background: -webkit-gradient(to bottom right, rgba(116, 6, 12, 0.60), rgba(204, 0, 0, 0.6));
+      height: 150px;
+      width: 80%;
+      box-shadow: 3px 3px 3px 3px;
+  }
+
+  #container
+  {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      margin-top: -13em;
+      margin-left: 2.2em;
+  }
+
+  #txt
+  {
+      font: small-caps bold 1.4em/2em Verdana, Arial, Helvetica, sans-serif;
+      color: #EFEFEF;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+
+</style>
+
+<div data-role="header">
+  <h1>WiCity</h1>
+  <%= link_to 'Credits', '#popupDialog', 'data-icon' => 'gear', 'class' => 'ui-btn-right ui-corner-all ui-shadow ui-btn-inline ui-icon-delete ui-btn-icon-left', 'data-rel' => 'popup', 'data-position-to' => 'window', 'data-transition' => 'pop' %>
+
+  <!--<#%= link_to 'Login', new_user_session_path, 'data-icon' => 'back', 'class' => 'ui-btn-left' %>-->
+  <% if !user_signed_in? %>
+      <%= link_to 'Login', '#popupLogin', 'data-icon' => 'user', 'class' => 'ui-btn-left ui-corner-all ui-shadow ui-btn-inline ui-icon-delete ui-btn-icon-left', 'data-rel' => 'popup', 'data-position-to' => 'window', 'data-transition' => 'pop' %>
+  <% else %>
+      <!-- <#%= link_to "Welcome #{current_user.name}, Logout", destroy_user_session_path, method: :delete, 'data-icon' => 'delete', 'class' => 'ui-btn-left', 'target' => '_parent' %> -->
+      <%= link_to "Edit #{current_user.name}", edit_user_registration_path, 'data-icon' => 'user', 'class' => 'ui-btn-left', 'target' => '_parent' %>
+  <% end %>
+
+</div>
+
+<div id="container" data-role="content">
+
+  <div class="ui-grid-b">
+    <div class="ui-block-a">
+      <a href="<%= root_url %>intloc" style="text-decoration: none" target="_parent">
+        <button class="ui-shadow ui-btn ui-corner-all" id="mcs">
+          <span id="txt">Main City Services</span>
+        </button>
+      </a>
+    </div>
+
+    <div class="ui-block-b">
+      <a href="<%= root_url %>nearserv" style="text-decoration: none" target="_parent">
+        <button class="ui-shadow ui-btn ui-corner-all" id="ncs">
+          <span id="txt">Nearest City Services</span>
+        </button>
+      </a>
+    </div>
+
+    <div class="ui-block-c">
+      <div class="button-wrap">
+        <button class="ui-shadow ui-btn ui-corner-all" id="dss">
+          <span id="txt">M-Recommender Systems &<br>City Social Network</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <br><br><br>
+
+  <div class="ui-grid-b">
+    <div class="ui-block-a">
+      <div class="button-wrap">
+        <button class="ui-shadow ui-btn ui-corner-all" id="mg">
+          <span id="txt">Mobile Government</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="ui-block-b">
+      <div class="button-wrap">
+        <button class="ui-shadow ui-btn ui-corner-all" id="evt">
+          <span id="txt">City & Regional Events</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="ui-block-c">
+      <div class="button-wrap">
+        <button class="ui-shadow ui-btn ui-corner-all" id="rtt">
+          <span id="txt">Real Time Traffic &<br>Environment Information</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="b" data-dismissible="true" style="max-width:100%;">
+  <div data-role="header" data-theme="a">
+    <h1>Credits</h1>
+  </div>
+  <div role="main" class="ui-content">
+    <h3 class="ui-title">WiCity 2.0</h3>
+    <p style="text-align: justify; width: 600px;">WiCity è un sistema di informazione per i cittadini in mobilità.<br>
+       Esso fa parte del progetto K-Metropolis presentato nel 2010 al POR Sicilia 2007-2013
+       e finanziato nel 2011 nella linea di intervento 4.1.1.1.<br><br>
+       WiCity è sviluppato da un gruppo di lavoro del Dipartimento di Ingegneria Elettrica,
+       Elettronica e Informatica dell'Università di Catania costituito da:
+       <ul>
+        <li>Alberto Faro (responsabile scientifico),</li>
+        <li>Daniela Giordano (Data and Metadata Definition),</li>
+        <li>Concetto Spampinato (Database Integration),</li>
+        <li>Alfio Costanzo (Software Development).</li>
+       </ul>
+       <br>
+         <div style="text-align: right">WebMaster: <a href="mailto:alfio.costanzo@dieei.unict.it" target="_parent">alfio.costanzo@dieei.unict.it</a></div>
+         <br>
+         <div style="text-align: center"><script type="text/javascript" src="http://codice.shinystat.com/cgi-bin/getcod.cgi?USER=wicity"></script>
+            <noscript>
+                <a href="http://www.shinystat.com/it" target="_top">
+                    <img src="http://www.shinystat.com/cgi-bin/shinystat.cgi?USER=wicity" alt="Statistiche gratis" border="0" />
+                </a>
+            </noscript>
+         </div>
+
+    </p>
+  </div>
+</div>
