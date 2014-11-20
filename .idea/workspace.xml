@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/intloc.html.erb" afterPath="$PROJECT_DIR$/app/views/home/intloc.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WiCity.iws" />
@@ -32,10 +33,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="intloc.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="intloc.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="222" column="39" selection-start="7049" selection-end="7049" vertical-scroll-proportion="-8.769231" vertical-offset="3318" max-vertical-offset="4012">
+            <state line="146" column="25" selection-start="4842" selection-end="4842" vertical-scroll-proportion="0.7057878" vertical-offset="2043" max-vertical-offset="4012">
               <folding />
             </state>
           </provider>
@@ -104,10 +105,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="206" column="36" selection-start="8201" selection-end="8201" vertical-scroll-proportion="0.45511812" vertical-offset="3213" max-vertical-offset="4216">
+            <state line="94" column="26" selection-start="4226" selection-end="4226" vertical-scroll-proportion="-8.5" vertical-offset="1377" max-vertical-offset="4216">
               <folding />
             </state>
           </provider>
@@ -192,13 +193,13 @@
         <option value="$PROJECT_DIR$/app/views/hospitals/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/nearserv.html.erb" />
         <option value="$PROJECT_DIR$/app/views/first_aids/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/home/intloc.html.erb" />
         <option value="$PROJECT_DIR$/app/views/taxistations/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/radiotaxis/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/pharms/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/parks/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/fuels/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/intloc.html.erb" />
       </list>
     </option>
   </component>
@@ -1623,7 +1624,11 @@
       <created>1416501161873</created>
       <updated>1416501161873</updated>
     </task>
-    <option name="localTasksCounter" value="230" />
+    <task id="LOCAL-00230" summary="UPDATE mcs&#10;">
+      <created>1416503020120</created>
+      <updated>1416503020120</updated>
+    </task>
+    <option name="localTasksCounter" value="231" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -2019,16 +2024,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="222" column="39" selection-start="7049" selection-end="7049" vertical-scroll-proportion="-8.769231" vertical-offset="3318" max-vertical-offset="4012">
+        <state line="94" column="26" selection-start="4226" selection-end="4226" vertical-scroll-proportion="-8.5" vertical-offset="1377" max-vertical-offset="4216">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="206" column="36" selection-start="8201" selection-end="8201" vertical-scroll-proportion="0.45511812" vertical-offset="3213" max-vertical-offset="4216">
+        <state line="146" column="25" selection-start="4842" selection-end="4842" vertical-scroll-proportion="0.7057878" vertical-offset="2043" max-vertical-offset="4012">
           <folding />
         </state>
       </provider>
