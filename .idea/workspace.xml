@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\Users\Alfio\RubymineProjects\WiCity\app\assets\images\icon_btn\farmacia.png" afterPath="$PROJECT_DIR$/app/assets/images/icon_btn/pharms.png" />
-      <change type="MOVED" beforePath="C:\Users\Alfio\RubymineProjects\WiCity\app\assets\images\icon_btn\financial.png" afterPath="$PROJECT_DIR$/app/assets/images/icon_btn/financials.png" />
-      <change type="MOVED" beforePath="C:\Users\Alfio\RubymineProjects\WiCity\app\assets\images\icon_btn\fuel.png" afterPath="$PROJECT_DIR$/app/assets/images/icon_btn/fuels.png" />
-      <change type="MOVED" beforePath="C:\Users\Alfio\RubymineProjects\WiCity\app\assets\images\icon_btn\hotel.png" afterPath="$PROJECT_DIR$/app/assets/images/icon_btn/hotels.png" />
-      <change type="MOVED" beforePath="C:\Users\Alfio\RubymineProjects\WiCity\app\assets\images\icon_btn\parks.png" afterPath="$PROJECT_DIR$/app/assets/images/icon_btn/park.png" />
-      <change type="MOVED" beforePath="C:\Users\Alfio\RubymineProjects\WiCity\app\assets\images\icon_btn\restaurant.png" afterPath="$PROJECT_DIR$/app/assets/images/icon_btn/restaurants.png" />
-      <change type="MOVED" beforePath="C:\Users\Alfio\RubymineProjects\WiCity\app\assets\images\icon_btn\school.png" afterPath="$PROJECT_DIR$/app/assets/images/icon_btn/schools.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/intloc.html.erb" afterPath="$PROJECT_DIR$/app/views/home/intloc.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/nearserv.html.erb" afterPath="$PROJECT_DIR$/app/views/home/nearserv.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fuels/show.html.erb" afterPath="$PROJECT_DIR$/app/views/fuels/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/parks/show.html.erb" afterPath="$PROJECT_DIR$/app/views/parks/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pharms/show.html.erb" afterPath="$PROJECT_DIR$/app/views/pharms/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/restaurants/show.html.erb" afterPath="$PROJECT_DIR$/app/views/restaurants/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/radiotaxis/show.html.erb" afterPath="$PROJECT_DIR$/app/views/radiotaxis/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/taxistations/show.html.erb" afterPath="$PROJECT_DIR$/app/views/taxistations/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WiCity.iws" />
@@ -43,10 +36,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="intloc.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="intloc.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="222" column="39" selection-start="7049" selection-end="7049" vertical-scroll-proportion="0.62986004" vertical-offset="3369" max-vertical-offset="4012">
+            <state line="222" column="39" selection-start="7049" selection-end="7049" vertical-scroll-proportion="-7.7884617" vertical-offset="3369" max-vertical-offset="4012">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/taxistations/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="127" column="47" selection-start="4093" selection-end="4093" vertical-scroll-proportion="20.923077" vertical-offset="2703" max-vertical-offset="6341">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/restaurants/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="82" column="46" selection-start="2416" selection-end="2416" vertical-scroll-proportion="18.538462" vertical-offset="1876" max-vertical-offset="6256">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/radiotaxis/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="127" column="47" selection-start="4091" selection-end="4091" vertical-scroll-proportion="4.8076925" vertical-offset="2284" max-vertical-offset="6341">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="130" column="52" selection-start="4193" selection-end="4193" vertical-scroll-proportion="-5.0" vertical-offset="2080" max-vertical-offset="6256">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/parks/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="127" column="47" selection-start="4086" selection-end="4086" vertical-scroll-proportion="-16.76923" vertical-offset="1723" max-vertical-offset="7684">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/hospitals/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="82" column="46" selection-start="2416" selection-end="2416" vertical-scroll-proportion="10.961538" vertical-offset="1679" max-vertical-offset="6256">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/fuels/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="130" column="51" selection-start="4190" selection-end="4190" vertical-scroll-proportion="0.5046296" vertical-offset="1883" max-vertical-offset="6256">
               <folding />
             </state>
           </provider>
@@ -136,17 +192,17 @@
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" />
         <option value="$PROJECT_DIR$/db/schema.rb" />
-        <option value="$PROJECT_DIR$/app/views/taxistations/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/restaurants/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/radiotaxis/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/pharms/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/parks/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/hospitals/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/nearserv.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/fuels/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/first_aids/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/intloc.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/taxistations/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/radiotaxis/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/pharms/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/parks/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/fuels/show.html.erb" />
       </list>
     </option>
   </component>
@@ -276,7 +332,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
+              <option name="myItemId" value="hospitals" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WiCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WiCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fuels" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1541,7 +1619,11 @@
       <created>1416500323572</created>
       <updated>1416500323572</updated>
     </task>
-    <option name="localTasksCounter" value="228" />
+    <task id="LOCAL-00228" summary="UPDATE mcs&#10;">
+      <created>1416500535653</created>
+      <updated>1416500535653</updated>
+    </task>
+    <option name="localTasksCounter" value="229" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1860,48 +1942,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/taxistations/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="48" selection-start="3653" selection-end="3656" vertical-scroll-proportion="-3.0" vertical-offset="1799" max-vertical-offset="6341">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/restaurants/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="46" selection-start="2416" selection-end="2416" vertical-scroll-proportion="-6.9615383" vertical-offset="1213" max-vertical-offset="6256">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/radiotaxis/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="46" selection-start="2410" selection-end="2410" vertical-scroll-proportion="-6.9615383" vertical-offset="1213" max-vertical-offset="6341">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="46" selection-start="2410" selection-end="2410" vertical-scroll-proportion="-6.9615383" vertical-offset="1213" max-vertical-offset="6256">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/parks/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="46" selection-start="2410" selection-end="2410" vertical-scroll-proportion="-6.9615383" vertical-offset="1213" max-vertical-offset="7684">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/hospitals/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="46" selection-start="2416" selection-end="2416" vertical-scroll-proportion="-6.6923075" vertical-offset="1220" max-vertical-offset="6256">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="116" column="46" selection-start="3337" selection-end="3337" vertical-scroll-proportion="-6.6923075" vertical-offset="1798" max-vertical-offset="8704">
@@ -1912,13 +1952,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/fuels/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="185" column="37" selection-start="7913" selection-end="7913" vertical-scroll-proportion="-7.1923075" vertical-offset="2958" max-vertical-offset="5695">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fuels/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="46" selection-start="2410" selection-end="2410" vertical-scroll-proportion="-6.6923075" vertical-offset="1220" max-vertical-offset="6256">
           <folding />
         </state>
       </provider>
@@ -1946,7 +1979,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="222" column="39" selection-start="7049" selection-end="7049" vertical-scroll-proportion="0.62986004" vertical-offset="3369" max-vertical-offset="4012">
+        <state line="222" column="39" selection-start="7049" selection-end="7049" vertical-scroll-proportion="-7.7884617" vertical-offset="3369" max-vertical-offset="4012">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/taxistations/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="47" selection-start="4093" selection-end="4093" vertical-scroll-proportion="20.923077" vertical-offset="2703" max-vertical-offset="6341">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/restaurants/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="46" selection-start="2416" selection-end="2416" vertical-scroll-proportion="18.538462" vertical-offset="1876" max-vertical-offset="6256">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/radiotaxis/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="47" selection-start="4091" selection-end="4091" vertical-scroll-proportion="4.8076925" vertical-offset="2284" max-vertical-offset="6341">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="130" column="52" selection-start="4193" selection-end="4193" vertical-scroll-proportion="-5.0" vertical-offset="2080" max-vertical-offset="6256">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/parks/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="47" selection-start="4086" selection-end="4086" vertical-scroll-proportion="-16.76923" vertical-offset="1723" max-vertical-offset="7684">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/hospitals/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="46" selection-start="2416" selection-end="2416" vertical-scroll-proportion="10.961538" vertical-offset="1679" max-vertical-offset="6256">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/fuels/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="130" column="51" selection-start="4190" selection-end="4190" vertical-scroll-proportion="0.5046296" vertical-offset="1883" max-vertical-offset="6256">
           <folding />
         </state>
       </provider>
