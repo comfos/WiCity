@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\Users\Alfio\RubymineProjects\WiCity\app\assets\images\icon_btn\hospital.PNG" afterPath="$PROJECT_DIR$/app/assets/images/icon_btn/hospitals.png" />
+      <change type="MOVED" beforePath="C:\Users\Alfio\RubymineProjects\WiCity\app\assets\images\icon_btn\farmacia.png" afterPath="$PROJECT_DIR$/app/assets/images/icon_btn/pharms.png" />
+      <change type="MOVED" beforePath="C:\Users\Alfio\RubymineProjects\WiCity\app\assets\images\icon_btn\financial.png" afterPath="$PROJECT_DIR$/app/assets/images/icon_btn/financials.png" />
+      <change type="MOVED" beforePath="C:\Users\Alfio\RubymineProjects\WiCity\app\assets\images\icon_btn\fuel.png" afterPath="$PROJECT_DIR$/app/assets/images/icon_btn/fuels.png" />
+      <change type="MOVED" beforePath="C:\Users\Alfio\RubymineProjects\WiCity\app\assets\images\icon_btn\hotel.png" afterPath="$PROJECT_DIR$/app/assets/images/icon_btn/hotels.png" />
+      <change type="MOVED" beforePath="C:\Users\Alfio\RubymineProjects\WiCity\app\assets\images\icon_btn\parks.png" afterPath="$PROJECT_DIR$/app/assets/images/icon_btn/park.png" />
+      <change type="MOVED" beforePath="C:\Users\Alfio\RubymineProjects\WiCity\app\assets\images\icon_btn\restaurant.png" afterPath="$PROJECT_DIR$/app/assets/images/icon_btn/restaurants.png" />
+      <change type="MOVED" beforePath="C:\Users\Alfio\RubymineProjects\WiCity\app\assets\images\icon_btn\school.png" afterPath="$PROJECT_DIR$/app/assets/images/icon_btn/schools.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/intloc.html.erb" afterPath="$PROJECT_DIR$/app/views/home/intloc.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/hospitals/show.html.erb" afterPath="$PROJECT_DIR$/app/views/hospitals/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/nearserv.html.erb" afterPath="$PROJECT_DIR$/app/views/home/nearserv.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fuels/show.html.erb" afterPath="$PROJECT_DIR$/app/views/fuels/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pharms/show.html.erb" afterPath="$PROJECT_DIR$/app/views/pharms/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/restaurants/show.html.erb" afterPath="$PROJECT_DIR$/app/views/restaurants/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WiCity.iws" />
@@ -37,7 +46,7 @@
       <file leaf-file-name="intloc.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="207" column="15" selection-start="6574" selection-end="6574" vertical-scroll-proportion="1.1057543" vertical-offset="2808" max-vertical-offset="4012">
+            <state line="222" column="39" selection-start="7049" selection-end="7049" vertical-scroll-proportion="0.62986004" vertical-offset="3369" max-vertical-offset="4012">
               <folding />
             </state>
           </provider>
@@ -1528,7 +1537,11 @@
       <created>1416500290539</created>
       <updated>1416500290539</updated>
     </task>
-    <option name="localTasksCounter" value="227" />
+    <task id="LOCAL-00227" summary="UPDATE mcs&#10;">
+      <created>1416500323572</created>
+      <updated>1416500323572</updated>
+    </task>
+    <option name="localTasksCounter" value="228" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1728,7 +1741,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/BKintloc.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="36" selection-start="652" selection-end="680" vertical-scroll-proportion="-0.0" vertical-offset="289" max-vertical-offset="2380" />
+        <state line="17" column="36" selection-start="652" selection-end="680" vertical-scroll-proportion="-0.0" vertical-offset="289" max-vertical-offset="2380">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/BKindex.html.erb">
@@ -1931,7 +1946,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="207" column="15" selection-start="6574" selection-end="6574" vertical-scroll-proportion="1.1057543" vertical-offset="2808" max-vertical-offset="4012">
+        <state line="222" column="39" selection-start="7049" selection-end="7049" vertical-scroll-proportion="0.62986004" vertical-offset="3369" max-vertical-offset="4012">
           <folding />
         </state>
       </provider>

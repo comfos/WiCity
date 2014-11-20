@@ -4,7 +4,7 @@
 <script type="text/javascript">
 
     /*var styles = [ [{
-        url: '/assets/marker/pharm.png',
+        url: '/assets/marker/pharms.png',
         height: 35,
         width: 35,
         opt_anchor: [16, 0],
@@ -306,7 +306,7 @@
                 var coord = new google.maps.LatLng(<%= itm.lat %>, <%= itm.lng %>);
                 if( bounds.contains(coord) ) {
                     if('<%= isOpen(itm) %>') {
-                        var icon = '/assets/marker/pharm.png';
+                        var icon = '/assets/marker/pharms.png';
                     }
                     else {
                         var icon = '/assets/marker/cpharm.png';
