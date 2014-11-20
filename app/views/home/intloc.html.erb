@@ -1,6 +1,20 @@
 <style>
 
-    .ui-listview > .ui-li-static, .ui-listview > .ui-li-divider, .ui-listview > li > a.ui-btn-mcs
+    /* A bit custom styling */
+    .my-page .ui-listview li .ui-btn p {
+        color: #c0c0c0;
+    }
+
+    .my-page .ui-listview li .ui-btn h2 {
+        color: #c0c0c0;
+    }
+
+    /* Hide the icon */
+    .my-page .ui-listview .ui-btn-icon-right:after {
+        display: none;
+    }
+
+    .my-page .ui-listview > li > a.ui-btn
     {
         background: -o-linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.6));
         background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 255, 0.6));
@@ -10,68 +24,44 @@
         box-shadow: 0px 0px 2px #111;
     }
 
-    .ui-listview h2
+    /* First breakpoint is 48em (768px). 3 column layout. Tiles 250x250 pixels incl. margin at the breakpoint. */
+    @media ( min-width: 48em )
     {
-        color: #EFEFEF;
-        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-        text-align: center;
-        font: small-caps bold 2em Verdana, Arial, Helvetica, sans-serif;
-    }
-
-    .ui-listview li .ui-btn p
-    {
-        color: #c0c0c0;
-    }
-
-    .ui-listview li .ui-btn
-    {
-        color: #eee;
-    }
-
-    /* 3 column layout */
-    @media ( min-width: 768px )
-    {
-        .ui-content
-        {
-            padding: 9px;
-            vertical-align: middle;
+        .my-page .ui-content {
+            padding: .5625em; /* 9px */
         }
 
-        .ui-listview li
-        {
+        .my-page .ui-listview li {
             float: left;
             width: 30.9333%; /* 33.3333% incl. 2 x 1.2% margin */
-            height: 150px;
+            height: 180px; /* 232p */
             margin: .5625em 1.2%;
         }
 
-        .ui-btn
-        {
-            border: 1px #000;
-        }
-
-        .ui-listview li > .ui-btn
-        {
+        .my-page .ui-listview li > .ui-btn {
             -webkit-box-sizing: border-box; /* include padding and border in height so we can set it to 100% */
             -moz-box-sizing: border-box;
             box-sizing: border-box;
             height: 100%;
         }
 
+        .my-page .ui-listview li.ui-li-has-thumb .ui-li-thumb {
+            height: auto; /* To keep aspect ratio. */
+            max-width: 100%;
+            max-height: none;
+        }
+
         /* Make all list items and anchors inherit the border-radius from the UL. */
-        .ui-listview li, .ui-listview li .ui-btn
-        {
+        .my-page .ui-listview li,
+        .my-page .ui-listview li .ui-btn,
+        .my-page .ui-listview .ui-li-thumb {
             -webkit-border-radius: inherit;
             border-radius: inherit;
         }
 
-        /* Hide the icon */
-        .ui-listview .ui-btn-icon-right:after {
-            display: none;
-        }
-
         /* Make text wrap. */
-        .ui-listview h2 {
+        .my-page .ui-listview h2,
+        .my-page .ui-listview p {
             white-space: normal;
             overflow: visible;
             position: absolute;
@@ -80,30 +70,53 @@
         }
 
         /* Text position */
-        .ui-listview h2 {
+        .my-page .ui-listview h2 {
             font-size: 1.25em;
             margin: 0;
             padding: .125em 1em;
             bottom: 50%;
         }
 
+        .my-page .ui-listview p {
+            font-size: 1em;
+            margin: 0;
+            padding: 0 1.25em;
+            min-height: 50%;
+            bottom: 0;
+        }
+
+        /* Semi transparent background and different position if there is a thumb. The button has overflow hidden so we don't need to set border-radius. */
+        .ui-listview .ui-li-has-thumb h2,
+        .ui-listview .ui-li-has-thumb p {
+            background: #111;
+            background: rgba(0,0,0,.8);
+        }
+
+        .ui-listview .ui-li-has-thumb h2 {
+            bottom: 35%;
+        }
+
+        .ui-listview .ui-li-has-thumb p {
+            min-height: 35%;
+        }
+
         /* If you want to add shadow, don't kill the focus style. */
-        .ui-listview li {
+        .my-page .ui-listview li {
             -moz-box-shadow: 0px 0px 9px #111;
             -webkit-box-shadow: 0px 0px 9px #111;
             box-shadow: 0px 0px 9px #111;
         }
 
         /* Images mask the hover bg color so we give desktop users feedback by applying the focus style on hover as well. */
-        .ui-listview li > .ui-btn:hover {
+        .my-page .ui-listview li > .ui-btn:hover {
             -moz-box-shadow: 0px 0px 12px #33ccff;
             -webkit-box-shadow: 0px 0px 12px #33ccff;
             box-shadow: 0px 0px 12px #33ccff;
         }
 
         /* Animate focus and hover style, and resizing. */
-        .ui-listview li, .ui-listview .ui-btn
-        {
+        .my-page .ui-listview li,
+        .my-page .ui-listview .ui-btn {
             -webkit-transition: all 500ms ease;
             -moz-transition: all 500ms ease;
             -o-transition: all 500ms ease;
@@ -111,6 +124,7 @@
             transition: all 500ms ease;
         }
     }
+
 </style>
 
 <div data-role="header">
@@ -119,44 +133,69 @@
 </div>
 
 
-<div role="main" class="ui-content">
+
+
+<div class="my-page">
+
+  <div role="main" class="ui-content">
+
     <ul data-role="listview" data-inset="true">
 
-      <li><a href="<%= pharms_path %>?filter1=now" target="_parent" class="ui-btn ui-btn-mcs">
+      <li><a href="<%= pharms_path %>?filter1=now" target="_parent">
+        <img src="http://www.libertas.sm/files/2014/08/immagini_contenuti/96385/farmacia-croce-verde.jpg" class="ui-li-thumb">
         <h2>Pharms</h2>
+        <p>Pharmacies blablabla</p>
       </a></li>
 
-      <li><a href="<%= hospitals_path %>?filter1=now" target="_parent" class="ui-btn ui-btn-mcs">
-        <h2>Hospitals &<br>Medical Guards</h2>
+      <li><a href="<%= hospitals_path %>?filter1=now" target="_parent">
+        <img src="http://icons.iconarchive.com/icons/icons8/windows-8/512/City-Hospital-icon.png" class="ui-li-thumb">
+        <h2>Hospitals & Medical Guards</h2>
+        <p>BlackBerry launched the Z10 and Q10 with the new BB10 OS</p>
       </a></li>
 
-      <li><a href="" target="_parent" class="ui-btn ui-btn-mcs">
-        <h2>Financial Services &<br>City - Regional Stores</h2>
+      <li><a href="#">
+        <img src="http://icons.iconarchive.com/icons/iconlicious/misc/512/Credit-Card-icon.png" class="ui-li-thumb">
+        <h2>Financial Services & City - Regional Stores</h2>
+        <p>Nokia rolls out WP 7.8 to Lumia 800</p>
       </a></li>
 
-      <li><a href="<%= restaurants_path %>?filter1=now" target="_parent" class="ui-btn ui-btn-mcs">
-        <h2>Restaurants &<br>Café</h2>
+      <li><a href="<%= restaurants_path %>?filter1=now" target="_parent">
+        <img src="../_assets/img/galaxy_express.png" class="ui-li-thumb">
+        <h2>Restaurants & Café</h2>
+        <p>Restaurants & Café</p>
       </a></li>
 
-      <li><a href="" target="_parent" class="ui-btn ui-btn-mcs">
-        <h2>Bed and Breakfast &<br>Hotels</h2>
+      <li><a href="#">
+        <img src="/assets/icon_btn/hotel.png" class="ui-li-thumb">
+        <h2>Bed and Breakfast & Hotels</h2>
+        <p></p>
       </a></li>
 
-      <li><a href="" target="_parent" class="ui-btn ui-btn-mcs">
+      <li><a href="#">
+        <img src="../_assets/img/nexus_7.png" class="ui-li-thumb">
         <h2>Cinema & Theaters</h2>
+        <p>Rumours about new full HD Nexus 7</p>
       </a></li>
 
-      <li><a href="" target="_parent" class="ui-btn ui-btn-mcs">
+      <li><a href="#">
+        <img src="../_assets/img/firefox_os.png" class="ui-li-thumb">
         <h2>Schools & Universities</h2>
+        <p>ZTE to launch Firefox OS smartphone at MWC</p>
       </a></li>
 
-      <li><a href="<%= fuels_path %>?filter1=now" target="_parent" class="ui-btn ui-btn-mcs">
+      <li><a href="<%= fuels_path %>?filter1=now" target="_parent">
+        <img src="../_assets/img/tizen.png" class="ui-li-thumb">
         <h2>Fuel Stations</h2>
+        <p>First Samsung phones with Tizen can be expected in 2013</p>
       </a></li>
 
-      <li><a href="<%= parks_path %>?filter1=now" target="_parent" class="ui-btn ui-btn-mcs">
-        <h2>Parks - Garages &<br>Taxi Services</h2>
+      <li><a href="<%= parks_path %>?filter1=now" target="_parent">
+        <img src="../_assets/img/tizen.png" class="ui-li-thumb">
+        <h2>Parks - Garages & Taxi Services</h2>
+        <p>First Samsung phones with Tizen can be expected in 2013</p>
       </a></li>
 
     </ul>
+  </div>
+
 </div>
