@@ -49,6 +49,7 @@
             height: auto; /* To keep aspect ratio. */
             max-width: 100%;
             max-height: none;
+            #display: none;
         }
 
         /* Make all list items and anchors inherit the border-radius from the UL. */
@@ -68,6 +69,14 @@
             left: 0;
             right: 0;
         }
+
+        /*.my-page .ui-listview li .ui-btn h2 {
+            color: #000;
+        }
+
+        .my-page .ui-listview li .ui-btn p {
+            color: #000;
+        }*/
 
         /* Text position */
         .my-page .ui-listview h2 {
@@ -89,7 +98,7 @@
         .ui-listview .ui-li-has-thumb h2,
         .ui-listview .ui-li-has-thumb p {
             background: #111;
-            background: rgba(0,0,0,.8);
+            background: rgba(0, 0, 0, 0.6);
         }
 
         .ui-listview .ui-li-has-thumb h2 {
@@ -125,6 +134,27 @@
         }
     }
 
+    /* Second breakpoint is 63.75em (1020px). 4 column layout. Tiles will be 250x250 pixels incl. margin again at the breakpoint. */
+    @media ( min-width: 63.75em ) {
+        .my-page .ui-content {
+            padding: .625em; /* 10px */
+        }
+        /* Set a max-width for the last breakpoint to prevent too much stretching on large screens.
+        By setting the max-width equal to the breakpoint width minus padding we keep square tiles. */
+        .my-page .ui-listview {
+            max-width: 1100px; /* 1000px */
+            margin: 0 auto;
+            margin-top: 80px;
+        }
+        /* Because of the 1000px max-width the width will always be 230px (and margin left/right 10px),
+        but we stick to percentage values for demo purposes. */
+        .my-page .ui-listview li {
+            width: 23%;
+            height: 230px;
+            margin: .625em 1%;
+        }
+    }
+
 </style>
 
 <div data-role="header">
@@ -142,57 +172,57 @@
     <ul data-role="listview" data-inset="true">
 
       <li><a href="<%= pharms_path %>?filter1=now" target="_parent">
-        <img src="http://www.libertas.sm/files/2014/08/immagini_contenuti/96385/farmacia-croce-verde.jpg" class="ui-li-thumb">
+        <img src="/assets/icon_btn/farmacia.png" class="ui-li-thumb">
         <h2>Pharms</h2>
-        <p>Pharmacies blablabla</p>
+        <p></p>
       </a></li>
 
       <li><a href="<%= hospitals_path %>?filter1=now" target="_parent">
-        <img src="http://icons.iconarchive.com/icons/icons8/windows-8/512/City-Hospital-icon.png" class="ui-li-thumb">
-        <h2>Hospitals & Medical Guards</h2>
-        <p>BlackBerry launched the Z10 and Q10 with the new BB10 OS</p>
-      </a></li>
-
-      <li><a href="#">
-        <img src="http://icons.iconarchive.com/icons/iconlicious/misc/512/Credit-Card-icon.png" class="ui-li-thumb">
-        <h2>Financial Services & City - Regional Stores</h2>
-        <p>Nokia rolls out WP 7.8 to Lumia 800</p>
-      </a></li>
-
-      <li><a href="<%= restaurants_path %>?filter1=now" target="_parent">
-        <img src="../_assets/img/galaxy_express.png" class="ui-li-thumb">
-        <h2>Restaurants & Café</h2>
-        <p>Restaurants & Café</p>
-      </a></li>
-
-      <li><a href="#">
-        <img src="/assets/icon_btn/hotel.png" class="ui-li-thumb">
-        <h2>Bed and Breakfast & Hotels</h2>
+        <img src="/assets/icon_btn/hospital.png" class="ui-li-thumb">
+        <h2>Hospitals</h2>
         <p></p>
       </a></li>
 
       <li><a href="#">
-        <img src="../_assets/img/nexus_7.png" class="ui-li-thumb">
-        <h2>Cinema & Theaters</h2>
-        <p>Rumours about new full HD Nexus 7</p>
+        <img src="/assets/icon_btn/financial.png" class="ui-li-thumb">
+        <h2>Banks & Stores</h2>
+        <p></p>
+      </a></li>
+
+      <li><a href="<%= restaurants_path %>?filter1=now" target="_parent">
+        <img src="/assets/icon_btn/restaurant.png" class="ui-li-thumb">
+        <h2>Restaurants & Café</h2>
+        <p></p>
       </a></li>
 
       <li><a href="#">
-        <img src="../_assets/img/firefox_os.png" class="ui-li-thumb">
+        <img src="/assets/icon_btn/hotel.png" class="ui-li-thumb">
+        <h2>B&B - Hotels</h2>
+        <p></p>
+      </a></li>
+
+      <!-- <li><a href="#">
+        <img src="/assets/icon_btn/hospital.png" class="ui-li-thumb">
+        <h2>Cinema & Theaters</h2>
+        <p></p>
+      </a></li> -->
+
+      <li><a href="#">
+        <img src="/assets/icon_btn/school.png" class="ui-li-thumb">
         <h2>Schools & Universities</h2>
-        <p>ZTE to launch Firefox OS smartphone at MWC</p>
+        <p></p>
       </a></li>
 
       <li><a href="<%= fuels_path %>?filter1=now" target="_parent">
-        <img src="../_assets/img/tizen.png" class="ui-li-thumb">
+        <img src="/assets/icon_btn/fuel.png" class="ui-li-thumb">
         <h2>Fuel Stations</h2>
-        <p>First Samsung phones with Tizen can be expected in 2013</p>
+        <p></p>
       </a></li>
 
       <li><a href="<%= parks_path %>?filter1=now" target="_parent">
-        <img src="../_assets/img/tizen.png" class="ui-li-thumb">
-        <h2>Parks - Garages & Taxi Services</h2>
-        <p>First Samsung phones with Tizen can be expected in 2013</p>
+        <img src="/assets/icon_btn/parks.png" class="ui-li-thumb">
+        <h2>Parks-Garages & Taxi</h2>
+        <p></p>
       </a></li>
 
     </ul>
