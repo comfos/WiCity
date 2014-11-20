@@ -247,20 +247,23 @@
     </div>
   </fieldset >
 
-  <div class="ui-grid-d ui-corner-all">
+  <div class="ui-grid-a ui-corner-all">
     <div class="ui-block-a">
       <div class="ui-bar ui-bar-a"><input id='datepicker' placeholder='Date' style="height: 43px"/></div>
     </div>
     <div class="ui-block-b">
-      <div class="ui-bar ui-bar-a"><a id="filtersunday" class="ui-corner-all ui-btn" type="button" onclick="getDomenicali();">Sunday</a></div>
+      <div class="ui-bar ui-bar-a"><input id="timeh" type="text" style="height: 43px"></div>
     </div>
-    <div class="ui-block-c">
-      <div class="ui-bar ui-bar-b"><input id="timeh" type="text" style="height: 43px"></div>
+  </div>
+
+  <div class="ui-grid-b ui-corner-all">
+    <div class="ui-block-a">
+      <div class="ui-bar ui-bar-b"><a id="filtersunday" class="ui-corner-all ui-btn ui-btn-active" type="button" onclick="getDomenicali();">Sunday</a></div>
     </div>
-    <div class="ui-block-d">
+    <div class="ui-block-b">
       <div class="ui-bar ui-bar-b"><a id="filternow" class="ui-corner-all ui-btn ui-btn-active" type="button" onclick="setNow();">Now</a></div>
     </div>
-    <div class="ui-block-e">
+    <div class="ui-block-c">
       <div class="ui-bar ui-bar-b"><a id="filternotturne" class="ui-corner-all ui-btn ui-btn-active" type="button" onclick="getNotturne();">Night</a></div>
     </div>
   </div>
