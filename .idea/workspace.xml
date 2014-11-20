@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Alfio\RubymineProjects\WiCity\app\assets\images\icon_btn\park.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/intloc.html.erb" afterPath="$PROJECT_DIR$/app/views/home/intloc.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WiCity.iws" />
@@ -37,7 +34,7 @@
       <file leaf-file-name="intloc.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="207" column="15" selection-start="6573" selection-end="6573" vertical-scroll-proportion="0.7172557" vertical-offset="3174" max-vertical-offset="4012">
+            <state line="207" column="15" selection-start="6573" selection-end="6573" vertical-scroll-proportion="1.035343" vertical-offset="3021" max-vertical-offset="4012">
               <folding />
             </state>
           </provider>
@@ -300,6 +297,54 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WiCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WiCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WiCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WiCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="icon_btn" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1460,7 +1505,11 @@
       <created>1416499278963</created>
       <updated>1416499278964</updated>
     </task>
-    <option name="localTasksCounter" value="222" />
+    <task id="LOCAL-00222" summary="UPDATE mcs&#10;">
+      <created>1416499597400</created>
+      <updated>1416499597401</updated>
+    </task>
+    <option name="localTasksCounter" value="223" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1551,11 +1600,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/hospitals/_form_edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="276" column="18" selection-start="10261" selection-end="10261" vertical-scroll-proportion="-3.8461537" vertical-offset="4492" max-vertical-offset="9979" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/parks_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="17" selection-start="230" selection-end="331" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1513" />
@@ -1866,9 +1910,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/icon_btn/hospital.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="207" column="15" selection-start="6573" selection-end="6573" vertical-scroll-proportion="0.7172557" vertical-offset="3174" max-vertical-offset="4012">
+        <state line="207" column="15" selection-start="6573" selection-end="6573" vertical-scroll-proportion="1.035343" vertical-offset="3021" max-vertical-offset="4012">
           <folding />
         </state>
       </provider>
