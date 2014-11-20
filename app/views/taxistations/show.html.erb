@@ -79,8 +79,8 @@
     function initialize() {
         if(mypos == 0) {
           <% if user_signed_in? %>
-            if("<%= current_user.prefadd %>" == "downtown") {
-                codeAdd("<%= current_user.downtown %>");
+            if("<%= current_user.prefadd %>" == "away") {
+                codeAdd("<%= current_user.away %>");
             }
             else if("<%= current_user.prefadd %>" == "home") {
                 codeAdd("<%= current_user.home %>");

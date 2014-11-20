@@ -11,7 +11,7 @@
         $( '#datepicker' ).datepicker( { dateFormat: "dd/mm/yy" } );
         $( '#datepicker').val( $.datepicker.formatDate( "dd/mm/yy", new Date( $.datepicker.parseDate( "yy-mm-dd", "<%= current_user.born %>" ) ) ) );
 
-        var input = (document.getElementById('user_downtown'));
+        var input = (document.getElementById('user_away'));
         var autocomplete = new google.maps.places.Autocomplete(input);
 
         var input1 = (document.getElementById('user_home'));
@@ -63,15 +63,6 @@
           <p>
           <div class="ui-grid-b ui-corner-all">
             <div class="ui-block-a" style="width: 20%">
-              <div class="ui-bar ui-bar-a" style="height:53px;">Downtown</div>
-            </div>
-            <div class="ui-block-b" style="width: 70%">
-              <div class="ui-bar ui-bar-a" style="height:53px;"><%= f.text_field :downtown %></div>
-            </div>
-            <div class="ui-block-c" style="width: 10%">
-              <div class="ui-bar ui-bar-a" style="height:53px;"><label style="height: 16px"><%= f.radio_button(:prefadd, "downtown") %></label></div>
-            </div>
-            <div class="ui-block-a" style="width: 20%">
               <div class="ui-bar ui-bar-a" style="height:53px">Home</div>
             </div>
             <div class="ui-block-b" style="width: 70%">
@@ -80,6 +71,7 @@
             <div class="ui-block-c" style="width: 10%">
               <div class="ui-bar ui-bar-a" style="height:53px"><label style="height: 16px"><%= f.radio_button(:prefadd, "home") %></label></div>
             </div>
+
             <div class="ui-block-a" style="width: 20%">
               <div class="ui-bar ui-bar-a" style="height:53px">Office</div>
             </div>
@@ -88,6 +80,16 @@
             </div>
             <div class="ui-block-c" style="width: 10%">
               <div class="ui-bar ui-bar-a" style="height:53px"><label style="height: 16px"><%= f.radio_button(:prefadd, "office") %></label></div>
+            </div>
+
+            <div class="ui-block-a" style="width: 20%">
+              <div class="ui-bar ui-bar-a" style="height:53px;">Away</div>
+            </div>
+            <div class="ui-block-b" style="width: 70%">
+              <div class="ui-bar ui-bar-a" style="height:53px;"><%= f.text_field :away %></div>
+            </div>
+            <div class="ui-block-c" style="width: 10%">
+              <div class="ui-bar ui-bar-a" style="height:53px;"><label style="height: 16px"><%= f.radio_button(:prefadd, "away") %></label></div>
             </div>
             <div class="ui-block-a" style="width: 20%">
               <div class="ui-bar ui-bar-a" style="height:53px">Other</div>

@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20141107114052) do
 
-  create_table "fist_aids", force: true do |t|
+  create_table "first_aids", force: true do |t|
     t.string   "name"
     t.string   "address"
     t.string   "lat"
@@ -194,7 +194,7 @@ ActiveRecord::Schema.define(version: 20141107114052) do
     t.string   "name"
     t.string   "surname"
     t.date     "born"
-    t.string   "downtown",               default: "0"
+    t.string   "away",                   default: "0"
     t.string   "home",                   default: "0"
     t.string   "office",                 default: "0"
     t.string   "other",                  default: "0"
