@@ -4,6 +4,9 @@ class CavesController < ApplicationController
   # GET /caves
   # GET /caves.json
   def index
+    @today = Time.now.strftime("%u")  # => lun = 1, mar = 2, mer = 3
+    @t = Time.now
+
     @caves = Cafe.all
   end
 
