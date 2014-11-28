@@ -7,6 +7,30 @@
 
 <script>
 
+    function getrestaurant() {
+        var type = "<%= params[:type] %>";
+        if(type != 'restaurant') {
+            var http = location.href.replace('&type=cafe', '');
+            location.href = http+'&type=restaurant';
+        }
+        else {
+            var http = location.href.replace('&type=restaurant', '');
+            location.href = http;
+        }
+    }
+
+    function getcafe() {
+        var type = "<%= params[:type] %>";
+        if(type != 'cafe') {
+            var http = location.href.replace('&type=restaurant', '');
+            location.href = http+'&type=cafe';
+        }
+        else {
+            var http = location.href.replace('&type=cafe', '');
+            location.href = http;
+        }
+    }
+
     function getAll() {
         var currentDate = $( "#datepicker" ).datepicker( "getDate" );
         var currentTime = $( "#timeh" ).val();
@@ -135,6 +159,18 @@
         $( "#filtersunday" ).css("border-width", "2px");
         <% end %>
 
+        <% if params[:type] == 'restaurant' %>
+        $( "#restaurant" ).css("height", "18px");
+        $( "#restaurant" ).css("border-color", "red");
+        $( "#restaurant" ).css("border-width", "2px");
+        <% end %>
+
+        <% if params[:type] == 'cafe' %>
+        $( "#cafe" ).css("height", "18px");
+        $( "#cafe" ).css("border-color", "red");
+        $( "#cafe" ).css("border-width", "2px");
+        <% end %>
+
 
         $( '#datepicker' ).datepicker( { dateFormat: "dd/mm/yy" } );
         $( "#datepicker" ).datepicker( "setDate", new Date("<%= @t %>") );
@@ -158,16 +194,25 @@
 
 
 <div data-role="header" data-theme="b">
-  <h1>Restaurants</h1>
+  <h1>Restaurants & Café</h1>
   <div id="custom-border-radius" class="ui-btn-left" data-role="controlgroup" data-type="horizontal" data-mini="true">
     <%= link_to 'Back', 'intloc', 'data-icon' => 'back', 'data-role' => 'button', 'data-iconpos' => 'notext' %>
     <%= link_to 'Home', root_url, 'data-icon' => 'home', 'data-role' => 'button', 'data-iconpos' => 'notext', :target => '_parent' %>
   </div>
-  <%= link_to 'Add', new_restaurant_path, 'data-iconpos' => 'notext', 'data-icon' => 'plus', 'class' => 'ui-btn-right', :target => '_parent' %>
+  <a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-right ui-icon-plus ui-btn-icon-notext">Add</a>
 </div>
 
 
 <div data-role="content">
+
+  <fieldset class="ui-grid-a ui-corner-all">
+    <div class="ui-block-a">
+      <a class="ui-corner-all ui-btn" id="restaurant" type="button" onclick="getrestaurant();">Restaurants</a>
+    </div>
+    <div class="ui-block-b">
+      <a class="ui-corner-all ui-btn" id="cafe" type="button" onclick="getcafe();">Café</a>
+    </div>
+  </fieldset >
 
   <fieldset class="ui-grid-a ui-corner-all">
     <div class="ui-block-a">
@@ -326,5 +371,25 @@
                     end     %>
 
     <% end %>
+
+    <% if !@caves.nil? && ( ( params[:type] != '' && params[:type] == 'cafe' ) || params[:type] == nil )
+         @caves.each do |cafe| %>
+            <li>
+              <a href="<%= "#{caves_url}/#{cafe.id}?time="+@t.to_s %>" target="_parent">
+                <img src="/assets/icon/cafe.png">
+                <h2><%= cafe.name %></h2>
+                <p><%= cafe.address %></p>
+                <%= link_to 'Edit', edit_cafe_path(cafe), 'data-icon' => 'edit', :target => '_parent' %>
+              </a>
+            </li>
+        <%     end
+               end %>
   </ul>
+</div>
+
+<div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="b" style="max-width:400px;">
+  <div role="main" class="ui-content">
+    <%= link_to 'Restaurants', new_restaurant_path, 'class' => 'ui-btn', :target => '_parent' %>
+    <%= link_to 'Café', new_cafe_path, 'class' => 'ui-btn', :target => '_parent' %>
+  </div>
 </div>

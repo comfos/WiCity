@@ -7,7 +7,10 @@ class RestaurantsController < ApplicationController
     @today = Time.now.strftime("%u")  # => lun = 1, mar = 2, mer = 3
     @t = Time.now
 
+    @type = 'all'
+
     @restaurants = Restaurant.all
+    @caves = Cafe.all
   end
 
   # GET /restaurants/1
