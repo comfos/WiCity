@@ -1,5 +1,7 @@
 WiCity::Application.routes.draw do
 
+  resources :schools
+
   resources :caves
 
   devise_for :users

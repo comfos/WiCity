@@ -2,7 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/caves_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/caves_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20141204132610_create_schools.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/schools/_form.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/schools/_form_edit.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/schools/_form_new.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/schools/edit.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/schools/index.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/schools/index.json.jbuilder" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/schools/new.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/school.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/schools.css.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/schools.js.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/schools_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/schools_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/schools/show.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/schools/show.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/runConfigurations/Development__WiCity.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Development__WiCity.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/WiCity.iml" afterPath="$PROJECT_DIR$/.idea/WiCity.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/intloc.html.erb" afterPath="$PROJECT_DIR$/app/views/home/intloc.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WiCity.iws" />
@@ -15,10 +35,10 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/WiCity@Development__WiCity.coverage" NAME="Development: WiCity Coverage Results" MODIFIED="1417179690588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
+    <SUITE FILE_PATH="coverage/WiCity@Development__WiCity.coverage" NAME="Development: WiCity Coverage Results" MODIFIED="1417700273388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
     <SUITE FILE_PATH="coverage/WiCity@db_create_all__WiCity.coverage" NAME="db:create:all: WiCity Coverage Results" MODIFIED="1415187772915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
     <SUITE FILE_PATH="coverage/WiCity@Rails_console__WiCity.coverage" NAME="Rails console: WiCity Coverage Results" MODIFIED="1388859434959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
-    <SUITE FILE_PATH="coverage/WiCity@db_migrate__WiCity.coverage" NAME="db:migrate: WiCity Coverage Results" MODIFIED="1417179894911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
+    <SUITE FILE_PATH="coverage/WiCity@db_migrate__WiCity.coverage" NAME="db:migrate: WiCity Coverage Results" MODIFIED="1417708203892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -32,228 +52,94 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/restaurants/index.html.erb">
+      <file leaf-file-name="_form_edit.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/schools/_form_edit.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="392" column="37" selection-start="18310" selection-end="18310" vertical-scroll-proportion="-78.27161" vertical-offset="324" max-vertical-offset="6800">
+            <state line="68" column="43" selection-start="2356" selection-end="2356" vertical-scroll-proportion="-8.961538" vertical-offset="923" max-vertical-offset="1700">
               <folding>
-                <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#4;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form_edit.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/caves/_form_edit.html.erb">
+      <file leaf-file-name="20141204132610_create_schools.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20141204132610_create_schools.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="16" selection-start="355" selection-end="359" vertical-scroll-proportion="-1.8641975" vertical-offset="2" max-vertical-offset="9979">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#1;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#1;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#2;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#2;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#4;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#4;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#4;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#5;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#5;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#5;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#6;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#6;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#7;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#7;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#7;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#8;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#8;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#8;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#9;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#9;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#9;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#9;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#10;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#10;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#10;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#11;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#11;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#11;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#12;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#12;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#12;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#12;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#13;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#13;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#13;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#14;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#14;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#14;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#15;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#15;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#15;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#15;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#16;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#16;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#16;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#17;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#17;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#17;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#18;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#18;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#18;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#18;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#19;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#19;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#19;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#20;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#20;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#20;n#div#4;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="8" column="19" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="schema.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/schema.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="199" column="19" selection-start="7837" selection-end="7837" vertical-scroll-proportion="0.0" vertical-offset="3043" max-vertical-offset="4216">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="schools_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/schools_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="0" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.0" vertical-offset="740" max-vertical-offset="1360">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="_form_new.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/caves/_form_new.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/schools/_form_new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="16" selection-start="917" selection-end="921" vertical-scroll-proportion="-1.7777778" vertical-offset="366" max-vertical-offset="7140">
+            <state line="83" column="92" selection-start="2740" selection-end="2740" vertical-scroll-proportion="-29.846153" vertical-offset="635" max-vertical-offset="2244">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#6;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#6;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#9;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#9;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#9;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#9;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#12;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#12;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#12;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#12;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#15;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#15;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#15;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#15;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#18;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#18;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#18;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#18;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#5;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/restaurants/new.html.erb">
+      <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="0" selection-end="227" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="204">
+            <state line="54" column="83" selection-start="1935" selection-end="1935" vertical-scroll-proportion="0.3654224" vertical-offset="732" max-vertical-offset="1581">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/schools/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="270" column="56" selection-start="9303" selection-end="9350" vertical-scroll-proportion="-15.5" vertical-offset="4187" max-vertical-offset="4811">
               <folding>
-                <marker date="1415195965938" expanded="true" signature="38:199" placeholder="..." />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/caves/new.html.erb">
+      <file leaf-file-name="index.json.jbuilder" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/schools/index.json.jbuilder">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="0" selection-end="221" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="204">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/caves/edit.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="15" selection-start="55" selection-end="55" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="204">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/restaurants/edit.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="340" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="204">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="caves_controller.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/caves_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="21" selection-start="270" selection-end="270" vertical-scroll-proportion="0.29882812" vertical-offset="0" max-vertical-offset="1411">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="first_aids_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/first_aids_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="180" selection-end="298" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1411">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/hospitals/index.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/schools/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="381" column="0" selection-start="17916" selection-end="18265" vertical-scroll-proportion="-11.461538" vertical-offset="6560" max-vertical-offset="7056">
-              <folding>
-                <marker date="1416481805620" expanded="true" signature="5672:5834" placeholder="if ... end" />
-                <marker date="1416481805620" expanded="true" signature="5883:6165" placeholder="if ... end" />
-                <marker date="1416481805620" expanded="true" signature="6181:6384" placeholder="if ... end" />
-                <marker date="1416481805620" expanded="true" signature="6400:6623" placeholder="if ... end" />
-                <marker date="1416481805620" expanded="true" signature="6639:6845" placeholder="if ... end" />
-                <marker date="1416481805620" expanded="true" signature="7079:7285" placeholder="if ... end" />
-                <marker date="1416481805620" expanded="true" signature="7288:18265" placeholder="if ... end" />
-                <marker date="1416481805620" expanded="true" signature="10239:15607" placeholder=" ... end" />
-                <marker date="1416481805620" expanded="true" signature="10247:11001" placeholder="if ... end" />
-                <marker date="1416481805620" expanded="true" signature="10307:10990" placeholder="if ... end" />
-                <marker date="1416481805620" expanded="true" signature="11009:11765" placeholder="if ... end" />
-                <marker date="1416481805620" expanded="true" signature="11071:11754" placeholder="if ... end" />
-                <marker date="1416481805620" expanded="true" signature="11773:12541" placeholder="if ... end" />
-                <marker date="1416481805620" expanded="true" signature="11839:12530" placeholder="if ... end" />
-                <marker date="1416481805620" expanded="true" signature="12549:13305" placeholder="if ... end" />
-                <marker date="1416481805620" expanded="true" signature="12611:13294" placeholder="if ... end" />
-                <marker date="1416481805620" expanded="true" signature="13313:14069" placeholder="if ... end" />
-                <marker date="1416481805620" expanded="true" signature="13375:14058" placeholder="if ... end" />
-                <marker date="1416481805620" expanded="true" signature="14077:14831" placeholder="if ... end" />
-                <marker date="1416481805620" expanded="true" signature="14137:14820" placeholder="if ... end" />
-                <marker date="1416481805620" expanded="true" signature="14839:15598" placeholder="if ... end" />
-                <marker date="1416481805620" expanded="true" signature="14904:15587" placeholder="if ... end" />
-                <marker date="1416481805620" expanded="true" signature="15686:17277" placeholder="if ... end" />
-                <marker date="1416481805620" expanded="true" signature="15924:16371" placeholder="if ... end" />
-                <marker date="1416481805620" expanded="true" signature="16679:17208" placeholder="if ... end" />
-                <marker date="1416481805620" expanded="true" signature="17289:17896" placeholder="if ... end" />
-              </folding>
+            <state line="54" column="52" selection-start="2205" selection-end="2205" vertical-scroll-proportion="-18.76923" vertical-offset="430" max-vertical-offset="1173">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -284,14 +170,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/restaurants/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/restaurants/_form_new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/restaurants/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/restaurants/_form_edit.html.erb" />
-        <option value="$PROJECT_DIR$/db/migrate/20141107105729_create_hospitals.rb" />
-        <option value="$PROJECT_DIR$/app/views/hospitals/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/hospitals/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/hospitals/_form_new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/hospitals/_form_edit.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/fist_aids_controller.rb" />
@@ -307,14 +185,12 @@
         <option value="$PROJECT_DIR$/app/views/first_aids/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/dynamiclayout.js" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/COPIAindex.html.erb" />
         <option value="$PROJECT_DIR$/app/views/pharms/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/fuels/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/parks/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" />
-        <option value="$PROJECT_DIR$/db/schema.rb" />
         <option value="$PROJECT_DIR$/app/views/restaurants/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/hospitals/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/first_aids/show.html.erb" />
@@ -324,7 +200,6 @@
         <option value="$PROJECT_DIR$/app/views/parks/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/fuels/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/home/intloc.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/nearserv.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20141128124019_create_caves.rb" />
         <option value="$PROJECT_DIR$/app/controllers/restaurants_controller.rb" />
@@ -335,6 +210,17 @@
         <option value="$PROJECT_DIR$/app/views/caves/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/caves/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/caves_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/home/intloc.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/schools/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/schools/edit.html.erb" />
+        <option value="$PROJECT_DIR$/db/migrate/20141204132608_create_schools.rb" />
+        <option value="$PROJECT_DIR$/db/schema.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/schools_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/schools/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/schools/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/schools/_form_edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/schools/_form_new.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       </list>
     </option>
   </component>
@@ -426,6 +312,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WiCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WiCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WiCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WiCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -452,7 +370,51 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="restaurants" />
+              <option name="myItemId" value="schools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WiCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WiCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WiCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WiCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="devise" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -528,11 +490,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Alfio\RubymineProjects\WiCity\app\views\schools" />
       <recent name="C:\Users\Alfio\RubymineProjects\WiCity\app\views\caves" />
       <recent name="C:\Users\Alfio\RubymineProjects\WiCity\app\views\home" />
       <recent name="C:\Users\Alfio\RubymineProjects\WiCity\app\views\first_aids" />
       <recent name="C:\Users\Alfio\RubymineProjects\WiCity\app\views\hospitals" />
-      <recent name="C:\Users\Alfio\RubymineProjects\WiCity\app\views\restaurants" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Alfio\RubymineProjects\WiCity\app\assets\images\icon" />
@@ -543,6 +505,25 @@
     </key>
   </component>
   <component name="RunManager" selected="Rake.db:migrate: WiCity">
+    <configuration default="false" name="Rails console: WiCity" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
+      <module name="WiCity" />
+      <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <IRB_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <IRB_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <IRB_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <IRB_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <IRB_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/bin/rails" />
+      <IRB_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="console" />
+      <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="true" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
     <configuration default="false" name="db:create:all: WiCity" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="WiCity" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -574,7 +555,7 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <envs>
         <env name="RAILS_ENV" value="development" />
-        <env name="VERSION" value="20141128124025" />
+        <env name="VERSION" value="20141204132610" />
       </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
@@ -586,25 +567,6 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Rails console: WiCity" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
-      <module name="WiCity" />
-      <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <IRB_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$" />
-      <IRB_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
-      <IRB_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
-      <IRB_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
-      <envs />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <IRB_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/bin/rails" />
-      <IRB_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="console" />
-      <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="true" />
       <RunnerSettings RunnerId="RubyRunner" />
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
@@ -738,13 +700,13 @@
       <method />
     </configuration>
     <list size="7">
-      <item index="0" class="java.lang.String" itemvalue="Rails.Production: WiCity" />
-      <item index="1" class="java.lang.String" itemvalue="Rails.Development: WiCity" />
-      <item index="2" class="java.lang.String" itemvalue="Rake.test: WiCity" />
-      <item index="3" class="java.lang.String" itemvalue="Rake.spec: WiCity" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.db:create:all: WiCity" />
-      <item index="5" class="java.lang.String" itemvalue="Rake.db:migrate: WiCity" />
-      <item index="6" class="java.lang.String" itemvalue="IRB console.Rails console: WiCity" />
+      <item index="0" class="java.lang.String" itemvalue="IRB console.Rails console: WiCity" />
+      <item index="1" class="java.lang.String" itemvalue="Rails.Production: WiCity" />
+      <item index="2" class="java.lang.String" itemvalue="Rails.Development: WiCity" />
+      <item index="3" class="java.lang.String" itemvalue="Rake.test: WiCity" />
+      <item index="4" class="java.lang.String" itemvalue="Rake.spec: WiCity" />
+      <item index="5" class="java.lang.String" itemvalue="Rake.db:create:all: WiCity" />
+      <item index="6" class="java.lang.String" itemvalue="Rake.db:migrate: WiCity" />
     </list>
     <recent_temporary>
       <list size="3">
@@ -1714,7 +1676,11 @@
       <created>1417181561721</created>
       <updated>1417181561722</updated>
     </task>
-    <option name="localTasksCounter" value="235" />
+    <task id="LOCAL-00235" summary="ADD Café&#10;">
+      <created>1417183965762</created>
+      <updated>1417183965762</updated>
+    </task>
+    <option name="localTasksCounter" value="236" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1745,14 +1711,14 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32038835" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32365146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3231623" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1970475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4563107" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22468793" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17475729" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3259362" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1774,7 +1740,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="ADD DB Pharms&#10;" />
     <MESSAGE value="UPDATE DB Fuels&#10;" />
     <MESSAGE value="UPDATE Fuels&#10;" />
     <MESSAGE value="UPDATE NearestService" />
@@ -1799,93 +1764,13 @@
     <MESSAGE value="UPDATE change downtown to away" />
     <MESSAGE value="UPDATE mcs&#10;" />
     <MESSAGE value="ADD Café" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD Café" />
+    <MESSAGE value="ADD Café&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD Café&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/taxistations/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="422" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/taxistations/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="422" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/taxistations_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1445" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/first_aids/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="36" selection-start="87" selection-end="101" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="204" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="3" selection-start="545" selection-end="545" vertical-scroll-proportion="0.46153846" vertical-offset="0" max-vertical-offset="442" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/first_aids/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="36" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="204" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="10" selection-start="1460" selection-end="1460" vertical-scroll-proportion="-23.538462" vertical-offset="0" max-vertical-offset="1581" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="23" selection-start="213" selection-end="213" vertical-scroll-proportion="0.2514793" vertical-offset="0" max-vertical-offset="1394">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/BKintloc.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="36" selection-start="652" selection-end="680" vertical-scroll-proportion="-0.0" vertical-offset="289" max-vertical-offset="2380" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/BKindex.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="165" column="0" selection-start="6275" selection-end="7905" vertical-scroll-proportion="-15.153846" vertical-offset="2411" max-vertical-offset="3417" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="180" column="0" selection-start="7669" selection-end="8622" vertical-scroll-proportion="-2.0" vertical-offset="3008" max-vertical-offset="5695">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/parks/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="268" column="8" selection-start="11122" selection-end="11122" vertical-scroll-proportion="-17.653847" vertical-offset="4097" max-vertical-offset="7327">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="1.9615384" vertical-offset="51" max-vertical-offset="578" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/unlocks/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="512" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/devise/shared/_links.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527" />
@@ -1920,11 +1805,6 @@
         <state line="14" column="43" selection-start="569" selection-end="569" vertical-scroll-proportion="0.34244603" vertical-offset="0" max-vertical-offset="695" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="55" selection-start="619" selection-end="623" vertical-scroll-proportion="-7.423077" vertical-offset="28" max-vertical-offset="2465" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/fuels/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="185" column="37" selection-start="7913" selection-end="7913" vertical-scroll-proportion="-7.1923075" vertical-offset="2958" max-vertical-offset="5695">
@@ -1934,7 +1814,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/first_aids/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="46" selection-start="2416" selection-end="2416" vertical-scroll-proportion="0.35222673" vertical-offset="1220" max-vertical-offset="6256" />
+        <state line="82" column="46" selection-start="2416" selection-end="2416" vertical-scroll-proportion="0.35222673" vertical-offset="1220" max-vertical-offset="6256">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/intlocOK.html.erb">
@@ -1959,13 +1841,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/radiotaxis/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="127" column="47" selection-start="4091" selection-end="4091" vertical-scroll-proportion="0.0" vertical-offset="2284" max-vertical-offset="6341">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="52" selection-start="4193" selection-end="4193" vertical-scroll-proportion="0.0" vertical-offset="2080" max-vertical-offset="6256">
           <folding />
         </state>
       </provider>
@@ -1998,13 +1873,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="25" selection-start="4842" selection-end="4842" vertical-scroll-proportion="-16.884615" vertical-offset="2043" max-vertical-offset="4012">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/cafe.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="31" selection-start="31" selection-end="31" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136">
@@ -2022,20 +1890,6 @@
     <entry file="file://$PROJECT_DIR$/db/migrate/20141107105729_create_hospitals.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="18" selection-start="779" selection-end="805" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="219" column="40" selection-start="8102" selection-end="8102" vertical-scroll-proportion="5.811215" vertical-offset="614" max-vertical-offset="4012">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20141128124025_create_caves.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="42" selection-start="690" selection-end="690" vertical-scroll-proportion="0.5719626" vertical-offset="0" max-vertical-offset="544">
           <folding />
         </state>
       </provider>
@@ -2058,32 +1912,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="381" column="0" selection-start="17916" selection-end="18265" vertical-scroll-proportion="-11.461538" vertical-offset="6560" max-vertical-offset="7056">
           <folding>
-            <marker date="1416481805620" expanded="true" signature="5672:5834" placeholder="if ... end" />
-            <marker date="1416481805620" expanded="true" signature="5883:6165" placeholder="if ... end" />
-            <marker date="1416481805620" expanded="true" signature="6181:6384" placeholder="if ... end" />
-            <marker date="1416481805620" expanded="true" signature="6400:6623" placeholder="if ... end" />
-            <marker date="1416481805620" expanded="true" signature="6639:6845" placeholder="if ... end" />
-            <marker date="1416481805620" expanded="true" signature="7079:7285" placeholder="if ... end" />
-            <marker date="1416481805620" expanded="true" signature="7288:18265" placeholder="if ... end" />
-            <marker date="1416481805620" expanded="true" signature="10239:15607" placeholder=" ... end" />
-            <marker date="1416481805620" expanded="true" signature="10247:11001" placeholder="if ... end" />
-            <marker date="1416481805620" expanded="true" signature="10307:10990" placeholder="if ... end" />
-            <marker date="1416481805620" expanded="true" signature="11009:11765" placeholder="if ... end" />
-            <marker date="1416481805620" expanded="true" signature="11071:11754" placeholder="if ... end" />
-            <marker date="1416481805620" expanded="true" signature="11773:12541" placeholder="if ... end" />
-            <marker date="1416481805620" expanded="true" signature="11839:12530" placeholder="if ... end" />
-            <marker date="1416481805620" expanded="true" signature="12549:13305" placeholder="if ... end" />
-            <marker date="1416481805620" expanded="true" signature="12611:13294" placeholder="if ... end" />
-            <marker date="1416481805620" expanded="true" signature="13313:14069" placeholder="if ... end" />
-            <marker date="1416481805620" expanded="true" signature="13375:14058" placeholder="if ... end" />
-            <marker date="1416481805620" expanded="true" signature="14077:14831" placeholder="if ... end" />
-            <marker date="1416481805620" expanded="true" signature="14137:14820" placeholder="if ... end" />
-            <marker date="1416481805620" expanded="true" signature="14839:15598" placeholder="if ... end" />
-            <marker date="1416481805620" expanded="true" signature="14904:15587" placeholder="if ... end" />
-            <marker date="1416481805620" expanded="true" signature="15686:17277" placeholder="if ... end" />
-            <marker date="1416481805620" expanded="true" signature="15924:16371" placeholder="if ... end" />
-            <marker date="1416481805620" expanded="true" signature="16679:17208" placeholder="if ... end" />
-            <marker date="1416481805620" expanded="true" signature="17289:17896" placeholder="if ... end" />
+            <marker date="1416481805620" expanded="true" signature="-1:-1" placeholder="if ... end" />
+            <marker date="1416481805620" expanded="true" signature="-1:-1" placeholder="if ... end" />
+            <marker date="1416481805620" expanded="true" signature="-1:-1" placeholder="if ... end" />
+            <marker date="1416481805620" expanded="true" signature="-1:-1" placeholder="if ... end" />
+            <marker date="1416481805620" expanded="true" signature="-1:-1" placeholder="if ... end" />
+            <marker date="1416481805620" expanded="true" signature="-1:-1" placeholder="if ... end" />
+            <marker date="1416481805620" expanded="true" signature="-1:-1" placeholder="if ... end" />
+            <marker date="1416481805620" expanded="true" signature="-1:-1" placeholder=" ... end" />
+            <marker date="1416481805620" expanded="true" signature="-1:-1" placeholder="if ... end" />
+            <marker date="1416481805620" expanded="true" signature="-1:-1" placeholder="if ... end" />
+            <marker date="1416481805620" expanded="true" signature="-1:-1" placeholder="if ... end" />
+            <marker date="1416481805620" expanded="true" signature="-1:-1" placeholder="if ... end" />
+            <marker date="1416481805620" expanded="true" signature="-1:-1" placeholder="if ... end" />
+            <marker date="1416481805620" expanded="true" signature="-1:-1" placeholder="if ... end" />
+            <marker date="1416481805620" expanded="true" signature="-1:-1" placeholder="if ... end" />
+            <marker date="1416481805620" expanded="true" signature="-1:-1" placeholder="if ... end" />
+            <marker date="1416481805620" expanded="true" signature="-1:-1" placeholder="if ... end" />
+            <marker date="1416481805620" expanded="true" signature="-1:-1" placeholder="if ... end" />
+            <marker date="1416481805620" expanded="true" signature="-1:-1" placeholder="if ... end" />
+            <marker date="1416481805620" expanded="true" signature="-1:-1" placeholder="if ... end" />
+            <marker date="1416481805620" expanded="true" signature="-1:-1" placeholder="if ... end" />
+            <marker date="1416481805620" expanded="true" signature="-1:-1" placeholder="if ... end" />
+            <marker date="1416481805620" expanded="true" signature="-1:-1" placeholder="if ... end" />
+            <marker date="1416481805620" expanded="true" signature="-1:-1" placeholder="if ... end" />
+            <marker date="1416481805620" expanded="true" signature="-1:-1" placeholder="if ... end" />
+            <marker date="1416481805620" expanded="true" signature="-1:-1" placeholder="if ... end" />
           </folding>
         </state>
       </provider>
@@ -2091,119 +1945,14 @@
     <entry file="file://$PROJECT_DIR$/app/views/caves/_form_edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="16" selection-start="355" selection-end="359" vertical-scroll-proportion="-1.8641975" vertical-offset="2" max-vertical-offset="9979">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#1;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#1;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#2;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#2;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#4;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#4;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#4;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#5;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#5;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#5;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#6;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#6;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#7;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#7;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#7;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#8;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#8;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#8;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#9;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#9;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#9;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#9;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#10;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#10;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#10;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#11;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#11;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#11;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#12;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#12;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#12;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#12;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#13;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#13;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#13;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#14;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#14;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#14;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#15;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#15;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#15;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#15;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#16;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#16;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#16;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#17;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#17;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#17;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#18;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#18;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#18;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#18;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#19;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#19;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#19;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#20;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#div#20;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#0;n#div#20;n#div#4;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/caves/_form_new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="16" selection-start="917" selection-end="921" vertical-scroll-proportion="-1.7777778" vertical-offset="366" max-vertical-offset="7140">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#6;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#6;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#9;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#9;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#9;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#9;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#12;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#12;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#12;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#12;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#15;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#15;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#15;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#15;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#18;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#18;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#18;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#18;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2211,7 +1960,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="0" selection-start="0" selection-end="227" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="204">
           <folding>
-            <marker date="1415195965938" expanded="true" signature="38:199" placeholder="..." />
+            <marker date="1415195965938" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -2219,7 +1968,9 @@
     <entry file="file://$PROJECT_DIR$/app/views/caves/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="0" selection-start="0" selection-end="221" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="204">
-          <folding />
+          <folding>
+            <marker date="1417180890897" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2237,15 +1988,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/restaurants/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="392" column="37" selection-start="18310" selection-end="18310" vertical-scroll-proportion="-78.27161" vertical-offset="324" max-vertical-offset="6800">
-          <folding>
-            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/first_aids_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="0" selection-start="180" selection-end="298" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1411">
@@ -2255,7 +1997,165 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/caves_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="21" selection-start="270" selection-end="270" vertical-scroll-proportion="0.29882812" vertical-offset="0" max-vertical-offset="1411">
+        <state line="9" column="21" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1411">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/school.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="33" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20141128124025_create_caves.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="18" selection-start="666" selection-end="690" vertical-scroll-proportion="0.0" vertical-offset="49" max-vertical-offset="544">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="209" column="38" selection-start="6616" selection-end="6616" vertical-scroll-proportion="-7.269231" vertical-offset="3364" max-vertical-offset="4012">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/schools/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="34" selection-start="96" selection-end="96" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="204">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="18" selection-start="3787" selection-end="4316" vertical-scroll-proportion="0.5336427" vertical-offset="1334" max-vertical-offset="2465">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="180" column="0" selection-start="0" selection-end="15723" vertical-scroll-proportion="-2.5962265" vertical-offset="4436" max-vertical-offset="5695">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/restaurants/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="376" column="0" selection-start="17593" selection-end="18031" vertical-scroll-proportion="-5.4615383" vertical-offset="6250" max-vertical-offset="6800">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pharms/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="217" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="204">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/pharms_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1445">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pharms/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="25" selection-start="0" selection-end="325" vertical-scroll-proportion="0.1878453" vertical-offset="0" max-vertical-offset="543">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="131" column="17" selection-start="0" selection-end="12256" vertical-scroll-proportion="0.27071825" vertical-offset="2080" max-vertical-offset="6256">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/schools/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="29" selection-start="201" selection-end="201" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="204">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="199" column="19" selection-start="7837" selection-end="7837" vertical-scroll-proportion="0.0" vertical-offset="3043" max-vertical-offset="4216">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/schools_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="0" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.0" vertical-offset="740" max-vertical-offset="1360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/schools/index.json.jbuilder">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="548">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/schools/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="52" selection-start="2205" selection-end="2205" vertical-scroll-proportion="-18.76923" vertical-offset="430" max-vertical-offset="1173">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20141204132610_create_schools.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="19" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/schools/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="270" column="56" selection-start="9303" selection-end="9350" vertical-scroll-proportion="-15.5" vertical-offset="4187" max-vertical-offset="4811">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/schools/_form_edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="43" selection-start="2356" selection-end="2356" vertical-scroll-proportion="-8.961538" vertical-offset="923" max-vertical-offset="1700">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#4;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/schools/_form_new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="92" selection-start="2740" selection-end="2740" vertical-scroll-proportion="-29.846153" vertical-offset="635" max-vertical-offset="2244">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="83" selection-start="1935" selection-end="1935" vertical-scroll-proportion="0.3654224" vertical-offset="732" max-vertical-offset="1581">
           <folding />
         </state>
       </provider>

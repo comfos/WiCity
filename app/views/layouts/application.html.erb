@@ -52,10 +52,10 @@
 
   <%= yield %>
 
-  <% if request.original_url.start_with?(pharms_url) %>
-      <div data-role="footer" data-position="fixed" data-theme='b'>
-  <% else %>
+  <% if request.original_url.start_with?(intloc_url) || request.original_url.equal?(root_url) %>
       <div data-role="footer" data-position="fixed">
+  <% else %>
+      <div data-role="footer" data-position="fixed" data-theme='b'>
   <% end %>
 
         <h2>KMetropolis Project</h2>

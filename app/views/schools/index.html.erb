@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+<link rel="stylesheet" type="text/css" href="http://xdsoft.net/scripts/jquery.datetimepicker.css">
+<script src="http://xdsoft.net/scripts/jquery.datetimepicker.js"></script>
+
+<script>
+
+    $(function() {
+        <% if params[:filter] == 'all' %>
+        $( "#filterall" ).css("border-color", "red");
+        $( "#filterall" ).css("border-width", "2px");
+        <% else %>
+        $( "#filteropen" ).css("border-color", "red");
+        $( "#filteropen" ).css("border-width", "2px");
+        <% end %>
+
+        <% if params[:filter1] == 'now' %>
+        $( "#filternow" ).css("height", "18px");
+        $( "#filternow" ).css("border-color", "red");
+        $( "#filternow" ).css("border-width", "2px");
+        <% end %>
+
+        <% if params[:filter2] == 'notturne' %>
+        $( "#filternotturne" ).css("height", "18px");
+        $( "#filternotturne" ).css("border-color", "red");
+        $( "#filternotturne" ).css("border-width", "2px");
+        <% end %>
+
+        <% if params[:day] == '7' %>
+        $( "#filtersunday" ).css("height", "18px");
+        $( "#filtersunday" ).css("border-color", "red");
+        $( "#filtersunday" ).css("border-width", "2px");
+        <% end %>
+    });
+</script>
+
+
+<div data-role="header" data-theme="b">
+  <h1>Schools & University</h1>
+  <div id="custom-border-radius" class="ui-btn-left" data-role="controlgroup" data-type="horizontal" data-mini="true">
+    <%= link_to 'Back', 'intloc', 'data-icon' => 'back', 'data-role' => 'button', 'data-iconpos' => 'notext' %>
+    <%= link_to 'Home', root_url, 'data-icon' => 'home', 'data-role' => 'button', 'data-iconpos' => 'notext', :target => '_parent' %>
+  </div>
+  <%= link_to 'Add', new_school_path, 'data-iconpos' => 'notext', 'data-icon' => 'plus', 'class' => 'ui-btn-right', :target => '_parent' %>
+</div>
+
+
+<div data-role="content">
+
+  <ul data-role="listview" data-inset="true" data-filter="true">
+    <% @schools.each do |school|  %>
+        <li>
+          <a href="<%= "#{schools_url}/#{school.id}" %>" target="_parent">
+          <img src="/assets/icon/school.png">
+          <h2><%= school.name %></h2>
+          <p><%= school.address %></p>
+          <%= link_to 'Edit', edit_school_path(school), 'data-icon' => 'edit', :target => '_parent' %>
+          </a>
+        </li>
+    <% end %>
+  </ul>
+</div>

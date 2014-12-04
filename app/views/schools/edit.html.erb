@@ -1,0 +1,7 @@
+<div data-role="header" data-theme="b">
+  <h1>Edit School</h1>
+  <%= link_to 'Back', schools_path, 'data-icon' => 'back', 'class' => 'ui-btn-left', :target => '_parent' %>
+  <%= link_to 'Show', @school, :target => '_parent', 'data-icon' => 'search', 'class' => 'ui-btn-right'  %>
+</div>
+
+<%= render 'form_edit' %>

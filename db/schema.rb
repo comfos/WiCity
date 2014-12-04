@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141128124025) do
+ActiveRecord::Schema.define(version: 20141204132610) do
 
   create_table "caves", force: true do |t|
     t.string   "name"
@@ -187,6 +187,18 @@ ActiveRecord::Schema.define(version: 20141128124025) do
     t.string   "DM",         default: "0:0 - 0:0"
     t.string   "DP",         default: "0:0 - 0:0"
     t.string   "phone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "schools", force: true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "lat"
+    t.string   "lng"
+    t.string   "phone"
+    t.string   "url"
+    t.integer  "typ",        default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end

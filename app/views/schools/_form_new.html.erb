@@ -1,0 +1,127 @@
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+
+<script>
+
+    function initialize() {
+
+        var input = (document.getElementById('school_address'));
+        var autocomplete = new google.maps.places.Autocomplete(input);
+
+        google.maps.event.addListener(autocomplete, 'place_changed', function() {
+
+            var place = autocomplete.getPlace();
+            if (!place.geometry) {
+                return;
+            }
+
+            if (place.geometry.viewport) {
+                map.fitBounds(place.geometry.viewport);
+            } else {
+                document.getElementById('school_lat').value = (place.geometry.location).lat();
+                document.getElementById('school_lng').value = (place.geometry.location).lng();
+                document.getElementById("school_add").style.display = "block";
+            }
+        });
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+
+
+
+<div data-role="content">
+
+    <%= form_for(@school, :html => {:target => '_parent'} ) do |f| %>
+      <% if @school.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@school.errors.count, "error") %> prohibited this school from being saved:</h2>
+
+          <ul>
+          <% @school.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <strong><b><%= f.label :Name, :class => "ui-bar ui-bar-a ui-corner-all ui-shadow" %></b></strong>
+        <%= f.text_field :name %>
+      </div>
+
+      <br>
+
+      <div class="field">
+        <strong><b><%= f.label :Address, :class => "ui-bar ui-bar-a ui-corner-all ui-shadow" %></b></strong>
+        <%= f.text_field :address %>
+      </div>
+
+      <br>
+
+      <div class="ui-grid-a">
+        <div class="ui-block-a" style="padding-right: 5px">
+          <strong><b><%= f.label :Latitude, :class => "ui-bar ui-bar-a ui-corner-all ui-shadow" %></b></strong>
+          <%= f.text_field :lat, :readonly => true %>
+        </div>
+        <div class="ui-block-b" style="padding-left: 5px">
+          <strong><b><%= f.label :Longitude, :class => "ui-bar ui-bar-a ui-corner-all ui-shadow" %></b></strong>
+          <%= f.text_field :lng, :readonly => true %>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="field">
+        <strong><b><%= f.label :Site, :class => "ui-bar ui-bar-a ui-corner-all ui-shadow" %></b></strong>
+        <%= f.text_field :url %>
+      </div>
+
+      <br>
+
+      <div class="ui-grid-a">
+        <div class="ui-block-a" style="padding-right: 5px">
+          <strong><b><%= f.label :Phone, :class => "ui-bar ui-bar-a ui-corner-all ui-shadow" %></b></strong>
+          <%= f.text_field :phone %>
+        </div>
+
+        <div class="ui-block-b" style="padding-left: 5px">
+          <div class="ui-grid-c ui-corner-all">
+            <div class="ui-block-a">
+              <div class="ui-bar ui-bar-a" style="height:60px">
+                Scuola Elementare
+                <label style="height: 10px"><%= f.radio_button(:typ, 0) %></label>
+              </div>
+            </div>
+            <div class="ui-block-b">
+              <div class="ui-bar ui-bar-a" style="height:60px">
+                Scuola Media
+                <label style="height: 10px"><%= f.radio_button(:typ, 1) %></label>
+              </div>
+            </div>
+            <div class="ui-block-c">
+              <div class="ui-bar ui-bar-a" style="height:60px">
+                Scuola Superiore
+                <label style="height: 10px"><%= f.radio_button(:typ, 2) %></label>
+              </div>
+            </div>
+            <div class="ui-block-d">
+              <div class="ui-bar ui-bar-a" style="height:60px">
+                Università
+                <label style="height: 10px"><%= f.radio_button(:typ, 3) %></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <br>
+
+      <div class="actions" id="school_add" style="display:none;">
+        <%= f.submit 'Add School' %>
+      </div>
+
+    <% end %>
+
+</div>
