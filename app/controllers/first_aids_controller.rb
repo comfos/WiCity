@@ -1,6 +1,8 @@
 class FirstAidsController < ApplicationController
   before_action :set_first_aid, only: [:show, :edit, :update, :destroy]
 
+  before_filter :authenticate_user!, :except => [:show, :index]
+
   # GET /first_aids
   # GET /first_aids.json
   def index

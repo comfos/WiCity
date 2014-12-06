@@ -1,6 +1,8 @@
 class CavesController < ApplicationController
   before_action :set_cafe, only: [:show, :edit, :update, :destroy]
 
+  before_filter :authenticate_user!, :except => [:show, :index]
+
   # GET /caves
   # GET /caves.json
   def index

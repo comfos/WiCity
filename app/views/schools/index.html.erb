@@ -53,7 +53,7 @@
     <% @schools.each do |school|  %>
         <li>
           <a href="<%= "#{schools_url}/#{school.id}" %>" target="_parent">
-          <img src="/assets/icon/school.png">
+          <!-- <img src="/assets/icon/school.png"> -->
           <h2><%= school.name %></h2>
           <p><%= school.address %></p>
           <%= link_to 'Edit', edit_school_path(school), 'data-icon' => 'edit', :target => '_parent' %>
