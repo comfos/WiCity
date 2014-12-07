@@ -1,10 +1,13 @@
 WiCity::Application.routes.draw do
 
-  resources :schools
-
-  resources :caves
-
   devise_for :users
+
+  get '/users/sign_in', to: 'home#index'
+
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
+  #get '/users/sign_out', to: 'devise/sessions#destroy'
 
   resources :pharms
   resources :parks
@@ -14,14 +17,13 @@ WiCity::Application.routes.draw do
   resources :restaurants
   resources :first_aids
   resources :hospitals
+  resources :schools
+  resources :caves
 
   root 'home#index'
 
   get '/intloc', to: 'home#intloc'
   get '/nearserv', to: 'home#nearserv'
-
-  get '/users/sign_in', to: 'home#index'
-  get '/users/sign_out', to: 'devise/sessions#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
