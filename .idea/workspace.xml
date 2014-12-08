@@ -45,7 +45,7 @@
       <file leaf-file-name="nearserv.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="513" column="12" selection-start="22529" selection-end="22529" vertical-scroll-proportion="1.6895674" vertical-offset="4538" max-vertical-offset="7174">
+            <state line="569" column="9" selection-start="23948" selection-end="23948" vertical-scroll-proportion="0.4783715" vertical-offset="5966" max-vertical-offset="7174">
               <folding>
                 <element signature="e#1313#1399#0" expanded="false" />
                 <element signature="e#1439#1549#0" expanded="false" />
@@ -1624,7 +1624,11 @@
       <created>1418055641764</created>
       <updated>1418055641764</updated>
     </task>
-    <option name="localTasksCounter" value="248" />
+    <task id="LOCAL-00248" summary="UPDATE nearservices&#10;">
+      <created>1418057123538</created>
+      <updated>1418057123538</updated>
+    </task>
+    <option name="localTasksCounter" value="249" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1983,7 +1987,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="513" column="12" selection-start="22529" selection-end="22529" vertical-scroll-proportion="1.6895674" vertical-offset="4538" max-vertical-offset="7174">
+        <state line="569" column="9" selection-start="23948" selection-end="23948" vertical-scroll-proportion="0.4783715" vertical-offset="5966" max-vertical-offset="7174">
           <folding>
             <element signature="e#1313#1399#0" expanded="false" />
             <element signature="e#1439#1549#0" expanded="false" />
