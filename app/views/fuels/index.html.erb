@@ -308,11 +308,7 @@
             if isOpen(fuel) %>
                     <li>
                       <a href="<%= "#{fuels_url}/#{fuel.id}?time="+@t.to_s %>" target="_parent">
-    <%          if fuel.call %>
                         <img src="/assets/icon/gasstation.png">
-    <%          else %>
-                        <img src="/assets/icon/gasstation.png">
-    <%          end %>
                         <h2><%= fuel.name %></h2>
                         <p><%= fuel.address %></p>
                         <%= link_to 'Edit', edit_fuel_path(fuel), 'data-icon' => 'edit', :target => '_parent' %>

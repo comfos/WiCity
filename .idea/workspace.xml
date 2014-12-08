@@ -61,7 +61,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/fuels/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="296" column="59" selection-start="14359" selection-end="14359" vertical-scroll-proportion="0.5496183" vertical-offset="4816" max-vertical-offset="5627">
+            <state line="313" column="24" selection-start="15190" selection-end="15190" vertical-scroll-proportion="0.7659033" vertical-offset="5020" max-vertical-offset="5559">
               <folding />
             </state>
           </provider>
@@ -1542,7 +1542,11 @@
       <created>1418051470959</created>
       <updated>1418051470959</updated>
     </task>
-    <option name="localTasksCounter" value="242" />
+    <task id="LOCAL-00242" summary="FIX FuelStation">
+      <created>1418051577785</created>
+      <updated>1418051577785</updated>
+    </task>
+    <option name="localTasksCounter" value="243" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1602,7 +1606,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="UPDATE Restaurants (show)&#10;" />
     <MESSAGE value="ADD Hospital &amp; First Aid" />
     <MESSAGE value="UPDATE BG e FIX&#10;" />
     <MESSAGE value="UPDATE grafica&#10;" />
@@ -1627,7 +1630,8 @@
     <MESSAGE value="FIX logout" />
     <MESSAGE value="UPDATE graphics" />
     <MESSAGE value="UPDATE nearservices" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE nearservices" />
+    <MESSAGE value="FIX FuelStation" />
+    <option name="LAST_COMMIT_MESSAGE" value="FIX FuelStation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1904,7 +1908,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/fuels/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="296" column="59" selection-start="14359" selection-end="14359" vertical-scroll-proportion="0.5496183" vertical-offset="4816" max-vertical-offset="5627">
+        <state line="313" column="24" selection-start="15190" selection-end="15190" vertical-scroll-proportion="0.7659033" vertical-offset="5020" max-vertical-offset="5559">
           <folding />
         </state>
       </provider>
