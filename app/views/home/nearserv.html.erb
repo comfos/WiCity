@@ -361,6 +361,7 @@
             markerClusterer_pharm = new MarkerClusterer(map, markers_pharms);
         }
         i=0;
+
         if(cpark) {
             <% @parks.each do |itm| %>
             var coord = new google.maps.LatLng(<%= itm.lat %>, <%= itm.lng %>);
@@ -407,6 +408,7 @@
             markerClusterer_park = new MarkerClusterer(map, markers_parks);
         }
         i=0;
+
         if(cts) {
                 <% @taxistations.each do |itm| %>
                 var coord = new google.maps.LatLng(<%= itm.lat %>, <%= itm.lng %>);
@@ -438,6 +440,7 @@
              });*/
             markerClusterer_ts = new MarkerClusterer(map, markers_ts);
         }
+        i=0;
 
         if(crt) {
             <% @radiotaxis.each do |itm| %>
@@ -470,6 +473,7 @@
              });*/
             markerClusterer_rt = new MarkerClusterer(map, markers_rt);
         }
+        i=0;
 
         if(cfuel) {
             <% @fuels.each do |itm| %>
@@ -507,6 +511,7 @@
              });*/
             markerClusterer_fuel = new MarkerClusterer(map, markers_fuel);
         }
+        i=0;
     }
 
     function clearClusters() {
@@ -533,6 +538,7 @@
                 cpharm = true;
             }
         }
+
         if(type=='park') {
             if(cpark) {
                 $("#park").fadeTo( "slow", 0.30 );
@@ -542,6 +548,7 @@
                 cpark = true;
             }
         }
+
         if(type=='ts') {
             if(cts) {
                 $("#ts").fadeTo( "slow", 0.30 );
@@ -551,6 +558,7 @@
                 cts = true;
             }
         }
+
         if(type=='rt') {
             if(crt) {
                 $("#rt").fadeTo( "slow", 0.30 );
@@ -560,6 +568,7 @@
                 crt = true;
             }
         }
+
         if(type=='fuel') {
             if(crt) {
                 $("#fuel").fadeTo( "slow", 0.30 );
