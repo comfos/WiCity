@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fuels/_form_edit.html.erb" afterPath="$PROJECT_DIR$/app/views/fuels/_form_edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/nearserv.html.erb" afterPath="$PROJECT_DIR$/app/views/home/nearserv.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WiCity.iws" />
@@ -42,36 +43,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nearserv.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="nearserv.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="468" column="0" selection-start="20605" selection-end="20637" vertical-scroll-proportion="-4.326923" vertical-offset="5657" max-vertical-offset="7514">
+            <state line="568" column="21" selection-start="24126" selection-end="24126" vertical-scroll-proportion="-0.7302799" vertical-offset="6424" max-vertical-offset="7021">
               <folding>
-                <element signature="e#1249#1335#0" expanded="false" />
-                <element signature="e#1375#1485#0" expanded="false" />
-                <element signature="e#1510#2600#0" expanded="false" />
-                <element signature="e#2628#2966#0" expanded="false" />
-                <element signature="e#3012#3204#0" expanded="false" />
-                <element signature="e#3232#5314#0" expanded="false" />
+                <element signature="e#1313#1399#0" expanded="false" />
+                <element signature="e#1439#1549#0" expanded="false" />
+                <element signature="e#1574#2664#0" expanded="false" />
+                <element signature="e#2692#3030#0" expanded="false" />
+                <element signature="e#3076#3268#0" expanded="false" />
+                <element signature="e#3296#5378#0" expanded="false" />
+                <element signature="n#isOpen#0;n#!!top" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/fuels/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="313" column="24" selection-start="15190" selection-end="15190" vertical-scroll-proportion="-5.7884617" vertical-offset="5020" max-vertical-offset="5559">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_form_edit.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/fuels/_form_edit.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="255" column="0" selection-start="9177" selection-end="9177" vertical-scroll-proportion="1.2536945" vertical-offset="3826" max-vertical-offset="9979">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -79,7 +63,7 @@
       <file leaf-file-name="home_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="31" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+            <state line="10" column="14" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
               <folding />
             </state>
           </provider>
@@ -158,10 +142,10 @@
         <option value="$PROJECT_DIR$/app/views/devise/sessions/destroy.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/home/nearserv.html.erb" />
         <option value="$PROJECT_DIR$/app/views/fuels/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/fuels/_form_edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/home/nearserv.html.erb" />
       </list>
     </option>
   </component>
@@ -312,6 +296,72 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WiCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WiCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WiCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WiCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WiCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WiCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="marker" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1563,7 +1613,11 @@
       <created>1418052549944</created>
       <updated>1418052549944</updated>
     </task>
-    <option name="localTasksCounter" value="245" />
+    <task id="LOCAL-00245" summary="FIX FuelStation&#10;">
+      <created>1418053120478</created>
+      <updated>1418053120478</updated>
+    </task>
+    <option name="localTasksCounter" value="246" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1654,21 +1708,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="209" column="38" selection-start="6616" selection-end="6616" vertical-scroll-proportion="-7.269231" vertical-offset="3364" max-vertical-offset="4012" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/schools/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="34" selection-start="96" selection-end="96" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="204" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pharms/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="180" column="0" selection-start="0" selection-end="15723" vertical-scroll-proportion="-2.5962265" vertical-offset="4436" max-vertical-offset="5695" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/restaurants/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="376" column="0" selection-start="17593" selection-end="18031" vertical-scroll-proportion="-5.4615383" vertical-offset="6250" max-vertical-offset="6800" />
@@ -1890,37 +1929,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="31" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="43" selection-start="569" selection-end="569" vertical-scroll-proportion="0.5173913" vertical-offset="0" max-vertical-offset="460">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="468" column="0" selection-start="20605" selection-end="20637" vertical-scroll-proportion="-4.326923" vertical-offset="5657" max-vertical-offset="7514">
-          <folding>
-            <element signature="e#1249#1335#0" expanded="false" />
-            <element signature="e#1375#1485#0" expanded="false" />
-            <element signature="e#1510#2600#0" expanded="false" />
-            <element signature="e#2628#2966#0" expanded="false" />
-            <element signature="e#3012#3204#0" expanded="false" />
-            <element signature="e#3232#5314#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fuels/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="313" column="24" selection-start="15190" selection-end="15190" vertical-scroll-proportion="-5.7884617" vertical-offset="5020" max-vertical-offset="5559">
           <folding />
         </state>
       </provider>
@@ -1929,6 +1940,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="255" column="0" selection-start="9177" selection-end="9177" vertical-scroll-proportion="1.2536945" vertical-offset="3826" max-vertical-offset="9979">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/fuels/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="313" column="24" selection-start="15190" selection-end="15190" vertical-scroll-proportion="0.7659033" vertical-offset="5020" max-vertical-offset="5559">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/marker/cfuel.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/marker/fuel.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/fuels/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-4.8402777" vertical-offset="2091" max-vertical-offset="6256">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="14" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="568" column="21" selection-start="24126" selection-end="24126" vertical-scroll-proportion="-0.7302799" vertical-offset="6424" max-vertical-offset="7021">
+          <folding>
+            <element signature="e#1313#1399#0" expanded="false" />
+            <element signature="e#1439#1549#0" expanded="false" />
+            <element signature="e#1574#2664#0" expanded="false" />
+            <element signature="e#2692#3030#0" expanded="false" />
+            <element signature="e#3076#3268#0" expanded="false" />
+            <element signature="e#3296#5378#0" expanded="false" />
+            <element signature="n#isOpen#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

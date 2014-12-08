@@ -13,6 +13,7 @@ class HomeController < ApplicationController
     @parks = Park.all
     @taxistations = Taxistation.all
     @radiotaxis = Radiotaxi.all
+    @fuels = Fuel.all
     @restaurants = Restaurant.all
 
   end
