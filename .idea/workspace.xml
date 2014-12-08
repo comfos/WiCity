@@ -70,7 +70,7 @@
       <file leaf-file-name="_form_edit.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/fuels/_form_edit.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="254" column="10" selection-start="9176" selection-end="9176" vertical-scroll-proportion="0.41625616" vertical-offset="4149" max-vertical-offset="10200">
+            <state line="255" column="0" selection-start="9177" selection-end="9177" vertical-scroll-proportion="1.2536945" vertical-offset="3826" max-vertical-offset="9979">
               <folding />
             </state>
           </provider>
@@ -1559,7 +1559,11 @@
       <created>1418051986316</created>
       <updated>1418051986316</updated>
     </task>
-    <option name="localTasksCounter" value="244" />
+    <task id="LOCAL-00244" summary="FIX FuelStation&#10;">
+      <created>1418052549944</created>
+      <updated>1418052549944</updated>
+    </task>
+    <option name="localTasksCounter" value="245" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1923,7 +1927,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/fuels/_form_edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="254" column="10" selection-start="9176" selection-end="9176" vertical-scroll-proportion="0.41625616" vertical-offset="4149" max-vertical-offset="10200">
+        <state line="255" column="0" selection-start="9177" selection-end="9177" vertical-scroll-proportion="1.2536945" vertical-offset="3826" max-vertical-offset="9979">
           <folding />
         </state>
       </provider>
