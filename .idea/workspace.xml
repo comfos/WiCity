@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/nearserv.html.erb" afterPath="$PROJECT_DIR$/app/views/home/nearserv.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WiCity.iws" />
@@ -46,7 +44,7 @@
       <file leaf-file-name="nearserv.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="568" column="21" selection-start="24126" selection-end="24126" vertical-scroll-proportion="-0.7302799" vertical-offset="6424" max-vertical-offset="7021">
+            <state line="568" column="21" selection-start="24126" selection-end="24126" vertical-scroll-proportion="3.292621" vertical-offset="4843" max-vertical-offset="7021">
               <folding>
                 <element signature="e#1313#1399#0" expanded="false" />
                 <element signature="e#1439#1549#0" expanded="false" />
@@ -1617,7 +1615,11 @@
       <created>1418053120478</created>
       <updated>1418053120478</updated>
     </task>
-    <option name="localTasksCounter" value="246" />
+    <task id="LOCAL-00246" summary="UPDATE nearservices">
+      <created>1418054286280</created>
+      <updated>1418054286281</updated>
+    </task>
+    <option name="localTasksCounter" value="247" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1699,10 +1701,10 @@
     <MESSAGE value="EDIT School &amp; University&#10;" />
     <MESSAGE value="FIX logout" />
     <MESSAGE value="UPDATE graphics" />
-    <MESSAGE value="UPDATE nearservices" />
     <MESSAGE value="FIX FuelStation" />
     <MESSAGE value="FIX FuelStation&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="FIX FuelStation&#10;" />
+    <MESSAGE value="UPDATE nearservices" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE nearservices" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1976,7 +1978,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="568" column="21" selection-start="24126" selection-end="24126" vertical-scroll-proportion="-0.7302799" vertical-offset="6424" max-vertical-offset="7021">
+        <state line="568" column="21" selection-start="24126" selection-end="24126" vertical-scroll-proportion="3.292621" vertical-offset="4843" max-vertical-offset="7021">
           <folding>
             <element signature="e#1313#1399#0" expanded="false" />
             <element signature="e#1439#1549#0" expanded="false" />
