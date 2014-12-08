@@ -294,11 +294,7 @@
             <li>
     <%          if isOpen(fuel) %>
                     <a href="<%= "#{fuels_url}/#{fuel.id}?time="+@t.to_s %>" target="_parent">
-    <%              if fuel.call %>
-                       <img src="/assets/icon/gasstation.png">
-    <%              else %>
-                       <img src="/assets/icon/gasstation.png">
-    <%              end %>
+                    <img src="/assets/icon/gasstation.png">
     <%          else    %>
                     <a href="<%= "#{fuels_url}/#{fuel.id}?s=close&time="+@t.to_s %>" target="_parent">
                     <img src="/assets/icon/gasstation.png">
