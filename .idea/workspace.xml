@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fuels/index.html.erb" afterPath="$PROJECT_DIR$/app/views/fuels/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fuels/_form_edit.html.erb" afterPath="$PROJECT_DIR$/app/views/fuels/_form_edit.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WiCity.iws" />
@@ -58,10 +58,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/fuels/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="313" column="24" selection-start="15190" selection-end="15190" vertical-scroll-proportion="0.7659033" vertical-offset="5020" max-vertical-offset="5559">
+            <state line="313" column="24" selection-start="15190" selection-end="15190" vertical-scroll-proportion="-5.7884617" vertical-offset="5020" max-vertical-offset="5559">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_form_edit.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/fuels/_form_edit.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="254" column="10" selection-start="9176" selection-end="9176" vertical-scroll-proportion="0.41625616" vertical-offset="4149" max-vertical-offset="10200">
               <folding />
             </state>
           </provider>
@@ -102,7 +111,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/db/migrate/20141107114052_create_first_aids.rb" />
         <option value="$PROJECT_DIR$/app/views/first_aids/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/first_aids/_form_new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/first_aids/_form_edit.html.erb" />
@@ -153,6 +161,7 @@
         <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/home/nearserv.html.erb" />
         <option value="$PROJECT_DIR$/app/views/fuels/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/fuels/_form_edit.html.erb" />
       </list>
     </option>
   </component>
@@ -1546,7 +1555,11 @@
       <created>1418051577785</created>
       <updated>1418051577785</updated>
     </task>
-    <option name="localTasksCounter" value="243" />
+    <task id="LOCAL-00243" summary="FIX FuelStation&#10;">
+      <created>1418051986316</created>
+      <updated>1418051986316</updated>
+    </task>
+    <option name="localTasksCounter" value="244" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1606,7 +1619,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="ADD Hospital &amp; First Aid" />
     <MESSAGE value="UPDATE BG e FIX&#10;" />
     <MESSAGE value="UPDATE grafica&#10;" />
     <MESSAGE value="EDIT bottone Home su NearCityServices" />
@@ -1631,17 +1643,13 @@
     <MESSAGE value="UPDATE graphics" />
     <MESSAGE value="UPDATE nearservices" />
     <MESSAGE value="FIX FuelStation" />
-    <option name="LAST_COMMIT_MESSAGE" value="FIX FuelStation" />
+    <MESSAGE value="FIX FuelStation&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="FIX FuelStation&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20141128124025_create_caves.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="18" selection-start="666" selection-end="690" vertical-scroll-proportion="0.0" vertical-offset="49" max-vertical-offset="544" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/intloc.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="209" column="38" selection-start="6616" selection-end="6616" vertical-scroll-proportion="-7.269231" vertical-offset="3364" max-vertical-offset="4012" />
@@ -1908,7 +1916,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/fuels/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="313" column="24" selection-start="15190" selection-end="15190" vertical-scroll-proportion="0.7659033" vertical-offset="5020" max-vertical-offset="5559">
+        <state line="313" column="24" selection-start="15190" selection-end="15190" vertical-scroll-proportion="-5.7884617" vertical-offset="5020" max-vertical-offset="5559">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/fuels/_form_edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="254" column="10" selection-start="9176" selection-end="9176" vertical-scroll-proportion="0.41625616" vertical-offset="4149" max-vertical-offset="10200">
           <folding />
         </state>
       </provider>
