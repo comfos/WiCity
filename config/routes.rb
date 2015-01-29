@@ -1,5 +1,9 @@
 WiCity::Application.routes.draw do
 
+  resources :links
+
+  resources :nodos
+
   devise_for :users
 
   get '/users/sign_in', to: 'home#index'

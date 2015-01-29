@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141204132610) do
+ActiveRecord::Schema.define(version: 20150108091449) do
 
   create_table "caves", force: true do |t|
     t.string   "name"
@@ -101,6 +101,27 @@ ActiveRecord::Schema.define(version: 20141204132610) do
     t.string   "SP",         default: "13:00 - 24:00"
     t.string   "DM",         default: "0:00 - 13:00"
     t.string   "DP",         default: "13:00 - 24:00"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "links", force: true do |t|
+    t.integer  "n1"
+    t.integer  "n2"
+    t.string   "Timeg",      default: "0"
+    t.string   "Timew",      default: "0"
+    t.string   "Distance",   default: "0"
+    t.string   "FlussIn",    default: "0"
+    t.string   "FlussOut",   default: "0"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "links", ["n1", "n2"], name: "index_links_on_n1_and_n2", unique: true, using: :btree
+
+  create_table "nodos", force: true do |t|
+    t.string   "lat"
+    t.string   "lng"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

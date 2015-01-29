@@ -1,0 +1,311 @@
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+
+<script type="text/javascript">
+
+    function activeButton() {
+        $("#link_add").click(function(e) {
+            e.preventDefault();
+            $( "#link2" ).submit();
+            $( "#link1" ).trigger('submit');
+        });
+    }
+
+    var map;
+
+    var rendererOptions = {
+        preserveViewport: true,
+        suppressMarkers: true
+    };
+
+    var polylineOptionsActual = new google.maps.Polyline({
+        strokeColor: '#FF6600',
+        strokeOpacity: 0.8,
+        strokeWeight: 6
+    });
+
+    function checkDir() {
+        location.href='?start='+$('#start').find(':selected').text()+'&end='+$('#end').find(':selected').text();
+    }
+
+    function addOption(slt) {
+        var select = document.getElementById(slt);
+        <% @nodos.each do |itm| %>
+            var opt = document.createElement('option');
+            opt.value = '<%= itm.id %>';
+            opt.innerHTML = '<%= itm.id %>';
+            select.appendChild(opt);
+        <% end %>
+    }
+
+    function initialize() {
+        activeButton();
+        hideUpdate();
+        addOption('start');
+        addOption('end');
+
+        var mapOptions = {
+            zoom: 20,
+            center: new google.maps.LatLng(37.508059, 375.082752)
+        };
+        map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+        addallMarker();
+        addallLink();
+
+        <% if (params[:start] && params[:end])
+              @n1 = Nodo.find(params[:start])
+              @n2 = Nodo.find(params[:end])
+        %>
+              var directionsDisplay = new google.maps.DirectionsRenderer({polylineOptions: polylineOptionsActual});
+              directionsDisplay.setOptions({ suppressMarkers: true });
+              var directionsService = new google.maps.DirectionsService();
+              var start = new google.maps.LatLng(<%= @n1.lat %>, <%= @n1.lng %>);
+              var end = new google.maps.LatLng(<%= @n2.lat %>, <%= @n2.lng %>)
+              calcRouteLink(start, end, directionsService, directionsDisplay, 1);
+
+              var directionsDisplay2 = new google.maps.DirectionsRenderer({polylineOptions: polylineOptionsActual});
+              directionsDisplay2.setOptions({ suppressMarkers: true });
+              var directionsService2 = new google.maps.DirectionsService();
+              var start2 = new google.maps.LatLng(<%= @n2.lat %>, <%= @n2.lng %>);
+              var end2 = new google.maps.LatLng(<%= @n1.lat %>, <%= @n1.lng %>)
+              calcRouteLink(start2, end2, directionsService2, directionsDisplay2, 2);
+        <% end %>
+    }
+
+    function addallLink() {
+        <% @links.each do |itm| %>
+            var directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions);
+            var directionsService = new google.maps.DirectionsService();
+            <% @n1 = Nodo.find(itm.n1) %>
+            <% @n2 = Nodo.find(itm.n2) %>
+            <% @id = itm.id %>
+            var start = new google.maps.LatLng(<%= @n1.lat %>, <%= @n1.lng %>);
+            var end = new google.maps.LatLng(<%= @n2.lat %>, <%= @n2.lng %>)
+            calcRoute(start, end, directionsService, directionsDisplay);
+        <% end %>
+    }
+
+    function calcRouteLink(start, end, dS, dD, typ) {
+        dD.setMap(map);
+
+        var request = {
+            origin:start,
+            destination:end,
+            travelMode: google.maps.TravelMode.DRIVING
+        };
+
+        dS.route(request, function(response, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+                dD.setDirections(response);
+                showSteps(response, typ);
+            }
+        });
+    }
+
+    function showSteps(res, typ) {
+        var myRoute = res.routes[0].legs[0];
+        if(myRoute.steps.length == 1 && typ == 1) {
+            var duration = myRoute.duration.value;
+            var dist = myRoute.distance.value;
+            document.getElementById("checkdir").style.display = "none";
+
+            $('#link_n1').val("<%= params[:start] %>");
+            $('#link_n2').val("<%= params[:end] %>");
+            $('#link_Timeg').val(duration);
+            $('#link_Timew').val(duration);
+            $('#link_Distance').val(dist);
+            document.getElementById("info").style.display = "block";
+            document.getElementById("link_add").style.display = "block";
+        }
+        if(myRoute.steps.length == 1 && typ == 2) {
+            var duration = myRoute.duration.value;
+            var dist = myRoute.distance.value;
+            document.getElementById("checkdir").style.display = "none";
+
+            $('#link_n1_2').val("<%= params[:end] %>");
+            $('#link_n2_2').val("<%= params[:start] %>");
+            $('#link_Timeg_2').val(duration);
+            $('#link_Timew_2').val(duration);
+            $('#link_Distance_2').val(dist);
+            document.getElementById("info2").style.display = "block";
+            document.getElementById("link_add").style.display = "block";
+        }
+        /*for (var i = 0; i < myRoute.steps.length; i++) {
+            $( "#info" ).append( $.parseHTML( myRoute.steps[i].instructions + "<br>" ) );
+        }*/
+    }
+
+    function calcRoute(start, end, dS, dD) {
+        dD.setMap(map);
+
+        var request = {
+            origin:start,
+            destination:end,
+            travelMode: google.maps.TravelMode.DRIVING
+        };
+
+        dS.route(request, function(response, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+                dD.setDirections(response);
+            }
+        });
+    }
+
+    function addallMarker() {
+        var icon = { anchor: new google.maps.Point(11, 11), url: "http://load.my-azur.de/f/o/dot-blue.png"};
+        <% @nodos.each do |itm| %>
+            var coord = new google.maps.LatLng(<%= itm.lat %>, <%= itm.lng %>);
+            var title = '<%= itm.id %>';
+            var marker = new google.maps.Marker({
+                map: map,
+                title: title,
+                position: coord,
+                icon: icon
+            });
+            map.setCenter(coord);
+
+            infowindow = new google.maps.InfoWindow({
+                content: '<span class="infowin"><%= itm.id %></span>'
+            });
+            google.maps.event.addListener(marker, 'click', function () {
+                infowindow.setContent('<span class="infowin"><%= itm.id %></span>');
+                infowindow.open(map, this);
+            });
+        <% end %>
+    }
+
+    function hideUpdate() {
+        document.getElementById("info").style.display = "none";
+        document.getElementById("info2").style.display = "none";
+        document.getElementById("link_add").style.display = "none";
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+
+<div data-role="content">
+
+  <div id="checkdir" class="ui-corner-all ui-bar ui-bar-a" style="margin-bottom: 10px">
+    <div data-role="fieldcontain">
+      <label for="start" class="select">Start:</label>
+      <select name="start" id="start"></select>
+    </div>
+    <div data-role="fieldcontain">
+      <label for="end" class="select">End:</label>
+      <select name="end" id="end"></select>
+    </div>
+
+    <a href="#" data-role="button" data-mini="true" onclick="checkDir();">Check Direction</a>
+  </div>
+
+
+  <%= form_for(@link1, :html => {:target => '_parent', :id => 'link1'} ) do |f| %>
+          <% if @link1.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@link1.errors.count, "error") %> prohibited this link from being saved:</h2>
+
+              <ul>
+              <% @link1.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <div id="info" class="ui-corner-all ui-bar ui-bar-a" style="margin-bottom: 10px">
+              <div class="ui-grid-a">
+                <div class="ui-block-a" style="padding-right: 5px">
+                  <strong><b><%= f.label :N1 %></b></strong>
+                  <%= f.text_field :n1, :readonly => true %>
+                </div>
+                <div class="ui-block-b" style="padding-left: 5px">
+                  <strong><b><%= f.label :N2 %></b></strong>
+                  <%= f.text_field :n2, :readonly => true %>
+                </div>
+              </div>
+              <div class="ui-grid-b">
+                <div class="ui-block-a" style="padding-right: 5px">
+                  <strong><b><%= f.label :Google_Time %></b></strong>
+                  <%= f.text_field :Timeg, :readonly => true %>
+                </div>
+                <div class="ui-block-b" style="padding-left: 5px">
+                  <strong><b><%= f.label :WiCity_Time %></b></strong>
+                  <%= f.text_field :Timew %>
+                </div>
+                <div class="ui-block-c" style="padding-left: 5px">
+                  <strong><b><%= f.label :Distance %></b></strong>
+                  <%= f.text_field :Distance, :readonly => true %>
+                </div>
+              </div>
+              <div class="ui-grid-a">
+                <div class="ui-block-a" style="padding-right: 5px">
+                  <strong><b><%= f.label :Flow_IN %></b></strong>
+                  <%= f.text_field :FlussIn %>
+                </div>
+                <div class="ui-block-b" style="padding-left: 5px">
+                  <strong><b><%= f.label :Flow_OUT %></b></strong>
+                  <%= f.text_field :FlussOut %>
+                </div>
+              </div>
+          </div>
+    <% end %>
+
+    <%= form_for(@link2, :html => {:target => '_parent', :id => 'link2'} ) do |f| %>
+          <% if @link2.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@link2.errors.count, "error") %> prohibited this link from being saved:</h2>
+
+                <ul>
+                  <% @link2.errors.full_messages.each do |msg| %>
+                      <li><%= msg %></li>
+                  <% end %>
+                </ul>
+              </div>
+          <% end %>
+
+          <div id="info2" class="ui-corner-all ui-bar ui-bar-a" style="margin-bottom: 10px">
+            <div class="ui-grid-a">
+              <div class="ui-block-a" style="padding-right: 5px">
+                <strong><b><%= f.label :N1 %></b></strong>
+                <input id="link_n1_2" name="link[n1]" readonly="readonly" type="text">
+              </div>
+              <div class="ui-block-b" style="padding-left: 5px">
+                <strong><b><%= f.label :N2 %></b></strong>
+                <input id="link_n2_2" name="link[n2]" readonly="readonly" type="text">
+              </div>
+            </div>
+            <div class="ui-grid-b">
+              <div class="ui-block-a" style="padding-right: 5px">
+                <strong><b><%= f.label :Google_Time %></b></strong>
+                <input id="link_Timeg_2" name="link[Timeg]" readonly="readonly" type="text">
+              </div>
+              <div class="ui-block-b" style="padding-left: 5px">
+                <strong><b><%= f.label :WiCity_Time %></b></strong>
+                <input id="link_Timew_2" name="link[Timew]" type="text">
+              </div>
+              <div class="ui-block-c" style="padding-left: 5px">
+                <strong><b><%= f.label :Distance %></b></strong>
+                <input id="link_Distance_2" name="link[Distance]" readonly="readonly" type="text">
+              </div>
+            </div>
+            <div class="ui-grid-a">
+              <div class="ui-block-a" style="padding-right: 5px">
+                <strong><b><%= f.label :Flow_IN %></b></strong>
+                <input id="link_FlussIn_2" name="link[FlussIn]" type="text">
+              </div>
+              <div class="ui-block-b" style="padding-left: 5px">
+                <strong><b><%= f.label :Flow_OUT %></b></strong>
+                <input id="link_FlussOut_2" name="link[FlussOut]" type="text">
+              </div>
+            </div>
+          </div>
+    <% end %>
+
+    <div id="link_add">
+      <input id="saveLinks" name="commit" value="Create Link" type="button">
+    </div>
+
+    <div id="map-canvas" style="width: 100%; height: 450px" class="ui-corner-all"></div>
+
+</div>
