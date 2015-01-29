@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @nodo.lat %>
+</p>
+
+<p>
+  <strong>Lng:</strong>
+  <%= @nodo.lng %>
+</p>
+
+<%= link_to 'Edit', edit_nodo_path(@nodo) %> |
+<%= link_to 'Back', nodos_path %>
