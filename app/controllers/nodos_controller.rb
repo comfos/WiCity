@@ -15,8 +15,6 @@ class NodosController < ApplicationController
   # GET /nodos/new
   def new
     @nodo = Nodo.new
-    @nodos = Nodo.all
-    @lastnodo = Nodo.all.last!
   end
 
   # GET /nodos/1/edit

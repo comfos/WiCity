@@ -3,9 +3,70 @@
 <script type="text/javascript">
 
     var map;
+    var check = true;
+    var layer;
+    var lastid;
+    var newid;
+
+    /*var clientId = '740816178247-ca9hl1r0ai49td6v291aj48hc521nnoe.apps.googleusercontent.com';
+    var apiKey = 'AIzaSyB10PsKhxnW0krauzOAlCGyfEusLozigIw';
+    var scopes = 'https://www.googleapis.com/auth/fusiontables';*/
+    var tableId = '1VRWffIb31b6fdGhbUJrVr8EoY2RS4R1gUl63cUAO';
+
+    var clientId = '740816178247-3kqr6eg1tokcb50o23ufbgqis96jt0bj.apps.googleusercontent.com';
+    var apiKey = 'AIzaSyD6kp0eU2mmd2wQSC_q2gF1NvDBsOh8k_Q';
+    var scopes = 'https://www.googleapis.com/auth/fusiontables';
+
+    function handleClientLoad() {
+        gapi.client.setApiKey(apiKey);
+        window.setTimeout(checkAuth,1);
+    }
+
+    function checkAuth() {
+        gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: true}, handleAuthResult);
+    }
+
+    function handleAuthResult(authResult) {
+        var authorizeButton = document.getElementById('authorize-button');
+        if (authResult && !authResult.error) {
+            authorizeButton.style.visibility = 'hidden';
+            //makeApiCall();
+        } else {
+            authorizeButton.style.visibility = '';
+            authorizeButton.onclick = handleAuthClick;
+        }
+    }
+
+    function handleAuthClick(event) {
+        gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: false}, handleAuthResult);
+        return false;
+    }
+
+    function makeApiCall() {
+        gapi.client.load('fusiontables', 'v2').then(function() {
+            var request = gapi.client.plus.people.get({
+                'userId': 'me'
+            });
+            request.then(function(resp) {
+                var heading = document.createElement('h4');
+                var image = document.createElement('img');
+                image.src = resp.result.image.url;
+                heading.appendChild(image);
+                heading.appendChild(document.createTextNode(resp.result.displayName));
+
+                document.getElementById('content').appendChild(heading);
+            }, function(reason) {
+                console.log('Error: ' + reason.result.error.message);
+            });
+        });
+    }
+
 
     function initialize() {
-        hideUpdate();
+
+        handleClientLoad();
+
+        //hideUpdate();
 
         var mapOptions = {
             zoom: 20,
@@ -13,44 +74,36 @@
         };
         map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-        addallMarker();
+        layer = new google.maps.FusionTablesLayer({
+            query: {
+                select: '\'latitude\'',
+                from: '1VRWffIb31b6fdGhbUJrVr8EoY2RS4R1gUl63cUAO'
+            }
+        });
+        layer.setMap(map);
 
-        addMarker();
+        google.maps.event.addListener(map, 'click', function(e) {
+            if(check) {
+                check = false;
+                addMarker(e.latLng);
+            }
+        })
+
+        $.get("https://www.googleapis.com/fusiontables/v1/query?sql=SELECT idnod FROM 1VRWffIb31b6fdGhbUJrVr8EoY2RS4R1gUl63cUAO ORDER BY idnod DESC%20LIMIT%201&key=AIzaSyB10PsKhxnW0krauzOAlCGyfEusLozigIw",function(data,status){
+            lastid = data.rows;
+        });
     }
 
-    function addallMarker() {
-        var icon = { anchor: new google.maps.Point(11, 11), url: "http://load.my-azur.de/f/o/dot-blue.png"};
-        <% @nodos.each do |itm| %>
-            var coord = new google.maps.LatLng(<%= itm.lat %>, <%= itm.lng %>);
-            var title = '<%= itm.id %>';
-            var marker = new google.maps.Marker({
-                map: map,
-                title: title,
-                position: coord,
-                icon: icon
-            });
-            map.setCenter(coord);
-
-            infowindow = new google.maps.InfoWindow({
-                content: '<span class="infowin"><%= itm.id %></span>'
-            });
-            google.maps.event.addListener(marker, 'click', function () {
-                infowindow.setContent('<span class="infowin"><%= itm.id %></span>');
-                infowindow.open(map, this);
-            });
-        <% end %>
-    }
-
-    function addMarker() {
-        var coord = new google.maps.LatLng(<%= @lastnodo.lat %>, <%= @lastnodo.lng %>);
-        var title = '<%= @lastnodo.id + 1 %>';
+    function addMarker(location) {
+        var title = (parseInt(lastid) + 1).toString();
+        newid = parseInt(lastid) + 1;
         var marker = new google.maps.Marker({
             map: map,
             title: title,
-            position: coord,
+            position: location,
             draggable: true
         });
-        map.setCenter(coord);
+        map.setCenter(location);
 
         google.maps.event.addListener(marker, 'drag', function() {
             document.getElementById('nodo_lat').value = (marker.position.lat());
@@ -68,13 +121,72 @@
         document.getElementById("nodo_add").style.display = "none";
     }
 
-    google.maps.event.addDomListener(window, 'load', initialize);
+    function saveMarker() {
+        var lat = document.getElementById('nodo_lat').value;
+        var lng = document.getElementById('nodo_lng').value;
+
+        var insert = [];
+        insert.push("INSERT INTO ");
+        insert.push(tableId);
+        insert.push(" (idnod, latitude, longitude) VALUES (");
+        insert.push(newid + ", ");
+        insert.push(lat + ", ");
+        insert.push(lng);
+        insert.push(")");
+
+        query(insert.join(''));
+    }
+
+    function query(query) {
+        var lowerCaseQuery = query.toLowerCase();
+        var path = 'https://www.googleapis.com/fusiontables/v1/query';
+
+        var callback = function(element) {
+            return function(resp) {
+                //var output = JSON.stringify(resp);
+                //document.getElementById(element).innerHTML = output;
+                document.location.href = '<% root_url %>/nodos';
+            };
+        }
+
+        if (lowerCaseQuery.indexOf('select') != 0 &&
+                lowerCaseQuery.indexOf('show') != 0 &&
+                lowerCaseQuery.indexOf('describe') != 0) {
+
+            var body = 'sql=' + encodeURIComponent(query);
+
+            runClientRequest({
+                path: path,
+                body: body,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Content-Length': body.length
+                },
+                method: 'POST'
+            }, callback('insert-data-output'));
+
+        } else {
+            runClientRequest({
+                path: path,
+                params: { 'sql': query }
+            }, callback('select-data-output'));
+        }
+    }
+
+    // Execute the client request.
+    function runClientRequest(request, callback) {
+        var restRequest = gapi.client.request(request);
+        restRequest.execute(callback);
+    }
+
+    //google.maps.event.addDomListener(window, 'load', initialize);
 
 </script>
 
+<script src="https://apis.google.com/js/client.js?onload=initialize"></script>
+
 <div data-role="content">
 
-    <%= form_for(@nodo, :html => {:target => '_parent'} ) do |f| %>
       <% if @nodo.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@nodo.errors.count, "error") %> prohibited this nodo from being saved:</h2>
@@ -89,21 +201,22 @@
 
       <div class="ui-grid-a">
         <div class="ui-block-a" style="padding-right: 5px">
-          <strong><b><%= f.label :Latitude %></b></strong>
-          <%= f.text_field :lat, :readonly => true %>
+          <strong><b><label for="nodo_Latitude">Latitude</label></b></strong>
+          <input id="nodo_lat" name="nodo[lat]" readonly="readonly" type="text">
         </div>
         <div class="ui-block-b" style="padding-left: 5px">
-          <strong><b><%= f.label :Longitude %></b></strong>
-          <%= f.text_field :lng, :readonly => true %>
+          <strong><b><label for="nodo_Longitude">Longitude</label></b></strong>
+          <input id="nodo_lng" name="nodo[lng]" readonly="readonly" type="text">
         </div>
       </div>
 
       <div id="nodo_add" class="actions">
-        <%= f.submit %>
+        <button onclick="saveMarker();">Save</button>
       </div>
 
       <div id="map-canvas" style="width: 100%; height: 450px" class="ui-corner-all"></div>
 
-    <% end %>
+    <input type="button" id="authorize-button" value="Authorize">
+    <p id="insert-data-output"><i>insert response goes here...</i></p>
 
 </div>
