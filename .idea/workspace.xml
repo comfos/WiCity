@@ -70,7 +70,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/links/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="69" selection-start="1765" selection-end="1765" vertical-scroll-proportion="0.36324787" vertical-offset="714" max-vertical-offset="3417">
+            <state line="70" column="77" selection-start="2617" selection-end="2617" vertical-scroll-proportion="0.69017094" vertical-offset="867" max-vertical-offset="3417">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -1683,7 +1683,11 @@
       <created>1424941662001</created>
       <updated>1424941662002</updated>
     </task>
-    <option name="localTasksCounter" value="253" />
+    <task id="LOCAL-00253" summary="UPDATE  Links&#10;">
+      <created>1424944153441</created>
+      <updated>1424944153441</updated>
+    </task>
+    <option name="localTasksCounter" value="254" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -2046,7 +2050,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/links/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="69" selection-start="1765" selection-end="1765" vertical-scroll-proportion="0.36324787" vertical-offset="714" max-vertical-offset="3417">
+        <state line="70" column="77" selection-start="2617" selection-end="2617" vertical-scroll-proportion="0.69017094" vertical-offset="867" max-vertical-offset="3417">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />

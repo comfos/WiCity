@@ -68,7 +68,7 @@
                 };
                 directionsService.route(request, function(response, status) {
                     if (status == google.maps.DirectionsStatus.OK) {
-                        directionsDisplay.setOptions({ suppressMarkers: true });
+                        directionsDisplay.setOptions({ suppressMarkers: true, preserveViewport: true });
                         directionsDisplay.setDirections(response);
                         showSteps(response);
                     } else {
