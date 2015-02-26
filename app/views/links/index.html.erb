@@ -4,10 +4,11 @@
 
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 
+<script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerclusterer/1.0/src/markerclusterer_packed.js"></script>
+
 <script type="text/javascript">
 
-    var map;
-    var infowindow = null;
+    var map, layer;
 
     var rendererOptions = {
         strokeColor: "#FF0000",
@@ -23,16 +24,79 @@
         };
         map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-        addMarker();
+        var directionsDisplay = new google.maps.DirectionsRenderer();
+        directionsDisplay.setMap(map);
+        directionsDisplay.setPanel(document.getElementById('results'));
 
-        addLink();
+        var directionsService = new google.maps.DirectionsService();
+
+        layer = new google.maps.FusionTablesLayer({
+            query: {
+                select: '\'latitude\'',
+                from: '1VRWffIb31b6fdGhbUJrVr8EoY2RS4R1gUl63cUAO'
+            },
+            options: {
+                suppressInfoWindows: true
+            }
+        });
+        layer.setMap(map);
+
+        var infowindow = new google.maps.InfoWindow();
+
+        var check = true;
+        var start = null;
+
+        google.maps.event.addListener(layer, 'click', function(e) {
+            if (check) {
+                infowindow.setContent(e.infoWindowHtml +
+                        '<br><label>Click on another point</label>');
+                infowindow.setPosition(e.latLng);
+                infowindow.open(map);
+                check = false;
+                start = e.latLng;
+            } else {
+                infowindow.close();
+                var request = {
+                    origin: start,
+                    destination: e.latLng,
+                    travelMode: google.maps.DirectionsTravelMode.DRIVING
+                };
+                directionsService.route(request, function(response, status) {
+                    if (status == google.maps.DirectionsStatus.OK) {
+                        directionsDisplay.setOptions({ suppressMarkers: true });
+                        directionsDisplay.setDirections(response);
+                        showSteps(response);
+                    } else {
+                        window.alert('Error generating directions: ' + status);
+                    }
+                });
+                check = true;
+            }
+        });
     }
 
-    function addMarker() {
+    function showSteps(res) {
+        var myRoute = res.routes[0].legs[0];
+        if(myRoute.steps.length == 1) {
+            var duration = myRoute.duration.value;
+            var dist = myRoute.distance.value;
+            alert("DURATA: " + duration + " --- DISTANZA: " + dist);
+
+            /*$('#link_n1').val("<%#= params[:start] %>");
+            $('#link_n2').val("<%#= params[:end] %>");
+            $('#link_Timeg').val(duration);
+            $('#link_Timew').val(duration);
+            $('#link_Distance').val(dist);
+            document.getElementById("info").style.display = "block";
+            document.getElementById("link_add").style.display = "block";*/
+        }
+    }
+
+    /*function addMarker() {
         var icon = { anchor: new google.maps.Point(11, 11), url: "http://load.my-azur.de/f/o/dot-red.png"};
-        <% @nodos.each do |itm| %>
-            var coord = new google.maps.LatLng(<%= itm.lat %>, <%= itm.lng %>);
-            var title = '<%= itm.id %>';
+        <%# @nodos.each do |itm| %>
+            var coord = new google.maps.LatLng(<%#= itm.lat %>, <%#= itm.lng %>);
+            var title = '<%#= itm.id %>';
             var marker = new google.maps.Marker({
                 map: map,
                 title: title,
@@ -42,30 +106,30 @@
             map.setCenter(coord);
 
             infowindow = new google.maps.InfoWindow({
-                content: '<span class="infowin"><%= itm.id %></span>'
+                content: '<span class="infowin"><%#= itm.id %></span>'
             });
             google.maps.event.addListener(marker, 'click', function () {
-                infowindow.setContent('<span class="infowin"><%= itm.id %></span>');
+                infowindow.setContent('<span class="infowin"><%#= itm.id %></span>');
                 infowindow.open(map, this);
             });
-        <% end %>
-    }
+        <%# end %>
+    }*/
 
-    function addLink() {
-        <% @links.each do |itm| %>
+    /*function addLink() {
+        <%# @links.each do |itm| %>
             var directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions);
             var directionsService = new google.maps.DirectionsService();
-            <% @n1 = Nodo.find(itm.n1) %>
-            <% @n2 = Nodo.find(itm.n2) %>
-            <% @id = itm.id %>
-            var start = new google.maps.LatLng(<%= @n1.lat %>, <%= @n1.lng %>);
-            var end = new google.maps.LatLng(<%= @n2.lat %>, <%= @n2.lng %>)
+            <%# @n1 = Nodo.find(itm.n1) %>
+            <%# @n2 = Nodo.find(itm.n2) %>
+            <%# @id = itm.id %>
+            var start = new google.maps.LatLng(<%#= @n1.lat %>, <%#= @n1.lng %>);
+            var end = new google.maps.LatLng(<%#= @n2.lat %>, <%#= @n2.lng %>)
 
             calcRoute(start, end, directionsService, directionsDisplay);
-        <% end %>
-    }
+        <%# end %>
+    }*/
 
-    function calcRoute(start, end, dS, dD) {
+    /*function calcRoute(start, end, dS, dD) {
          dD.setMap(map);
 
          var request = {
@@ -87,7 +151,7 @@
                 });
             }
          });
-    }
+    }*/
 
     google.maps.event.addDomListener(window, 'load', initialize);
 

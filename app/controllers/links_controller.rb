@@ -5,7 +5,6 @@ class LinksController < ApplicationController
   # GET /links.json
   def index
     @links = Link.all
-    @nodos = Nodo.all
   end
 
   # GET /links/1
