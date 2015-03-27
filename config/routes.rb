@@ -29,6 +29,8 @@ WiCity::Application.routes.draw do
   get '/intloc', to: 'home#intloc'
   get '/nearserv', to: 'home#nearserv'
 
+  get '/alllinks', to: 'links#showall'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

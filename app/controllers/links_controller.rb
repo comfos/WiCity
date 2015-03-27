@@ -1,6 +1,8 @@
 class LinksController < ApplicationController
   before_action :set_link, only: [:show, :edit, :update, :destroy]
 
+  layout 'show', only: [:showall]
+
   # GET /links
   # GET /links.json
   def index
@@ -12,14 +14,18 @@ class LinksController < ApplicationController
   def show
   end
 
+  def showall
+    @links = Link.all
+  end
+
   # GET /links/new
   def new
-    @link1 = Link.new
-    @link2 = Link.new
-    @nodos = Nodo.all
+    #@link1 = Link.new
+    #@link2 = Link.new
+    @link = Link.new
     @links = Link.all
 
-    @aLink = []
+    #@aLink = []
   end
 
   # GET /links/1/edit
@@ -29,24 +35,22 @@ class LinksController < ApplicationController
   # POST /links
   # POST /links.json
   def create
-    @link1 = Link.new(link_params)
-    @link2 = Link.new(link_params)
+    @link = Link.new(link_params)
 
     begin
-      respond_to do |format|
-        if @link1.save || @link2.save
+      #respond_to do |format|
+        if @link.save
           #format.html { redirect_to @link, notice: 'Link was successfully created.' }
           #format.json { render action: 'show', status: :created, location: @link }
-          #format.html { redirect_to links_url }
-          #format.json { head :no_content }
+          redirect_to links_url+'/new', notice: "Link was successfully created."
         else
-          format.html { render action: 'new' }
-          format.json { render json: @link1.errors, status: :unprocessable_entity }
-          format.json { render json: @link2.errors, status: :unprocessable_entity }
+          #format.html { render action: 'new' }
+          #format.json { render json: @link.errors, status: :unprocessable_entity }
+          redirect_to links_url+'/new', notice: "Error."
         end
-      end
+      #end
     rescue ActiveRecord::RecordNotUnique
-      redirect_to links_url+'/new'
+      redirect_to links_url+'/new', notice: "Link was already created."
     end
 
   end
