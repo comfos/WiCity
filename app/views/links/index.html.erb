@@ -19,6 +19,8 @@
         suppressMarkers: true
     };
 
+    var directionsService, directionsDisplay;
+
     function initialize() {
         var mapOptions = {
             zoom: 18,
@@ -26,11 +28,11 @@
         };
         map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-        var directionsDisplay = new google.maps.DirectionsRenderer();
+        directionsDisplay = new google.maps.DirectionsRenderer();
         directionsDisplay.setMap(map);
         directionsDisplay.setPanel(document.getElementById('results'));
 
-        var directionsService = new google.maps.DirectionsService();
+        directionsService = new google.maps.DirectionsService();
 
         layer = new google.maps.FusionTablesLayer({
             query: {
@@ -78,6 +80,8 @@
                 check = true;
             }
         });
+
+        addLink();
     }
 
     function showSteps(res) {
@@ -97,66 +101,71 @@
         }
     }
 
-    /*function addMarker() {
-        var icon = { anchor: new google.maps.Point(11, 11), url: "http://load.my-azur.de/f/o/dot-red.png"};
-        <%# @nodos.each do |itm| %>
-            var coord = new google.maps.LatLng(<%#= itm.lat %>, <%#= itm.lng %>);
-            var title = '<%#= itm.id %>';
-            var marker = new google.maps.Marker({
-                map: map,
-                title: title,
-                position: coord,
-                icon: icon
+    var node1, node1_lat, node1_lng;
+    var node2, node2_lat, node2_lng;
+    var links_start = [];
+    var links_end = [];
+    function addLink() {
+        <% @links.each do |itm| %>
+
+            node1 = <%= itm.n1 %>;
+            $.get("https://www.googleapis.com/fusiontables/v1/query?sql=SELECT latitude, longitude FROM 1VRWffIb31b6fdGhbUJrVr8EoY2RS4R1gUl63cUAO WHERE idnod = "+ node1 +"&key=AIzaSyB10PsKhxnW0krauzOAlCGyfEusLozigIw",function(data,status){
+                node1_lat = String(data.rows).split(",")[0];
+                node1_lng = String(data.rows).split(",")[1];
+                var start = new google.maps.LatLng(node1_lat, node1_lng);
+                links_start.push(start);
             });
-            map.setCenter(coord);
 
-            infowindow = new google.maps.InfoWindow({
-                content: '<span class="infowin"><%#= itm.id %></span>'
+            node2 = <%= itm.n2 %>;
+            $.get("https://www.googleapis.com/fusiontables/v1/query?sql=SELECT latitude, longitude FROM 1VRWffIb31b6fdGhbUJrVr8EoY2RS4R1gUl63cUAO WHERE idnod = "+ node2 +"&key=AIzaSyB10PsKhxnW0krauzOAlCGyfEusLozigIw",function(data,status){
+                node2_lat = String(data.rows).split(",")[0];
+                node2_lng = String(data.rows).split(",")[1];
+                var end = new google.maps.LatLng(node2_lat, node2_lng);
+                links_end.push(end);
             });
-            google.maps.event.addListener(marker, 'click', function () {
-                infowindow.setContent('<span class="infowin"><%#= itm.id %></span>');
-                infowindow.open(map, this);
-            });
-        <%# end %>
-    }*/
+        <% end %>
+    }
 
-    /*function addLink() {
-        <%# @links.each do |itm| %>
-            var directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions);
-            var directionsService = new google.maps.DirectionsService();
-            <%# @n1 = Nodo.find(itm.n1) %>
-            <%# @n2 = Nodo.find(itm.n2) %>
-            <%# @id = itm.id %>
-            var start = new google.maps.LatLng(<%#= @n1.lat %>, <%#= @n1.lng %>);
-            var end = new google.maps.LatLng(<%#= @n2.lat %>, <%#= @n2.lng %>)
+    var nextLink = 0;
+    var delay = 1000;
+    function theNext() {
+        if (nextLink < links_start.length) {
+            setTimeout('calcRoute("'+nextLink+'", theNext)', delay);
+            nextLink++;
+        } else {
+            //map.fitBounds(bounds);
+            alert("FATTO");
+        }
+    }
 
-            calcRoute(start, end, directionsService, directionsDisplay);
-        <%# end %>
-    }*/
+    function calcRoute(link, next) {
 
-    /*function calcRoute(start, end, dS, dD) {
-         dD.setMap(map);
+        var dD = new google.maps.DirectionsRenderer();
+        dD.setMap(map);
 
-         var request = {
-             origin:start,
-             destination:end,
-             travelMode: google.maps.TravelMode.DRIVING
+        var dS = new google.maps.DirectionsService();
+
+        var request = {
+             origin: links_start[link],
+             destination: links_end[link],
+             travelMode: google.maps.TravelMode.WALKING
          };
 
-         dS.route(request, function(response, status) {
+        dS.route(request, function(response, status) {
             if (status == google.maps.DirectionsStatus.OK) {
-                 dD.setDirections(response);
-
-                google.maps.event.addListener(response, 'click', function () {
-                    alert("c9a");
-                });
-
-                google.maps.event.addListener(dS, 'click', function () {
-                    alert("c9a");
-                });
+                dD.setOptions({ suppressMarkers: true, preserveViewport: true });
+                dD.setDirections(response);
+            } else {
+                if (status == google.maps.DirectionsStatus.OVER_QUERY_LIMIT) {
+                    nextLink--;
+                    delay = delay + 200;
+                } else {
+                    window.alert('Error generating directions: ' + status);
+                }
             }
-         });
-    }*/
+            next();
+        });
+    }
 
     google.maps.event.addDomListener(window, 'load', initialize);
 
@@ -168,7 +177,11 @@
     <%= link_to 'Back', 'intloc', 'data-icon' => 'back', 'data-role' => 'button', 'data-iconpos' => 'notext' %>
     <%= link_to 'Home', root_url, 'data-icon' => 'home', 'data-role' => 'button', 'data-iconpos' => 'notext', :target => '_parent' %>
   </div>
-  <%= link_to 'Add', new_link_path, 'data-iconpos' => 'notext', 'data-icon' => 'plus', 'class' => 'ui-btn-right', :target => '_parent' %>
+
+  <div id="custom-border-radius" class="ui-btn-right" data-role="controlgroup" data-type="horizontal" data-mini="true">
+    <%= link_to 'Add', new_link_path, 'data-icon' => 'plus', 'data-role' => 'button', 'data-iconpos' => 'notext', :target => '_parent' %>
+    <a href="#" data-role="button" data-icon="info" data-iconpos="notext" onclick="theNext();">Delete</a>
+  </div>
 </div>
 
 <div data-role="content">

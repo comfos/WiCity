@@ -87,7 +87,7 @@
                 check = false;
                 addMarker(e.latLng);
             }
-        })
+        });
 
         $.get("https://www.googleapis.com/fusiontables/v1/query?sql=SELECT idnod FROM 1VRWffIb31b6fdGhbUJrVr8EoY2RS4R1gUl63cUAO ORDER BY idnod DESC%20LIMIT%201&key=AIzaSyB10PsKhxnW0krauzOAlCGyfEusLozigIw",function(data,status){
             lastid = data.rows;

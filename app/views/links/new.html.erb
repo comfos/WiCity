@@ -1,6 +1,7 @@
 <div data-role="header" data-theme="b">
   <h1>Add Link</h1>
   <%= link_to 'Back', links_path, 'data-icon' => 'back', 'class' => 'ui-btn-left', :target => '_parent' %>
+  <a href="#" data-role="button" data-icon="info" class="ui-btn-right" data-iconpos="notext" onclick="theNext();">Delete</a>
 </div>
 
 <%= render 'form_new' %>
