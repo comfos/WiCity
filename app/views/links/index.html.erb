@@ -70,7 +70,13 @@
                 };
                 directionsService.route(request, function(response, status) {
                     if (status == google.maps.DirectionsStatus.OK) {
-                        directionsDisplay.setOptions({ suppressMarkers: true, preserveViewport: true, strokeColor: "#FF0000" });
+                        directionsDisplay.setOptions({
+                            suppressMarkers: true,
+                            preserveViewport: true,
+                            polylineOptions: {
+                                strokeColor: "red"
+                            }
+                        });
                         directionsDisplay.setDirections(response);
                         showSteps(response);
                     } else {
