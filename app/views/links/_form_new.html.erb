@@ -18,7 +18,7 @@
         polylineOptions: {
             strokeColor: "#FF0000",
             strokeOpacity: 0.8,
-            strokeWeight: 7
+            strokeWeight: 6
         }
     };
 
@@ -123,13 +123,13 @@
     var links_end = [];
     function addLink() {
         <% @links.each do |itm| %>
-        var node1_lat = "<%= Nodo.find(itm.n1).lat %>";
-        var node1_lng = "<%= Nodo.find(itm.n1).lng %>";
+        var node1_lat = parseFloat("<%= Nodo.find(itm.n1).lat %>");
+        var node1_lng = parseFloat("<%= Nodo.find(itm.n1).lng %>");
         var start = new google.maps.LatLng(node1_lat, node1_lng);
         links_start.push(start);
 
-        var node2_lat = "<%= Nodo.find(itm.n2).lat %>";
-        var node2_lng = "<%= Nodo.find(itm.n2).lng %>";
+        var node2_lat = parseFloat("<%= Nodo.find(itm.n2).lat %>");
+        var node2_lng = parseFloat("<%= Nodo.find(itm.n2).lng %>");
         var end = new google.maps.LatLng(node2_lat, node2_lng);
         links_end.push(end);
         <% end %>
