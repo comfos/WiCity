@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/links/index.html.erb" afterPath="$PROJECT_DIR$/app/views/links/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/links/_form_new.html.erb" afterPath="$PROJECT_DIR$/app/views/links/_form_new.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WiCity.iws" />
@@ -47,10 +47,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/links/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="151" column="53" selection-start="5025" selection-end="5025" vertical-scroll-proportion="0.49361703" vertical-offset="2335" max-vertical-offset="3570">
+            <state line="151" column="53" selection-start="5002" selection-end="5025" vertical-scroll-proportion="-6.5384617" vertical-offset="2397" max-vertical-offset="3570">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -63,19 +63,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form_new.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_form_new.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/links/_form_new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="141" column="12" selection-start="5159" selection-end="5159" vertical-scroll-proportion="0.0" vertical-offset="2397" max-vertical-offset="3927">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/links/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="69" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="204">
+            <state line="165" column="38" selection-start="5436" selection-end="5436" vertical-scroll-proportion="0.7553192" vertical-offset="2450" max-vertical-offset="3927">
               <folding />
             </state>
           </provider>
@@ -155,9 +146,9 @@
         <option value="$PROJECT_DIR$/app/views/links/showall.html.erb" />
         <option value="$PROJECT_DIR$/app/views/nodos/_form_new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/links/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/links/_form_new.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/links_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/links/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/links/_form_new.html.erb" />
       </list>
     </option>
   </component>
@@ -1678,7 +1669,11 @@
       <created>1428573599394</created>
       <updated>1428573599395</updated>
     </task>
-    <option name="localTasksCounter" value="263" />
+    <task id="LOCAL-00263" summary="UPDATE  Links&#10;">
+      <created>1428573681296</created>
+      <updated>1428573681296</updated>
+    </task>
+    <option name="localTasksCounter" value="264" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -2000,20 +1995,6 @@
         <state line="0" column="0" selection-start="0" selection-end="32" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/links/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="69" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="204">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/links/_form_new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="12" selection-start="5159" selection-end="5159" vertical-scroll-proportion="0.0" vertical-offset="2397" max-vertical-offset="3927">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/links/showall.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="9" selection-start="123" selection-end="123" vertical-scroll-proportion="0.07234043" vertical-offset="0" max-vertical-offset="470">
@@ -2035,9 +2016,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/links/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="69" selection-start="236" selection-end="236" vertical-scroll-proportion="0.108510636" vertical-offset="0" max-vertical-offset="470">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/links/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="53" selection-start="5025" selection-end="5025" vertical-scroll-proportion="0.49361703" vertical-offset="2335" max-vertical-offset="3570">
+        <state line="151" column="53" selection-start="5002" selection-end="5025" vertical-scroll-proportion="-6.5384617" vertical-offset="2397" max-vertical-offset="3570">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -2046,6 +2034,13 @@
             <element signature="n#style#0;n#div#3;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/links/_form_new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="165" column="38" selection-start="5436" selection-end="5436" vertical-scroll-proportion="0.7553192" vertical-offset="2450" max-vertical-offset="3927">
+          <folding />
         </state>
       </provider>
     </entry>
