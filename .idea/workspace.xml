@@ -48,10 +48,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/links/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="70" selection-start="4244" selection-end="4244" vertical-scroll-proportion="0.6148936" vertical-offset="1785" max-vertical-offset="3638">
+            <state line="20" column="27" selection-start="748" selection-end="748" vertical-scroll-proportion="-9.153846" vertical-offset="102" max-vertical-offset="3638">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -64,10 +64,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form_new.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_form_new.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/links/_form_new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="131" column="66" selection-start="4450" selection-end="4450" vertical-scroll-proportion="-11.115385" vertical-offset="1938" max-vertical-offset="3995">
+            <state line="20" column="27" selection-start="748" selection-end="748" vertical-scroll-proportion="0.7234042" vertical-offset="0" max-vertical-offset="3995">
               <folding />
             </state>
           </provider>
@@ -157,8 +157,8 @@
         <option value="$PROJECT_DIR$/app/views/nodos/_form_new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/links/new.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/links_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/links/_form_new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/links/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/links/_form_new.html.erb" />
       </list>
     </option>
   </component>
@@ -1691,7 +1691,11 @@
       <created>1428575558339</created>
       <updated>1428575558339</updated>
     </task>
-    <option name="localTasksCounter" value="266" />
+    <task id="LOCAL-00266" summary="UPDATE  Links&#10;">
+      <created>1428576917641</created>
+      <updated>1428576917641</updated>
+    </task>
+    <option name="localTasksCounter" value="267" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -2041,16 +2045,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/links/_form_new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="66" selection-start="4450" selection-end="4450" vertical-scroll-proportion="-11.115385" vertical-offset="1938" max-vertical-offset="3995">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/links/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="70" selection-start="4244" selection-end="4244" vertical-scroll-proportion="0.6148936" vertical-offset="1785" max-vertical-offset="3638">
+        <state line="20" column="27" selection-start="748" selection-end="748" vertical-scroll-proportion="-9.153846" vertical-offset="102" max-vertical-offset="3638">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -2059,6 +2056,13 @@
             <element signature="n#style#0;n#div#3;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/links/_form_new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="27" selection-start="748" selection-end="748" vertical-scroll-proportion="0.7234042" vertical-offset="0" max-vertical-offset="3995">
+          <folding />
         </state>
       </provider>
     </entry>
