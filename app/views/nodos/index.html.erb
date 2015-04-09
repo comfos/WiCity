@@ -22,9 +22,21 @@
             query: {
                 select: '\'latitude\'',
                 from: '1VRWffIb31b6fdGhbUJrVr8EoY2RS4R1gUl63cUAO'
+            },
+            options: {
+                suppressInfoWindows: true
             }
         });
         layer.setMap(map);
+
+        var infowindow = new google.maps.InfoWindow();
+        google.maps.event.addListener(layer, 'click', function(e) {
+            var n1 = e.row['idnod'].value;
+            infowindow.setContent(e.infoWindowHtml +
+                    '<br><a href="' + n1+ '/edit">Delete</a>');
+            infowindow.setPosition(e.latLng);
+            infowindow.open(map);
+        });
     }
 
     /*function addMarker() {
