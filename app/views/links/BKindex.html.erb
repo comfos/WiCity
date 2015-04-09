@@ -12,12 +12,11 @@
 
     var n1, n2;
 
-    var rendererOptionsLink = {
-        suppressMarkers: true,
+    var rendererOptions = {
+        strokeColor: "#FF0000",
+        //draggable: true,
         preserveViewport: true,
-        polylineOptions: {
-            strokeColor: "#FF0000"
-        }
+        suppressMarkers: true
     };
 
     var directionsService, directionsDisplay;
@@ -71,7 +70,13 @@
                 };
                 directionsService.route(request, function(response, status) {
                     if (status == google.maps.DirectionsStatus.OK) {
-                        directionsDisplay.setOptions(rendererOptionsLink);
+                        directionsDisplay.setOptions({
+                            suppressMarkers: true,
+                            preserveViewport: true,
+                            polylineOptions: {
+                                strokeColor: "red"
+                            }
+                        });
                         directionsDisplay.setDirections(response);
                         showSteps(response);
                     } else {
@@ -87,35 +92,48 @@
 
     function showSteps(res) {
         var myRoute = res.routes[0].legs[0];
-        var duration = myRoute.duration.value;
-        var dist = myRoute.distance.value;
+        if(myRoute.steps.length == 1) {
+            var duration = myRoute.duration.value;
+            var dist = myRoute.distance.value;
+            //alert("DURATA: " + duration + " --- DISTANZA: " + dist);
 
-        $('#link_n1').val(n1);
-        $('#link_n2').val(n2);
-        $('#link_Timeg').val(duration);
-        //$('#link_Timew').val(duration);
-        $('#link_Distance').val(dist);
-        document.getElementById("info").style.display = "block";
+            $('#link_n1').val(n1);
+            $('#link_n2').val(n2);
+            $('#link_Timeg').val(duration);
+            //$('#link_Timew').val(duration);
+            $('#link_Distance').val(dist);
+            document.getElementById("info").style.display = "block";
+            //document.getElementById("link_add").style.display = "block";
+        }
     }
 
+    var node1, node1_lat, node1_lng;
+    var node2, node2_lat, node2_lng;
     var links_start = [];
     var links_end = [];
     function addLink() {
         <% @links.each do |itm| %>
-            var node1_lat = "<%= Nodo.find(itm.n1).lat %>";
-            var node1_lng = "<%= Nodo.find(itm.n1).lng %>";
-            var start = new google.maps.LatLng(node1_lat, node1_lng);
-            links_start.push(start);
 
-            var node2_lat = "<%= Nodo.find(itm.n2).lat %>";
-            var node2_lng = "<%= Nodo.find(itm.n2).lng %>";
-            var end = new google.maps.LatLng(node2_lat, node2_lng);
-            links_end.push(end);
+            node1 = <%= itm.n1 %>;
+            $.get("https://www.googleapis.com/fusiontables/v1/query?sql=SELECT latitude, longitude FROM 1VRWffIb31b6fdGhbUJrVr8EoY2RS4R1gUl63cUAO WHERE idnod = "+ node1 +"&key=AIzaSyB10PsKhxnW0krauzOAlCGyfEusLozigIw",function(data,status){
+                node1_lat = String(data.rows).split(",")[0];
+                node1_lng = String(data.rows).split(",")[1];
+                var start = new google.maps.LatLng(node1_lat, node1_lng);
+                links_start.push(start);
+            });
+
+            node2 = <%= itm.n2 %>;
+            $.get("https://www.googleapis.com/fusiontables/v1/query?sql=SELECT latitude, longitude FROM 1VRWffIb31b6fdGhbUJrVr8EoY2RS4R1gUl63cUAO WHERE idnod = "+ node2 +"&key=AIzaSyB10PsKhxnW0krauzOAlCGyfEusLozigIw",function(data,status){
+                node2_lat = String(data.rows).split(",")[0];
+                node2_lng = String(data.rows).split(",")[1];
+                var end = new google.maps.LatLng(node2_lat, node2_lng);
+                links_end.push(end);
+            });
         <% end %>
     }
 
     var nextLink = 0;
-    var delay = 500;
+    var delay = 1000;
     function theNext() {
         if (nextLink < links_start.length) {
             setTimeout('calcRoute("'+nextLink+'", theNext)', delay);
@@ -146,7 +164,7 @@
             } else {
                 if (status == google.maps.DirectionsStatus.OVER_QUERY_LIMIT) {
                     nextLink--;
-                    delay = delay + 50;
+                    delay = delay + 200;
                 } else {
                     window.alert('Error generating directions: ' + status);
                 }

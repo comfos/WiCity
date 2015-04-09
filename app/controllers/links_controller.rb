@@ -24,8 +24,6 @@ class LinksController < ApplicationController
     #@link2 = Link.new
     @link = Link.new
     @links = Link.all
-
-    #@aLink = []
   end
 
   # GET /links/1/edit
