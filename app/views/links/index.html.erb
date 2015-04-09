@@ -20,6 +20,14 @@
         }
     };
 
+    var rendererOptionsAllLinks = {
+        suppressMarkers: true,
+        preserveViewport: true,
+        polylineOptions: {
+            strokeColor: "#00FFFF"
+        }
+    };
+
     var directionsService, directionsDisplay;
 
     function initialize() {
@@ -141,7 +149,7 @@
 
         dS.route(request, function(response, status) {
             if (status == google.maps.DirectionsStatus.OK) {
-                dD.setOptions({ suppressMarkers: true, preserveViewport: true });
+                dD.setOptions(rendererOptionsAllLinks);
                 dD.setDirections(response);
             } else {
                 if (status == google.maps.DirectionsStatus.OVER_QUERY_LIMIT) {
