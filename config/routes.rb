@@ -30,6 +30,7 @@ WiCity::Application.routes.draw do
   get '/nearserv', to: 'home#nearserv'
 
   get '/alllinks', to: 'links#showall'
+  get '/allnodos', to: 'nodos#showall'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -7,6 +7,10 @@ class NodosController < ApplicationController
     @nodos = Nodo.all
   end
 
+  def showall
+    @nodos = Nodo.all
+  end
+
   # GET /nodos/1
   # GET /nodos/1.json
   def show
