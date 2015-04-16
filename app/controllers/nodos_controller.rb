@@ -1,6 +1,8 @@
 class NodosController < ApplicationController
   before_action :set_nodo, only: [:show, :edit, :update, :destroy]
 
+  layout 'show', only: [:showall]
+
   # GET /nodos
   # GET /nodos.json
   def index
