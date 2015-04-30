@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style type="text/css">
+    html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
+  </style>
+
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key="></script>
+
+  <script type="text/javascript">
+    var infowindow, map, markerC, markerA, bounds;
+
+    function initialize() {
+
+      var mapOptions = {
+        center: { lat: 37.50789, lng: 15.08330},
+        zoom: 10
+      };
+
+      map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+      addCircle(map.getCenter(), 500);
+
+      // Try HTML5 geolocation
+      /*if(navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+          map.setCenter(pos);
+          map.setZoom(14);
+
+          addCircle(pos, 1000);
+
+        }, function() {
+          handleNoGeolocation(true);
+        });
+      } else {
+        // Browser doesn't support Geolocation
+        handleNoGeolocation(false);
+      }*/
+
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+    function handleNoGeolocation(errorFlag) {
+      if (errorFlag) {
+        var content = 'Error: The Geolocation service failed.';
+      } else {
+        var content = 'Error: Your browser doesn\'t support geolocation.';
+      }
+
+      var options = {
+        map: map,
+        position: new google.maps.LatLng(60, 105),
+        content: content
+      };
+
+      infowindow = new google.maps.InfoWindow(options);
+      map.setCenter(options.position);
+    }
+
+    function addCircle(pos, r) {
+      markerC = new google.maps.Marker({
+        map: map,
+        position: pos,
+        draggable: true,
+        title: 'Marker C'
+      });
+
+      var circle = new google.maps.Circle({
+        map: map,
+        clickable: true,
+        radius: r,
+        fillColor: '#00f',
+        fillOpacity: .4,
+        strokeColor: '#313131',
+        strokeOpacity: .4,
+        strokeWeight: .8
+      });
+      circle.bindTo('center', markerC, 'position');
+
+      google.maps.event.addListener(circle, 'click', function() {
+        alert("ciao");
+      });
+
+    }
+
+  </script>
+
+</head>
+
+<body>
+<div id="map-canvas"></div>
+</body>
+
+</html>

@@ -8,7 +8,7 @@
 
 <script type="text/javascript">
 
-    var map, layer;
+    var map, circle, markerC, bounds;
     var infowindow = null;
 
     function initialize() {
@@ -17,54 +17,72 @@
             center: new google.maps.LatLng(37.508059, 375.082752)
         };
         map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        addNodos();
+        addCircle();
+    }
 
-        layer = new google.maps.FusionTablesLayer({
-            query: {
-                select: '\'latitude\'',
-                from: '1VRWffIb31b6fdGhbUJrVr8EoY2RS4R1gUl63cUAO'
-            },
-            options: {
-                suppressInfoWindows: true
-            }
+    function addCircle() {
+        markerC = new google.maps.Marker({
+            map: map,
+            position: map.getCenter(),
+            draggable: true,
+            title: 'Marker C'
         });
-        layer.setMap(map);
 
-        var infowindow = new google.maps.InfoWindow();
-        google.maps.event.addListener(layer, 'click', function(e) {
-            var n1 = e.row['idnod'].value;
-            infowindow.setContent(e.infoWindowHtml +
-                    '<br><a href="' + n1+ '/edit">Delete</a>');
-            infowindow.setPosition(e.latLng);
-            infowindow.open(map);
+        var circle = new google.maps.Circle({
+            map: map,
+            clickable: false,
+            radius: 500,
+            fillColor: '#fff',
+            fillOpacity: .4,
+            strokeColor: '#313131',
+            strokeOpacity: .4,
+            strokeWeight: .8
+        });
+        circle.bindTo('center', markerC, 'position');
+
+        google.maps.event.addListener(markerC, 'dragend', function() {
+            resetMarker();
+            bounds = circle.getBounds();
+            printMarker();
         });
     }
 
-    /*function addMarker() {
-        var icon = { anchor: new google.maps.Point(11, 11), url: "http://load.my-azur.de/f/o/dot-red.png"};
-        <#% @nodos.each do |itm| %>
-            var coord = new google.maps.LatLng(<#%= itm.lat %>, <#%= itm.lng %>);
-            var title = '<#%= itm.id %>';
-            var marker = new google.maps.Marker({
-                map: map,
-                title: title,
-                position: coord,
-                icon: icon
-            });
-            map.setCenter(coord);
+    var marker_array_lat = [];
+    var marker_array_lng = [];
+    function addNodos() {
+        <% @nodos.each do |itm| %>
+            var node_lat = parseFloat("<%= itm.lat %>");
+            marker_array_lat.push(node_lat);
+            var node_lng = parseFloat("<%= itm.lng %>");
+            marker_array_lng.push(node_lng);
+        <% end %>
+        alert(marker_array_lng.length);
+    }
 
-            google.maps.event.addListener(marker, "dblclick", function (e) {
-                location.href='<#%= edit_nodo_path(itm) %>';
-            });
+    var markerInside = [];
+    var icon = { anchor: new google.maps.Point(11, 11), url: "http://denovobiolabs.com/images/dot.png"};
+    function printMarker() {
+        for(var i = 0; i < marker_array_lng.length; i++)
+        {
+            var mCoord = new google.maps.LatLng(marker_array_lat[i], marker_array_lng[i]);
+            if(bounds.contains(mCoord))
+            {
+                var marker = new google.maps.Marker({
+                    position: mCoord,
+                    icon: icon,
+                    map: map
+                });
+                markerInside.push(marker);
+            }
+        }
+    }
 
-            infowindow = new google.maps.InfoWindow({
-                content: '<span class="infowin"><#%= itm.id %></span>'
-            });
-            google.maps.event.addListener(marker, 'click', function () {
-                infowindow.setContent('<span class="infowin"><#%= itm.id %></span>');
-                infowindow.open(map, this);
-            });
-        <#% end %>
-    }*/
+    function resetMarker() {
+        for (var i = 0; i < markerInside.length; i++) {
+            markerInside[i].setMap(null);
+        }
+    }
 
     google.maps.event.addDomListener(window, 'load', initialize);
 

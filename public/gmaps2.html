@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style type="text/css">
+    html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
+  </style>
+
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key="></script>
+
+  <script type="text/javascript">
+    var map, marker;
+
+    function initialize() {
+      var coord = new google.maps.LatLng(37.50789, 15.08330);
+
+      var mapOptions = {
+        center: coord,
+        zoom: 12
+      };
+
+      map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+      marker = new google.maps.Marker({
+        position: map.getCenter(),
+        map: map,
+        draggable: true,
+        title: 'Click to open infowindow'
+      });
+
+      var infowindow = new google.maps.InfoWindow();
+
+      google.maps.event.addListener(marker, 'dragstart', function() {
+        infowindow.open(map, marker);
+      });
+
+      google.maps.event.addListener(marker, 'drag', function() {
+        infowindow.setContent('Marker Position: ' + marker.getPosition() + '');
+      });
+
+      google.maps.event.addListener(marker, 'dragend', function() {
+        infowindow.close();
+        showCoord(marker.getPosition());
+      });
+
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+    function showCoord(coord) {
+      document.getElementById('risultato').value = coord;
+    }
+  </script>
+
+</head>
+<body>
+
+<div>
+  <input id="risultato" value="" size="200">
+</div>
+
+<div id="map-canvas"></div>
+
+</body>
+</html>
