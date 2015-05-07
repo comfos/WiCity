@@ -8,18 +8,28 @@
 
 <script type="text/javascript">
 
-    var map, circle, markerC, bounds;
+    var map, circle, markerC;
     var infowindow = null;
 
 
     function initialize() {
+
         var mapOptions = {
             zoom: 16,
             center: new google.maps.LatLng(37.508059, 375.082752)
         };
         map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+        var lat = "<%= params[:lat] %>";
+        var lng = "<%= params[:lng] %>";
+        if(lat) {
+            map.setCenter(new google.maps.LatLng(lat, lng));
+            map.setZoom(18);
+        }
+
         addNodos();
         addCircle();
+        printMarker();
     }
 
     function addCircle() {
@@ -30,7 +40,7 @@
             title: 'Marker C'
         });
 
-        var circle = new google.maps.Circle({
+        circle = new google.maps.Circle({
             map: map,
             clickable: false,
             radius: 500,
@@ -44,36 +54,58 @@
 
         google.maps.event.addListener(markerC, 'dragend', function() {
             resetMarker();
-            bounds = circle.getBounds();
             printMarker();
         });
     }
 
-    var marker_array_lat = [];
-    var marker_array_lng = [];
+    var marker_array = [];
     function addNodos() {
         <% @nodos.each do |itm| %>
             var node_lat = parseFloat("<%= itm.lat %>");
-            marker_array_lat.push(node_lat);
             var node_lng = parseFloat("<%= itm.lng %>");
-            marker_array_lng.push(node_lng);
+            var node_id = "<%= itm.id %>";
+
+            var marker = {id: node_id, lat: node_lat, lng: node_lng};
+            marker_array.push(marker);
         <% end %>
-        alert(marker_array_lng.length);
+    }
+
+    var globalInfoWindow = new google.maps.InfoWindow({
+        content: "holding..."
+    });
+    function viewLocPic() {
+        console.log("this refers to " + this);
+        globalInfoWindow.setPosition(this.getPosition());
+        globalInfoWindow.setContent('<a href="nodos/' + this.id + '/edit" target="_parent">Edit</a>' +
+                '<br>' +
+                '<%#= link_to "delete", Nodos.find(5), method: :delete, data: { confirm: "Are you sure?" } %>');
+        globalInfoWindow.open(map, this);
     }
 
     var markerInside = [];
-    var icon = { anchor: new google.maps.Point(11, 11), url: "http://denovobiolabs.com/images/dot.png"};
+    var iw;
     function printMarker() {
-        for(var i = 0; i < marker_array_lng.length; i++)
+        var i;
+        var icon = { anchor: new google.maps.Point(11, 11), url: "http://denovobiolabs.com/images/dot.png"};
+
+        iw = new google.maps.InfoWindow({
+            content: "holding..."
+        });
+
+        for(i = 0; i < marker_array.length; i++)
         {
-            var mCoord = new google.maps.LatLng(marker_array_lat[i], marker_array_lng[i]);
+            var mCoord = new google.maps.LatLng(marker_array[i].lat, marker_array[i].lng);
+            var bounds = circle.getBounds();
             if(bounds.contains(mCoord))
             {
                 var marker = new google.maps.Marker({
                     position: mCoord,
                     icon: icon,
-                    map: map
+                    map: map,
+                    id: marker_array[i].id
                 });
+
+                google.maps.event.addListener(marker, 'click', viewLocPic);
                 markerInside.push(marker);
             }
         }

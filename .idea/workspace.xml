@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/nodos/index.html.erb" afterPath="$PROJECT_DIR$/app/views/nodos/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/nodos_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/nodos_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WiCity.iws" />
@@ -15,15 +16,15 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/WiCity@Development__WiCity.coverage" NAME="Development: WiCity Coverage Results" MODIFIED="1430381231756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
+    <SUITE FILE_PATH="coverage/WiCity@Development__WiCity.coverage" NAME="Development: WiCity Coverage Results" MODIFIED="1430983509413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
     <SUITE FILE_PATH="coverage/WiCity@db_migrate__1_.coverage" NAME="db:migrate (1) Coverage Results" MODIFIED="1421331990014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
-    <SUITE FILE_PATH="coverage/WiCity@db_migrate__4_.coverage" NAME="db:migrate (4) Coverage Results" MODIFIED="1421333203902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
     <SUITE FILE_PATH="coverage/WiCity@db_migrate__3_.coverage" NAME="db:migrate (3) Coverage Results" MODIFIED="1421333017708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
+    <SUITE FILE_PATH="coverage/WiCity@db_migrate__4_.coverage" NAME="db:migrate (4) Coverage Results" MODIFIED="1421333203902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
     <SUITE FILE_PATH="coverage/WiCity@db_create_all__WiCity.coverage" NAME="db:create:all: WiCity Coverage Results" MODIFIED="1415187772915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
     <SUITE FILE_PATH="coverage/WiCity@Rails_console__WiCity.coverage" NAME="Rails console: WiCity Coverage Results" MODIFIED="1388859434959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
     <SUITE FILE_PATH="coverage/WiCity@db_migrate.coverage" NAME="db:migrate Coverage Results" MODIFIED="1421331874331" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
-    <SUITE FILE_PATH="coverage/WiCity@db_migrate__2_.coverage" NAME="db:migrate (2) Coverage Results" MODIFIED="1421332035021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
     <SUITE FILE_PATH="coverage/WiCity@db_migrate__WiCity.coverage" NAME="db:migrate: WiCity Coverage Results" MODIFIED="1421331948942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
+    <SUITE FILE_PATH="coverage/WiCity@db_migrate__2_.coverage" NAME="db:migrate (2) Coverage Results" MODIFIED="1421332035021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
     <SUITE FILE_PATH="coverage/WiCity@Production__WiCity.coverage" NAME="Production: WiCity Coverage Results" MODIFIED="1417973004425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -41,7 +42,18 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/nodos/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="4" selection-start="562" selection-end="562" vertical-scroll-proportion="0.30584708" vertical-offset="0" max-vertical-offset="1836">
+            <state line="80" column="20" selection-start="2510" selection-end="2510" vertical-scroll-proportion="0.7923729" vertical-offset="986" max-vertical-offset="2380">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nodos_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/nodos_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="10" selection-start="1362" selection-end="1362" vertical-scroll-proportion="0.0" vertical-offset="692" max-vertical-offset="1530">
               <folding />
             </state>
           </provider>
@@ -73,7 +85,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/db/migrate/20141204132608_create_schools.rb" />
         <option value="$PROJECT_DIR$/app/views/schools/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/schools/_form_edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/schools/_form_new.html.erb" />
@@ -114,7 +125,6 @@
         <option value="$PROJECT_DIR$/app/views/fuels/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/nodos/showall.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/nodos_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/nodos/_form_edit.html.erb" />
         <option value="$PROJECT_DIR$/public/gmaps7.html" />
         <option value="$PROJECT_DIR$/public/gmaps.html" />
@@ -123,6 +133,8 @@
         <option value="$PROJECT_DIR$/public/gmaps5.html" />
         <option value="$PROJECT_DIR$/public/gmaps6.html" />
         <option value="$PROJECT_DIR$/public/gmaps4.html" />
+        <option value="$PROJECT_DIR$/app/views/nodos/indexBK.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/nodos_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/nodos/index.html.erb" />
       </list>
     </option>
@@ -185,7 +197,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
@@ -258,9 +269,32 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WiCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WiCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1690,7 +1724,11 @@
       <created>1430381640838</created>
       <updated>1430381640838</updated>
     </task>
-    <option name="localTasksCounter" value="278" />
+    <task id="LOCAL-00278" summary="EDIT showNodos&#10;">
+      <created>1430381820287</created>
+      <updated>1430381820287</updated>
+    </task>
+    <option name="localTasksCounter" value="279" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1717,25 +1755,25 @@
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31988874" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32780084" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32732317" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22978178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23234917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20445062" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20445062" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27323163" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3259362" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32226834" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32226834" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1947,11 +1985,6 @@
         <state line="17" column="64" selection-start="844" selection-end="844" vertical-scroll-proportion="0.44054878" vertical-offset="0" max-vertical-offset="5559" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/nodos_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="33" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0733813" vertical-offset="0" max-vertical-offset="1530" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/nodos/showall.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="47" selection-start="74" selection-end="74" vertical-scroll-proportion="0.025411062" vertical-offset="0" max-vertical-offset="669" />
@@ -1967,13 +2000,6 @@
         <state line="3" column="33" selection-start="116" selection-end="147" vertical-scroll-proportion="0.0733813" vertical-offset="0" max-vertical-offset="1632" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/nodos/_form_edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="29" selection-start="477" selection-end="780" vertical-scroll-proportion="0.4485842" vertical-offset="158" max-vertical-offset="1479">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/nodos/_form_new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="89" column="11" selection-start="3011" selection-end="3011" vertical-scroll-proportion="0.0" vertical-offset="1513" max-vertical-offset="3859">
@@ -1981,23 +2007,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="185" column="43" selection-start="5480" selection-end="5511" vertical-scroll-proportion="-12.903846" vertical-offset="2474" max-vertical-offset="10693">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/links/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="140" column="33" selection-start="4706" selection-end="4710" vertical-scroll-proportion="4.576923" vertical-offset="2499" max-vertical-offset="3638">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/nodos/indexBK.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="107" selection-start="1534" selection-end="1633" vertical-scroll-proportion="0.11283186" vertical-offset="663" max-vertical-offset="1513">
           <folding />
         </state>
       </provider>
@@ -2016,13 +2028,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/gmaps3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="82" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1343">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pharms/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="118" column="3" selection-start="3710" selection-end="3710" vertical-scroll-proportion="1.0976378" vertical-offset="1309" max-vertical-offset="6256">
@@ -2035,38 +2040,77 @@
         <state line="4" column="0" selection-start="215" selection-end="350" vertical-scroll-proportion="-1.7621951" vertical-offset="1224" max-vertical-offset="5695" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/gmaps4.html">
+    <entry file="file://$PROJECT_DIR$/public/gmaps7.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="48" selection-start="403" selection-end="403" vertical-scroll-proportion="0.27952167" vertical-offset="68" max-vertical-offset="1190">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/gmaps5.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="82" selection-start="219" selection-end="219" vertical-scroll-proportion="-0.83856505" vertical-offset="697" max-vertical-offset="1547">
+        <state line="8" column="82" selection-start="219" selection-end="219" vertical-scroll-proportion="43.153847" vertical-offset="1258" max-vertical-offset="2006">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/gmaps6.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="82" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1734">
+        <state line="8" column="82" selection-start="219" selection-end="219" vertical-scroll-proportion="39.23077" vertical-offset="1156" max-vertical-offset="1734">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/gmaps7.html">
+    <entry file="file://$PROJECT_DIR$/public/gmaps4.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="82" selection-start="219" selection-end="219" vertical-scroll-proportion="-0.0" vertical-offset="136" max-vertical-offset="2006">
+        <state line="37" column="29" selection-start="1059" selection-end="1078" vertical-scroll-proportion="-7.8461537" vertical-offset="425" max-vertical-offset="1190">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/nodos/indexBK.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="80" selection-start="1339" selection-end="1394" vertical-scroll-proportion="0.4559387" vertical-offset="357" max-vertical-offset="1513">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/gmaps5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="82" selection-start="219" selection-end="219" vertical-scroll-proportion="34.0" vertical-offset="1020" max-vertical-offset="1547">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/gmaps3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="6" selection-start="769" selection-end="911" vertical-scroll-proportion="-0.29310346" vertical-offset="697" max-vertical-offset="1343">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/nodos/_form_edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="34" selection-start="2342" selection-end="2342" vertical-scroll-proportion="1.286017" vertical-offset="702" max-vertical-offset="1479">
+          <folding>
+            <element signature="n#style#0;n#div#3;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="43" selection-start="2053" selection-end="2053" vertical-scroll-proportion="-6.740741" vertical-offset="4437" max-vertical-offset="10693">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/nodos_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="10" selection-start="1362" selection-end="1362" vertical-scroll-proportion="0.0" vertical-offset="692" max-vertical-offset="1530">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/nodos/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="4" selection-start="562" selection-end="562" vertical-scroll-proportion="0.30584708" vertical-offset="0" max-vertical-offset="1836">
-          <folding />
+        <state line="80" column="20" selection-start="2510" selection-end="2510" vertical-scroll-proportion="0.7923729" vertical-offset="986" max-vertical-offset="2380">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

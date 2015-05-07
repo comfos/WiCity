@@ -52,7 +52,7 @@ class NodosController < ApplicationController
       if @nodo.update(nodo_params)
         #format.html { redirect_to @nodo, notice: 'Nodo was successfully updated.' }
         #format.json { head :no_content }
-        format.html { redirect_to nodos_url }
+        format.html { redirect_to nodos_url+'?lat=' + @nodo.lat + '&lng=' + @nodo.lng }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
