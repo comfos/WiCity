@@ -149,41 +149,41 @@
 
     $(function() {
         <% if params[:filter] == 'all' %>
-            $( "#filterall" ).css("border-color", "red");
-            $( "#filterall" ).css("border-width", "2px");
+        $( "#filterall" ).css("border-color", "red");
+        $( "#filterall" ).css("border-width", "2px");
         <% else %>
-            $( "#filteropen" ).css("border-color", "red");
-            $( "#filteropen" ).css("border-width", "2px");
+        $( "#filteropen" ).css("border-color", "red");
+        $( "#filteropen" ).css("border-width", "2px");
         <% end %>
 
         <% if params[:filter1] == 'now' %>
-            $( "#filternow" ).css("height", "18px");
-            $( "#filternow" ).css("border-color", "red");
-            $( "#filternow" ).css("border-width", "2px");
+        $( "#filternow" ).css("height", "18px");
+        $( "#filternow" ).css("border-color", "red");
+        $( "#filternow" ).css("border-width", "2px");
         <% end %>
 
         <% if params[:filter2] == 'notturne' %>
-            $( "#filternotturne" ).css("height", "18px");
-            $( "#filternotturne" ).css("border-color", "red");
-            $( "#filternotturne" ).css("border-width", "2px");
+        $( "#filternotturne" ).css("height", "18px");
+        $( "#filternotturne" ).css("border-color", "red");
+        $( "#filternotturne" ).css("border-width", "2px");
         <% end %>
 
         <% if params[:day] == '7' %>
-            $( "#filtersunday" ).css("height", "18px");
-            $( "#filtersunday" ).css("border-color", "red");
-            $( "#filtersunday" ).css("border-width", "2px");
+        $( "#filtersunday" ).css("height", "18px");
+        $( "#filtersunday" ).css("border-color", "red");
+        $( "#filtersunday" ).css("border-width", "2px");
         <% end %>
 
         <% if params[:type] == 'park' %>
-            $( "#park" ).css("height", "18px");
-            $( "#park" ).css("border-color", "red");
-            $( "#park" ).css("border-width", "2px");
+        $( "#park" ).css("height", "18px");
+        $( "#park" ).css("border-color", "red");
+        $( "#park" ).css("border-width", "2px");
         <% end %>
 
         <% if params[:type] == 'taxistation' %>
-            $( "#taxistation" ).css("height", "18px");
-            $( "#taxistation" ).css("border-color", "red");
-            $( "#taxistation" ).css("border-width", "2px");
+        $( "#taxistation" ).css("height", "18px");
+        $( "#taxistation" ).css("border-color", "red");
+        $( "#taxistation" ).css("border-width", "2px");
         <% end %>
 
         <% if params[:type] == 'radiotaxi' %>
@@ -360,22 +360,22 @@
   <ul data-role="listview" data-inset="true" data-filter="true">
     <% if !@parks.nil? && ( ( params[:type] != '' && params[:type] == 'park' ) || params[:type] == nil )
          @parks.each do |park|
-          if params[:filter] == 'all' %>
-            <li>
-    <%          if isOpen(park) %>
-                    <a href="<%= "#{parks_url}/#{park.id}?time="+@t.to_s %>" target="_parent">
-                    <img src="/assets/icon/openpark.png">
-    <%          else    %>
-                    <a href="<%= "#{parks_url}/#{park.id}?s=close&time="+@t.to_s %>" target="_parent">
-                    <img src="/assets/icon/closepark.png">
-    <%	        end     %>
-                        <h2><%= park.name %></h2>
-                        <p><%= park.address %></p>
-                        <%= link_to 'Edit', edit_park_path(park), 'data-icon' => 'edit', :target => '_parent' %>
-                    </a>
-            </li>
-    <%    else
-            if isOpen(park) %>
+           if params[:filter] == 'all' %>
+                <li>
+                  <%          if isOpen(park) %>
+                      <a href="<%= "#{parks_url}/#{park.id}?time="+@t.to_s %>" target="_parent">
+                        <img src="/assets/icon/openpark.png">
+                  <%          else    %>
+                      <a href="<%= "#{parks_url}/#{park.id}?s=close&time="+@t.to_s %>" target="_parent">
+                        <img src="/assets/icon/closepark.png">
+                  <%	        end     %>
+                  <h2><%= park.name %></h2>
+                  <p><%= park.address %></p>
+                  <%= link_to 'Edit', edit_park_path(park), 'data-icon' => 'edit', :target => '_parent' %>
+                  </a>
+                </li>
+            <%    else
+                    if isOpen(park) %>
                     <li>
                       <a href="<%= "#{parks_url}/#{park.id}?time="+@t.to_s %>" target="_parent">
                         <img src="/assets/icon/openpark.png">
@@ -384,23 +384,23 @@
                         <%= link_to 'Edit', edit_park_path(park), 'data-icon' => 'edit', :target => '_parent' %>
                       </a>
                     </li>
-    <%      end
-          end     %>
-    <%   end
-       end %>
+                <%      end
+                        end     %>
+        <%   end
+             end %>
 
     <% if !@taxistations.nil? && ( ( params[:type] != '' && params[:type] == 'taxistation' ) || params[:type] == nil )
-           @taxistations.each do |taxistation| %>
+         @taxistations.each do |taxistation| %>
             <li>
               <a href="<%= "#{taxistations_url}/#{taxistation.id}?time="+@t.to_s %>" target="_parent">
-                  <img src="/assets/icon/taxistation.png">
-                  <h2><%= taxistation.name %></h2>
-                  <p><%= taxistation.address %></p>
-                  <%= link_to 'Edit', edit_taxistation_path(taxistation), 'data-icon' => 'edit', :target => '_parent' %>
+                <img src="/assets/icon/taxistation.png">
+                <h2><%= taxistation.name %></h2>
+                <p><%= taxistation.address %></p>
+                <%= link_to 'Edit', edit_taxistation_path(taxistation), 'data-icon' => 'edit', :target => '_parent' %>
               </a>
             </li>
-    <%     end
-       end %>
+        <%     end
+               end %>
 
     <% if !@radiotaxis.nil? && ( ( params[:type] != '' && params[:type] == 'radiotaxi' ) || params[:type] == nil )
          @radiotaxis.each do |radiotaxi| %>
@@ -412,8 +412,8 @@
                 <%= link_to 'Edit', edit_radiotaxi_path(radiotaxi), 'data-icon' => 'edit', :target => '_parent' %>
               </a>
             </li>
-    <%   end
-       end %>
+        <%   end
+             end %>
   </ul>
 </div>
 

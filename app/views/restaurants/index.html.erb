@@ -334,43 +334,37 @@
   %>
 
   <ul data-role="listview" data-inset="true" data-filter="true">
-    <% @restaurants.each do |restaurant|
-      if params[:filter] == 'all' %>
-            <li>
-              <%          if isOpen(restaurant) %>
-                  <a href="<%= "#{restaurants_url}/#{restaurant.id}?time="+@t.to_s %>" target="_parent">
-                    <%              if restaurant.call %>
-                        <img src="/assets/icon/opencpharm.png">
-                    <%              else %>
-                        <img src="/assets/icon/openpharm.png">
-                    <%              end %>
-              <%          else    %>
-                  <a href="<%= "#{restaurants_url}/#{restaurant.id}?s=close&time="+@t.to_s %>" target="_parent">
-                    <img src="/assets/icon/closepharm.png">
-              <%	        end     %>
-              <h2><%= restaurant.name %></h2>
-              <p><%= restaurant.address %></p>
-              <%= link_to 'Edit', edit_restaurant_path(restaurant), 'data-icon' => 'edit', :target => '_parent' %>
-              </a>
-            </li>
-        <%    else
-                if isOpen(restaurant) %>
+    <% if !@restaurants.nil? && ( ( params[:type] != '' && params[:type] == 'restaurant' ) || params[:type] == nil )
+         @restaurants.each do |restaurant|
+           if params[:filter] == 'all' %>
                 <li>
-                  <a href="<%= "#{restaurants_url}/#{restaurant.id}?time="+@t.to_s %>" target="_parent">
-                    <%          if restaurant.call %>
-                        <img src="/assets/icon/opencpharm.png">
-                    <%          else %>
-                        <img src="/assets/icon/openpharm.png">
-                    <%          end %>
-                    <h2><%= restaurant.name %></h2>
-                    <p><%= restaurant.address %></p>
-                    <%= link_to 'Edit', edit_restaurant_path(restaurant), 'data-icon' => 'edit', :target => '_parent' %>
+                  <%          if isOpen(restaurant) %>
+                      <a href="<%= "#{restaurants_url}/#{restaurant.id}?time="+@t.to_s %>" target="_parent">
+                        <img src="/assets/icon/xxx.png">
+                  <%          else    %>
+                      <a href="<%= "#{restaurants_url}/#{restaurant.id}?s=close&time="+@t.to_s %>" target="_parent">
+                        <img src="/assets/icon/xxx.png">
+                  <%	        end     %>
+                  <h2><%= restaurant.name %></h2>
+                  <p><%= restaurant.address %></p>
+                  <%= link_to 'Edit', edit_restaurant_path(restaurant), 'data-icon' => 'edit', :target => '_parent' %>
                   </a>
                 </li>
-            <%      end
-                    end     %>
+            <%    else
+                    if isOpen(restaurant) %>
+                    <li>
+                      <a href="<%= "#{restaurants_url}/#{restaurant.id}?time="+@t.to_s %>" target="_parent">
+                        <img src="/assets/icon/xxx.png">
+                        <h2><%= restaurant.name %></h2>
+                        <p><%= restaurant.address %></p>
+                        <%= link_to 'Edit', edit_restaurant_path(restaurant), 'data-icon' => 'edit', :target => '_parent' %>
+                      </a>
+                    </li>
+                <%      end
+                        end     %>
 
-    <% end %>
+        <% end
+           end %>
 
     <% if !@caves.nil? && ( ( params[:type] != '' && params[:type] == 'cafe' ) || params[:type] == nil )
          @caves.each do |cafe| %>
