@@ -44,6 +44,8 @@
     var markerClusterer_rt = null;
     var markers_fuel = [];
     var markerClusterer_fuel = null;
+    var markers_restaurant = [];
+    var markerClusterer_restaurant = null;
 
     var intervall = window.setInterval(checkpos, 2000);
 
@@ -206,6 +208,11 @@
             markers_fuel[i].setMap(null);
         }
         markers_fuel = [];
+
+        for (var i = 0; i < markers_restaurant.length; i++) {
+            markers_restaurant[i].setMap(null);
+        }
+        markers_restaurant = [];
     }
 
     <%
@@ -512,6 +519,44 @@
             markerClusterer_fuel = new MarkerClusterer(map, markers_fuel);
         }
         i=0;
+
+        if(crestaurant) {
+            <% @restaurants.each do |itm| %>
+            var coord = new google.maps.LatLng(<%= itm.lat %>, <%= itm.lng %>);
+            if( bounds.contains(coord) ) {
+                if('<%= isOpen(itm) %>') {
+                    var icon = '/assets/marker/restaurant.png';
+                }
+                else {
+                    var icon = '/assets/marker/crestaurant.png';
+                }
+                marker = new google.maps.Marker({
+                    position: coord,
+                    map: map,
+                    icon: icon,
+                    title: '<%= itm.name %>'
+                });
+                infowindow = new google.maps.InfoWindow({
+                    content: '<span class="infowin"><%= itm.name %></span>'
+                });
+                google.maps.event.addListener(marker, 'click', function () {
+                    <% if params[:time] %>
+                    infowindow.setContent('<a href="<%= "#{restaurants_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'&time=<%= params[:time] %>" target="_parent"><%= itm.name %></a>');
+                    <% else %>
+                    infowindow.setContent('<a href="<%= "#{restaurants_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'" target="_parent"><%= itm.name %></a>');
+                    <% end %>
+                    infowindow.open(map, this);
+                });
+                markers_restaurant[i] = marker;
+                i++;
+            }
+            <% end %>
+            /*markerClusterer_pharm = new MarkerClusterer(map, markers_pharms, {
+             styles: styles[0]
+             });*/
+            markerClusterer_restaurant = new MarkerClusterer(map, markers_restaurant);
+        }
+        i=0;
     }
 
     function clearClusters() {
@@ -520,6 +565,7 @@
         markerClusterer_ts.clearMarkers();
         markerClusterer_rt.clearMarkers();
         markerClusterer_fuel.clearMarkers();
+        markerClusterer_restaurant.clearMarkers();
     }
 
     var cpharm = true;
@@ -527,6 +573,7 @@
     var cts = true;
     var crt = true;
     var cfuel = true;
+    var crestaurant = true;
 
     function choiceElement(type) {
         if(type=='pharm') {
@@ -578,6 +625,17 @@
                 cfuel = true;
             }
         }
+
+        if(type=='restaurant') {
+            if(crestaurant) {
+                $("#restaurant").fadeTo( "slow", 0.30 );
+                crestaurant = false;
+            } else {
+                $("#restaurant").fadeTo( "slow", 1 );
+                crestaurant = true;
+            }
+        }
+
         removeMarker();
         clearClusters();
         addMarker();
@@ -609,6 +667,7 @@
   %>
   <input disabled="" value="<%= data %>" type="button" data-icon="clock">
 
+  <a href="#" id="restaurant" onclick="choiceElement(this.id)"><img src="assets/marker/restaurant.png"/></a>
   <a href="#" id="pharm" onclick="choiceElement(this.id)"><img src="assets/marker/pharm.png"/></a>
   <a href="#" id="park" onclick="choiceElement(this.id)"><img src="assets/marker/park.png"/></a>
   <a href="#" id="ts" onclick="choiceElement(this.id)"><img src="assets/marker/taxistation.png"/></a>

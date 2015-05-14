@@ -125,10 +125,10 @@
             if (status == google.maps.GeocoderStatus.OK) {
                 map.setCenter(results[0].geometry.location);
                 if(s=="close") {
-                    var icon = '/assets/marker/crestaurant.png';
+                    var icon = '/assets/marker/restaurant.png';
                 }
                 else {
-                    var icon = '/assets/marker/restaurants.png';
+                    var icon = '/assets/marker/restaurant.png';
                 }
                 var marker = new google.maps.Marker({
                     map: map,
