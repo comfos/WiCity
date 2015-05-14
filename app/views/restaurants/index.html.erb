@@ -340,10 +340,10 @@
                 <li>
                   <%          if isOpen(restaurant) %>
                       <a href="<%= "#{restaurants_url}/#{restaurant.id}?time="+@t.to_s %>" target="_parent">
-                        <img src="/assets/icon/xxx.png">
+                        <img src="/assets/icon/restaurant.png">
                   <%          else    %>
                       <a href="<%= "#{restaurants_url}/#{restaurant.id}?s=close&time="+@t.to_s %>" target="_parent">
-                        <img src="/assets/icon/xxx.png">
+                        <img src="/assets/icon/restaurant.png">
                   <%	        end     %>
                   <h2><%= restaurant.name %></h2>
                   <p><%= restaurant.address %></p>
@@ -354,7 +354,7 @@
                     if isOpen(restaurant) %>
                     <li>
                       <a href="<%= "#{restaurants_url}/#{restaurant.id}?time="+@t.to_s %>" target="_parent">
-                        <img src="/assets/icon/xxx.png">
+                        <img src="/assets/icon/restaurant.png">
                         <h2><%= restaurant.name %></h2>
                         <p><%= restaurant.address %></p>
                         <%= link_to 'Edit', edit_restaurant_path(restaurant), 'data-icon' => 'edit', :target => '_parent' %>
@@ -370,7 +370,7 @@
          @caves.each do |cafe| %>
             <li>
               <a href="<%= "#{caves_url}/#{cafe.id}?time="+@t.to_s %>" target="_parent">
-                <img src="/assets/icon/cafe.png">
+                <img src="/assets/icon/restaurant.png">
                 <h2><%= cafe.name %></h2>
                 <p><%= cafe.address %></p>
                 <%= link_to 'Edit', edit_cafe_path(cafe), 'data-icon' => 'edit', :target => '_parent' %>
