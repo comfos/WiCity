@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/home/recnearserv.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/nearserv.html.erb" afterPath="$PROJECT_DIR$/app/views/home/nearserv.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/recnearserv.html.erb" afterPath="$PROJECT_DIR$/app/views/home/recnearserv.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WiCity.iws" />
@@ -71,7 +69,16 @@
       <file leaf-file-name="recnearserv.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/recnearserv.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="29" selection-start="3609" selection-end="3609" vertical-scroll-proportion="0.57186544" vertical-offset="1751" max-vertical-offset="11832">
+            <state line="186" column="19" selection-start="5481" selection-end="5481" vertical-scroll-proportion="0.7106518" vertical-offset="2715" max-vertical-offset="11900">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nearserv.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="678" column="8" selection-start="28194" selection-end="28194" vertical-scroll-proportion="-13.384615" vertical-offset="11178" max-vertical-offset="11832">
               <folding />
             </state>
           </provider>
@@ -157,11 +164,11 @@
         <option value="$PROJECT_DIR$/app/views/parks/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/restaurants/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/restaurants/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/home/nearserv.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
+        <option value="$PROJECT_DIR$/app/views/home/nearserv.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/recnearserv.html.erb" />
       </list>
     </option>
@@ -1767,7 +1774,11 @@
       <created>1431616193020</created>
       <updated>1431616193020</updated>
     </task>
-    <option name="localTasksCounter" value="283" />
+    <task id="LOCAL-00283" summary="ADD RecNearServ">
+      <created>1434009491686</created>
+      <updated>1434009491686</updated>
+    </task>
+    <option name="localTasksCounter" value="284" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1792,14 +1803,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31988874" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32732317" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32732317" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24582799" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24582799" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20445062" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -1809,7 +1821,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32226834" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1827,7 +1838,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="UPDATE CSS pharms&#10;" />
     <MESSAGE value="UPDATE CSS mcs&#10;" />
     <MESSAGE value="UPDATE change downtown to away" />
     <MESSAGE value="UPDATE mcs&#10;" />
@@ -1852,7 +1862,8 @@
     <MESSAGE value="EDIT showNodos" />
     <MESSAGE value="EDIT showNodos&#10;" />
     <MESSAGE value="EDIT nearest services&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="EDIT nearest services&#10;" />
+    <MESSAGE value="ADD RecNearServ" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD RecNearServ" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1887,7 +1898,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/links/_form_new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="27" selection-start="748" selection-end="748" vertical-scroll-proportion="0.39787233" vertical-offset="153" max-vertical-offset="3995" />
+        <state line="20" column="27" selection-start="748" selection-end="748" vertical-scroll-proportion="0.39787233" vertical-offset="153" max-vertical-offset="3995">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/nodos/edit.html.erb">
@@ -1957,7 +1970,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/nodos/_form_new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="11" selection-start="3011" selection-end="3011" vertical-scroll-proportion="0.0" vertical-offset="1513" max-vertical-offset="3859" />
+        <state line="89" column="11" selection-start="3011" selection-end="3011" vertical-scroll-proportion="0.0" vertical-offset="1513" max-vertical-offset="3859">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/links/index.html.erb">
@@ -1982,7 +1997,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/gmaps6.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="82" selection-start="219" selection-end="219" vertical-scroll-proportion="39.23077" vertical-offset="1156" max-vertical-offset="1734" />
+        <state line="8" column="82" selection-start="219" selection-end="219" vertical-scroll-proportion="39.23077" vertical-offset="1156" max-vertical-offset="1734">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/nodos/indexBK.html.erb">
@@ -1992,7 +2009,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/nodos/_form_edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="34" selection-start="2342" selection-end="2342" vertical-scroll-proportion="1.286017" vertical-offset="702" max-vertical-offset="1479" />
+        <state line="77" column="34" selection-start="2342" selection-end="2342" vertical-scroll-proportion="1.286017" vertical-offset="702" max-vertical-offset="1479">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/nodos/index.html.erb">
@@ -2034,13 +2053,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="556" column="84" selection-start="24491" selection-end="24491" vertical-scroll-proportion="0.0" vertical-offset="8859" max-vertical-offset="11696">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="496" />
@@ -2048,7 +2060,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/restaurants/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="57" selection-start="4217" selection-end="4217" vertical-scroll-proportion="-85.0" vertical-offset="0" max-vertical-offset="6256" />
+        <state line="130" column="57" selection-start="4217" selection-end="4217" vertical-scroll-proportion="-85.0" vertical-offset="0" max-vertical-offset="6256">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
@@ -2068,27 +2082,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/gmaps3.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="6" selection-start="769" selection-end="911" vertical-scroll-proportion="5.8846154" vertical-offset="697" max-vertical-offset="1343" />
+        <state line="32" column="6" selection-start="769" selection-end="911" vertical-scroll-proportion="5.8846154" vertical-offset="697" max-vertical-offset="1343">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/gmaps5.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="82" selection-start="219" selection-end="219" vertical-scroll-proportion="0.46153846" vertical-offset="148" max-vertical-offset="1547" />
+        <state line="8" column="82" selection-start="219" selection-end="219" vertical-scroll-proportion="0.46153846" vertical-offset="148" max-vertical-offset="1547">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/gmaps2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="82" selection-start="219" selection-end="219" vertical-scroll-proportion="9.346154" vertical-offset="379" max-vertical-offset="1173" />
+        <state line="8" column="82" selection-start="219" selection-end="219" vertical-scroll-proportion="9.346154" vertical-offset="379" max-vertical-offset="1173">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/gmaps.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="82" selection-start="219" selection-end="219" vertical-scroll-proportion="-0.0" vertical-offset="136" max-vertical-offset="680" />
+        <state line="8" column="82" selection-start="219" selection-end="219" vertical-scroll-proportion="-0.0" vertical-offset="136" max-vertical-offset="680">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/gmaps4.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="29" selection-start="1059" selection-end="1078" vertical-scroll-proportion="0.47113165" vertical-offset="425" max-vertical-offset="1190" />
+        <state line="37" column="29" selection-start="1059" selection-end="1078" vertical-scroll-proportion="0.47113165" vertical-offset="425" max-vertical-offset="1190">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
@@ -2126,9 +2150,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="678" column="8" selection-start="28194" selection-end="28194" vertical-scroll-proportion="-13.384615" vertical-offset="11178" max-vertical-offset="11832">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/recnearserv.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="29" selection-start="3609" selection-end="3609" vertical-scroll-proportion="0.57186544" vertical-offset="1751" max-vertical-offset="11832">
+        <state line="186" column="19" selection-start="5481" selection-end="5481" vertical-scroll-proportion="0.7106518" vertical-offset="2715" max-vertical-offset="11900">
           <folding />
         </state>
       </provider>

@@ -56,7 +56,7 @@
         }
     }
 
-    function updateRadius(circle, rad){
+    function updateRadius(circle, rad) {
         circle.setRadius(rad*1);
         removeMarker();
         clearClusters();
@@ -165,7 +165,7 @@
             fillOpacity: 0.35,
             map: map,
             center: mypos,
-            radius: 1000
+            radius: 1000 * fuzzyLogic()
         });
         circle.bindTo('center', markerCenter, 'position');
 
@@ -181,6 +181,10 @@
         });
 
         addMarker();
+    }
+
+    function fuzzyLogic() {
+        return 0.6;
     }
 
     function removeMarker() {

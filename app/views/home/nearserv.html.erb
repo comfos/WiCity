@@ -674,10 +674,18 @@
   <a href="#" id="rt" onclick="choiceElement(this.id)"><img src="assets/marker/radiotaxi.png"/></a>
   <a href="#" id="fuel" onclick="choiceElement(this.id)"><img src="assets/marker/fuel.png"/></a>
 
-  <input name="slider" id="slider" min="100" max="5000" value="1000" data-popup-enabled="true" type="range">
+  <div id="custom-slider">
+    <input name="slider" id="slider" min="100" max="5000" value="1000" type="range">
+  </div>
 
   <div class="ui-bar ui-bar-c ui-corner-all ui-shadow" style="padding: 2px">
     <div id="map-canvas" style="height: 100%; min-height: 450px;" class="ui-corner-all ui-shadow"></div>
   </div>
 
 </div>
+
+<style type="text/css">
+    #custom-slider input {
+        width: 50px !important;
+    }
+</style>
