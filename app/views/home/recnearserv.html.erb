@@ -173,13 +173,7 @@
         });
         circle.bindTo('center', markerCenter, 'position');
 
-        $("#slider").slider({
-            max: 5000,
-            min: 100,
-            value: parseInt(1000 * parseFloat(fuzzyLogic()))
-        });
-
-        //$("#slider").val( parseInt(1000 * parseFloat(fuzzyLogic())) );
+        $("#slider").val( parseInt(1000 * parseFloat(fuzzyLogic())) );
 
         $("#slider").on('slidestop', function( event, ui ) {
             updateRadius(circle, $("#slider").val());
@@ -717,7 +711,7 @@
   <a href="#" id="fuel" onclick="choiceElement(this.id)"><img src="assets/marker/fuel.png"/></a>
 
   <div id="custom-slider">
-    <input name="slider" id="slider" type="range">
+    <input name="slider" id="slider" min="100" max="5000" type="range">
   </div>
 
   <div class="ui-bar ui-bar-c ui-corner-all ui-shadow" style="padding: 2px">
