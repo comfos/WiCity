@@ -160,8 +160,6 @@
             icon: icon
         });
 
-        alert( "RAGGIO " + (1000 * parseFloat(fuzzyLogic())) );
-
         circle = new google.maps.Circle({
             strokeColor: '#FF0000',
             clickable: false,
@@ -175,7 +173,7 @@
         });
         circle.bindTo('center', markerCenter, 'position');
 
-        $("#slider").val( 1000 * parseFloat(fuzzyLogic()) );
+        $("#slider").val( parseInt(1000 * parseFloat(fuzzyLogic())) );
 
         $("#slider").on('slidestop', function( event, ui ) {
             updateRadius(circle, $("#slider").val());
