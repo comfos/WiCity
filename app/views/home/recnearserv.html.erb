@@ -190,7 +190,36 @@
     }
 
     function fuzzyLogic() {
-        return 0.6;
+        <%
+            def age(dob)
+                now = Time.now.utc.to_date
+                puts "età: " + String(now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1))
+                return now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
+            end
+
+        if user_signed_in? %>
+            if("<%= age(current_user.born) %>" <= 30) {
+                alert(1);
+                return 1;
+            }
+            else if(30 < "<%= age(current_user.born) %>" <= 50) {
+                var rtn = (<%= age(current_user.born) %> - 70)/(-40);
+                alert(rtn);
+                return (rtn);
+            }
+            else if(50 < "<%= age(current_user.born) %>" <= 80) {
+                var rtn = (125 - <%= age(current_user.born) %>)/(150);
+                alert(rtn);
+                return (rtn);
+            }
+            else if("<%= age(current_user.born) %>" > 80) {
+                var rtn = (0.3);
+                alert(rtn);
+                return (rtn);
+            }
+        <% else %>
+        return 1;
+        <% end %>
     }
 
     function removeMarker() {
