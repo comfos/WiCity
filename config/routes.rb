@@ -28,6 +28,7 @@ WiCity::Application.routes.draw do
 
   get '/intloc', to: 'home#intloc'
   get '/nearserv', to: 'home#nearserv'
+  get '/recnearserv', to: 'home#recnearserv'
 
   get '/alllinks', to: 'links#showall'
   get '/allnodos', to: 'nodos#showall'

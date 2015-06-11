@@ -1,0 +1,691 @@
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerclusterer/1.0/src/markerclusterer_packed.js"></script>
+
+<script type="text/javascript">
+
+    /*var styles = [ [{
+     url: '/assets/marker/pharms.png',
+     height: 35,
+     width: 35,
+     opt_anchor: [16, 0],
+     opt_textColor: '#000000',
+     opt_textSize: 10
+     }, {
+     url: '../images/people45.png',
+     height: 45,
+     width: 45,
+     opt_anchor: [24, 0],
+     opt_textColor: '#ff0000',
+     opt_textSize: 11
+     }, {
+     url: '../images/people55.png',
+     height: 55,
+     width: 55,
+     opt_anchor: [32, 0],
+     opt_textSize: 12
+     }] ];*/
+
+    var map;
+    var geocoder;
+    var mypos = 0;
+    var check = 0;
+
+    var circle;
+
+    var infowindow = null;
+
+    var markers_pharms = [];
+    var markerClusterer_pharm = null;
+    var markers_parks = [];
+    var markerClusterer_park = null;
+    var markers_ts = [];
+    var markerClusterer_ts = null;
+    var markers_rt = [];
+    var markerClusterer_rt = null;
+    var markers_fuel = [];
+    var markerClusterer_fuel = null;
+    var markers_restaurant = [];
+    var markerClusterer_restaurant = null;
+
+    var intervall = window.setInterval(checkpos, 2000);
+
+    function checkpos() {
+        if(mypos == 0) {
+            check++;
+            preinit();
+        }
+    }
+
+    function updateRadius(circle, rad){
+        circle.setRadius(rad*1);
+        removeMarker();
+        clearClusters();
+        addMarker();
+    }
+
+    function preinit() {
+        geocoder = new google.maps.Geocoder();
+
+        var lat = "<%= params[:lat] %>";
+        var lng = "<%= params[:lng] %>";
+        if(lat) {
+            mypos = new google.maps.LatLng(lat, lng);
+            window.clearInterval(intervall);
+            initialize();
+        }
+        else {
+            if(check > 1) {
+                window.clearInterval(intervall);
+                initialize();
+            }
+            else {
+                if(navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        if(position.coords.latitude) {
+                            mypos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                            window.clearInterval(intervall);
+                            initialize();
+                        }
+                    }, function() {
+                        handleNoGeolocation(true);
+                    });
+                } else {
+                    handleNoGeolocation(false);
+                }
+            }
+        }
+    }
+
+    function codeAdd(add) {
+        geocoder.geocode( { 'address': add}, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                mypos = results[0].geometry.location;
+            } else {
+                mypos = 0;
+            }
+            window.clearInterval(intervall);
+            initialize();
+        });
+    }
+
+    function handleNoGeolocation(errorFlag) {
+        if (errorFlag) {
+            alert("Error: The Geolocation service failed.");
+        } else {
+            alert("Error: Your browser doesn\'t support geolocation.");
+        }
+    }
+
+    function initialize() {
+        if(mypos == 0) {
+            <% if user_signed_in? %>
+            if("<%= current_user.prefadd %>" == "away") {
+                codeAdd("<%= current_user.away %>");
+            }
+            else if("<%= current_user.prefadd %>" == "home") {
+                codeAdd("<%= current_user.home %>");
+            }
+            else if("<%= current_user.prefadd %>" == "office") {
+                codeAdd("<%= current_user.office %>");
+            }
+            else if("<%= current_user.prefadd %>" == "other") {
+                codeAdd("<%= current_user.other %>");
+            }
+            else {
+                mypos = new google.maps.LatLng(37.508059, 375.082752);
+            }
+            <% else %>
+            mypos = new google.maps.LatLng(37.508059, 375.082752);
+            <% end %>
+        }
+
+        var mapOptions = {
+            center: mypos,
+            zoom: 14,
+            minZoom: 10,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+        var icon = '/assets/marker/mypos.png';
+        var markerCenter = new google.maps.Marker({
+            position: mypos,
+            map: map,
+            draggable: true,
+            icon: icon
+        });
+
+        circle = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            clickable: false,
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#FF0000',
+            fillOpacity: 0.35,
+            map: map,
+            center: mypos,
+            radius: 1000
+        });
+        circle.bindTo('center', markerCenter, 'position');
+
+        $("#slider").on( 'slidestop', function( event, ui ) {
+            updateRadius(circle, $("#slider").val());
+        });
+
+        google.maps.event.addListener(markerCenter, 'dragend', function() {
+            mypos = new google.maps.LatLng(markerCenter.position.lat(), markerCenter.position.lng());
+            removeMarker();
+            clearClusters();
+            addMarker();
+        });
+
+        addMarker();
+    }
+
+    function removeMarker() {
+        for (var i = 0; i < markers_pharms.length; i++) {
+            markers_pharms[i].setMap(null);
+        }
+        markers_pharms = [];
+
+        for (var i = 0; i < markers_parks.length; i++) {
+            markers_parks[i].setMap(null);
+        }
+        markers_parks = [];
+
+        for (var i = 0; i < markers_ts.length; i++) {
+            markers_ts[i].setMap(null);
+        }
+        markers_ts = [];
+
+        for (var i = 0; i < markers_rt.length; i++) {
+            markers_rt[i].setMap(null);
+        }
+        markers_rt = [];
+
+        for (var i = 0; i < markers_fuel.length; i++) {
+            markers_fuel[i].setMap(null);
+        }
+        markers_fuel = [];
+
+        for (var i = 0; i < markers_restaurant.length; i++) {
+            markers_restaurant[i].setMap(null);
+        }
+        markers_restaurant = [];
+    }
+
+    <%
+        if params[:time]
+            datatempo = params[:time]
+            year = datatempo.split("-")[0].to_s
+            day = datatempo.split("-")[2].to_s.split(" ")[0].to_s
+            mese = datatempo.split("-")[1].to_s
+            ora = datatempo.split(" ")[1].split(":")[0].to_s
+            min = datatempo.split(" ")[1].split(":")[1].to_s
+            @t = Time.local(year, mese, day, ora, min)
+            @today = @t.strftime("%u")  # => lun = 1, mar = 2, mer = 3
+        else
+            @today = Time.now.strftime("%u")  # => lun = 1, mar = 2, mer = 3
+            @t = Time.now
+        end
+
+        def isOpen(type)
+            if (@today == '1') # LUNEDì
+                puts "LUNEDì"
+                if (Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.LM.split(' - ')[0]).split(':')[0], (type.LM.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.LM.split(' - ')[1]).split(':')[0], (type.LM.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i || Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.LP.split(' - ')[0]).split(':')[0], (type.LP.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.LP.split(' - ')[1]).split(':')[0], (type.LP.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i)
+                   return true
+               end
+            end
+            if (@today == '2') # MARTEDì
+                puts "MARTEDì"
+                if (Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.MM.split(' - ')[0]).split(':')[0], (type.MM.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.MM.split(' - ')[1]).split(':')[0], (type.MM.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i || Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.MP.split(' - ')[0]).split(':')[0], (type.MP.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.MP.split(' - ')[1]).split(':')[0], (type.MP.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i)
+                   return true
+               end
+            end
+            if (@today == '3') # MERCOLEDì
+                puts "MERCOLEDì"
+                if (Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.MEM.split(' - ')[0]).split(':')[0], (type.MEM.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.MEM.split(' - ')[1]).split(':')[0], (type.MEM.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i || Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.MEP.split(' - ')[0]).split(':')[0], (type.MEP.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.MEP.split(' - ')[1]).split(':')[0], (type.MEP.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i)
+                   return true
+               end
+            end
+            if (@today == '4') # GIOVEDì
+                puts "GIOVEDì"
+                if (Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.GM.split(' - ')[0]).split(':')[0], (type.GM.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.GM.split(' - ')[1]).split(':')[0], (type.GM.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i || Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.GP.split(' - ')[0]).split(':')[0], (type.GP.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.GP.split(' - ')[1]).split(':')[0], (type.GP.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i)
+                   return true
+               end
+            end
+            if (@today == '5') # VENERDì
+                puts "VENERDì"
+                if (Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.VM.split(' - ')[0]).split(':')[0], (type.VM.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.VM.split(' - ')[1]).split(':')[0], (type.VM.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i || Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.VP.split(' - ')[0]).split(':')[0], (type.VP.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.VP.split(' - ')[1]).split(':')[0], (type.VP.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i)
+                   return true
+               end
+            end
+            if (@today == '6') # SABATO
+                puts "SABATO"
+                if (Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.SM.split(' - ')[0]).split(':')[0], (type.SM.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.SM.split(' - ')[1]).split(':')[0], (type.SM.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i || Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.SP.split(' - ')[0]).split(':')[0], (type.SP.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.SP.split(' - ')[1]).split(':')[0], (type.SP.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i)
+                   return true
+               end
+            end
+            if (@today == '7') # MERCOLEDì
+                puts "DOMENICA"
+                if (Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.DM.split(' - ')[0]).split(':')[0], (type.DM.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.DM.split(' - ')[1]).split(':')[0], (type.DM.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i || Range.new(
+                         Time.local(@t.year, @t.month, @t.day, (type.DP.split(' - ')[0]).split(':')[0], (type.DP.split(' - ')[0]).split(':')[1]).to_i,
+                         Time.local(@t.year, @t.month, @t.day, (type.DP.split(' - ')[1]).split(':')[0], (type.DP.split(' - ')[1]).split(':')[1]).to_i,
+                   ) === @t.to_i)
+                   return true
+               end
+            end
+        end
+    %>
+
+    function addMarker() {
+        var bounds = circle.getBounds();
+        var marker;
+        var i=0;
+        if(cpharm) {
+            <% @pharms.each do |itm| %>
+            var coord = new google.maps.LatLng(<%= itm.lat %>, <%= itm.lng %>);
+            if( bounds.contains(coord) ) {
+                if('<%= isOpen(itm) %>') {
+                    var icon = '/assets/marker/pharm.png';
+                }
+                else {
+                    var icon = '/assets/marker/cpharm.png';
+                }
+                marker = new google.maps.Marker({
+                    position: coord,
+                    map: map,
+                    icon: icon,
+                    title: '<%= itm.name %>'
+                });
+                infowindow = new google.maps.InfoWindow({
+                    content: '<span class="infowin"><%= itm.name %></span>'
+                });
+                google.maps.event.addListener(marker, 'click', function () {
+                    if('<%= isOpen(itm) %>') {
+                        <% if params[:time] %>
+                        infowindow.setContent('<a href="<%= "#{pharms_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'&time=<%= params[:time] %>" target="_parent"><%= itm.name %></a>');
+                        <% else %>
+                        infowindow.setContent('<a href="<%= "#{pharms_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'" target="_parent"><%= itm.name %></a>');
+                        <% end %>
+                    }
+                    else {
+                        <% if params[:time] %>
+                        infowindow.setContent('<a href="<%= "#{pharms_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'&time=<%= params[:time] %>&s=close" target="_parent"><%= itm.name %></a>');
+                        <% else %>
+                        infowindow.setContent('<a href="<%= "#{pharms_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'&s=close"" target="_parent"><%= itm.name %></a>');
+                        <% end %>
+                    }
+                    infowindow.open(map, this);
+                });
+                markers_pharms[i] = marker;
+                i++;
+            }
+            <% end %>
+            /*markerClusterer_pharm = new MarkerClusterer(map, markers_pharms, {
+             styles: styles[0]
+             });*/
+            markerClusterer_pharm = new MarkerClusterer(map, markers_pharms);
+        }
+        i=0;
+
+        if(cpark) {
+            <% @parks.each do |itm| %>
+            var coord = new google.maps.LatLng(<%= itm.lat %>, <%= itm.lng %>);
+            if( bounds.contains(coord) ) {
+                if('<%= isOpen(itm) %>') {
+                    var icon = '/assets/marker/park.png';
+                }
+                else {
+                    var icon = '/assets/marker/cpark.png';
+                }
+                marker = new google.maps.Marker({
+                    position: coord,
+                    map: map,
+                    icon: icon,
+                    title: '<%= itm.name %>'
+                });
+                infowindow = new google.maps.InfoWindow({
+                    content: '<span class="infowin"><%= itm.name %></span>'
+                });
+                google.maps.event.addListener(marker, 'click', function () {
+                    if('<%= isOpen(itm) %>') {
+                        <% if params[:time] %>
+                        infowindow.setContent('<a href="<%= "#{parks_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'&time=<%= params[:time] %>" target="_parent"><%= itm.name %></a>');
+                        <% else %>
+                        infowindow.setContent('<a href="<%= "#{parks_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'" target="_parent"><%= itm.name %></a>');
+                        <% end %>
+                    }
+                    else {
+                        <% if params[:time] %>
+                        infowindow.setContent('<a href="<%= "#{parks_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'&time=<%= params[:time] %>&s=close" target="_parent"><%= itm.name %></a>');
+                        <% else %>
+                        infowindow.setContent('<a href="<%= "#{parks_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'&s=close"" target="_parent"><%= itm.name %></a>');
+                        <% end %>
+                    }
+                    infowindow.open(map, this);
+                });
+                markers_parks[i] = marker;
+                i++;
+            }
+            <% end %>
+            /*markerClusterer_pharm = new MarkerClusterer(map, markers_pharms, {
+             styles: styles[0]
+             });*/
+            markerClusterer_park = new MarkerClusterer(map, markers_parks);
+        }
+        i=0;
+
+        if(cts) {
+            <% @taxistations.each do |itm| %>
+            var coord = new google.maps.LatLng(<%= itm.lat %>, <%= itm.lng %>);
+            if( bounds.contains(coord) ) {
+                var icon = '/assets/marker/taxistation.png';
+                marker = new google.maps.Marker({
+                    position: coord,
+                    map: map,
+                    icon: icon,
+                    title: '<%= itm.name %>'
+                });
+                infowindow = new google.maps.InfoWindow({
+                    content: '<span class="infowin"><%= itm.name %></span>'
+                });
+                google.maps.event.addListener(marker, 'click', function () {
+                    <% if params[:time] %>
+                    infowindow.setContent('<a href="<%= "#{taxistations_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'&time=<%= params[:time] %>" target="_parent"><%= itm.name %></a>');
+                    <% else %>
+                    infowindow.setContent('<a href="<%= "#{taxistations_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'" target="_parent"><%= itm.name %></a>');
+                    <% end %>
+                    infowindow.open(map, this);
+                });
+                markers_ts[i] = marker;
+                i++;
+            }
+            <% end %>
+            /*markerClusterer_pharm = new MarkerClusterer(map, markers_pharms, {
+             styles: styles[0]
+             });*/
+            markerClusterer_ts = new MarkerClusterer(map, markers_ts);
+        }
+        i=0;
+
+        if(crt) {
+            <% @radiotaxis.each do |itm| %>
+            var coord = new google.maps.LatLng(<%= itm.lat %>, <%= itm.lng %>);
+            if( bounds.contains(coord) ) {
+                var icon = '/assets/marker/radiotaxi.png';
+                marker = new google.maps.Marker({
+                    position: coord,
+                    map: map,
+                    icon: icon,
+                    title: '<%= itm.name %>'
+                });
+                infowindow = new google.maps.InfoWindow({
+                    content: '<span class="infowin"><%= itm.name %></span>'
+                });
+                google.maps.event.addListener(marker, 'click', function () {
+                    <% if params[:time] %>
+                    infowindow.setContent('<a href="<%= "#{radiotaxis_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'&time=<%= params[:time] %>" target="_parent"><%= itm.name %></a>');
+                    <% else %>
+                    infowindow.setContent('<a href="<%= "#{radiotaxis_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'" target="_parent"><%= itm.name %></a>');
+                    <% end %>
+                    infowindow.open(map, this);
+                });
+                markers_rt[i] = marker;
+                i++;
+            }
+            <% end %>
+            /*markerClusterer_pharm = new MarkerClusterer(map, markers_pharms, {
+             styles: styles[0]
+             });*/
+            markerClusterer_rt = new MarkerClusterer(map, markers_rt);
+        }
+        i=0;
+
+        if(cfuel) {
+            <% @fuels.each do |itm| %>
+            var coord = new google.maps.LatLng(<%= itm.lat %>, <%= itm.lng %>);
+            if( bounds.contains(coord) ) {
+                if('<%= isOpen(itm) %>') {
+                    var icon = '/assets/marker/fuel.png';
+                }
+                else {
+                    var icon = '/assets/marker/cfuel.png';
+                }
+                marker = new google.maps.Marker({
+                    position: coord,
+                    map: map,
+                    icon: icon,
+                    title: '<%= itm.name %>'
+                });
+                infowindow = new google.maps.InfoWindow({
+                    content: '<span class="infowin"><%= itm.name %></span>'
+                });
+                google.maps.event.addListener(marker, 'click', function () {
+                    <% if params[:time] %>
+                    infowindow.setContent('<a href="<%= "#{fuels_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'&time=<%= params[:time] %>" target="_parent"><%= itm.name %></a>');
+                    <% else %>
+                    infowindow.setContent('<a href="<%= "#{fuels_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'" target="_parent"><%= itm.name %></a>');
+                    <% end %>
+                    infowindow.open(map, this);
+                });
+                markers_fuel[i] = marker;
+                i++;
+            }
+            <% end %>
+            /*markerClusterer_pharm = new MarkerClusterer(map, markers_pharms, {
+             styles: styles[0]
+             });*/
+            markerClusterer_fuel = new MarkerClusterer(map, markers_fuel);
+        }
+        i=0;
+
+        if(crestaurant) {
+            <% @restaurants.each do |itm| %>
+            var coord = new google.maps.LatLng(<%= itm.lat %>, <%= itm.lng %>);
+            if( bounds.contains(coord) ) {
+                if('<%= isOpen(itm) %>') {
+                    var icon = '/assets/marker/restaurant.png';
+                }
+                else {
+                    var icon = '/assets/marker/crestaurant.png';
+                }
+                marker = new google.maps.Marker({
+                    position: coord,
+                    map: map,
+                    icon: icon,
+                    title: '<%= itm.name %>'
+                });
+                infowindow = new google.maps.InfoWindow({
+                    content: '<span class="infowin"><%= itm.name %></span>'
+                });
+                google.maps.event.addListener(marker, 'click', function () {
+                    <% if params[:time] %>
+                    infowindow.setContent('<a href="<%= "#{restaurants_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'&time=<%= params[:time] %>" target="_parent"><%= itm.name %></a>');
+                    <% else %>
+                    infowindow.setContent('<a href="<%= "#{restaurants_url}/#{itm.id}" %>?lat='+mypos.lat()+'&lng='+mypos.lng()+'" target="_parent"><%= itm.name %></a>');
+                    <% end %>
+                    infowindow.open(map, this);
+                });
+                markers_restaurant[i] = marker;
+                i++;
+            }
+            <% end %>
+            /*markerClusterer_pharm = new MarkerClusterer(map, markers_pharms, {
+             styles: styles[0]
+             });*/
+            markerClusterer_restaurant = new MarkerClusterer(map, markers_restaurant);
+        }
+        i=0;
+    }
+
+    function clearClusters() {
+        markerClusterer_pharm.clearMarkers();
+        markerClusterer_park.clearMarkers();
+        markerClusterer_ts.clearMarkers();
+        markerClusterer_rt.clearMarkers();
+        markerClusterer_fuel.clearMarkers();
+        markerClusterer_restaurant.clearMarkers();
+    }
+
+    var cpharm = true;
+    var cpark = true;
+    var cts = true;
+    var crt = true;
+    var cfuel = true;
+    var crestaurant = true;
+
+    function choiceElement(type) {
+        if(type=='pharm') {
+            if(cpharm) {
+                $("#pharm").fadeTo( "slow", 0.30 );
+                cpharm = false;
+            } else {
+                $("#pharm").fadeTo( "slow", 1 );
+                cpharm = true;
+            }
+        }
+
+        if(type=='park') {
+            if(cpark) {
+                $("#park").fadeTo( "slow", 0.30 );
+                cpark = false;
+            } else {
+                $("#park").fadeTo( "slow", 1 );
+                cpark = true;
+            }
+        }
+
+        if(type=='ts') {
+            if(cts) {
+                $("#ts").fadeTo( "slow", 0.30 );
+                cts = false;
+            } else {
+                $("#ts").fadeTo( "slow", 1 );
+                cts = true;
+            }
+        }
+
+        if(type=='rt') {
+            if(crt) {
+                $("#rt").fadeTo( "slow", 0.30 );
+                crt = false;
+            } else {
+                $("#rt").fadeTo( "slow", 1 );
+                crt = true;
+            }
+        }
+
+        if(type=='fuel') {
+            if(cfuel) {
+                $("#fuel").fadeTo( "slow", 0.30 );
+                cfuel = false;
+            } else {
+                $("#fuel").fadeTo( "slow", 1 );
+                cfuel = true;
+            }
+        }
+
+        if(type=='restaurant') {
+            if(crestaurant) {
+                $("#restaurant").fadeTo( "slow", 0.30 );
+                crestaurant = false;
+            } else {
+                $("#restaurant").fadeTo( "slow", 1 );
+                crestaurant = true;
+            }
+        }
+
+        removeMarker();
+        clearClusters();
+        addMarker();
+    }
+
+</script>
+
+
+<div data-role="header" data-theme="b">
+  <h1>M-Recommender Systems</h1>
+  <%= link_to 'Home', root_url, 'data-icon' => 'home', 'class' => 'ui-btn-left', 'data-iconpos' => 'notext', :target => '_parent' %>
+</div>
+
+<div data-role="content">
+
+  <%    if params[:time]
+          datatempo = params[:time]
+          year = datatempo.split("-")[0].to_s
+          day = datatempo.split("-")[2].to_s.split(" ")[0].to_s
+          mese = datatempo.split("-")[1].to_s
+          ora = datatempo.split(" ")[1].split(":")[0].to_s
+          min = datatempo.split(" ")[1].split(":")[1].to_s
+
+          data = day+'/'+mese+'/'+year+'  -  '+ora+':'+min
+        else
+          t = Time.now
+          data = t.strftime("%d/%m/%Y  -  %H:%M")
+        end
+  %>
+  <input disabled="" value="<%= data %>" type="button" data-icon="clock">
+
+  <a href="#" id="restaurant" onclick="choiceElement(this.id)"><img src="assets/marker/restaurant.png"/></a>
+  <a href="#" id="pharm" onclick="choiceElement(this.id)"><img src="assets/marker/pharm.png"/></a>
+  <a href="#" id="park" onclick="choiceElement(this.id)"><img src="assets/marker/park.png"/></a>
+  <a href="#" id="ts" onclick="choiceElement(this.id)"><img src="assets/marker/taxistation.png"/></a>
+  <a href="#" id="rt" onclick="choiceElement(this.id)"><img src="assets/marker/radiotaxi.png"/></a>
+  <a href="#" id="fuel" onclick="choiceElement(this.id)"><img src="assets/marker/fuel.png"/></a>
+
+  <div id="custom-slider">
+    <input name="slider" id="slider" min="100" max="5000" value="1000" type="range">
+  </div>
+
+  <div class="ui-bar ui-bar-c ui-corner-all ui-shadow" style="padding: 2px">
+    <div id="map-canvas" style="height: 100%; min-height: 450px;" class="ui-corner-all ui-shadow"></div>
+  </div>
+
+</div>
+
+<style type="text/css">
+    #custom-slider input {
+        width: 50px !important;
+    }
+</style>
