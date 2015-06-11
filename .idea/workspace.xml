@@ -68,7 +68,7 @@
       <file leaf-file-name="recnearserv.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/recnearserv.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="211" column="63" selection-start="6504" selection-end="6504" vertical-scroll-proportion="0.43367347" vertical-offset="3417" max-vertical-offset="12512">
+            <state line="217" column="30" selection-start="6760" selection-end="6760" vertical-scroll-proportion="0.43367347" vertical-offset="3519" max-vertical-offset="12512">
               <folding />
             </state>
           </provider>
@@ -1793,7 +1793,11 @@
       <created>1434015511540</created>
       <updated>1434015511540</updated>
     </task>
-    <option name="localTasksCounter" value="288" />
+    <task id="LOCAL-00288" summary="ADD RecNearServ&#10;">
+      <created>1434016464567</created>
+      <updated>1434016464568</updated>
+    </task>
+    <option name="localTasksCounter" value="289" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -2174,7 +2178,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/recnearserv.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="211" column="63" selection-start="6504" selection-end="6504" vertical-scroll-proportion="0.43367347" vertical-offset="3417" max-vertical-offset="12512">
+        <state line="217" column="30" selection-start="6760" selection-end="6760" vertical-scroll-proportion="0.43367347" vertical-offset="3519" max-vertical-offset="12512">
           <folding />
         </state>
       </provider>
