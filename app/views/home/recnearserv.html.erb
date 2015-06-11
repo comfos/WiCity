@@ -173,7 +173,9 @@
         });
         circle.bindTo('center', markerCenter, 'position');
 
-        $("#slider").val( parseInt(1000 * parseFloat(fuzzyLogic())) );
+        $("#slider").slider("option", "value", parseInt(1000 * parseFloat(fuzzyLogic())) );
+
+        //$("#slider").val( parseInt(1000 * parseFloat(fuzzyLogic())) );
 
         $("#slider").on('slidestop', function( event, ui ) {
             updateRadius(circle, $("#slider").val());
