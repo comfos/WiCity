@@ -160,6 +160,8 @@
             icon: icon
         });
 
+        alert("RAGGIO " + 1000 * parseInt(fuzzyLogic()));
+
         circle = new google.maps.Circle({
             strokeColor: '#FF0000',
             clickable: false,
@@ -172,8 +174,6 @@
             radius: 1000 * fuzzyLogic()
         });
         circle.bindTo('center', markerCenter, 'position');
-
-        alert("RAGGIO " + 1000 * parseInt(fuzzyLogic()));
 
         $("#slider").value = 1000 * fuzzyLogic();
 
