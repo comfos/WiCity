@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5a0126-957b-4bd8-af99-956ad480c251" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/nearserv.html.erb" afterPath="$PROJECT_DIR$/app/views/home/nearserv.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/recnearserv.html.erb" afterPath="$PROJECT_DIR$/app/views/home/recnearserv.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -69,7 +68,7 @@
       <file leaf-file-name="recnearserv.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/recnearserv.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="186" column="19" selection-start="5481" selection-end="5481" vertical-scroll-proportion="0.7106518" vertical-offset="2715" max-vertical-offset="11900">
+            <state line="150" column="27" selection-start="4421" selection-end="4421" vertical-scroll-proportion="-0.2972973" vertical-offset="2737" max-vertical-offset="12002">
               <folding />
             </state>
           </provider>
@@ -1778,7 +1777,11 @@
       <created>1434009491686</created>
       <updated>1434009491686</updated>
     </task>
-    <option name="localTasksCounter" value="284" />
+    <task id="LOCAL-00284" summary="ADD RecNearServ&#10;">
+      <created>1434010552775</created>
+      <updated>1434010552775</updated>
+    </task>
+    <option name="localTasksCounter" value="285" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1838,7 +1841,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="UPDATE CSS mcs&#10;" />
     <MESSAGE value="UPDATE change downtown to away" />
     <MESSAGE value="UPDATE mcs&#10;" />
     <MESSAGE value="ADD Café" />
@@ -1863,7 +1865,8 @@
     <MESSAGE value="EDIT showNodos&#10;" />
     <MESSAGE value="EDIT nearest services&#10;" />
     <MESSAGE value="ADD RecNearServ" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD RecNearServ" />
+    <MESSAGE value="ADD RecNearServ&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD RecNearServ&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2159,7 +2162,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/recnearserv.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="186" column="19" selection-start="5481" selection-end="5481" vertical-scroll-proportion="0.7106518" vertical-offset="2715" max-vertical-offset="11900">
+        <state line="150" column="27" selection-start="4421" selection-end="4421" vertical-scroll-proportion="-0.2972973" vertical-offset="2737" max-vertical-offset="12002">
           <folding />
         </state>
       </provider>

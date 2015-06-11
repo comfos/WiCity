@@ -148,6 +148,10 @@
 
         map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
+        /* TRAFFIC LAYER */
+        var trafficLayer = new google.maps.TrafficLayer();
+        trafficLayer.setMap(map);
+
         var icon = '/assets/marker/mypos.png';
         var markerCenter = new google.maps.Marker({
             position: mypos,
@@ -168,6 +172,8 @@
             radius: 1000 * fuzzyLogic()
         });
         circle.bindTo('center', markerCenter, 'position');
+
+        $$("#slider").value = 1000 * fuzzyLogic();
 
         $("#slider").on( 'slidestop', function( event, ui ) {
             updateRadius(circle, $("#slider").val());
