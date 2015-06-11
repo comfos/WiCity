@@ -160,7 +160,7 @@
             icon: icon
         });
 
-        alert( "RAGGIO " + (1000 * parseInt(fuzzyLogic())) );
+        alert( "RAGGIO " + (1000 * parseFloat(fuzzyLogic())) );
 
         circle = new google.maps.Circle({
             strokeColor: '#FF0000',
@@ -171,11 +171,11 @@
             fillOpacity: 0.35,
             map: map,
             center: mypos,
-            radius: 1000 * parseInt(fuzzyLogic())
+            radius: 1000 * parseFloat(fuzzyLogic())
         });
         circle.bindTo('center', markerCenter, 'position');
 
-        $("#slider").value = 500;
+        $("#slider").val( 1000 * parseFloat(fuzzyLogic()) );
 
         $("#slider").on('slidestop', function( event, ui ) {
             updateRadius(circle, $("#slider").val());
@@ -206,15 +206,15 @@
             }
             else if(parseInt("<%= age(current_user.born) %>") > 30 && parseInt("<%= age(current_user.born) %>") <= 50) {
                 var rtn = (parseInt("<%= age(current_user.born) %>") - 70)/(-40);
-                return parseFloat(rtn);
+                return rtn;
             }
             else if(parseInt("<%= age(current_user.born) %>") > 50 && parseInt("<%= age(current_user.born) %>") <= 80) {
                 var rtn = (125 - parseInt("<%= age(current_user.born) %>"))/(150);
-                return parseFloat(rtn);
+                return rtn;
             }
             else if(parseInt("<%= age(current_user.born) %>") > 80) {
                 var rtn = 0.3;
-                return parseFloat(rtn);
+                return rtn;
             }
         <% else %>
             return 1;
