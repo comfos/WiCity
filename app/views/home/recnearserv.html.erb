@@ -206,15 +206,15 @@
             }
             else if(parseInt("<%= age(current_user.born) %>") > 30 && parseInt("<%= age(current_user.born) %>") <= 50) {
                 var rtn = (parseInt("<%= age(current_user.born) %>") - 70)/(-40);
-                return rtn;
+                return parseFloat(rtn);
             }
             else if(parseInt("<%= age(current_user.born) %>") > 50 && parseInt("<%= age(current_user.born) %>") <= 80) {
                 var rtn = (125 - parseInt("<%= age(current_user.born) %>"))/(150);
-                return rtn;
+                return parseFloat(rtn);
             }
             else if(parseInt("<%= age(current_user.born) %>") > 80) {
-                var rtn = (0.3);
-                return rtn;
+                var rtn = 0.3;
+                return parseFloat(rtn);
             }
         <% else %>
             return 1;
