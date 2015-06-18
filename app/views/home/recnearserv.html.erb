@@ -31,6 +31,7 @@
     var check = 0;
 
     var circle;
+    var radius = 400;
 
     var infowindow = null;
 
@@ -169,11 +170,11 @@
             fillOpacity: 0.35,
             map: map,
             center: mypos,
-            radius: 1000 * parseFloat(fuzzyLogic())
+            radius: radius * parseFloat(fuzzyLogic())
         });
         circle.bindTo('center', markerCenter, 'position');
 
-        $("#slider").val( parseInt(1000 * parseFloat(fuzzyLogic())) );
+        $("#slider").val( parseInt(radius * parseFloat(fuzzyLogic())) );
 
         $("#slider").on('slidestop', function( event, ui ) {
             updateRadius(circle, $("#slider").val());
@@ -711,7 +712,7 @@
   <a href="#" id="fuel" onclick="choiceElement(this.id)"><img src="assets/marker/fuel.png"/></a>
 
   <div id="custom-slider">
-    <input name="slider" id="slider" min="100" max="5000" type="range">
+    <input name="slider" id="slider" min="100" max="1000" type="range">
   </div>
 
   <div class="ui-bar ui-bar-c ui-corner-all ui-shadow" style="padding: 2px">

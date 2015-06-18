@@ -17,13 +17,13 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/WiCity@Development__WiCity.coverage" NAME="Development: WiCity Coverage Results" MODIFIED="1434015109001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
     <SUITE FILE_PATH="coverage/WiCity@db_migrate__1_.coverage" NAME="db:migrate (1) Coverage Results" MODIFIED="1421331990014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
-    <SUITE FILE_PATH="coverage/WiCity@db_migrate__4_.coverage" NAME="db:migrate (4) Coverage Results" MODIFIED="1421333203902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
     <SUITE FILE_PATH="coverage/WiCity@db_migrate__3_.coverage" NAME="db:migrate (3) Coverage Results" MODIFIED="1421333017708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
+    <SUITE FILE_PATH="coverage/WiCity@db_migrate__4_.coverage" NAME="db:migrate (4) Coverage Results" MODIFIED="1421333203902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
     <SUITE FILE_PATH="coverage/WiCity@db_create_all__WiCity.coverage" NAME="db:create:all: WiCity Coverage Results" MODIFIED="1415187772915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
     <SUITE FILE_PATH="coverage/WiCity@Rails_console__WiCity.coverage" NAME="Rails console: WiCity Coverage Results" MODIFIED="1388859434959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
     <SUITE FILE_PATH="coverage/WiCity@db_migrate.coverage" NAME="db:migrate Coverage Results" MODIFIED="1421331874331" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
-    <SUITE FILE_PATH="coverage/WiCity@db_migrate__2_.coverage" NAME="db:migrate (2) Coverage Results" MODIFIED="1421332035021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
     <SUITE FILE_PATH="coverage/WiCity@db_migrate__WiCity.coverage" NAME="db:migrate: WiCity Coverage Results" MODIFIED="1421331948942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
+    <SUITE FILE_PATH="coverage/WiCity@db_migrate__2_.coverage" NAME="db:migrate (2) Coverage Results" MODIFIED="1421332035021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
     <SUITE FILE_PATH="coverage/WiCity@Production__WiCity.coverage" NAME="Production: WiCity Coverage Results" MODIFIED="1417973004425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="WiCity" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -68,7 +68,7 @@
       <file leaf-file-name="recnearserv.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/recnearserv.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="181" column="10" selection-start="5297" selection-end="5297" vertical-scroll-proportion="1.6734694" vertical-offset="2421" max-vertical-offset="12546">
+            <state line="714" column="56" selection-start="29416" selection-end="29420" vertical-scroll-proportion="0.4864865" vertical-offset="11832" max-vertical-offset="12461">
               <folding />
             </state>
           </provider>
@@ -77,7 +77,7 @@
       <file leaf-file-name="nearserv.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="678" column="8" selection-start="28194" selection-end="28194" vertical-scroll-proportion="-13.384615" vertical-offset="11178" max-vertical-offset="11832">
+            <state line="678" column="8" selection-start="28194" selection-end="28194" vertical-scroll-proportion="0.0" vertical-offset="11178" max-vertical-offset="11832">
               <folding />
             </state>
           </provider>
@@ -230,8 +230,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -324,6 +322,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="RailsProjectView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1853,7 +1853,15 @@
       <created>1434020422522</created>
       <updated>1434020422522</updated>
     </task>
-    <option name="localTasksCounter" value="303" />
+    <task id="LOCAL-00303" summary="ADD RecNearServ&#10;">
+      <created>1434021041693</created>
+      <updated>1434021041693</updated>
+    </task>
+    <task id="LOCAL-00304" summary="ADD RecNearServ&#10;">
+      <created>1434021228282</created>
+      <updated>1434021228282</updated>
+    </task>
+    <option name="localTasksCounter" value="305" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1880,25 +1888,25 @@
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31988874" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32732317" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32732317" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19897304" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20154044" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20445062" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3259362" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32226834" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32226834" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1973,9 +1981,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/links/_form_new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="27" selection-start="748" selection-end="748" vertical-scroll-proportion="0.39787233" vertical-offset="153" max-vertical-offset="3995">
-          <folding />
-        </state>
+        <state line="20" column="27" selection-start="748" selection-end="748" vertical-scroll-proportion="0.39787233" vertical-offset="153" max-vertical-offset="3995" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/nodos/edit.html.erb">
@@ -2045,9 +2051,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/nodos/_form_new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="11" selection-start="3011" selection-end="3011" vertical-scroll-proportion="0.0" vertical-offset="1513" max-vertical-offset="3859">
-          <folding />
-        </state>
+        <state line="89" column="11" selection-start="3011" selection-end="3011" vertical-scroll-proportion="0.0" vertical-offset="1513" max-vertical-offset="3859" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/links/index.html.erb">
@@ -2084,9 +2088,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/nodos/_form_edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="34" selection-start="2342" selection-end="2342" vertical-scroll-proportion="1.286017" vertical-offset="702" max-vertical-offset="1479">
-          <folding />
-        </state>
+        <state line="77" column="34" selection-start="2342" selection-end="2342" vertical-scroll-proportion="1.286017" vertical-offset="702" max-vertical-offset="1479" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/nodos/index.html.erb">
@@ -2227,14 +2229,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/nearserv.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="678" column="8" selection-start="28194" selection-end="28194" vertical-scroll-proportion="-13.384615" vertical-offset="11178" max-vertical-offset="11832">
+        <state line="678" column="8" selection-start="28194" selection-end="28194" vertical-scroll-proportion="0.0" vertical-offset="11178" max-vertical-offset="11832">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/recnearserv.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="181" column="10" selection-start="5297" selection-end="5297" vertical-scroll-proportion="1.6734694" vertical-offset="2421" max-vertical-offset="12546">
+        <state line="714" column="56" selection-start="29416" selection-end="29420" vertical-scroll-proportion="0.4864865" vertical-offset="11832" max-vertical-offset="12461">
           <folding />
         </state>
       </provider>
